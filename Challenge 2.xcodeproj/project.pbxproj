@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10B602171AC098B200B6E7BF /* OpcoesJogosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B602151AC098B200B6E7BF /* OpcoesJogosViewController.m */; };
-		10B602181AC098B200B6E7BF /* OpcoesJogosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B602161AC098B200B6E7BF /* OpcoesJogosViewController.xib */; };
-		10B6021C1AC0A0C600B6E7BF /* jogoQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B6021A1AC0A0C600B6E7BF /* jogoQuizViewController.m */; };
-		10B6021D1AC0A0C600B6E7BF /* jogoQuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B6021B1AC0A0C600B6E7BF /* jogoQuizViewController.xib */; };
-		10B602261AC0A72600B6E7BF /* EnciclopediaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B602241AC0A72600B6E7BF /* EnciclopediaTableViewController.m */; };
-		10B602271AC0A72600B6E7BF /* EnciclopediaTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B602251AC0A72600B6E7BF /* EnciclopediaTableViewController.xib */; };
 		4EA614BC1AC094A400D94F8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA614BB1AC094A400D94F8A /* main.m */; };
 		4EA614BF1AC094A400D94F8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA614BE1AC094A400D94F8A /* AppDelegate.m */; };
 		4EA614C71AC094A400D94F8A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EA614C61AC094A400D94F8A /* Images.xcassets */; };
@@ -20,6 +14,16 @@
 		4EA614D61AC094A400D94F8A /* Challenge_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA614D51AC094A400D94F8A /* Challenge_2Tests.m */; };
 		4EA614E21AC0955300D94F8A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA614E01AC0955300D94F8A /* HomeViewController.m */; };
 		4EA614E31AC0955300D94F8A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA614E11AC0955300D94F8A /* HomeViewController.xib */; };
+		7E551B521AC0AC5800EB7FD8 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E551B511AC0AC5800EB7FD8 /* Realm.framework */; };
+		7E551B541AC0AC5E00EB7FD8 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E551B531AC0AC5E00EB7FD8 /* libc++.dylib */; };
+		7E551B621AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B561AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.m */; };
+		7E551B631AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E551B571AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.xib */; };
+		7E551B641AC0AC7D00EB7FD8 /* JogosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B591AC0AC7D00EB7FD8 /* JogosViewController.m */; };
+		7E551B651AC0AC7D00EB7FD8 /* JogosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E551B5A1AC0AC7D00EB7FD8 /* JogosViewController.xib */; };
+		7E551B661AC0AC7D00EB7FD8 /* Pontuacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B5C1AC0AC7D00EB7FD8 /* Pontuacao.m */; };
+		7E551B671AC0AC7D00EB7FD8 /* PontuacaoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B5E1AC0AC7D00EB7FD8 /* PontuacaoManager.m */; };
+		7E551B681AC0AC7D00EB7FD8 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B601AC0AC7D00EB7FD8 /* QuizViewController.m */; };
+		7E551B691AC0AC7D00EB7FD8 /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E551B611AC0AC7D00EB7FD8 /* QuizViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,15 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		10B602141AC098B200B6E7BF /* OpcoesJogosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpcoesJogosViewController.h; path = ../OpcoesJogosViewController.h; sourceTree = "<group>"; };
-		10B602151AC098B200B6E7BF /* OpcoesJogosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpcoesJogosViewController.m; path = ../OpcoesJogosViewController.m; sourceTree = "<group>"; };
-		10B602161AC098B200B6E7BF /* OpcoesJogosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OpcoesJogosViewController.xib; path = ../OpcoesJogosViewController.xib; sourceTree = "<group>"; };
-		10B602191AC0A0C600B6E7BF /* jogoQuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jogoQuizViewController.h; path = ../jogoQuizViewController.h; sourceTree = "<group>"; };
-		10B6021A1AC0A0C600B6E7BF /* jogoQuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = jogoQuizViewController.m; path = ../jogoQuizViewController.m; sourceTree = "<group>"; };
-		10B6021B1AC0A0C600B6E7BF /* jogoQuizViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = jogoQuizViewController.xib; path = ../jogoQuizViewController.xib; sourceTree = "<group>"; };
-		10B602231AC0A72600B6E7BF /* EnciclopediaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnciclopediaTableViewController.h; path = ../EnciclopediaTableViewController.h; sourceTree = "<group>"; };
-		10B602241AC0A72600B6E7BF /* EnciclopediaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnciclopediaTableViewController.m; path = ../EnciclopediaTableViewController.m; sourceTree = "<group>"; };
-		10B602251AC0A72600B6E7BF /* EnciclopediaTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EnciclopediaTableViewController.xib; path = ../EnciclopediaTableViewController.xib; sourceTree = "<group>"; };
 		4EA614B61AC094A400D94F8A /* Challenge 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Challenge 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EA614BA1AC094A400D94F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EA614BB1AC094A400D94F8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -55,6 +50,21 @@
 		4EA614DF1AC0955300D94F8A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		4EA614E01AC0955300D94F8A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		4EA614E11AC0955300D94F8A /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		7E551B511AC0AC5800EB7FD8 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Challenge 2/Frameworks/Realm.framework"; sourceTree = "<group>"; };
+		7E551B531AC0AC5E00EB7FD8 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		7E551B551AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnciclopediaTableViewController.h; sourceTree = "<group>"; };
+		7E551B561AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnciclopediaTableViewController.m; sourceTree = "<group>"; };
+		7E551B571AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnciclopediaTableViewController.xib; sourceTree = "<group>"; };
+		7E551B581AC0AC7D00EB7FD8 /* JogosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JogosViewController.h; sourceTree = "<group>"; };
+		7E551B591AC0AC7D00EB7FD8 /* JogosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JogosViewController.m; sourceTree = "<group>"; };
+		7E551B5A1AC0AC7D00EB7FD8 /* JogosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JogosViewController.xib; sourceTree = "<group>"; };
+		7E551B5B1AC0AC7D00EB7FD8 /* Pontuacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pontuacao.h; sourceTree = "<group>"; };
+		7E551B5C1AC0AC7D00EB7FD8 /* Pontuacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pontuacao.m; sourceTree = "<group>"; };
+		7E551B5D1AC0AC7D00EB7FD8 /* PontuacaoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PontuacaoManager.h; sourceTree = "<group>"; };
+		7E551B5E1AC0AC7D00EB7FD8 /* PontuacaoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PontuacaoManager.m; sourceTree = "<group>"; };
+		7E551B5F1AC0AC7D00EB7FD8 /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizViewController.h; sourceTree = "<group>"; };
+		7E551B601AC0AC7D00EB7FD8 /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
+		7E551B611AC0AC7D00EB7FD8 /* QuizViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuizViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E551B541AC0AC5E00EB7FD8 /* libc++.dylib in Frameworks */,
+				7E551B521AC0AC5800EB7FD8 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +90,8 @@
 		4EA614AD1AC094A400D94F8A = {
 			isa = PBXGroup;
 			children = (
+				7E551B531AC0AC5E00EB7FD8 /* libc++.dylib */,
+				7E551B511AC0AC5800EB7FD8 /* Realm.framework */,
 				4EA614B81AC094A400D94F8A /* Challenge 2 */,
 				4EA614D21AC094A400D94F8A /* Challenge 2Tests */,
 				4EA614B71AC094A400D94F8A /* Products */,
@@ -98,18 +112,8 @@
 			children = (
 				4EA614BD1AC094A400D94F8A /* AppDelegate.h */,
 				4EA614BE1AC094A400D94F8A /* AppDelegate.m */,
-				10B602231AC0A72600B6E7BF /* EnciclopediaTableViewController.h */,
-				10B602241AC0A72600B6E7BF /* EnciclopediaTableViewController.m */,
-				10B602251AC0A72600B6E7BF /* EnciclopediaTableViewController.xib */,
-				10B602191AC0A0C600B6E7BF /* jogoQuizViewController.h */,
-				10B6021A1AC0A0C600B6E7BF /* jogoQuizViewController.m */,
-				10B6021B1AC0A0C600B6E7BF /* jogoQuizViewController.xib */,
-				10B602141AC098B200B6E7BF /* OpcoesJogosViewController.h */,
-				10B602151AC098B200B6E7BF /* OpcoesJogosViewController.m */,
-				10B602161AC098B200B6E7BF /* OpcoesJogosViewController.xib */,
-				4EA614DF1AC0955300D94F8A /* HomeViewController.h */,
-				4EA614E01AC0955300D94F8A /* HomeViewController.m */,
-				4EA614E11AC0955300D94F8A /* HomeViewController.xib */,
+				7E551B4C1AC0AA8000EB7FD8 /* Entidades */,
+				7E551B4B1AC0AA7300EB7FD8 /* Views */,
 				4EA614C61AC094A400D94F8A /* Images.xcassets */,
 				4EA614C81AC094A400D94F8A /* LaunchScreen.xib */,
 				4EA614B91AC094A400D94F8A /* Supporting Files */,
@@ -141,6 +145,60 @@
 				4EA614D41AC094A400D94F8A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7E551B4B1AC0AA7300EB7FD8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4EA614DF1AC0955300D94F8A /* HomeViewController.h */,
+				4EA614E01AC0955300D94F8A /* HomeViewController.m */,
+				4EA614E11AC0955300D94F8A /* HomeViewController.xib */,
+				7E551B4E1AC0AAF200EB7FD8 /* Jogo */,
+				7E551B501AC0AB0D00EB7FD8 /* Pontuação */,
+				7E551B4F1AC0AAF900EB7FD8 /* Enciclopédia */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		7E551B4C1AC0AA8000EB7FD8 /* Entidades */ = {
+			isa = PBXGroup;
+			children = (
+				7E551B5B1AC0AC7D00EB7FD8 /* Pontuacao.h */,
+				7E551B5C1AC0AC7D00EB7FD8 /* Pontuacao.m */,
+				7E551B5D1AC0AC7D00EB7FD8 /* PontuacaoManager.h */,
+				7E551B5E1AC0AC7D00EB7FD8 /* PontuacaoManager.m */,
+			);
+			name = Entidades;
+			sourceTree = "<group>";
+		};
+		7E551B4E1AC0AAF200EB7FD8 /* Jogo */ = {
+			isa = PBXGroup;
+			children = (
+				7E551B581AC0AC7D00EB7FD8 /* JogosViewController.h */,
+				7E551B591AC0AC7D00EB7FD8 /* JogosViewController.m */,
+				7E551B5A1AC0AC7D00EB7FD8 /* JogosViewController.xib */,
+				7E551B5F1AC0AC7D00EB7FD8 /* QuizViewController.h */,
+				7E551B601AC0AC7D00EB7FD8 /* QuizViewController.m */,
+				7E551B611AC0AC7D00EB7FD8 /* QuizViewController.xib */,
+			);
+			name = Jogo;
+			sourceTree = "<group>";
+		};
+		7E551B4F1AC0AAF900EB7FD8 /* Enciclopédia */ = {
+			isa = PBXGroup;
+			children = (
+				7E551B551AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.h */,
+				7E551B561AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.m */,
+				7E551B571AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.xib */,
+			);
+			name = "Enciclopédia";
+			sourceTree = "<group>";
+		};
+		7E551B501AC0AB0D00EB7FD8 /* Pontuação */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Pontuação";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,12 +281,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10B602181AC098B200B6E7BF /* OpcoesJogosViewController.xib in Resources */,
-				10B602271AC0A72600B6E7BF /* EnciclopediaTableViewController.xib in Resources */,
+				7E551B651AC0AC7D00EB7FD8 /* JogosViewController.xib in Resources */,
+				7E551B691AC0AC7D00EB7FD8 /* QuizViewController.xib in Resources */,
 				4EA614CA1AC094A400D94F8A /* LaunchScreen.xib in Resources */,
+				7E551B631AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.xib in Resources */,
 				4EA614C71AC094A400D94F8A /* Images.xcassets in Resources */,
 				4EA614E31AC0955300D94F8A /* HomeViewController.xib in Resources */,
-				10B6021D1AC0A0C600B6E7BF /* jogoQuizViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,10 +304,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10B602171AC098B200B6E7BF /* OpcoesJogosViewController.m in Sources */,
-				10B6021C1AC0A0C600B6E7BF /* jogoQuizViewController.m in Sources */,
+				7E551B641AC0AC7D00EB7FD8 /* JogosViewController.m in Sources */,
+				7E551B671AC0AC7D00EB7FD8 /* PontuacaoManager.m in Sources */,
+				7E551B621AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.m in Sources */,
+				7E551B661AC0AC7D00EB7FD8 /* Pontuacao.m in Sources */,
+				7E551B681AC0AC7D00EB7FD8 /* QuizViewController.m in Sources */,
 				4EA614BF1AC094A400D94F8A /* AppDelegate.m in Sources */,
-				10B602261AC0A72600B6E7BF /* EnciclopediaTableViewController.m in Sources */,
 				4EA614BC1AC094A400D94F8A /* main.m in Sources */,
 				4EA614E21AC0955300D94F8A /* HomeViewController.m in Sources */,
 			);
@@ -367,6 +427,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Challenge",
+					2/Frameworks,
+				);
 				INFOPLIST_FILE = "Challenge 2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -377,6 +442,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Challenge",
+					2/Frameworks,
+				);
 				INFOPLIST_FILE = "Challenge 2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
