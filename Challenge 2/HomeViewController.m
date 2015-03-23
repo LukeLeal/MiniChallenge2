@@ -34,4 +34,12 @@
 }
 */
 
+- (IBAction)jogarBotao:(id)sender {
+}
+
+- (IBAction)pontuacaoBotao:(id)sender {
+}
+
+- (IBAction)enciclopediaBotao:(id)sender {
+}
 @end

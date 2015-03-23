@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface HomeViewController : UIViewController
+- (IBAction)jogarBotao:(id)sender;
+- (IBAction)pontuacaoBotao:(id)sender;
+- (IBAction)enciclopediaBotao:(id)sender;
 
 @end
