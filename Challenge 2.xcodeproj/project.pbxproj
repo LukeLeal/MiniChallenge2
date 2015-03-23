@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		10B602171AC098B200B6E7BF /* OpcoesJogosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B602151AC098B200B6E7BF /* OpcoesJogosViewController.m */; };
 		10B602181AC098B200B6E7BF /* OpcoesJogosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B602161AC098B200B6E7BF /* OpcoesJogosViewController.xib */; };
+		10B6021C1AC0A0C600B6E7BF /* jogoQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B6021A1AC0A0C600B6E7BF /* jogoQuizViewController.m */; };
+		10B6021D1AC0A0C600B6E7BF /* jogoQuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B6021B1AC0A0C600B6E7BF /* jogoQuizViewController.xib */; };
 		4EA614BC1AC094A400D94F8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA614BB1AC094A400D94F8A /* main.m */; };
 		4EA614BF1AC094A400D94F8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA614BE1AC094A400D94F8A /* AppDelegate.m */; };
 		4EA614C71AC094A400D94F8A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EA614C61AC094A400D94F8A /* Images.xcassets */; };
@@ -32,6 +34,9 @@
 		10B602141AC098B200B6E7BF /* OpcoesJogosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpcoesJogosViewController.h; path = ../OpcoesJogosViewController.h; sourceTree = "<group>"; };
 		10B602151AC098B200B6E7BF /* OpcoesJogosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpcoesJogosViewController.m; path = ../OpcoesJogosViewController.m; sourceTree = "<group>"; };
 		10B602161AC098B200B6E7BF /* OpcoesJogosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OpcoesJogosViewController.xib; path = ../OpcoesJogosViewController.xib; sourceTree = "<group>"; };
+		10B602191AC0A0C600B6E7BF /* jogoQuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jogoQuizViewController.h; path = ../jogoQuizViewController.h; sourceTree = "<group>"; };
+		10B6021A1AC0A0C600B6E7BF /* jogoQuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = jogoQuizViewController.m; path = ../jogoQuizViewController.m; sourceTree = "<group>"; };
+		10B6021B1AC0A0C600B6E7BF /* jogoQuizViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = jogoQuizViewController.xib; path = ../jogoQuizViewController.xib; sourceTree = "<group>"; };
 		4EA614B61AC094A400D94F8A /* Challenge 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Challenge 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EA614BA1AC094A400D94F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EA614BB1AC094A400D94F8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,6 +93,9 @@
 			children = (
 				4EA614BD1AC094A400D94F8A /* AppDelegate.h */,
 				4EA614BE1AC094A400D94F8A /* AppDelegate.m */,
+				10B602191AC0A0C600B6E7BF /* jogoQuizViewController.h */,
+				10B6021A1AC0A0C600B6E7BF /* jogoQuizViewController.m */,
+				10B6021B1AC0A0C600B6E7BF /* jogoQuizViewController.xib */,
 				10B602141AC098B200B6E7BF /* OpcoesJogosViewController.h */,
 				10B602151AC098B200B6E7BF /* OpcoesJogosViewController.m */,
 				10B602161AC098B200B6E7BF /* OpcoesJogosViewController.xib */,
@@ -211,6 +219,7 @@
 				4EA614CA1AC094A400D94F8A /* LaunchScreen.xib in Resources */,
 				4EA614C71AC094A400D94F8A /* Images.xcassets in Resources */,
 				4EA614E31AC0955300D94F8A /* HomeViewController.xib in Resources */,
+				10B6021D1AC0A0C600B6E7BF /* jogoQuizViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10B602171AC098B200B6E7BF /* OpcoesJogosViewController.m in Sources */,
+				10B6021C1AC0A0C600B6E7BF /* jogoQuizViewController.m in Sources */,
 				4EA614BF1AC094A400D94F8A /* AppDelegate.m in Sources */,
 				4EA614BC1AC094A400D94F8A /* main.m in Sources */,
 				4EA614E21AC0955300D94F8A /* HomeViewController.m in Sources */,
