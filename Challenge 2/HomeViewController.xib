@@ -7,7 +7,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
                 <outlet property="banner" destination="yMq-ln-i0b" id="qic-Dp-qnB"/>
+                <outlet property="enciclopedia" destination="yxm-Rw-1tQ" id="lPB-O5-7ix"/>
+                <outlet property="jogar" destination="voE-CT-vB9" id="rn4-0B-b3A"/>
                 <outlet property="logo" destination="BAD-DU-Bqp" id="svO-LB-Vz8"/>
+                <outlet property="pontuacao" destination="ekQ-xd-sun" id="YUt-z5-eA6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -128,6 +131,9 @@
                             <exclude reference="gtQ-AH-XNO"/>
                             <exclude reference="oMY-3G-bh2"/>
                         </mask>
+                    </variation>
+                    <variation key="widthClass=compact" ambiguous="YES">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
                     </variation>
                     <variation key="heightClass=compact-widthClass=regular">
                         <mask key="constraints">
