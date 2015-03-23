@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface HomeViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UIImageView *logo;
+
 - (IBAction)jogarBotao:(id)sender;
 - (IBAction)pontuacaoBotao:(id)sender;
 - (IBAction)enciclopediaBotao:(id)sender;
