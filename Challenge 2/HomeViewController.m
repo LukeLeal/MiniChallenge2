@@ -48,7 +48,8 @@
 }
 
 - (IBAction)pontuacaoBotao:(id)sender {
-//    Ir para tela de pontuação
+    PontuacaoViewController *ranking = [[PontuacaoViewController alloc]init];
+    [self.navigationController pushViewController:ranking animated:NO];
 }
 
 - (IBAction)enciclopediaBotao:(id)sender {

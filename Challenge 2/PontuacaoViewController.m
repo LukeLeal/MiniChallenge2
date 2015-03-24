@@ -18,6 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UINib *nib = [UINib nibWithNibName:@"PontuacaoTableViewCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"celulaPadrao"];
+    
     [tableView setDelegate:self];
     [tableView setDataSource:self];
 }
@@ -37,6 +41,9 @@
     NSInteger i = modoJogo.selectedSegmentIndex;
     
     PontuacaoTableViewCell *celula = [self.tableView dequeueReusableCellWithIdentifier:@"celulaPadrao"];
+    [celula.nome setText:@"Oi"];
+    [celula.pontos setText:@"Oi"];
+    [celula.avatar setImage:[UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
     
 //    switch (i) {
 //        case 0:
@@ -57,6 +64,10 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 105;
 }
 
 #pragma mark - Segmented Control

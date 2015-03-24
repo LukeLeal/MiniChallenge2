@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PontuacaoViewController.h"
 
 @interface HomeViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *jogar;
