@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PontuacaoViewController">
+            <connections>
+                <outlet property="modoJogo" destination="ndk-oc-eNo" id="ALY-zR-Pmv"/>
+                <outlet property="tableView" destination="vvW-pd-nY0" id="ORC-kf-FiJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vvW-pd-nY0">
+                    <rect key="frame" x="-8" y="152" width="600" height="448"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ndk-oc-eNo">
+                    <rect key="frame" x="231" y="89" width="123" height="29"/>
+                    <segments>
+                        <segment title="Quiz"/>
+                        <segment title="Memória"/>
+                    </segments>
+                    <connections>
+                        <action selector="trocaModoJogo:" destination="-1" eventType="valueChanged" id="EmX-Hd-eCV"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ndk-oc-eNo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="f8s-SJ-nQW"/>
+                <constraint firstAttribute="centerX" secondItem="ndk-oc-eNo" secondAttribute="centerX" id="hpc-Aa-dAk"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

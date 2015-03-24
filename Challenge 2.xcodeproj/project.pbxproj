@@ -10,6 +10,10 @@
 		10B602351AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B602331AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m */; };
 		10B602361AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B602341AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib */; };
 		24A3BB0F1AC1D7D700F7E698 /* img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24A3BB0E1AC1D7D700F7E698 /* img.jpg */; };
+		24A3BB131AC1DD8700F7E698 /* PontuacaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A3BB111AC1DD8700F7E698 /* PontuacaoViewController.m */; };
+		24A3BB141AC1DD8700F7E698 /* PontuacaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A3BB121AC1DD8700F7E698 /* PontuacaoViewController.xib */; };
+		24A3BB181AC1E16600F7E698 /* PontuacaoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A3BB161AC1E16600F7E698 /* PontuacaoTableViewCell.m */; };
+		24A3BB191AC1E16600F7E698 /* PontuacaoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A3BB171AC1E16600F7E698 /* PontuacaoTableViewCell.xib */; };
 		4EA614BC1AC094A400D94F8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA614BB1AC094A400D94F8A /* main.m */; };
 		4EA614BF1AC094A400D94F8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA614BE1AC094A400D94F8A /* AppDelegate.m */; };
 		4EA614C71AC094A400D94F8A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EA614C61AC094A400D94F8A /* Images.xcassets */; };
@@ -47,6 +51,12 @@
 		10B602331AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalheEnciclopediaViewController.m; sourceTree = "<group>"; };
 		10B602341AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetalheEnciclopediaViewController.xib; sourceTree = "<group>"; };
 		24A3BB0E1AC1D7D700F7E698 /* img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = img.jpg; path = Images.xcassets/img.jpg; sourceTree = "<group>"; };
+		24A3BB101AC1DD8700F7E698 /* PontuacaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PontuacaoViewController.h; sourceTree = "<group>"; };
+		24A3BB111AC1DD8700F7E698 /* PontuacaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PontuacaoViewController.m; sourceTree = "<group>"; };
+		24A3BB121AC1DD8700F7E698 /* PontuacaoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PontuacaoViewController.xib; sourceTree = "<group>"; };
+		24A3BB151AC1E16600F7E698 /* PontuacaoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PontuacaoTableViewCell.h; sourceTree = "<group>"; };
+		24A3BB161AC1E16600F7E698 /* PontuacaoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PontuacaoTableViewCell.m; sourceTree = "<group>"; };
+		24A3BB171AC1E16600F7E698 /* PontuacaoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PontuacaoTableViewCell.xib; sourceTree = "<group>"; };
 		4EA614B61AC094A400D94F8A /* Challenge 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Challenge 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EA614BA1AC094A400D94F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EA614BB1AC094A400D94F8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -222,6 +232,12 @@
 		7E551B501AC0AB0D00EB7FD8 /* Pontuação */ = {
 			isa = PBXGroup;
 			children = (
+				24A3BB101AC1DD8700F7E698 /* PontuacaoViewController.h */,
+				24A3BB111AC1DD8700F7E698 /* PontuacaoViewController.m */,
+				24A3BB121AC1DD8700F7E698 /* PontuacaoViewController.xib */,
+				24A3BB151AC1E16600F7E698 /* PontuacaoTableViewCell.h */,
+				24A3BB161AC1E16600F7E698 /* PontuacaoTableViewCell.m */,
+				24A3BB171AC1E16600F7E698 /* PontuacaoTableViewCell.xib */,
 			);
 			name = "Pontuação";
 			sourceTree = "<group>";
@@ -306,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24A3BB191AC1E16600F7E698 /* PontuacaoTableViewCell.xib in Resources */,
 				7E551B651AC0AC7D00EB7FD8 /* JogosViewController.xib in Resources */,
 				7E551B691AC0AC7D00EB7FD8 /* QuizViewController.xib in Resources */,
 				4EA614CA1AC094A400D94F8A /* LaunchScreen.xib in Resources */,
@@ -314,6 +331,7 @@
 				7E551B631AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.xib in Resources */,
 				4EA614C71AC094A400D94F8A /* Images.xcassets in Resources */,
 				4EA614E31AC0955300D94F8A /* HomeViewController.xib in Resources */,
+				24A3BB141AC1DD8700F7E698 /* PontuacaoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,10 +352,12 @@
 				7E551B641AC0AC7D00EB7FD8 /* JogosViewController.m in Sources */,
 				7EDF4A621AC1D5C100FFACD5 /* Doenca.m in Sources */,
 				7E551B671AC0AC7D00EB7FD8 /* PontuacaoManager.m in Sources */,
+				24A3BB181AC1E16600F7E698 /* PontuacaoTableViewCell.m in Sources */,
 				10B602351AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m in Sources */,
 				7EDF4A651AC1E3C900FFACD5 /* DoencaManager.m in Sources */,
 				7E551B621AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.m in Sources */,
 				7E551B661AC0AC7D00EB7FD8 /* Pontuacao.m in Sources */,
+				24A3BB131AC1DD8700F7E698 /* PontuacaoViewController.m in Sources */,
 				7E551B681AC0AC7D00EB7FD8 /* QuizViewController.m in Sources */,
 				4EA614BF1AC094A400D94F8A /* AppDelegate.m in Sources */,
 				4EA614BC1AC094A400D94F8A /* main.m in Sources */,
