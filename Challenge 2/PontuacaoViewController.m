@@ -42,13 +42,13 @@
 //        case 0:
 //            [celula.nome setText:];
 //            [celula.pontos setText:];
-//            [celula.avatar setImage:];
+//            [celula.avatar setImage:[UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
 //            break;
 //            
 //        case 2:
 //            [celula.nome setText:];
 //            [celula.pontos setText:];
-//            [celula.avatar setImage:];
+//            [celula.avatar setImage:[UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
 //            break;
 //    }
     

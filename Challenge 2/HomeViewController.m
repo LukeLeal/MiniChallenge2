@@ -22,9 +22,6 @@
     [logo setImage: [UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-}
-
 - (void)viewDidAppear:(BOOL)animated{
     [self animacao];
 }
