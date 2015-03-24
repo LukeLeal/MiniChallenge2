@@ -26,7 +26,7 @@
 		7E551B681AC0AC7D00EB7FD8 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B601AC0AC7D00EB7FD8 /* QuizViewController.m */; };
 		7E551B691AC0AC7D00EB7FD8 /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E551B611AC0AC7D00EB7FD8 /* QuizViewController.xib */; };
 		7EDF4A5B1AC1D0F500FFACD5 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDF4A5A1AC1D0F500FFACD5 /* iAd.framework */; };
-		7EDF4A5D1AC1D29C00FFACD5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDF4A5C1AC1D29C00FFACD5 /* Realm.framework */; };
+		7EDF4A5F1AC1D31500FFACD5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDF4A5E1AC1D31500FFACD5 /* Realm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +71,7 @@
 		7E551B601AC0AC7D00EB7FD8 /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
 		7E551B611AC0AC7D00EB7FD8 /* QuizViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuizViewController.xib; sourceTree = "<group>"; };
 		7EDF4A5A1AC1D0F500FFACD5 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		7EDF4A5C1AC1D29C00FFACD5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Challenge 2/Frameworks/Realm.framework"; sourceTree = "<group>"; };
+		7EDF4A5E1AC1D31500FFACD5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Challenge 2/Frameworks/Realm.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EDF4A5D1AC1D29C00FFACD5 /* Realm.framework in Frameworks */,
+				7EDF4A5F1AC1D31500FFACD5 /* Realm.framework in Frameworks */,
 				7EDF4A5B1AC1D0F500FFACD5 /* iAd.framework in Frameworks */,
 				7E551B541AC0AC5E00EB7FD8 /* libc++.dylib in Frameworks */,
 			);
@@ -98,7 +98,7 @@
 		4EA614AD1AC094A400D94F8A = {
 			isa = PBXGroup;
 			children = (
-				7EDF4A5C1AC1D29C00FFACD5 /* Realm.framework */,
+				7EDF4A5E1AC1D31500FFACD5 /* Realm.framework */,
 				7EDF4A5A1AC1D0F500FFACD5 /* iAd.framework */,
 				7E551B531AC0AC5E00EB7FD8 /* libc++.dylib */,
 				4EA614B81AC094A400D94F8A /* Challenge 2 */,
@@ -441,11 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Challenge",
-					2/Frameworks,
-				);
+				FRAMEWORK_SEARCH_PATHS = "./Frameworks/**";
 				INFOPLIST_FILE = "Challenge 2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -456,11 +452,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Challenge",
-					2/Frameworks,
-				);
+				FRAMEWORK_SEARCH_PATHS = "./Frameworks/**";
 				INFOPLIST_FILE = "Challenge 2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
