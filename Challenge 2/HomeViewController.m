@@ -19,13 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle:@"Home"];
+    [logo setImage: [UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    jogar.transform = CGAffineTransformMakeTranslation(0, 180);
-    pontuacao.transform = CGAffineTransformMakeTranslation(0, 180);
-    enciclopedia.transform = CGAffineTransformMakeTranslation(0, 180);
-    logo.transform = CGAffineTransformMakeTranslation(0, -180);
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -37,10 +34,10 @@
 
 - (void)animacao{
     [UIView animateWithDuration:1.0 delay:0 options:UIViewAnimationCurveEaseIn animations:^{
-        jogar.transform = CGAffineTransformMakeTranslation(0, -180);
-        pontuacao.transform = CGAffineTransformMakeTranslation(0, -180);
-        enciclopedia.transform = CGAffineTransformMakeTranslation(0, -180);
-        logo.transform = CGAffineTransformMakeTranslation(0, 180);
+        jogar.transform = CGAffineTransformMakeTranslation(0, -100);
+        pontuacao.transform = CGAffineTransformMakeTranslation(0, -100);
+        enciclopedia.transform = CGAffineTransformMakeTranslation(0, -100);
+        logo.transform = CGAffineTransformMakeTranslation(0, 100);
     } completion:^(BOOL finished) {
         
     }];

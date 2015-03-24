@@ -98,6 +98,23 @@
                         <action selector="enciclopediaBotao:" destination="-1" eventType="touchUpOutside" id="b9w-Mc-0Lo"/>
                     </connections>
                 </button>
+                <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yMq-ln-i0b">
+                    <rect key="frame" x="60" y="551" width="480" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="480" id="UgH-nz-irJ"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="UgH-nz-irJ"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
+                        <rect key="frame" x="160" y="363" width="480" height="32"/>
+                        <mask key="constraints">
+                            <include reference="UgH-nz-irJ"/>
+                        </mask>
+                    </variation>
+                </adBannerView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BAD-DU-Bqp">
                     <rect key="frame" x="186" y="128" width="240" height="128"/>
                     <constraints>
@@ -123,7 +140,8 @@
                             <include reference="gtQ-AH-XNO"/>
                         </mask>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
+                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="80" y="102" width="240" height="203"/>
                         <mask key="constraints">
                             <include reference="c3x-Ne-Ttc"/>
                             <include reference="oMY-3G-bh2"/>
@@ -131,23 +149,6 @@
                     </variation>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3hy-jU-9Cn"/>
-                <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yMq-ln-i0b">
-                    <rect key="frame" x="60" y="551" width="480" height="32"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="480" id="UgH-nz-irJ"/>
-                    </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="UgH-nz-irJ"/>
-                        </mask>
-                    </variation>
-                    <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
-                        <rect key="frame" x="160" y="363" width="480" height="32"/>
-                        <mask key="constraints">
-                            <include reference="UgH-nz-irJ"/>
-                        </mask>
-                    </variation>
-                </adBannerView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -159,7 +160,7 @@
                 <constraint firstItem="yxm-Rw-1tQ" firstAttribute="top" secondItem="ekQ-xd-sun" secondAttribute="bottom" constant="25" id="BuH-Hu-2sn"/>
                 <constraint firstAttribute="centerX" secondItem="yMq-ln-i0b" secondAttribute="centerX" id="Gln-7e-mEI"/>
                 <constraint firstItem="yMq-ln-i0b" firstAttribute="top" secondItem="yxm-Rw-1tQ" secondAttribute="bottom" constant="100" id="Kil-zE-hWU">
-                    <variation key="heightClass=regular-widthClass=compact" constant="85"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="-50"/>
                 </constraint>
                 <constraint firstAttribute="centerX" secondItem="yxm-Rw-1tQ" secondAttribute="centerX" id="M6Z-3V-IFh"/>
                 <constraint firstItem="yxm-Rw-1tQ" firstAttribute="leading" secondItem="ekQ-xd-sun" secondAttribute="trailing" constant="50" id="Po0-YA-NMx">
@@ -191,6 +192,9 @@
                 <constraint firstItem="ekQ-xd-sun" firstAttribute="leading" secondItem="voE-CT-vB9" secondAttribute="trailing" constant="50" id="puA-1g-mmi">
                     <variation key="heightClass=compact-widthClass=regular" constant="90"/>
                 </constraint>
+                <constraint firstItem="BAD-DU-Bqp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="rDP-js-ykR">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
                 <constraint firstItem="ekQ-xd-sun" firstAttribute="top" secondItem="voE-CT-vB9" secondAttribute="bottom" constant="65" id="sHS-pw-RiL">
                     <variation key="heightClass=regular-widthClass=compact" constant="75"/>
                 </constraint>
@@ -210,6 +214,7 @@
                     <exclude reference="jqS-29-bqT"/>
                     <exclude reference="dTH-l1-fkz"/>
                     <exclude reference="eHo-yF-Gfc"/>
+                    <exclude reference="rDP-js-ykR"/>
                     <exclude reference="zgt-qO-10U"/>
                     <exclude reference="RMM-ab-NFm"/>
                     <exclude reference="wXn-ff-gK2"/>
@@ -258,9 +263,10 @@
                     <exclude reference="553-UI-8cP"/>
                     <exclude reference="jqS-29-bqT"/>
                     <include reference="dTH-l1-fkz"/>
+                    <include reference="rDP-js-ykR"/>
                     <exclude reference="RMM-ab-NFm"/>
                     <include reference="wXn-ff-gK2"/>
-                    <include reference="yAy-vs-j9v"/>
+                    <exclude reference="yAy-vs-j9v"/>
                     <include reference="gDX-vb-92I"/>
                     <include reference="lum-XX-6PX"/>
                     <exclude reference="sHS-pw-RiL"/>
