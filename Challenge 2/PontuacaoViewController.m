@@ -22,8 +22,13 @@
     UINib *nib = [UINib nibWithNibName:@"PontuacaoTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"celulaPadrao"];
     
+    UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target: self action:@selector(back:)];
+    self.navigationItem.leftBarButtonItem=back;
+    
     [tableView setDelegate:self];
     [tableView setDataSource:self];
+    
+    [self setTitle:@"Pontuação"];
 }
 
 #pragma mark - Table
@@ -70,8 +75,18 @@
     return 105;
 }
 
+- (void) back:(id)sender{
+    [UIView animateWithDuration:0.75
+                     animations:^{
+                         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+                         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
+                     }];
+    [self.navigationController popViewControllerAnimated:NO];
+}
+
 #pragma mark - Segmented Control
 - (IBAction)trocaModoJogo:(id)sender {
     [self.tableView reloadData];
 }
+
 @end

@@ -30,7 +30,7 @@
 #pragma mark - Animação
 
 - (void)animacao{
-    [UIView animateWithDuration:1.0 delay:0 options:UIViewAnimationCurveEaseIn animations:^{
+    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationCurveEaseIn animations:^{
         jogar.transform = CGAffineTransformMakeTranslation(0, -100);
         pontuacao.transform = CGAffineTransformMakeTranslation(0, -100);
         enciclopedia.transform = CGAffineTransformMakeTranslation(0, -100);
@@ -49,6 +49,13 @@
 
 - (IBAction)pontuacaoBotao:(id)sender {
     PontuacaoViewController *ranking = [[PontuacaoViewController alloc]init];
+    
+    [UIView animateWithDuration:0.75
+                     animations:^{
+                         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+                         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+                     }];
+    
     [self.navigationController pushViewController:ranking animated:NO];
 }
 

@@ -17,8 +17,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vvW-pd-nY0">
-                    <rect key="frame" x="-8" y="152" width="600" height="448"/>
+                    <rect key="frame" x="-8" y="152" width="600" height="366"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="-8" y="152" width="600" height="545"/>
+                    </variation>
                 </tableView>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ndk-oc-eNo">
                     <rect key="frame" x="231" y="89" width="123" height="29"/>
@@ -30,12 +33,35 @@
                         <action selector="trocaModoJogo:" destination="-1" eventType="valueChanged" id="EmX-Hd-eCV"/>
                     </connections>
                 </segmentedControl>
+                <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="UcL-Vx-DEj">
+                    <rect key="frame" x="140" y="550" width="320" height="50"/>
+                </adBannerView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="centerX" secondItem="UcL-Vx-DEj" secondAttribute="centerX" id="IX3-eI-Gb3"/>
                 <constraint firstItem="ndk-oc-eNo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="f8s-SJ-nQW"/>
                 <constraint firstAttribute="centerX" secondItem="ndk-oc-eNo" secondAttribute="centerX" id="hpc-Aa-dAk"/>
+                <constraint firstAttribute="bottom" secondItem="UcL-Vx-DEj" secondAttribute="bottom" id="p3R-Zg-3bd"/>
             </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="UcL-Vx-DEj"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="IX3-eI-Gb3"/>
+                    <exclude reference="p3R-Zg-3bd"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <exclude reference="UcL-Vx-DEj"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="IX3-eI-Gb3"/>
+                    <include reference="p3R-Zg-3bd"/>
+                </mask>
+            </variation>
         </view>
     </objects>
 </document>
