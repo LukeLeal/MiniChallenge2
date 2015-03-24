@@ -6,7 +6,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
-                <outlet property="banner" destination="yMq-ln-i0b" id="qic-Dp-qnB"/>
                 <outlet property="enciclopedia" destination="yxm-Rw-1tQ" id="lPB-O5-7ix"/>
                 <outlet property="jogar" destination="voE-CT-vB9" id="rn4-0B-b3A"/>
                 <outlet property="logo" destination="BAD-DU-Bqp" id="svO-LB-Vz8"/>
@@ -73,23 +72,6 @@
                         <action selector="pontuacaoBotao:" destination="-1" eventType="touchUpInside" id="kbl-fZ-ZC1"/>
                     </connections>
                 </button>
-                <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yMq-ln-i0b">
-                    <rect key="frame" x="60" y="551" width="480" height="32"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="480" id="UgH-nz-irJ"/>
-                    </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="UgH-nz-irJ"/>
-                        </mask>
-                    </variation>
-                    <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
-                        <rect key="frame" x="160" y="363" width="480" height="32"/>
-                        <mask key="constraints">
-                            <include reference="UgH-nz-irJ"/>
-                        </mask>
-                    </variation>
-                </adBannerView>
                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxm-Rw-1tQ">
                     <rect key="frame" x="243" y="448" width="127" height="30"/>
                     <constraints>
@@ -149,6 +131,23 @@
                     </variation>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3hy-jU-9Cn"/>
+                <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yMq-ln-i0b">
+                    <rect key="frame" x="60" y="551" width="480" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="480" id="UgH-nz-irJ"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="UgH-nz-irJ"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
+                        <rect key="frame" x="160" y="363" width="480" height="32"/>
+                        <mask key="constraints">
+                            <include reference="UgH-nz-irJ"/>
+                        </mask>
+                    </variation>
+                </adBannerView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -160,7 +159,7 @@
                 <constraint firstItem="yxm-Rw-1tQ" firstAttribute="top" secondItem="ekQ-xd-sun" secondAttribute="bottom" constant="25" id="BuH-Hu-2sn"/>
                 <constraint firstAttribute="centerX" secondItem="yMq-ln-i0b" secondAttribute="centerX" id="Gln-7e-mEI"/>
                 <constraint firstItem="yMq-ln-i0b" firstAttribute="top" secondItem="yxm-Rw-1tQ" secondAttribute="bottom" constant="100" id="Kil-zE-hWU">
-                    <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="85"/>
                 </constraint>
                 <constraint firstAttribute="centerX" secondItem="yxm-Rw-1tQ" secondAttribute="centerX" id="M6Z-3V-IFh"/>
                 <constraint firstItem="yxm-Rw-1tQ" firstAttribute="leading" secondItem="ekQ-xd-sun" secondAttribute="trailing" constant="50" id="Po0-YA-NMx">
@@ -182,7 +181,7 @@
                 <constraint firstAttribute="centerX" secondItem="BAD-DU-Bqp" secondAttribute="centerX" id="eHo-yF-Gfc"/>
                 <constraint firstAttribute="centerX" secondItem="ekQ-xd-sun" secondAttribute="centerX" id="gDX-vb-92I"/>
                 <constraint firstAttribute="bottom" secondItem="yMq-ln-i0b" secondAttribute="bottom" constant="84" id="hSP-Pl-UjR">
-                    <variation key="heightClass=regular-widthClass=compact" constant="5"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                 </constraint>
                 <constraint firstAttribute="centerX" secondItem="3hy-jU-9Cn" secondAttribute="centerX" id="jqS-29-bqT"/>
                 <constraint firstItem="yMq-ln-i0b" firstAttribute="top" secondItem="yxm-Rw-1tQ" secondAttribute="bottom" constant="65" id="kvP-dG-ZcM"/>

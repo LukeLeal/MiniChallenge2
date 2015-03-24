@@ -18,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setTitle:@"Home"];
 }
 
 - (void)viewWillAppear:(BOOL)animated{

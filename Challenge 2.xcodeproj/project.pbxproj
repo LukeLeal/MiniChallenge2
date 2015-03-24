@@ -16,7 +16,6 @@
 		4EA614D61AC094A400D94F8A /* Challenge_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA614D51AC094A400D94F8A /* Challenge_2Tests.m */; };
 		4EA614E21AC0955300D94F8A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA614E01AC0955300D94F8A /* HomeViewController.m */; };
 		4EA614E31AC0955300D94F8A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA614E11AC0955300D94F8A /* HomeViewController.xib */; };
-		7E551B521AC0AC5800EB7FD8 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E551B511AC0AC5800EB7FD8 /* Realm.framework */; };
 		7E551B541AC0AC5E00EB7FD8 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E551B531AC0AC5E00EB7FD8 /* libc++.dylib */; };
 		7E551B621AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B561AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.m */; };
 		7E551B631AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E551B571AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.xib */; };
@@ -26,6 +25,8 @@
 		7E551B671AC0AC7D00EB7FD8 /* PontuacaoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B5E1AC0AC7D00EB7FD8 /* PontuacaoManager.m */; };
 		7E551B681AC0AC7D00EB7FD8 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B601AC0AC7D00EB7FD8 /* QuizViewController.m */; };
 		7E551B691AC0AC7D00EB7FD8 /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E551B611AC0AC7D00EB7FD8 /* QuizViewController.xib */; };
+		7EDF4A591AC1CD3F00FFACD5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDF4A581AC1CD3F00FFACD5 /* Realm.framework */; };
+		7EDF4A5B1AC1D0F500FFACD5 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDF4A5A1AC1D0F500FFACD5 /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +56,6 @@
 		4EA614DF1AC0955300D94F8A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		4EA614E01AC0955300D94F8A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		4EA614E11AC0955300D94F8A /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		7E551B511AC0AC5800EB7FD8 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Challenge 2/Frameworks/Realm.framework"; sourceTree = "<group>"; };
 		7E551B531AC0AC5E00EB7FD8 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		7E551B551AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnciclopediaTableViewController.h; sourceTree = "<group>"; };
 		7E551B561AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnciclopediaTableViewController.m; sourceTree = "<group>"; };
@@ -70,6 +70,8 @@
 		7E551B5F1AC0AC7D00EB7FD8 /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizViewController.h; sourceTree = "<group>"; };
 		7E551B601AC0AC7D00EB7FD8 /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
 		7E551B611AC0AC7D00EB7FD8 /* QuizViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuizViewController.xib; sourceTree = "<group>"; };
+		7EDF4A581AC1CD3F00FFACD5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Challenge 2/Frameworks/Realm.framework"; sourceTree = "<group>"; };
+		7EDF4A5A1AC1D0F500FFACD5 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +79,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EDF4A5B1AC1D0F500FFACD5 /* iAd.framework in Frameworks */,
+				7EDF4A591AC1CD3F00FFACD5 /* Realm.framework in Frameworks */,
 				7E551B541AC0AC5E00EB7FD8 /* libc++.dylib in Frameworks */,
-				7E551B521AC0AC5800EB7FD8 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +98,9 @@
 		4EA614AD1AC094A400D94F8A = {
 			isa = PBXGroup;
 			children = (
+				7EDF4A5A1AC1D0F500FFACD5 /* iAd.framework */,
+				7EDF4A581AC1CD3F00FFACD5 /* Realm.framework */,
 				7E551B531AC0AC5E00EB7FD8 /* libc++.dylib */,
-				7E551B511AC0AC5800EB7FD8 /* Realm.framework */,
 				4EA614B81AC094A400D94F8A /* Challenge 2 */,
 				4EA614D21AC094A400D94F8A /* Challenge 2Tests */,
 				4EA614B71AC094A400D94F8A /* Products */,
