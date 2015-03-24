@@ -10,12 +10,12 @@
 
 @implementation PontuacaoManager
 
-static PontuacaoManager *singleton = nil;
+static PontuacaoManager *singleton;
 static bool isFirstAccess = YES;
 
 #pragma mark - Pontuação
 
-+ (id)sharedInstance{
++ (id)sharedInstance {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         isFirstAccess = NO;

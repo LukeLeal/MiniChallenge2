@@ -28,6 +28,8 @@
 		7E551B691AC0AC7D00EB7FD8 /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E551B611AC0AC7D00EB7FD8 /* QuizViewController.xib */; };
 		7EDF4A5B1AC1D0F500FFACD5 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDF4A5A1AC1D0F500FFACD5 /* iAd.framework */; };
 		7EDF4A5F1AC1D31500FFACD5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDF4A5E1AC1D31500FFACD5 /* Realm.framework */; };
+		7EDF4A621AC1D5C100FFACD5 /* Doenca.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF4A611AC1D5C100FFACD5 /* Doenca.m */; };
+		7EDF4A651AC1E3C900FFACD5 /* DoencaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF4A641AC1E3C900FFACD5 /* DoencaManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,10 @@
 		7E551B611AC0AC7D00EB7FD8 /* QuizViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuizViewController.xib; sourceTree = "<group>"; };
 		7EDF4A5A1AC1D0F500FFACD5 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		7EDF4A5E1AC1D31500FFACD5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Challenge 2/Frameworks/Realm.framework"; sourceTree = "<group>"; };
+		7EDF4A601AC1D5C100FFACD5 /* Doenca.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doenca.h; sourceTree = "<group>"; };
+		7EDF4A611AC1D5C100FFACD5 /* Doenca.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doenca.m; sourceTree = "<group>"; };
+		7EDF4A631AC1E3C900FFACD5 /* DoencaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoencaManager.h; sourceTree = "<group>"; };
+		7EDF4A641AC1E3C900FFACD5 /* DoencaManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoencaManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,10 @@
 		7E551B4C1AC0AA8000EB7FD8 /* Entidades */ = {
 			isa = PBXGroup;
 			children = (
+				7EDF4A601AC1D5C100FFACD5 /* Doenca.h */,
+				7EDF4A611AC1D5C100FFACD5 /* Doenca.m */,
+				7EDF4A631AC1E3C900FFACD5 /* DoencaManager.h */,
+				7EDF4A641AC1E3C900FFACD5 /* DoencaManager.m */,
 				7E551B5B1AC0AC7D00EB7FD8 /* Pontuacao.h */,
 				7E551B5C1AC0AC7D00EB7FD8 /* Pontuacao.m */,
 				7E551B5D1AC0AC7D00EB7FD8 /* PontuacaoManager.h */,
@@ -322,8 +332,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E551B641AC0AC7D00EB7FD8 /* JogosViewController.m in Sources */,
+				7EDF4A621AC1D5C100FFACD5 /* Doenca.m in Sources */,
 				7E551B671AC0AC7D00EB7FD8 /* PontuacaoManager.m in Sources */,
 				10B602351AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m in Sources */,
+				7EDF4A651AC1E3C900FFACD5 /* DoencaManager.m in Sources */,
 				7E551B621AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.m in Sources */,
 				7E551B661AC0AC7D00EB7FD8 /* Pontuacao.m in Sources */,
 				7E551B681AC0AC7D00EB7FD8 /* QuizViewController.m in Sources */,
