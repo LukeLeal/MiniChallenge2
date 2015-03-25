@@ -7,6 +7,7 @@
 //
 
 #import "DetalheEnciclopediaViewController.h"
+#import "EnciclopediaViewController.h"
 #import "DoencaManager.h"
 #import "Doenca.h"
 
@@ -15,11 +16,19 @@
 @end
 
 @implementation DetalheEnciclopediaViewController
+@synthesize causa;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.informacoesDoenca setDelegate:self];
+    
+    
+    [_imagensDoenca setImage: [UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
+    
+//    causa.lineBreakMode = NSLineBreakByWordWrapping;
+//    causa.numberOfLines = 3;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,12 +38,31 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     
-    //descrição
+    //
     DoencaManager *doencaManager = [DoencaManager sharedInstance];
     Doenca *doenca = [doencaManager.doencas objectAtIndex:doencaManager.doencaAtual];
     
+    //titulo
+    [self setTitle:doenca.nome];
+    
+    //descrição
     [self.informacoesDoenca setText:doenca.descricao];
-    //[self.informacoesDoenca setUserInteractionEnabled:NO];
+    
+    //[self.informacoesDoenca setUserInteractionEnabled:NO]; //desabilitar edição.
+    
+    //causa
+    [self.causa setText:doenca.causa];
+    
+    //prevenção
+    [self.prevencao setText:doenca.prevencao];
+    
+    //sintomas
+    NSArray *a = doenca.sintomas;
+   // NSString *b = @"";
+    for(int i=0; i<a.count; i++){
+        [self.sintoma setText: [a objectAtIndex:i]];
+    }
+    
 }
 
 /*

@@ -83,6 +83,7 @@
     volta=false;
     DoencaManager *doencaManager = [DoencaManager sharedInstance];
     [doencaManager setDoencaAtual:(int)indexPath.row];
+    
     [self.navigationController pushViewController:[[DetalheEnciclopediaViewController alloc]init] animated:NO];
 }
 
