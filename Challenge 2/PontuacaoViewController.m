@@ -7,6 +7,8 @@
 //
 
 #import "PontuacaoViewController.h"
+#import "PontuacaoManager.h"
+#import "Pontuacao.h"
 
 @interface PontuacaoViewController ()
 
@@ -20,7 +22,7 @@
     [super viewDidLoad];
     
     UINib *nib = [UINib nibWithNibName:@"PontuacaoTableViewCell" bundle:nil];
-    [self.tableView registerNib:nib forCellReuseIdentifier:@"celulaPadrao"];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"PontuacaoCell"];
     
     [tableView setDelegate:self];
     [tableView setDataSource:self];
@@ -43,32 +45,35 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 100;
+    PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
+    if (modoJogo.selectedSegmentIndex == 0)
+        return pontuacaoManager.pontuacoesQuiz.count;
+    else if (modoJogo.selectedSegmentIndex == 1)
+        return pontuacaoManager.pontuacoesMemoria.count;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    NSInteger i = modoJogo.selectedSegmentIndex;
-    
-    PontuacaoTableViewCell *celula = [self.tableView dequeueReusableCellWithIdentifier:@"celulaPadrao"];
-    [celula.nome setText:@"Oi"];
-    [celula.pontos setText:@"Oi"];
-    [celula.avatar setImage:[UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
-    
-//    switch (i) {
-//        case 0:
-//            [celula.nome setText:];
-//            [celula.pontos setText:];
-//            [celula.avatar setImage:[UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
-//            break;
-//            
-//        case 2:
-//            [celula.nome setText:];
-//            [celula.pontos setText:];
-//            [celula.avatar setImage:[UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
-//            break;
-//    }
-    
+    PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
+    PontuacaoTableViewCell *celula = [self.tableView dequeueReusableCellWithIdentifier:@"PontuacaoCell"];
+    switch (modoJogo.selectedSegmentIndex) {
+        case 0:
+        {
+            Pontuacao *pontuacao = [pontuacaoManager.pontuacoesQuiz objectAtIndex:indexPath.row];
+            [celula.nome setText:pontuacao.nome];
+            [celula.pontos setText:[NSString stringWithFormat:@"%d", pontuacao.pontos]];
+            [celula.foto setImage:[UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
+            break;
+        }
+        case 1:
+        {
+            Pontuacao *pontuacao = [pontuacaoManager.pontuacoesMemoria objectAtIndex:indexPath.row];
+            [celula.nome setText:pontuacao.nome];
+            [celula.pontos setText:[NSString stringWithFormat:@"%d", pontuacao.pontos]];
+            [celula.foto setImage:[UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
+            break;
+        }
+    }
     return celula;
 }
 

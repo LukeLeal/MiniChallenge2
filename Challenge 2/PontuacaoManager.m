@@ -28,7 +28,11 @@ static bool isFirstAccess = YES;
     self = [super init];
     if (self) {
 #warning Implementar recuperação de dados pelo Realm.io
-        self.pontuacoes = [[NSMutableArray alloc] init];
+        self.pontuacoesQuiz = [[NSMutableArray alloc] initWithObjects:[[Pontuacao alloc] initWithNome:@"Samuel" andFoto:nil andPontos:10000],
+                           [[Pontuacao alloc] initWithNome:@"Leal" andFoto:nil andPontos:0],
+                           [[Pontuacao alloc] initWithNome:@"André" andFoto:nil andPontos:0],
+                           [[Pontuacao alloc] initWithNome:@"Amanda" andFoto:nil andPontos:0], nil];
+        self.pontuacoesMemoria = [[NSMutableArray alloc] init];
     }
     return self;
 }

@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface PontuacaoTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *avatar;
+
 @property (weak, nonatomic) IBOutlet UILabel *nome;
 @property (weak, nonatomic) IBOutlet UILabel *pontos;
+@property (weak, nonatomic) IBOutlet UIImageView *foto;
+
 
 @end

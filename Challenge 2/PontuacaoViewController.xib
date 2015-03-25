@@ -16,11 +16,25 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vvW-pd-nY0">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vvW-pd-nY0">
                     <rect key="frame" x="-8" y="152" width="600" height="366"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="-8" y="152" width="600" height="545"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="600" id="Rb3-u4-esT"/>
+                        <constraint firstAttribute="width" constant="400" id="UaB-db-sUw"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Rb3-u4-esT"/>
+                            <exclude reference="UaB-db-sUw"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                        <rect key="frame" x="0.0" y="147" width="400" height="466"/>
+                        <mask key="constraints">
+                            <include reference="Rb3-u4-esT"/>
+                            <include reference="UaB-db-sUw"/>
+                        </mask>
                     </variation>
                 </tableView>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ndk-oc-eNo">
@@ -33,6 +47,15 @@
                         <action selector="trocaModoJogo:" destination="-1" eventType="valueChanged" id="EmX-Hd-eCV"/>
                     </connections>
                 </segmentedControl>
+                <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DIl-NX-c97">
+                    <rect key="frame" x="147" y="550" width="320" height="50"/>
+                    <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                        <rect key="frame" x="39" y="750" width="320" height="50"/>
+                    </variation>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="K6f-70-uOp"/>
+                    </connections>
+                </adBannerView>
                 <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="UcL-Vx-DEj">
                     <rect key="frame" x="140" y="550" width="320" height="50"/>
                 </adBannerView>
@@ -40,15 +63,19 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="UcL-Vx-DEj" secondAttribute="centerX" id="IX3-eI-Gb3"/>
+                <constraint firstAttribute="bottom" secondItem="DIl-NX-c97" secondAttribute="bottom" id="VW0-so-m21"/>
                 <constraint firstItem="ndk-oc-eNo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="f8s-SJ-nQW"/>
                 <constraint firstAttribute="centerX" secondItem="ndk-oc-eNo" secondAttribute="centerX" id="hpc-Aa-dAk"/>
                 <constraint firstAttribute="bottom" secondItem="UcL-Vx-DEj" secondAttribute="bottom" id="p3R-Zg-3bd"/>
+                <constraint firstItem="vvW-pd-nY0" firstAttribute="top" secondItem="ndk-oc-eNo" secondAttribute="bottom" constant="15" id="s4m-rA-5UZ"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="UcL-Vx-DEj"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="s4m-rA-5UZ"/>
+                    <exclude reference="VW0-so-m21"/>
                     <exclude reference="IX3-eI-Gb3"/>
                     <exclude reference="p3R-Zg-3bd"/>
                 </mask>
@@ -58,6 +85,8 @@
                     <exclude reference="UcL-Vx-DEj"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="s4m-rA-5UZ"/>
+                    <include reference="VW0-so-m21"/>
                     <include reference="IX3-eI-Gb3"/>
                     <include reference="p3R-Zg-3bd"/>
                 </mask>

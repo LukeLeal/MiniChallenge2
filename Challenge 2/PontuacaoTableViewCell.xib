@@ -16,15 +16,15 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUo-v4-ReI">
                         <rect key="frame" x="99" y="20" width="208" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="uoV-hj-uSs"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="85" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AD9-KC-yZZ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pontos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AD9-KC-yZZ">
                         <rect key="frame" x="167" y="65" width="72" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="71.5" id="deN-UN-zAY"/>
-                        </constraints>
                         <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -39,18 +39,20 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="centerY" secondItem="NaS-Sa-9gZ" secondAttribute="centerY" id="8o0-rw-eCV"/>
-                    <constraint firstItem="UUo-v4-ReI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="12" id="CWL-GG-F6h"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="AD9-KC-yZZ" secondAttribute="trailing" constant="73" id="NKu-G1-9Qp"/>
-                    <constraint firstItem="UUo-v4-ReI" firstAttribute="leading" secondItem="NaS-Sa-9gZ" secondAttribute="trailing" constant="21" id="Rkx-9s-eeR"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="AD9-KC-yZZ" secondAttribute="bottom" constant="10.5" id="LYJ-rR-MYq"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="AD9-KC-yZZ" secondAttribute="trailing" constant="73" id="LiG-DB-SKY"/>
+                    <constraint firstItem="UUo-v4-ReI" firstAttribute="leading" secondItem="NaS-Sa-9gZ" secondAttribute="trailing" constant="21" id="PcQ-pE-c4L"/>
+                    <constraint firstItem="AD9-KC-yZZ" firstAttribute="leading" secondItem="NaS-Sa-9gZ" secondAttribute="trailing" constant="89" id="TSA-Oi-sra"/>
+                    <constraint firstItem="AD9-KC-yZZ" firstAttribute="top" secondItem="UUo-v4-ReI" secondAttribute="bottom" constant="24" id="UHe-tw-t4Z"/>
+                    <constraint firstItem="AD9-KC-yZZ" firstAttribute="centerX" secondItem="UUo-v4-ReI" secondAttribute="centerX" id="cig-uJ-36v"/>
                     <constraint firstItem="NaS-Sa-9gZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="dGu-SO-qgj"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="AD9-KC-yZZ" secondAttribute="bottom" constant="11.5" id="srv-jT-aez"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="UUo-v4-ReI" secondAttribute="trailing" constant="5" id="zXu-yt-3do"/>
+                    <constraint firstItem="UUo-v4-ReI" firstAttribute="top" secondItem="NaS-Sa-9gZ" secondAttribute="top" id="qxr-Vc-XnK"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="avatar" destination="NaS-Sa-9gZ" id="Gxl-Wf-Rt1"/>
-                <outlet property="nome" destination="UUo-v4-ReI" id="4z1-Uj-0a8"/>
-                <outlet property="pontos" destination="AD9-KC-yZZ" id="kYw-fm-GDY"/>
+                <outlet property="foto" destination="NaS-Sa-9gZ" id="2dm-nm-K5I"/>
+                <outlet property="nome" destination="UUo-v4-ReI" id="dN1-Ae-MQa"/>
+                <outlet property="pontos" destination="AD9-KC-yZZ" id="kQH-RN-hoA"/>
             </connections>
             <point key="canvasLocation" x="353.5" y="346"/>
         </tableViewCell>
