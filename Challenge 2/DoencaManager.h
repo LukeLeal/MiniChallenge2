@@ -11,6 +11,8 @@
 @interface DoencaManager : NSObject
 
 @property NSArray *doencas;
+@property int doencaAtual;
+
 -(NSArray *) nomeDoenca;
 +(DoencaManager *) sharedInstance;
 @end

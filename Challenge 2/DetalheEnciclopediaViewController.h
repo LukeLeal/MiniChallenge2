@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetalheEnciclopediaViewController : UIViewController
+@interface DetalheEnciclopediaViewController : UIViewController <UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *informacoesDoenca;
 @property (weak, nonatomic) IBOutlet UIImageView *imagensDoenca;

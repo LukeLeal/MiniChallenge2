@@ -25,19 +25,82 @@
                 </navigationBar>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nPf-wT-Sao">
                     <rect key="frame" x="138" y="86" width="324" height="242"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="324" id="coK-vw-cvI"/>
+                        <constraint firstAttribute="height" constant="242" id="wK8-br-mR0"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="coK-vw-cvI"/>
+                            <exclude reference="wK8-br-mR0"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                        <rect key="frame" x="38" y="94" width="324" height="242"/>
+                        <mask key="constraints">
+                            <include reference="coK-vw-cvI"/>
+                            <include reference="wK8-br-mR0"/>
+                        </mask>
+                    </variation>
                 </imageView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GHb-kC-bGh">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GHb-kC-bGh">
                     <rect key="frame" x="91" y="366" width="419" height="128"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="14" y="390" width="372" height="128"/>
+                    </variation>
                 </textView>
                 <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="T0x-ih-jnH">
                     <rect key="frame" x="281" y="263" width="39" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="39" id="LSf-Ya-wHe"/>
+                        <constraint firstAttribute="height" constant="37" id="Qs7-ZQ-lEa"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="LSf-Ya-wHe"/>
+                            <exclude reference="Qs7-ZQ-lEa"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                        <rect key="frame" x="181" y="289" width="39" height="37"/>
+                        <mask key="constraints">
+                            <include reference="LSf-Ya-wHe"/>
+                            <include reference="Qs7-ZQ-lEa"/>
+                        </mask>
+                    </variation>
                 </pageControl>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="nPf-wT-Sao" secondAttribute="trailing" constant="38" id="4Mc-Wv-rMt"/>
+                <constraint firstItem="T0x-ih-jnH" firstAttribute="top" secondItem="hhk-bj-L6a" secondAttribute="bottom" constant="200" id="5tT-qg-PIn">
+                    <variation key="heightClass=regular-widthClass=compact" constant="230"/>
+                </constraint>
+                <constraint firstItem="nPf-wT-Sao" firstAttribute="top" secondItem="hhk-bj-L6a" secondAttribute="bottom" constant="25" id="A3c-7n-PR1">
+                    <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                </constraint>
+                <constraint firstItem="nPf-wT-Sao" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="38" id="cbk-gD-mzv"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="4Mc-Wv-rMt"/>
+                    <exclude reference="A3c-7n-PR1"/>
+                    <exclude reference="cbk-gD-mzv"/>
+                    <exclude reference="5tT-qg-PIn"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <include reference="4Mc-Wv-rMt"/>
+                    <include reference="A3c-7n-PR1"/>
+                    <include reference="cbk-gD-mzv"/>
+                    <include reference="5tT-qg-PIn"/>
+                </mask>
+            </variation>
         </view>
     </objects>
 </document>

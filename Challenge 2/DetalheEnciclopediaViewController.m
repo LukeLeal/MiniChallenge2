@@ -7,6 +7,8 @@
 //
 
 #import "DetalheEnciclopediaViewController.h"
+#import "DoencaManager.h"
+#import "Doenca.h"
 
 @interface DetalheEnciclopediaViewController ()
 
@@ -17,11 +19,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self.informacoesDoenca setDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    
+    //descrição
+    DoencaManager *doencaManager = [DoencaManager sharedInstance];
+    Doenca *doenca = [doencaManager.doencas objectAtIndex:doencaManager.doencaAtual];
+    
+    [self.informacoesDoenca setText:doenca.descricao];
+    //[self.informacoesDoenca setUserInteractionEnabled:NO];
 }
 
 /*

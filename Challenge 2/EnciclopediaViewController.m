@@ -9,6 +9,7 @@
 #import "EnciclopediaViewController.h"
 #import "DoencaManager.h"
 #import "Doenca.h"
+#import "DetalheEnciclopediaViewController.h"
 
 @interface EnciclopediaViewController (){
     NSArray *doencas; 
@@ -24,6 +25,7 @@
     [self setTitle:@"Enciclopédia"];
     [_tabelaEnciclopedia setDelegate:self];
     [_tabelaEnciclopedia setDataSource:self];
+    
 }
 
 -(void) viewWillDisappear:(BOOL)animated{
@@ -53,14 +55,21 @@
     
     [celula.textLabel setText: [(Doenca *)[doencas objectAtIndex:(int) row] nome]];
     
+    //alterando a fonte da celula
+    celula.textLabel.font =[UIFont fontWithName:@"superclarendon" size:15.0f];
     
     return celula;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     doencas = [[DoencaManager sharedInstance] doencas];
-    return doencas.count;
+    return [doencas count];
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    DoencaManager *doencaManager = [DoencaManager sharedInstance];
+    [doencaManager setDoencaAtual:(int)indexPath.row];
+    [self.navigationController pushViewController:[[DetalheEnciclopediaViewController alloc]init] animated:NO];
+}
 
 @end
