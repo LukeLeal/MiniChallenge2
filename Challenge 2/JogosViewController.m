@@ -8,7 +8,9 @@
 
 #import "JogosViewController.h"
 
-@interface JogosViewController ()
+@interface JogosViewController (){
+    BOOL volta;
+}
 
 @end
 
@@ -18,12 +20,26 @@
     [super viewDidLoad];
 }
 
+- (void) viewWillAppear:(BOOL)animated{
+    volta = true;
+}
+
 -(void) viewWillDisappear:(BOOL)animated{
-    [UIView animateWithDuration:0.75
-                     animations:^{
-                         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-                         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
-                     }];
+    if(volta){
+        [UIView animateWithDuration:0.75
+                         animations:^{
+                             [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+                             [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
+                         }];
+    }
+    else{
+        [UIView animateWithDuration:0.75
+                         animations:^{
+                             [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+                             [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+                         }];
+        
+    }
 }
 
 
@@ -32,6 +48,7 @@
 }
 
 - (IBAction)quizBotao:(id)sender {
+    volta=false;
     QuizViewController *quiz = [[QuizViewController alloc]init];
     [self.navigationController pushViewController:quiz animated:NO];
 }
