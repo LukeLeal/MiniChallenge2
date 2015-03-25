@@ -12,7 +12,8 @@
 #import "DetalheEnciclopediaViewController.h"
 
 @interface EnciclopediaViewController (){
-    NSArray *doencas; 
+    NSArray *doencas;
+    BOOL volta;
 }
 
 @end
@@ -25,17 +26,29 @@
     [self setTitle:@"Enciclopédia"];
     [_tabelaEnciclopedia setDelegate:self];
     [_tabelaEnciclopedia setDataSource:self];
-    
+}
+
+- (void) viewWillAppear:(BOOL)animated{
+    volta = true;
 }
 
 -(void) viewWillDisappear:(BOOL)animated{
-    [UIView animateWithDuration:0.75
-                     animations:^{
-                         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-                         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
-                     }];
-}
+    if(volta){
+        [UIView animateWithDuration:0.75
+                         animations:^{
+                             [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+                             [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
+                         }];
+    }
+    else{
+        [UIView animateWithDuration:0.75
+                         animations:^{
+                             [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+                             [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+                         }];
 
+    }
+}
 
 
 #pragma mark - Table
@@ -67,6 +80,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    volta=false;
     DoencaManager *doencaManager = [DoencaManager sharedInstance];
     [doencaManager setDoencaAtual:(int)indexPath.row];
     [self.navigationController pushViewController:[[DetalheEnciclopediaViewController alloc]init] animated:NO];
