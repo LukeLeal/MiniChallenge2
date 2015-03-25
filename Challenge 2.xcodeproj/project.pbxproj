@@ -191,14 +191,11 @@
 		7E551B4C1AC0AA8000EB7FD8 /* Entidades */ = {
 			isa = PBXGroup;
 			children = (
-				7EDF4A601AC1D5C100FFACD5 /* Doenca.h */,
-				7EDF4A611AC1D5C100FFACD5 /* Doenca.m */,
-				7EDF4A631AC1E3C900FFACD5 /* DoencaManager.h */,
-				7EDF4A641AC1E3C900FFACD5 /* DoencaManager.m */,
-				7E551B5B1AC0AC7D00EB7FD8 /* Pontuacao.h */,
-				7E551B5C1AC0AC7D00EB7FD8 /* Pontuacao.m */,
-				7E551B5D1AC0AC7D00EB7FD8 /* PontuacaoManager.h */,
-				7E551B5E1AC0AC7D00EB7FD8 /* PontuacaoManager.m */,
+				7E7434241AC3413400EF26C4 /* Doenca */,
+				7E7434251AC3414C00EF26C4 /* Pontuacao */,
+				7E7434271AC3418000EF26C4 /* Quiz */,
+				7E7434291AC3418B00EF26C4 /* Memória */,
+				7E7434281AC3418500EF26C4 /* Roulette */,
 			);
 			name = Entidades;
 			sourceTree = "<group>";
@@ -209,9 +206,9 @@
 				7E551B581AC0AC7D00EB7FD8 /* JogosViewController.h */,
 				7E551B591AC0AC7D00EB7FD8 /* JogosViewController.m */,
 				7E551B5A1AC0AC7D00EB7FD8 /* JogosViewController.xib */,
-				7E551B5F1AC0AC7D00EB7FD8 /* QuizViewController.h */,
-				7E551B601AC0AC7D00EB7FD8 /* QuizViewController.m */,
-				7E551B611AC0AC7D00EB7FD8 /* QuizViewController.xib */,
+				7E74342A1AC341C900EF26C4 /* Quiz */,
+				7E74342B1AC341D500EF26C4 /* Memória */,
+				7E74342C1AC341DC00EF26C4 /* Roulette */,
 			);
 			name = Jogo;
 			sourceTree = "<group>";
@@ -240,6 +237,73 @@
 				24A3BB171AC1E16600F7E698 /* PontuacaoTableViewCell.xib */,
 			);
 			name = "Pontuação";
+			sourceTree = "<group>";
+		};
+		7E7434241AC3413400EF26C4 /* Doenca */ = {
+			isa = PBXGroup;
+			children = (
+				7EDF4A601AC1D5C100FFACD5 /* Doenca.h */,
+				7EDF4A611AC1D5C100FFACD5 /* Doenca.m */,
+				7EDF4A631AC1E3C900FFACD5 /* DoencaManager.h */,
+				7EDF4A641AC1E3C900FFACD5 /* DoencaManager.m */,
+			);
+			name = Doenca;
+			sourceTree = "<group>";
+		};
+		7E7434251AC3414C00EF26C4 /* Pontuacao */ = {
+			isa = PBXGroup;
+			children = (
+				7E551B5B1AC0AC7D00EB7FD8 /* Pontuacao.h */,
+				7E551B5C1AC0AC7D00EB7FD8 /* Pontuacao.m */,
+				7E551B5D1AC0AC7D00EB7FD8 /* PontuacaoManager.h */,
+				7E551B5E1AC0AC7D00EB7FD8 /* PontuacaoManager.m */,
+			);
+			name = Pontuacao;
+			sourceTree = "<group>";
+		};
+		7E7434271AC3418000EF26C4 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Quiz;
+			sourceTree = "<group>";
+		};
+		7E7434281AC3418500EF26C4 /* Roulette */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Roulette;
+			sourceTree = "<group>";
+		};
+		7E7434291AC3418B00EF26C4 /* Memória */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Memória";
+			sourceTree = "<group>";
+		};
+		7E74342A1AC341C900EF26C4 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				7E551B5F1AC0AC7D00EB7FD8 /* QuizViewController.h */,
+				7E551B601AC0AC7D00EB7FD8 /* QuizViewController.m */,
+				7E551B611AC0AC7D00EB7FD8 /* QuizViewController.xib */,
+			);
+			name = Quiz;
+			sourceTree = "<group>";
+		};
+		7E74342B1AC341D500EF26C4 /* Memória */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Memória";
+			sourceTree = "<group>";
+		};
+		7E74342C1AC341DC00EF26C4 /* Roulette */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Roulette;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
