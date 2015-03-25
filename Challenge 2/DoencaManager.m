@@ -44,4 +44,8 @@ static bool isFirstAccess = YES;
     return self;
 }
 
+- (NSArray *) nomeDoenca{
+    return _doencas;
+}
+
 @end

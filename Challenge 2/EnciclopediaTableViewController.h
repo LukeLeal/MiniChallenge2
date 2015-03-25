@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EnciclopediaTableViewController : UIViewController <UITabBarControllerDelegate, UITableViewDataSource>
+@interface EnciclopediaTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate>
+
 
 @property (weak, nonatomic) IBOutlet UITableView *tabelaEnciclopedia;
 

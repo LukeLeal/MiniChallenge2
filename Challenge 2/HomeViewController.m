@@ -60,7 +60,14 @@
 }
 
 - (IBAction)enciclopediaBotao:(id)sender {
-//    Ir para tela de enciclopédia
+//Ir para tela de enciclopédia
+    EnciclopediaTableViewController *enc =[[EnciclopediaTableViewController alloc]init];
+    [UIView animateWithDuration:0.75
+                     animations:^{
+                         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+                         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+                     }];
+    [self.navigationController pushViewController:enc animated:NO];
 }
 
 @end

@@ -95,7 +95,7 @@
                         </mask>
                     </variation>
                     <connections>
-                        <action selector="enciclopediaBotao:" destination="-1" eventType="touchUpOutside" id="b9w-Mc-0Lo"/>
+                        <action selector="enciclopediaBotao:" destination="-1" eventType="touchUpInside" id="IDy-KP-wHT"/>
                     </connections>
                 </button>
                 <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yMq-ln-i0b">

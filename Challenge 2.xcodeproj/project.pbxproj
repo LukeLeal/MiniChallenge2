@@ -219,12 +219,12 @@
 		7E551B4F1AC0AAF900EB7FD8 /* Enciclopédia */ = {
 			isa = PBXGroup;
 			children = (
-				10B602321AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.h */,
-				10B602331AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m */,
-				10B602341AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib */,
 				7E551B551AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.h */,
 				7E551B561AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.m */,
 				7E551B571AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.xib */,
+				10B602321AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.h */,
+				10B602331AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m */,
+				10B602341AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib */,
 			);
 			name = "Enciclopédia";
 			sourceTree = "<group>";
