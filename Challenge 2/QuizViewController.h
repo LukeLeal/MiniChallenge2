@@ -18,7 +18,8 @@
 //- (IBAction)alternativaCBotao:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imagemDoenca;
-@property (weak, nonatomic) IBOutlet UILabel *pergunta;
+//@property (weak, nonatomic) IBOutlet UILabel *pergunta;
+@property (weak, nonatomic) IBOutlet UITextView *pergunta;
 
 @property (weak, nonatomic) IBOutlet UILabel *tempo;
 @property (weak, nonatomic) IBOutlet UILabel *pontos;
