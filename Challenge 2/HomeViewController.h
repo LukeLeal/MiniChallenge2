@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PontuacaoViewController.h"
-#import "EnciclopediaTableViewController.h"
+#import "EnciclopediaViewController.h"
 #import "JogosViewController.h"
 
 @interface HomeViewController : UIViewController

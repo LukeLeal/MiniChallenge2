@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		107F6F7F1AC326B90077B065 /* EnciclopediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 107F6F7D1AC326B90077B065 /* EnciclopediaViewController.m */; };
+		107F6F801AC326B90077B065 /* EnciclopediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107F6F7E1AC326B90077B065 /* EnciclopediaViewController.xib */; };
 		10B602351AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B602331AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m */; };
 		10B602361AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B602341AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib */; };
 		24A3BB0F1AC1D7D700F7E698 /* img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24A3BB0E1AC1D7D700F7E698 /* img.jpg */; };
@@ -22,8 +24,6 @@
 		4EA614E21AC0955300D94F8A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA614E01AC0955300D94F8A /* HomeViewController.m */; };
 		4EA614E31AC0955300D94F8A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA614E11AC0955300D94F8A /* HomeViewController.xib */; };
 		7E551B541AC0AC5E00EB7FD8 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E551B531AC0AC5E00EB7FD8 /* libc++.dylib */; };
-		7E551B621AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B561AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.m */; };
-		7E551B631AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E551B571AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.xib */; };
 		7E551B641AC0AC7D00EB7FD8 /* JogosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B591AC0AC7D00EB7FD8 /* JogosViewController.m */; };
 		7E551B651AC0AC7D00EB7FD8 /* JogosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E551B5A1AC0AC7D00EB7FD8 /* JogosViewController.xib */; };
 		7E551B661AC0AC7D00EB7FD8 /* Pontuacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B5C1AC0AC7D00EB7FD8 /* Pontuacao.m */; };
@@ -47,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		107F6F7C1AC326B90077B065 /* EnciclopediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnciclopediaViewController.h; sourceTree = "<group>"; };
+		107F6F7D1AC326B90077B065 /* EnciclopediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnciclopediaViewController.m; sourceTree = "<group>"; };
+		107F6F7E1AC326B90077B065 /* EnciclopediaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnciclopediaViewController.xib; sourceTree = "<group>"; };
 		10B602321AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalheEnciclopediaViewController.h; sourceTree = "<group>"; };
 		10B602331AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalheEnciclopediaViewController.m; sourceTree = "<group>"; };
 		10B602341AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetalheEnciclopediaViewController.xib; sourceTree = "<group>"; };
@@ -71,9 +74,6 @@
 		4EA614E01AC0955300D94F8A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		4EA614E11AC0955300D94F8A /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		7E551B531AC0AC5E00EB7FD8 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
-		7E551B551AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnciclopediaTableViewController.h; sourceTree = "<group>"; };
-		7E551B561AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnciclopediaTableViewController.m; sourceTree = "<group>"; };
-		7E551B571AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnciclopediaTableViewController.xib; sourceTree = "<group>"; };
 		7E551B581AC0AC7D00EB7FD8 /* JogosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JogosViewController.h; sourceTree = "<group>"; };
 		7E551B591AC0AC7D00EB7FD8 /* JogosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JogosViewController.m; sourceTree = "<group>"; };
 		7E551B5A1AC0AC7D00EB7FD8 /* JogosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JogosViewController.xib; sourceTree = "<group>"; };
@@ -219,9 +219,9 @@
 		7E551B4F1AC0AAF900EB7FD8 /* Enciclopédia */ = {
 			isa = PBXGroup;
 			children = (
-				7E551B551AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.h */,
-				7E551B561AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.m */,
-				7E551B571AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.xib */,
+				107F6F7C1AC326B90077B065 /* EnciclopediaViewController.h */,
+				107F6F7D1AC326B90077B065 /* EnciclopediaViewController.m */,
+				107F6F7E1AC326B90077B065 /* EnciclopediaViewController.xib */,
 				10B602321AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.h */,
 				10B602331AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m */,
 				10B602341AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib */,
@@ -327,8 +327,8 @@
 				7E551B691AC0AC7D00EB7FD8 /* QuizViewController.xib in Resources */,
 				4EA614CA1AC094A400D94F8A /* LaunchScreen.xib in Resources */,
 				24A3BB0F1AC1D7D700F7E698 /* img.jpg in Resources */,
+				107F6F801AC326B90077B065 /* EnciclopediaViewController.xib in Resources */,
 				10B602361AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib in Resources */,
-				7E551B631AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.xib in Resources */,
 				4EA614C71AC094A400D94F8A /* Images.xcassets in Resources */,
 				4EA614E31AC0955300D94F8A /* HomeViewController.xib in Resources */,
 				24A3BB141AC1DD8700F7E698 /* PontuacaoViewController.xib in Resources */,
@@ -355,10 +355,10 @@
 				24A3BB181AC1E16600F7E698 /* PontuacaoTableViewCell.m in Sources */,
 				10B602351AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m in Sources */,
 				7EDF4A651AC1E3C900FFACD5 /* DoencaManager.m in Sources */,
-				7E551B621AC0AC7D00EB7FD8 /* EnciclopediaTableViewController.m in Sources */,
 				7E551B661AC0AC7D00EB7FD8 /* Pontuacao.m in Sources */,
 				24A3BB131AC1DD8700F7E698 /* PontuacaoViewController.m in Sources */,
 				7E551B681AC0AC7D00EB7FD8 /* QuizViewController.m in Sources */,
+				107F6F7F1AC326B90077B065 /* EnciclopediaViewController.m in Sources */,
 				4EA614BF1AC094A400D94F8A /* AppDelegate.m in Sources */,
 				4EA614BC1AC094A400D94F8A /* main.m in Sources */,
 				4EA614E21AC0955300D94F8A /* HomeViewController.m in Sources */,

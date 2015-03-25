@@ -65,7 +65,7 @@
 
 - (IBAction)enciclopediaBotao:(id)sender {
 //Ir para tela de enciclopédia
-    EnciclopediaTableViewController *enc =[[EnciclopediaTableViewController alloc]init];
+    EnciclopediaViewController *enc =[[EnciclopediaViewController alloc]init];
     [self animacaoTransicao];
     [self.navigationController pushViewController:enc animated:NO];
 }
