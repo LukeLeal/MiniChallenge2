@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PontuacaoViewController.h"
 #import "EnciclopediaTableViewController.h"
+#import "JogosViewController.h"
 
 @interface HomeViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *jogar;

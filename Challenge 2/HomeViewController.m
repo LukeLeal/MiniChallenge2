@@ -40,33 +40,33 @@
     }];
 }
 
-
-#pragma mark - Métodos dos botões
-
-- (IBAction)jogarBotao:(id)sender {
-//    Ir para tela de escolha de jogos
-}
-
-- (IBAction)pontuacaoBotao:(id)sender {
-    PontuacaoViewController *ranking = [[PontuacaoViewController alloc]init];
-    
+- (void)animacaoTransicao{
     [UIView animateWithDuration:0.75
                      animations:^{
                          [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
                          [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
                      }];
-    
+}
+
+
+#pragma mark - Métodos dos botões
+
+- (IBAction)jogarBotao:(id)sender {
+    JogosViewController *jogos = [[JogosViewController alloc]init];
+    [self animacaoTransicao];
+    [self.navigationController pushViewController:jogos animated:NO];
+}
+
+- (IBAction)pontuacaoBotao:(id)sender {
+    PontuacaoViewController *ranking = [[PontuacaoViewController alloc]init];
+    [self animacaoTransicao];
     [self.navigationController pushViewController:ranking animated:NO];
 }
 
 - (IBAction)enciclopediaBotao:(id)sender {
 //Ir para tela de enciclopédia
     EnciclopediaTableViewController *enc =[[EnciclopediaTableViewController alloc]init];
-    [UIView animateWithDuration:0.75
-                     animations:^{
-                         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-                         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
-                     }];
+    [self animacaoTransicao];
     [self.navigationController pushViewController:enc animated:NO];
 }
 

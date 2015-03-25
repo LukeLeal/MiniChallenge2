@@ -22,7 +22,9 @@
     UINib *nib = [UINib nibWithNibName:@"PontuacaoTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"celulaPadrao"];
     
-    UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target: self action:@selector(back:)];
+    UIImage *img = [UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"Home.png" ofType:nil]];
+    
+    UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithImage:img style:UIBarButtonItemStylePlain target: self action:@selector(back:)];
     self.navigationItem.leftBarButtonItem=back;
     
     [tableView setDelegate:self];
