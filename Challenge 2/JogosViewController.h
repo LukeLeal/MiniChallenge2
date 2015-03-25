@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QuizViewController.h"
 
 @interface JogosViewController : UIViewController
 

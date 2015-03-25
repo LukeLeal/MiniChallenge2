@@ -16,6 +16,8 @@
 		24A3BB141AC1DD8700F7E698 /* PontuacaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A3BB121AC1DD8700F7E698 /* PontuacaoViewController.xib */; };
 		24A3BB181AC1E16600F7E698 /* PontuacaoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A3BB161AC1E16600F7E698 /* PontuacaoTableViewCell.m */; };
 		24A3BB191AC1E16600F7E698 /* PontuacaoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A3BB171AC1E16600F7E698 /* PontuacaoTableViewCell.xib */; };
+		4E57BBAF1AC342AD00CB1869 /* Pergunta.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E57BBAE1AC342AD00CB1869 /* Pergunta.m */; };
+		4E57BBB21AC342C800CB1869 /* QuizManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E57BBB11AC342C800CB1869 /* QuizManager.m */; };
 		4EA614BC1AC094A400D94F8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA614BB1AC094A400D94F8A /* main.m */; };
 		4EA614BF1AC094A400D94F8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA614BE1AC094A400D94F8A /* AppDelegate.m */; };
 		4EA614C71AC094A400D94F8A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EA614C61AC094A400D94F8A /* Images.xcassets */; };
@@ -60,6 +62,10 @@
 		24A3BB151AC1E16600F7E698 /* PontuacaoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PontuacaoTableViewCell.h; sourceTree = "<group>"; };
 		24A3BB161AC1E16600F7E698 /* PontuacaoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PontuacaoTableViewCell.m; sourceTree = "<group>"; };
 		24A3BB171AC1E16600F7E698 /* PontuacaoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PontuacaoTableViewCell.xib; sourceTree = "<group>"; };
+		4E57BBAD1AC342AD00CB1869 /* Pergunta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pergunta.h; sourceTree = "<group>"; };
+		4E57BBAE1AC342AD00CB1869 /* Pergunta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pergunta.m; sourceTree = "<group>"; };
+		4E57BBB01AC342C800CB1869 /* QuizManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizManager.h; sourceTree = "<group>"; };
+		4E57BBB11AC342C800CB1869 /* QuizManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizManager.m; sourceTree = "<group>"; };
 		4EA614B61AC094A400D94F8A /* Challenge 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Challenge 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EA614BA1AC094A400D94F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EA614BB1AC094A400D94F8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -264,6 +270,10 @@
 		7E7434271AC3418000EF26C4 /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				4E57BBAD1AC342AD00CB1869 /* Pergunta.h */,
+				4E57BBAE1AC342AD00CB1869 /* Pergunta.m */,
+				4E57BBB01AC342C800CB1869 /* QuizManager.h */,
+				4E57BBB11AC342C800CB1869 /* QuizManager.m */,
 			);
 			name = Quiz;
 			sourceTree = "<group>";
@@ -420,10 +430,12 @@
 				10B602351AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m in Sources */,
 				7EDF4A651AC1E3C900FFACD5 /* DoencaManager.m in Sources */,
 				7E551B661AC0AC7D00EB7FD8 /* Pontuacao.m in Sources */,
+				4E57BBAF1AC342AD00CB1869 /* Pergunta.m in Sources */,
 				24A3BB131AC1DD8700F7E698 /* PontuacaoViewController.m in Sources */,
 				7E551B681AC0AC7D00EB7FD8 /* QuizViewController.m in Sources */,
 				107F6F7F1AC326B90077B065 /* EnciclopediaViewController.m in Sources */,
 				4EA614BF1AC094A400D94F8A /* AppDelegate.m in Sources */,
+				4E57BBB21AC342C800CB1869 /* QuizManager.m in Sources */,
 				4EA614BC1AC094A400D94F8A /* main.m in Sources */,
 				4EA614E21AC0955300D94F8A /* HomeViewController.m in Sources */,
 			);

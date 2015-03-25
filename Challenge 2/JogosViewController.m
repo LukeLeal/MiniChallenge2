@@ -32,6 +32,8 @@
 }
 
 - (IBAction)quizBotao:(id)sender {
+    QuizViewController *quiz = [[QuizViewController alloc]init];
+    [self.navigationController pushViewController:quiz animated:NO];
 }
 
 - (IBAction)rouletteBotao:(id)sender {
