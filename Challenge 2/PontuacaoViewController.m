@@ -22,18 +22,21 @@
     UINib *nib = [UINib nibWithNibName:@"PontuacaoTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"celulaPadrao"];
     
-    UIImage *img = [UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"Home.png" ofType:nil]];
-    
-    UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithImage:img style:UIBarButtonItemStylePlain target: self action:@selector(back:)];
-    self.navigationItem.leftBarButtonItem=back;
-    
     [tableView setDelegate:self];
     [tableView setDataSource:self];
     
     [self setTitle:@"Pontuação"];
 }
 
-#pragma mark - Table
+-(void) viewWillDisappear:(BOOL)animated{
+    [UIView animateWithDuration:0.75
+                     animations:^{
+                         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+                         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
+                     }];
+}
+
+#pragma mark - Tabela
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
@@ -75,15 +78,6 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 105;
-}
-
-- (void) back:(id)sender{
-    [UIView animateWithDuration:0.75
-                     animations:^{
-                         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-                         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
-                     }];
-    [self.navigationController popViewControllerAnimated:NO];
 }
 
 #pragma mark - Segmented Control

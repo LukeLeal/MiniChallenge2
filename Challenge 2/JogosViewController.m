@@ -16,13 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    UIImage *img = [UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"Home.png" ofType:nil]];
-    
-    UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithImage:img style:UIBarButtonItemStylePlain target: self action:@selector(back:)];
-    self.navigationItem.leftBarButtonItem=back;
 }
 
+-(void) viewWillDisappear:(BOOL)animated{
+    [UIView animateWithDuration:0.75
+                     animations:^{
+                         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+                         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
+                     }];
+}
+
+
+#pragma mark - Ações de botões
 - (IBAction)memoriaBotao:(id)sender {
 }
 
@@ -30,14 +35,5 @@
 }
 
 - (IBAction)rouletteBotao:(id)sender {
-}
-
-- (void) back:(id)sender{
-    [UIView animateWithDuration:0.75
-                     animations:^{
-                         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-                         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
-                     }];
-    [self.navigationController popViewControllerAnimated:NO];
 }
 @end
