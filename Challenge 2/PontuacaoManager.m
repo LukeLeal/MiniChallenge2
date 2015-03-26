@@ -44,8 +44,17 @@ static bool isFirstAccess = YES;
     [realm commitWriteTransaction];
 }
 
-- (void)addPontuacaoMemoria {
-    
+- (NSArray *)sortedPontuacoes {
+    return [self.pontuacoes sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        int first, second;
+        first = [(Pontuacao *)obj1 pontos];
+        second = [(Pontuacao *)obj2 pontos];
+        if (first > second)
+            return NSOrderedAscending;
+        if (second > first)
+            return NSOrderedDescending;
+        return NSOrderedSame;
+    }];
 }
 
 @end

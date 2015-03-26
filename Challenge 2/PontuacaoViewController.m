@@ -33,7 +33,7 @@
     [self setTitle:@"Pontuação"];
     
     PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
-    for (Pontuacao *pontuacao in pontuacaoManager.pontuacoes) {
+    for (Pontuacao *pontuacao in [pontuacaoManager sortedPontuacoes]) {
         if ([pontuacao.categoria isEqualToString:@"Quiz"])
             [pontuacoesQuiz addObject:pontuacao];
         else
@@ -64,7 +64,6 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
     PontuacaoTableViewCell *celula = [self.tableView dequeueReusableCellWithIdentifier:@"PontuacaoCell"];
     switch (modoJogo.selectedSegmentIndex) {
         case 0:

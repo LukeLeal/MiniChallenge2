@@ -14,5 +14,6 @@
 @property NSMutableArray *pontuacoes;
 
 + (PontuacaoManager *)sharedInstance;
+- (NSArray *)sortedPontuacoes;
 
 @end

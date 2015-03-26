@@ -36,8 +36,7 @@
                     <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="130" y="249" width="96" height="49"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                        <rect key="frame" x="70" y="603" width="260" height="49"/>
+                    <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
                             <include reference="biu-ZW-d2M"/>
                         </mask>
@@ -64,8 +63,7 @@
                     <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="316" y="249" width="168" height="49"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                        <rect key="frame" x="70" y="677" width="260" height="49"/>
+                    <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
                             <include reference="IGM-wv-U4a"/>
                         </mask>
@@ -91,8 +89,7 @@
                     <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="534" y="231" width="205" height="67"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                        <rect key="frame" x="70" y="751" width="260" height="49"/>
+                    <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
                             <include reference="dTp-XU-ruj"/>
                         </mask>
@@ -125,8 +122,7 @@
                             <include reference="gtQ-AH-XNO"/>
                         </mask>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                        <rect key="frame" x="80" y="102" width="240" height="203"/>
+                    <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
                             <include reference="c3x-Ne-Ttc"/>
                             <include reference="oMY-3G-bh2"/>

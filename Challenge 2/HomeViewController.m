@@ -30,7 +30,7 @@
 #pragma mark - Animação
 
 - (void)animacao{
-    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationCurveEaseIn animations:^{
+    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
         jogar.transform = CGAffineTransformMakeTranslation(0, -120);
         pontuacao.transform = CGAffineTransformMakeTranslation(0, -120);
         enciclopedia.transform = CGAffineTransformMakeTranslation(0, -120);
