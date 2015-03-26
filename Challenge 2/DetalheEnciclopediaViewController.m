@@ -60,6 +60,7 @@
     for(int i=0; i<doenca.sintomas.count; i++)
         [self.sintoma setText: [doenca.sintomas objectAtIndex:i]];
     
+    
 }
 
 - (void)next:(id)sender {
