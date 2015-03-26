@@ -11,7 +11,9 @@
 #import "DoencaManager.h"
 #import "Doenca.h"
 
-@interface DetalheEnciclopediaViewController ()
+@interface DetalheEnciclopediaViewController (){
+    BOOL volta;
+}
 
 @end
 
@@ -59,8 +61,11 @@
     //sintomas
     for(int i=0; i<doenca.sintomas.count; i++)
         [self.sintoma setText: [doenca.sintomas objectAtIndex:i]];
-    
-    
+    volta=true;
+}
+
+- (void) viewWillDisappear:(BOOL)animated{
+    [self animacao];
 }
 
 - (void)next:(id)sender {
@@ -72,6 +77,8 @@
     NSMutableArray *newViewControllers = [[NSMutableArray alloc] initWithArray:self.navigationController.viewControllers];
     [newViewControllers removeLastObject];
     [newViewControllers addObject:[[DetalheEnciclopediaViewController alloc] init]];
+    volta=false;
+    [self animacao];
     [self.navigationController setViewControllers:newViewControllers];
 }
 
@@ -84,7 +91,29 @@
     NSMutableArray *newViewControllers = [[NSMutableArray alloc] initWithArray:self.navigationController.viewControllers];
     [newViewControllers removeLastObject];
     [newViewControllers addObject:[[DetalheEnciclopediaViewController alloc] init]];
+    volta=true;
+    [self animacao];
     [self.navigationController setViewControllers:newViewControllers];
+}
+
+
+#pragma mark - Animação
+
+- (void)animacao{
+    if (volta){
+        [UIView animateWithDuration:0.75
+                         animations:^{
+                             [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+                             [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
+                         }];
+    }
+    else{
+        [UIView animateWithDuration:0.75
+                         animations:^{
+                             [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+                             [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+                         }];
+    }
 }
 
 @end
