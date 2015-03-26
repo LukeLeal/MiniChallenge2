@@ -27,6 +27,7 @@ static bool isFirstAccess = YES;
 - (instancetype)init {
     self = [super init];
     if (self) {
+        self.pontuacaoAtual = [[Pontuacao alloc] init];
         self.pontuacoes = [[NSMutableArray alloc] init];
         RLMResults *results = [Pontuacao allObjects];
         for (Pontuacao *pontuacao in results)

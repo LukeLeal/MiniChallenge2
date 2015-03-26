@@ -14,9 +14,11 @@
     self = [super init];
     if (self) {
         _perguntas = [[NSMutableArray alloc] initWithObjects:
-                      [[Pergunta alloc] init:@"P 1" withAlternativas:@[@"Certo", @"bvadvas", @"casfafw"]],
-                      [[Pergunta alloc] init:@"P 2" withAlternativas:@[@"6", @"7", @"8"]],
-                      //[[Pergunta alloc] init:<#(NSString *)#> withCorreto:<#(NSString *)#> withAlternativas:<#(NSArray *)#>]
+                      [[Pergunta alloc] init:@"Quais destes são sintomas da pneumonia?" withAlternativas:@[@"Falta de ar e bolhas avermelhadas na pele", @"Ardência nos olhos e rigidez na nuca", @"Febre alta e dor no tórax"]],
+                      [[Pergunta alloc] init:@"Como a aids ataca o corpo humano?" withAlternativas:@[@"Atacando o sistema imunológico e destruindo os glóbulos brancos", @"Inflamando as meninges, membranas que recobrem o cérebro", @"Infeccionando a cavidade abdominal"]],
+                      [[Pergunta alloc] init:@"Qual destas é uma medida contra a meningite?" withAlternativas:@[@"Vacina", @"Remoção da apêndice", @"Limpar frequentemente as mãos"]],
+                      [[Pergunta alloc] init:@"Qual destas doenças pode infectar alguém por uma lesão na pele?" withAlternativas:@[@"Tétano", @"Alzheimer", @"Apendicite"]],
+                      //[[Pergunta alloc] init:@"" withAlternativas:@[@"", @"", @""]]
                       nil];
         
         for (Pergunta *p in _perguntas) {//Embaralha a ordem das alternativas de cada pergunta

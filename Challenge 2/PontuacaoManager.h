@@ -12,8 +12,10 @@
 @interface PontuacaoManager : NSObject
 
 @property NSMutableArray *pontuacoes;
+@property Pontuacao *pontuacaoAtual;
 
 + (PontuacaoManager *)sharedInstance;
+- (void)addPontuacao:(Pontuacao *)pontuacao;
 - (NSArray *)sortedPontuacoes;
 
 @end

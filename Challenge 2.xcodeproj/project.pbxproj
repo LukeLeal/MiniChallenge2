@@ -18,6 +18,8 @@
 		24A3BB191AC1E16600F7E698 /* PontuacaoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A3BB171AC1E16600F7E698 /* PontuacaoTableViewCell.xib */; };
 		4E57BBAF1AC342AD00CB1869 /* Pergunta.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E57BBAE1AC342AD00CB1869 /* Pergunta.m */; };
 		4E57BBB21AC342C800CB1869 /* QuizManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E57BBB11AC342C800CB1869 /* QuizManager.m */; };
+		4E7D5FBF1AC49392009C8367 /* SalvarPontuacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D5FBD1AC49392009C8367 /* SalvarPontuacao.m */; };
+		4E7D5FC01AC49392009C8367 /* SalvarPontuacao.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E7D5FBE1AC49392009C8367 /* SalvarPontuacao.xib */; };
 		4EA614BC1AC094A400D94F8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA614BB1AC094A400D94F8A /* main.m */; };
 		4EA614BF1AC094A400D94F8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA614BE1AC094A400D94F8A /* AppDelegate.m */; };
 		4EA614C71AC094A400D94F8A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EA614C61AC094A400D94F8A /* Images.xcassets */; };
@@ -66,6 +68,9 @@
 		4E57BBAE1AC342AD00CB1869 /* Pergunta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pergunta.m; sourceTree = "<group>"; };
 		4E57BBB01AC342C800CB1869 /* QuizManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizManager.h; sourceTree = "<group>"; };
 		4E57BBB11AC342C800CB1869 /* QuizManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizManager.m; sourceTree = "<group>"; };
+		4E7D5FBC1AC49392009C8367 /* SalvarPontuacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalvarPontuacao.h; sourceTree = "<group>"; };
+		4E7D5FBD1AC49392009C8367 /* SalvarPontuacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalvarPontuacao.m; sourceTree = "<group>"; };
+		4E7D5FBE1AC49392009C8367 /* SalvarPontuacao.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SalvarPontuacao.xib; sourceTree = "<group>"; };
 		4EA614B61AC094A400D94F8A /* Challenge 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Challenge 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EA614BA1AC094A400D94F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EA614BB1AC094A400D94F8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -212,6 +217,9 @@
 				7E551B581AC0AC7D00EB7FD8 /* JogosViewController.h */,
 				7E551B591AC0AC7D00EB7FD8 /* JogosViewController.m */,
 				7E551B5A1AC0AC7D00EB7FD8 /* JogosViewController.xib */,
+				4E7D5FBC1AC49392009C8367 /* SalvarPontuacao.h */,
+				4E7D5FBD1AC49392009C8367 /* SalvarPontuacao.m */,
+				4E7D5FBE1AC49392009C8367 /* SalvarPontuacao.xib */,
 				7E74342A1AC341C900EF26C4 /* Quiz */,
 				7E74342B1AC341D500EF26C4 /* Memória */,
 				7E74342C1AC341DC00EF26C4 /* Roulette */,
@@ -397,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24A3BB191AC1E16600F7E698 /* PontuacaoTableViewCell.xib in Resources */,
+				4E7D5FC01AC49392009C8367 /* SalvarPontuacao.xib in Resources */,
 				7E551B651AC0AC7D00EB7FD8 /* JogosViewController.xib in Resources */,
 				7E551B691AC0AC7D00EB7FD8 /* QuizViewController.xib in Resources */,
 				4EA614CA1AC094A400D94F8A /* LaunchScreen.xib in Resources */,
@@ -438,6 +447,7 @@
 				4E57BBB21AC342C800CB1869 /* QuizManager.m in Sources */,
 				4EA614BC1AC094A400D94F8A /* main.m in Sources */,
 				4EA614E21AC0955300D94F8A /* HomeViewController.m in Sources */,
+				4E7D5FBF1AC49392009C8367 /* SalvarPontuacao.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

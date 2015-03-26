@@ -21,4 +21,8 @@
     return self;
 }
 
+- (void)setFotoWithUIImage:(UIImage *)newFoto {
+    self.foto = UIImagePNGRepresentation(newFoto);
+}
+
 @end

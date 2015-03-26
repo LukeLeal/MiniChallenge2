@@ -7,6 +7,8 @@
 //
 
 #import "QuizViewController.h"
+#import "SalvarPontuacao.h"
+#import "PontuacaoManager.h"
 
 @interface QuizViewController (){
     //int hours, minutes, seconds;
@@ -25,8 +27,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _pontos.text = @"Pontuação: 0";
+    [self.navigationController setNavigationBarHidden:YES];
     perguntaAtual = 0;
-    secondsLeft = 60;
+    secondsLeft = 5;
     [self countdownTimer];
     qm = [[QuizManager alloc] init];
     
@@ -57,7 +60,7 @@
 -(void)responde: (id)sender{
     UIButton *b = (UIButton *)sender;
     
-    if ([[b titleLabel] text] == [(Pergunta *)[[qm perguntas] objectAtIndex:0] correto]) {
+    if ([[b titleLabel] text] == [(Pergunta *)[[qm perguntas] objectAtIndex:[qm perguntaAtual]] correto]) {
         secondsLeft += 2;
         qm.pontuacao += 1;
         _pontos.text = [NSString stringWithFormat:@"Pontos: %d", [qm pontuacao]];
@@ -106,6 +109,24 @@
     else{
         NSLog(@"Fim do tempo!");
         [timer invalidate];
+        //Cria uma AlertController que gerencia o alerta.
+        UIAlertController *timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:@"Deseja salvar sua pontuação?" preferredStyle:UIAlertControllerStyleAlert];
+        //Cria uma ação para quando o respectivo botão for pressionado. No caso, o botão "Sim".
+        UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
+            [pontuacaoManager.pontuacaoAtual setPontos:qm.pontuacao];
+            [pontuacaoManager.pontuacaoAtual setCategoria:@"Quiz"];
+            [self.navigationController pushViewController:[[SalvarPontuacao alloc] init] animated:YES];
+        }];
+        //Botão "Não".
+        UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }];
+        //Adiciona as ações ao alerta.
+        [timerAlert addAction:yesAction];
+        [timerAlert addAction:noAction];
+        //A view controller apresenta o alerta.
+        [self presentViewController:timerAlert animated:YES completion:nil];
         //Pontuacao manager
         //Perguntar se quer salvar dados
         //Se sim, cria um pontuação manager, seta pontuação atual e vai pra outra view.
@@ -124,22 +145,4 @@
     //    [pool release];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-//- (IBAction)alternativaABotao:(id)sender {
-//}
-//
-//- (IBAction)alternativaBBotao:(id)sender {
-//}
-//
-//- (IBAction)alternativaCBotao:(id)sender {
-//}
 @end
