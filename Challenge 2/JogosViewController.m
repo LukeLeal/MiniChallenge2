@@ -16,8 +16,11 @@
 
 @implementation JogosViewController
 
+@synthesize adBanner;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [adBanner setDelegate:self];
 }
 
 - (void) viewWillAppear:(BOOL)animated{
@@ -41,6 +44,23 @@
         
     }
 }
+
+#pragma mark - adBanner
+//- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
+//    NSLog(@"bannerview did not receive any banner due to %@", error);
+//}
+//
+//- (void)bannerViewActionDidFinish:(ADBannerView *)banner{
+//    NSLog(@"bannerview was selected");
+//}
+//
+//- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave{
+//    return willLeave;
+//}
+//
+//- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
+//    NSLog(@"banner was loaded");
+//}
 
 
 #pragma mark - Ações de botões

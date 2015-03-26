@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JogosViewController">
             <connections>
+                <outlet property="adBanner" destination="uDO-sa-3kp" id="ia8-ih-0Kg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -59,8 +60,33 @@
                         <action selector="rouletteBotao:" destination="-1" eventType="touchUpInside" id="Y5B-78-kMk"/>
                     </connections>
                 </button>
+                <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="uDO-sa-3kp">
+                    <rect key="frame" x="0.0" y="-50" width="320" height="50"/>
+                </adBannerView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="uDO-sa-3kp" secondAttribute="bottom" id="Ygj-Rj-BDv"/>
+                <constraint firstAttribute="centerX" secondItem="uDO-sa-3kp" secondAttribute="centerX" id="gGK-5h-Fgx"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="uDO-sa-3kp"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="Ygj-Rj-BDv"/>
+                    <exclude reference="gGK-5h-Fgx"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="uDO-sa-3kp"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="Ygj-Rj-BDv"/>
+                    <include reference="gGK-5h-Fgx"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="176" y="253"/>
         </view>
     </objects>
