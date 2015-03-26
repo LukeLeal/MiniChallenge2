@@ -11,8 +11,7 @@
 
 @interface PontuacaoManager : NSObject
 
-@property NSMutableArray *pontuacoesQuiz;
-@property NSMutableArray *pontuacoesMemoria;
+@property NSMutableArray *pontuacoes;
 
 + (PontuacaoManager *)sharedInstance;
 

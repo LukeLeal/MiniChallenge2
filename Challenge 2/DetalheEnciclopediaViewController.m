@@ -23,8 +23,17 @@
     // Do any additional setup after loading the view from its nib.
     [self.informacoesDoenca setDelegate:self];
     
-    
     [_imagensDoenca setImage: [UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
+    
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(next:)];
+    [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [swipeLeft setDelegate:self];
+    [self.view addGestureRecognizer:swipeLeft];
+    
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(previous:)];
+    [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
+    [swipeRight setDelegate:self];
+    [self.view addGestureRecognizer:swipeRight];
     
 //    causa.lineBreakMode = NSLineBreakByWordWrapping;
 //    causa.numberOfLines = 3;
@@ -37,42 +46,44 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-    
-    //
     DoencaManager *doencaManager = [DoencaManager sharedInstance];
     Doenca *doenca = [doencaManager.doencas objectAtIndex:doencaManager.doencaAtual];
-    
     //titulo
     [self setTitle:doenca.nome];
-    
     //descrição
     [self.informacoesDoenca setText:doenca.descricao];
-    
-    //[self.informacoesDoenca setUserInteractionEnabled:NO]; //desabilitar edição.
-    
     //causa
     [self.causa setText:doenca.causa];
-    
     //prevenção
     [self.prevencao setText:doenca.prevencao];
-    
     //sintomas
-    NSArray *a = doenca.sintomas;
-   // NSString *b = @"";
-    for(int i=0; i<a.count; i++){
-        [self.sintoma setText: [a objectAtIndex:i]];
-    }
+    for(int i=0; i<doenca.sintomas.count; i++)
+        [self.sintoma setText: [doenca.sintomas objectAtIndex:i]];
     
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)next:(id)sender {
+    DoencaManager *doencaManager = [DoencaManager sharedInstance];
+    if (doencaManager.doencaAtual == doencaManager.doencas.count-1)
+        doencaManager.doencaAtual = 0;
+    else
+        doencaManager.doencaAtual++;
+    NSMutableArray *newViewControllers = [[NSMutableArray alloc] initWithArray:self.navigationController.viewControllers];
+    [newViewControllers removeLastObject];
+    [newViewControllers addObject:[[DetalheEnciclopediaViewController alloc] init]];
+    [self.navigationController setViewControllers:newViewControllers];
 }
-*/
+
+- (void)previous:(id)sender {
+    DoencaManager *doencaManager = [DoencaManager sharedInstance];
+    if (doencaManager.doencaAtual == 0)
+        doencaManager.doencaAtual = (int)doencaManager.doencas.count-1;
+    else
+        doencaManager.doencaAtual--;
+    NSMutableArray *newViewControllers = [[NSMutableArray alloc] initWithArray:self.navigationController.viewControllers];
+    [newViewControllers removeLastObject];
+    [newViewControllers addObject:[[DetalheEnciclopediaViewController alloc] init]];
+    [self.navigationController setViewControllers:newViewControllers];
+}
 
 @end

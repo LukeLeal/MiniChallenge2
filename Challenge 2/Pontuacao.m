@@ -10,12 +10,13 @@
 
 @implementation Pontuacao
 
-- (instancetype)initWithNome:(NSString *)newNome andFoto:(UIImage *)newFoto andPontos:(int)newPontos {
+- (instancetype)initWithNome:(NSString *)newNome andFoto:(UIImage *)newFoto andPontos:(int)newPontos andCategoria:(NSString *)newCategoria {
     self = [super init];
     if (self) {
         self.nome = newNome;
         self.foto = UIImagePNGRepresentation(newFoto);
         self.pontos = newPontos;
+        self.categoria = newCategoria;
     }
     return self;
 }

@@ -14,7 +14,8 @@
 @property NSString *nome;
 @property NSData *foto;
 @property int pontos;
+@property NSString *categoria;
 
-- (instancetype)initWithNome:(NSString *)newNome andFoto:(UIImage *)newFoto andPontos:(int)newPontos;
+- (instancetype)initWithNome:(NSString *)newNome andFoto:(UIImage *)newFoto andPontos:(int)newPontos andCategoria:(NSString *)newCategoria;
 
 @end

@@ -29,8 +29,8 @@
                             <exclude reference="UaB-db-sUw"/>
                         </mask>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                        <rect key="frame" x="0.0" y="147" width="400" height="466"/>
+                    <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                        <rect key="frame" x="0.0" y="133" width="400" height="600"/>
                         <mask key="constraints">
                             <include reference="Rb3-u4-esT"/>
                             <include reference="UaB-db-sUw"/>

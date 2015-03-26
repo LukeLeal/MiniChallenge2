@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hhk-bj-L6a">
+                <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hhk-bj-L6a">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                     <items>
                         <navigationItem title="Detalhes" id="5if-Qs-6Rc"/>
@@ -29,7 +29,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="400" height="44"/>
                     </variation>
                 </navigationBar>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QTC-4H-Kov">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QTC-4H-Kov">
                     <rect key="frame" x="0.0" y="44" width="600" height="600"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="met-Rn-MY9">
@@ -222,12 +222,12 @@
                                 </mask>
                                 <mask key="constraints">
                                     <exclude reference="TEy-dV-c8N"/>
-                                    <exclude reference="4y8-KN-Y1J"/>
-                                    <exclude reference="M0H-gI-FqQ"/>
-                                    <exclude reference="RpM-zY-p0w"/>
-                                    <exclude reference="aJE-nj-StH"/>
-                                    <exclude reference="jUB-eD-307"/>
-                                    <exclude reference="jkC-qx-GZl"/>
+                                    <exclude reference="Iz6-aS-wNz"/>
+                                    <exclude reference="cQV-fQ-Fn1"/>
+                                    <exclude reference="g8x-o3-0N2"/>
+                                    <exclude reference="7fJ-Vd-wTI"/>
+                                    <exclude reference="QPQ-et-pcL"/>
+                                    <exclude reference="fLw-Gf-syE"/>
                                     <exclude reference="IVW-ti-Vn3"/>
                                     <exclude reference="KJl-oJ-134"/>
                                     <exclude reference="By4-ok-HLl"/>
@@ -235,14 +235,14 @@
                                     <exclude reference="xgg-4m-mWd"/>
                                     <exclude reference="XOc-R3-74G"/>
                                     <exclude reference="kJC-NN-5nX"/>
-                                    <exclude reference="7fJ-Vd-wTI"/>
-                                    <exclude reference="QPQ-et-pcL"/>
-                                    <exclude reference="fLw-Gf-syE"/>
                                     <exclude reference="VTe-uG-9fc"/>
                                     <exclude reference="tHf-fh-Azb"/>
-                                    <exclude reference="Iz6-aS-wNz"/>
-                                    <exclude reference="cQV-fQ-Fn1"/>
-                                    <exclude reference="g8x-o3-0N2"/>
+                                    <exclude reference="4y8-KN-Y1J"/>
+                                    <exclude reference="M0H-gI-FqQ"/>
+                                    <exclude reference="RpM-zY-p0w"/>
+                                    <exclude reference="aJE-nj-StH"/>
+                                    <exclude reference="jUB-eD-307"/>
+                                    <exclude reference="jkC-qx-GZl"/>
                                 </mask>
                             </variation>
                             <variation key="heightClass=regular-widthClass=compact">
@@ -258,12 +258,12 @@
                                 </mask>
                                 <mask key="constraints">
                                     <include reference="TEy-dV-c8N"/>
-                                    <include reference="4y8-KN-Y1J"/>
-                                    <include reference="M0H-gI-FqQ"/>
-                                    <include reference="RpM-zY-p0w"/>
-                                    <include reference="aJE-nj-StH"/>
-                                    <include reference="jUB-eD-307"/>
-                                    <include reference="jkC-qx-GZl"/>
+                                    <exclude reference="Iz6-aS-wNz"/>
+                                    <include reference="cQV-fQ-Fn1"/>
+                                    <include reference="g8x-o3-0N2"/>
+                                    <include reference="7fJ-Vd-wTI"/>
+                                    <include reference="QPQ-et-pcL"/>
+                                    <include reference="fLw-Gf-syE"/>
                                     <include reference="IVW-ti-Vn3"/>
                                     <include reference="KJl-oJ-134"/>
                                     <include reference="By4-ok-HLl"/>
@@ -271,14 +271,14 @@
                                     <include reference="xgg-4m-mWd"/>
                                     <include reference="XOc-R3-74G"/>
                                     <include reference="kJC-NN-5nX"/>
-                                    <include reference="7fJ-Vd-wTI"/>
-                                    <include reference="QPQ-et-pcL"/>
-                                    <include reference="fLw-Gf-syE"/>
                                     <include reference="VTe-uG-9fc"/>
                                     <include reference="tHf-fh-Azb"/>
-                                    <exclude reference="Iz6-aS-wNz"/>
-                                    <include reference="cQV-fQ-Fn1"/>
-                                    <include reference="g8x-o3-0N2"/>
+                                    <include reference="4y8-KN-Y1J"/>
+                                    <include reference="M0H-gI-FqQ"/>
+                                    <include reference="RpM-zY-p0w"/>
+                                    <include reference="aJE-nj-StH"/>
+                                    <include reference="jUB-eD-307"/>
+                                    <include reference="jkC-qx-GZl"/>
                                 </mask>
                             </variation>
                         </view>

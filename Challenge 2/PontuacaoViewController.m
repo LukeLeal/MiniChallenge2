@@ -10,7 +10,10 @@
 #import "PontuacaoManager.h"
 #import "Pontuacao.h"
 
-@interface PontuacaoViewController ()
+@interface PontuacaoViewController () {
+    NSMutableArray *pontuacoesQuiz;
+    NSMutableArray *pontuacoesMemoria;
+}
 
 @end
 
@@ -28,6 +31,14 @@
     [tableView setDataSource:self];
     
     [self setTitle:@"Pontuação"];
+    
+    PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
+    for (Pontuacao *pontuacao in pontuacaoManager.pontuacoes) {
+        if ([pontuacao.categoria isEqualToString:@"Quiz"])
+            [pontuacoesQuiz addObject:pontuacao];
+        else
+            [pontuacoesMemoria addObject:pontuacao];
+    }
 }
 
 -(void) viewWillDisappear:(BOOL)animated{
@@ -45,11 +56,10 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
     if (modoJogo.selectedSegmentIndex == 0)
-        return pontuacaoManager.pontuacoesQuiz.count;
+        return pontuacoesQuiz.count;
     else if (modoJogo.selectedSegmentIndex == 1)
-        return pontuacaoManager.pontuacoesMemoria.count;
+        return pontuacoesMemoria.count;
     return 0;
 }
 
@@ -59,7 +69,7 @@
     switch (modoJogo.selectedSegmentIndex) {
         case 0:
         {
-            Pontuacao *pontuacao = [pontuacaoManager.pontuacoesQuiz objectAtIndex:indexPath.row];
+            Pontuacao *pontuacao = [pontuacoesQuiz objectAtIndex:indexPath.row];
             [celula.nome setText:pontuacao.nome];
             [celula.pontos setText:[NSString stringWithFormat:@"%d", pontuacao.pontos]];
             [celula.foto setImage:[UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
@@ -67,7 +77,7 @@
         }
         case 1:
         {
-            Pontuacao *pontuacao = [pontuacaoManager.pontuacoesMemoria objectAtIndex:indexPath.row];
+            Pontuacao *pontuacao = [pontuacoesMemoria objectAtIndex:indexPath.row];
             [celula.nome setText:pontuacao.nome];
             [celula.pontos setText:[NSString stringWithFormat:@"%d", pontuacao.pontos]];
             [celula.foto setImage:[UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
@@ -75,10 +85,6 @@
         }
     }
     return celula;
-}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

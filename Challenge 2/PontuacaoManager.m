@@ -27,14 +27,25 @@ static bool isFirstAccess = YES;
 - (instancetype)init {
     self = [super init];
     if (self) {
-#warning Implementar recuperação de dados pelo Realm.io
-        self.pontuacoesQuiz = [[NSMutableArray alloc] initWithObjects:[[Pontuacao alloc] initWithNome:@"Samuel" andFoto:nil andPontos:10000],
-                           [[Pontuacao alloc] initWithNome:@"Leal" andFoto:nil andPontos:0],
-                           [[Pontuacao alloc] initWithNome:@"André" andFoto:nil andPontos:0],
-                           [[Pontuacao alloc] initWithNome:@"Amanda" andFoto:nil andPontos:0], nil];
-        self.pontuacoesMemoria = [[NSMutableArray alloc] init];
+        self.pontuacoes = [[NSMutableArray alloc] init];
+        RLMResults *results = [Pontuacao allObjects];
+        for (Pontuacao *pontuacao in results)
+            [self.pontuacoes addObject:pontuacao];
     }
     return self;
+}
+
+- (void)addPontuacao:(Pontuacao *)pontuacao {
+    [self.pontuacoes addObject:pontuacao];
+    
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    [realm beginWriteTransaction];
+    [realm addObject:pontuacao];
+    [realm commitWriteTransaction];
+}
+
+- (void)addPontuacaoMemoria {
+    
 }
 
 @end
