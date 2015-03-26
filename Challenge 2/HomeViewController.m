@@ -14,11 +14,10 @@
 
 @implementation HomeViewController
 
-@synthesize jogar, pontuacao, enciclopedia, logo, adBanner;
+@synthesize jogar, pontuacao, enciclopedia, logo;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [adBanner setDelegate:self];
     [self setTitle:@"Home"];
     [logo setImage: [UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
 }
@@ -32,10 +31,10 @@
 
 - (void)animacao{
     [UIView animateWithDuration:1 delay:0 options:UIViewAnimationCurveEaseIn animations:^{
-        jogar.transform = CGAffineTransformMakeTranslation(0, -100);
-        pontuacao.transform = CGAffineTransformMakeTranslation(0, -100);
-        enciclopedia.transform = CGAffineTransformMakeTranslation(0, -100);
-        logo.transform = CGAffineTransformMakeTranslation(0, 100);
+        jogar.transform = CGAffineTransformMakeTranslation(0, -120);
+        pontuacao.transform = CGAffineTransformMakeTranslation(0, -120);
+        enciclopedia.transform = CGAffineTransformMakeTranslation(0, -120);
+        logo.transform = CGAffineTransformMakeTranslation(0, 120);
     } completion:^(BOOL finished) {
         
     }];
@@ -49,23 +48,6 @@
                      }];
 }
 
-
-#pragma mark - adBanner
-//- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
-//    NSLog(@"bannerview did not receive any banner due to %@", error);
-//}
-//
-//- (void)bannerViewActionDidFinish:(ADBannerView *)banner{
-//    NSLog(@"bannerview was selected");
-//}
-//
-//- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave{
-//    return willLeave;
-//}
-//
-//- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
-//    NSLog(@"banner was loaded");
-//}
 
 #pragma mark - Métodos dos botões
 

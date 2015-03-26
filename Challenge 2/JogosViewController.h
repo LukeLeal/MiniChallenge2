@@ -8,22 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "QuizViewController.h"
-#import <iAd/iAd.h>
 
-@interface JogosViewController : UIViewController <ADBannerViewDelegate>
-
-@property (weak, nonatomic) IBOutlet ADBannerView *adBanner;
+@interface JogosViewController : UIViewController
 
 - (IBAction)memoriaBotao:(id)sender;
 - (IBAction)quizBotao:(id)sender;
 - (IBAction)rouletteBotao:(id)sender;
-
-
-#pragma mark - adBanner
-//- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error;
-//- (void)bannerViewActionDidFinish:(ADBannerView *)banner;
-//- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave;
-//- (void)bannerViewDidLoadAd:(ADBannerView *)banner;
-
 
 @end
