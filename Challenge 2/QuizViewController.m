@@ -14,7 +14,7 @@
     //int hours, minutes, seconds;
     double secondsLeft;
     NSTimer *timer;
-    int perguntaAtual;
+    //int perguntaAtual;
     NSArray *botoes;
     //NSMutableArray *perguntas;
     QuizManager *qm;
@@ -28,8 +28,8 @@
     [super viewDidLoad];
     _pontos.text = @"Pontuação: 0";
     [self.navigationController setNavigationBarHidden:YES];
-    perguntaAtual = 0;
-    secondsLeft = 5;
+    //perguntaAtual = 0;
+    secondsLeft = 60;
     [self countdownTimer];
     qm = [[QuizManager alloc] init];
     
@@ -59,7 +59,6 @@
 
 -(void)responde: (id)sender{
     UIButton *b = (UIButton *)sender;
-    
     if ([[b titleLabel] text] == [(Pergunta *)[[qm perguntas] objectAtIndex:[qm perguntaAtual]] correto]) {
         secondsLeft += 2;
         qm.pontuacao += 1;
@@ -72,9 +71,13 @@
         }
     }
     qm.perguntaAtual += 1;
+    if ([qm perguntaAtual] < [[qm perguntas] count]){
     //perguntaAtual++;
     //NSLog(@"\n\n");
-    [self proxPerg];
+        [self proxPerg];
+    } else {
+        secondsLeft = 1;
+    }
     
 }
 
