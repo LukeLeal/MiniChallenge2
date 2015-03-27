@@ -38,6 +38,7 @@ static bool isFirstAccess = YES;
 
 - (void)addPontuacao:(Pontuacao *)pontuacao {
     [self.pontuacoes addObject:pontuacao];
+    self.pontuacaoAtual = [[Pontuacao alloc] init];
     
     RLMRealm *realm = [RLMRealm defaultRealm];
     [realm beginWriteTransaction];

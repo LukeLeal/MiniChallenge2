@@ -13,6 +13,7 @@
 -(id) init{
     self = [super init];
     if (self) {
+        _seqAcertos = 1;
         _perguntas = [[NSMutableArray alloc] initWithObjects:
                       [[Pergunta alloc] init:@"Quais destes são sintomas da pneumonia?" withAlternativas:@[@"Falta de ar e bolhas avermelhadas na pele", @"Ardência nos olhos e rigidez na nuca", @"Febre alta e dor no tórax"]],
                       [[Pergunta alloc] init:@"Como a aids ataca o corpo humano?" withAlternativas:@[@"Atacando o sistema imunológico e destruindo os glóbulos brancos", @"Inflamando as meninges, membranas que recobrem o cérebro", @"Infeccionando a cavidade abdominal"]],

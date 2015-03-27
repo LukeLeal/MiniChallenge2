@@ -23,6 +23,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *tempo;
 @property (weak, nonatomic) IBOutlet UILabel *pontos;
+@property (weak, nonatomic) IBOutlet UILabel *sequencia;
 @property (weak, nonatomic) IBOutlet UIButton *b1;
 @property (weak, nonatomic) IBOutlet UIButton *b2;
 @property (weak, nonatomic) IBOutlet UIButton *b3;

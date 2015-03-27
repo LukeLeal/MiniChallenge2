@@ -27,6 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _pontos.text = @"Pontuação: 0";
+    _sequencia.text = @"Combo: 0";
     [self.navigationController setNavigationBarHidden:YES];
     //perguntaAtual = 0;
     secondsLeft = 60;
@@ -58,18 +59,24 @@
 }
 
 -(void)responde: (id)sender{
+    for (int i = 0; i < [botoes count]; i++) {
+        [(UIButton *)[botoes objectAtIndex:i] setHidden:YES];
+    }
     UIButton *b = (UIButton *)sender;
     if ([[b titleLabel] text] == [(Pergunta *)[[qm perguntas] objectAtIndex:[qm perguntaAtual]] correto]) {
-        secondsLeft += 2;
-        qm.pontuacao += 1;
-        _pontos.text = [NSString stringWithFormat:@"Pontos: %d", [qm pontuacao]];
+        //secondsLeft += 2;
+        qm.pontuacao += 100 * [qm seqAcertos];
+        qm.seqAcertos++;
+        _pontos.text = [NSString stringWithFormat:@"Pontuação: %d", [qm pontuacao]];
     } else {
+        qm.seqAcertos = 1;
         if (secondsLeft - 5 <= 1) {
             secondsLeft = 1;
         } else {
             secondsLeft -= 5;
         }
     }
+    _sequencia.text = [NSString stringWithFormat:@"Combo: %d", [qm seqAcertos] - 1];
     qm.perguntaAtual += 1;
     if ([qm perguntaAtual] < [[qm perguntas] count]){
     //perguntaAtual++;
@@ -92,13 +99,16 @@
     //    }
     
     for (int i = 0; i < [botoes count]; i++) {
+        //[(UIButton *)[botoes objectAtIndex:i] setHidden:NO];
         [(UIButton *)[botoes objectAtIndex:i] setTitle:[[(Pergunta *)[[qm perguntas] objectAtIndex:[qm perguntaAtual]] alternativas] objectAtIndex:i] forState:UIControlStateNormal];
     }
     
     
     //
     //    [self.view setNeedsDisplay];
-    
+    for (int i = 0; i < [botoes count]; i++) {
+        [(UIButton *)[botoes objectAtIndex:i] setHidden:NO];
+    }
 }
 
 - (void) tempo: (id) sender{

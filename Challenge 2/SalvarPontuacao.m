@@ -7,6 +7,7 @@
 //
 
 #import "SalvarPontuacao.h"
+#import "PontuacaoViewController.h"
 #import "PontuacaoManager.h"
 
 @interface SalvarPontuacao ()
@@ -18,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
-    [self.navigationController setNavigationBarHidden:YES];
+//    [self.navigationController setNavigationBarHidden:YES];
     [self.categoria setText:pontuacaoManager.pontuacaoAtual.categoria];
     [self.pontos setText:[NSString stringWithFormat:@"%d", pontuacaoManager.pontuacaoAtual.pontos]];
     [self.foto setImage: [UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
@@ -78,6 +79,11 @@
     [pontuacaoManager.pontuacaoAtual setNome:self.nome.text];
     [pontuacaoManager.pontuacaoAtual setFotoWithUIImage:self.foto.image];
     [pontuacaoManager addPontuacao:pontuacaoManager.pontuacaoAtual];
+    
+    NSMutableArray *newViewControllers = [[NSMutableArray alloc] initWithArray:self.navigationController.viewControllers];
+    [newViewControllers removeObjectsInRange:NSMakeRange(1, self.navigationController.viewControllers.count-1)];
+    [newViewControllers addObject:[[PontuacaoViewController alloc] init]];
+    [self.navigationController setViewControllers:newViewControllers];
 }
 
 - (IBAction)cancelar:(id)sender {

@@ -23,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:NO];
     
     UINib *nib = [UINib nibWithNibName:@"PontuacaoTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"PontuacaoCell"];
@@ -33,7 +34,10 @@
     [self setTitle:@"Pontuação"];
     
     PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
+    pontuacoesQuiz = [[NSMutableArray alloc] init];
+    pontuacoesMemoria = [[NSMutableArray alloc] init];
     for (Pontuacao *pontuacao in [pontuacaoManager sortedPontuacoes]) {
+        NSLog(@"%@", pontuacao.nome);
         if ([pontuacao.categoria isEqualToString:@"Quiz"])
             [pontuacoesQuiz addObject:pontuacao];
         else
