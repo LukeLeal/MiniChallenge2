@@ -120,7 +120,6 @@
         _tempo.text = [NSString stringWithFormat:@"Segundos: %d", seconds];
     }
     else{
-        NSLog(@"Fim do tempo!");
         [timer invalidate];
         //Cria uma AlertController que gerencia o alerta.
         UIAlertController *timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:@"Deseja salvar sua pontuação?" preferredStyle:UIAlertControllerStyleAlert];

@@ -18,7 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+<<<<<<< Updated upstream
     
+=======
+>>>>>>> Stashed changes
     [self setTitle:@"Jogos"];
 }
 

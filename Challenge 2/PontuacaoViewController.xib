@@ -2,12 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PontuacaoViewController">
             <connections>
                 <outlet property="modoJogo" destination="ndk-oc-eNo" id="ALY-zR-Pmv"/>
-                <outlet property="tableView" destination="vvW-pd-nY0" id="ORC-kf-FiJ"/>
+                <outlet property="tablePontuacao" destination="vvW-pd-nY0" id="TqP-61-5ur"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,20 +20,24 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vvW-pd-nY0">
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="600" id="Rb3-u4-esT"/>
+                        <constraint firstAttribute="width" secondItem="vvW-pd-nY0" secondAttribute="height" multiplier="400:667" id="G73-1Z-Y6k"/>
+                        <constraint firstAttribute="height" constant="600" id="Rb3-u4-esT">
+                            <variation key="heightClass=regular-widthClass=compact" constant="667"/>
+                        </constraint>
                         <constraint firstAttribute="width" constant="400" id="UaB-db-sUw"/>
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
+                            <exclude reference="G73-1Z-Y6k"/>
                             <exclude reference="Rb3-u4-esT"/>
                             <exclude reference="UaB-db-sUw"/>
                         </mask>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
-                        <rect key="frame" x="0.0" y="133" width="400" height="600"/>
+                    <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
-                            <include reference="Rb3-u4-esT"/>
-                            <include reference="UaB-db-sUw"/>
+                            <exclude reference="G73-1Z-Y6k"/>
+                            <exclude reference="Rb3-u4-esT"/>
+                            <exclude reference="UaB-db-sUw"/>
                         </mask>
                     </variation>
                 </tableView>
@@ -49,18 +54,32 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="vvW-pd-nY0" firstAttribute="top" secondItem="ndk-oc-eNo" secondAttribute="bottom" constant="15" id="4DG-JP-zsB"/>
                 <constraint firstItem="ndk-oc-eNo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="f8s-SJ-nQW"/>
                 <constraint firstAttribute="centerX" secondItem="ndk-oc-eNo" secondAttribute="centerX" id="hpc-Aa-dAk"/>
                 <constraint firstItem="vvW-pd-nY0" firstAttribute="top" secondItem="ndk-oc-eNo" secondAttribute="bottom" constant="15" id="s4m-rA-5UZ"/>
+                <constraint firstAttribute="bottom" secondItem="vvW-pd-nY0" secondAttribute="bottom" constant="67" id="tRA-sC-9UE">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="vvW-pd-nY0" secondAttribute="trailing" id="tjA-am-Bzg"/>
+                <constraint firstItem="vvW-pd-nY0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ua9-Gu-Yu8"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="4DG-JP-zsB"/>
                     <exclude reference="s4m-rA-5UZ"/>
+                    <exclude reference="tRA-sC-9UE"/>
+                    <exclude reference="tjA-am-Bzg"/>
+                    <exclude reference="ua9-Gu-Yu8"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="constraints">
-                    <include reference="s4m-rA-5UZ"/>
+                    <include reference="4DG-JP-zsB"/>
+                    <exclude reference="s4m-rA-5UZ"/>
+                    <include reference="tRA-sC-9UE"/>
+                    <include reference="tjA-am-Bzg"/>
+                    <include reference="ua9-Gu-Yu8"/>
                 </mask>
             </variation>
         </view>

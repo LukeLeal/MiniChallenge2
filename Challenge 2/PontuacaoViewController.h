@@ -11,7 +11,7 @@
 
 @interface PontuacaoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITableView *tablePontuacao;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *modoJogo;
 
 - (IBAction)trocaModoJogo:(id)sender;

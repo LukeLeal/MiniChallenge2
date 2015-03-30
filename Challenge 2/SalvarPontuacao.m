@@ -16,10 +16,13 @@
 
 @implementation SalvarPontuacao
 
+#pragma mark - Interface
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
 //    [self.navigationController setNavigationBarHidden:YES];
+    [self.nome setDelegate:self];
     [self.categoria setText:pontuacaoManager.pontuacaoAtual.categoria];
     [self.pontos setText:[NSString stringWithFormat:@"%d", pontuacaoManager.pontuacaoAtual.pontos]];
     [self.foto setImage: [UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
@@ -33,6 +36,12 @@
     [textField resignFirstResponder];
     return NO;
 }
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.nome resignFirstResponder];
+}
+
+#pragma mark - UIImagePicker
 
 - (void)editarFoto:(id)sender {
     UIActionSheet *photoAction = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancelar" destructiveButtonTitle:nil otherButtonTitles:@"Tirar foto", @"Escolher foto", nil];
@@ -74,6 +83,8 @@
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - Persistência de Dados
+
 - (IBAction)salvar:(id)sender {
     PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
     [pontuacaoManager.pontuacaoAtual setNome:self.nome.text];
@@ -85,6 +96,8 @@
     [newViewControllers addObject:[[PontuacaoViewController alloc] init]];
     [self.navigationController setViewControllers:newViewControllers];
 }
+
+#pragma mark - Navegação
 
 - (IBAction)cancelar:(id)sender {
     //Cria uma AlertController que gerencia o alerta.

@@ -22,6 +22,10 @@
     [logo setImage: [UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO];
+}
+
 - (void)viewDidAppear:(BOOL)animated{
     [self animacao];
 }

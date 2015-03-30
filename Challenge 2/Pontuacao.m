@@ -25,4 +25,8 @@
     self.foto = UIImagePNGRepresentation(newFoto);
 }
 
+- (UIImage *)getFotoAsImage {
+    return [UIImage imageWithData:self.foto];
+}
+
 @end
