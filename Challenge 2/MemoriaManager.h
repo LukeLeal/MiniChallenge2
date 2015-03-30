@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DoencaManager.h"
+#import "Carta.h"
 
 @interface MemoriaManager : NSObject
+
+@property NSMutableArray *arrayDoencas;
 
 @end
