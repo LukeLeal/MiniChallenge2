@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MemoriaViewController">
             <connections>
+                <outlet property="img1" destination="pl6-hK-MNP" id="Hb8-g3-uSA"/>
+                <outlet property="img2" destination="9Tj-jr-KWU" id="u1E-tq-F2k"/>
+                <outlet property="img3" destination="00r-hs-jLI" id="Fjl-6Q-lNL"/>
+                <outlet property="img4" destination="c2e-Ct-IIh" id="8EU-q2-FmN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +17,143 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2e-Ct-IIh">
+                    <rect key="frame" x="302" y="84" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Ne6-na-7ex"/>
+                        <constraint firstAttribute="width" constant="50" id="zsd-zu-9Yp"/>
+                    </constraints>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Ne6-na-7ex"/>
+                            <exclude reference="zsd-zu-9Yp"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="Ne6-na-7ex"/>
+                            <include reference="zsd-zu-9Yp"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="botao:" destination="-1" eventType="touchUpInside" id="Qz4-Xd-pJU"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Tj-jr-KWU">
+                    <rect key="frame" x="302" y="162" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="0EO-xr-ef1"/>
+                        <constraint firstAttribute="width" constant="50" id="N4B-eB-1Mo"/>
+                    </constraints>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="0EO-xr-ef1"/>
+                            <exclude reference="N4B-eB-1Mo"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="0EO-xr-ef1"/>
+                            <include reference="N4B-eB-1Mo"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="botao:" destination="-1" eventType="touchUpInside" id="whV-M0-Idd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pl6-hK-MNP">
+                    <rect key="frame" x="405" y="162" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="1dp-eq-cVi"/>
+                        <constraint firstAttribute="height" constant="100" id="xm1-04-M8R"/>
+                    </constraints>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="1dp-eq-cVi"/>
+                            <exclude reference="xm1-04-M8R"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="1dp-eq-cVi"/>
+                            <include reference="xm1-04-M8R"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="botao:" destination="-1" eventType="touchUpInside" id="9II-RA-Cow"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00r-hs-jLI">
+                    <rect key="frame" x="405" y="84" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="8AV-Dn-O0D"/>
+                        <constraint firstAttribute="height" constant="100" id="XiH-x8-vL2"/>
+                    </constraints>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="8AV-Dn-O0D"/>
+                            <exclude reference="XiH-x8-vL2"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="8AV-Dn-O0D"/>
+                            <include reference="XiH-x8-vL2"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="botao:" destination="-1" eventType="touchUpInside" id="GcY-gy-tZv"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="pl6-hK-MNP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="94" id="RCI-Qx-efi"/>
+                <constraint firstItem="00r-hs-jLI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="89" id="Ro8-wz-s04"/>
+                <constraint firstItem="pl6-hK-MNP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="69" id="Wmb-MF-jy8"/>
+                <constraint firstItem="9Tj-jr-KWU" firstAttribute="leading" secondItem="c2e-Ct-IIh" secondAttribute="leading" id="gfg-kQ-HTv"/>
+                <constraint firstItem="00r-hs-jLI" firstAttribute="top" secondItem="pl6-hK-MNP" secondAttribute="bottom" constant="79" id="gqx-LL-AN7"/>
+                <constraint firstItem="00r-hs-jLI" firstAttribute="baseline" secondItem="c2e-Ct-IIh" secondAttribute="baseline" id="m9c-ao-v8O"/>
+                <constraint firstAttribute="trailing" secondItem="9Tj-jr-KWU" secondAttribute="trailing" constant="95" id="qDI-mh-uff"/>
+                <constraint firstItem="9Tj-jr-KWU" firstAttribute="baseline" secondItem="pl6-hK-MNP" secondAttribute="baseline" id="wDb-uA-sZ2"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="gfg-kQ-HTv"/>
+                    <exclude reference="qDI-mh-uff"/>
+                    <exclude reference="wDb-uA-sZ2"/>
+                    <exclude reference="Ro8-wz-s04"/>
+                    <exclude reference="gqx-LL-AN7"/>
+                    <exclude reference="m9c-ao-v8O"/>
+                    <exclude reference="RCI-Qx-efi"/>
+                    <exclude reference="Wmb-MF-jy8"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <include reference="gfg-kQ-HTv"/>
+                    <include reference="qDI-mh-uff"/>
+                    <include reference="wDb-uA-sZ2"/>
+                    <include reference="Ro8-wz-s04"/>
+                    <include reference="gqx-LL-AN7"/>
+                    <include reference="m9c-ao-v8O"/>
+                    <include reference="RCI-Qx-efi"/>
+                    <include reference="Wmb-MF-jy8"/>
+                </mask>
+            </variation>
         </view>
     </objects>
 </document>

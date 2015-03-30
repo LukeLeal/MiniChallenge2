@@ -14,9 +14,20 @@
 
 @implementation MemoriaViewController
 
+@synthesize img1, img2, img3, img4;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self setTitle:@"Memória"];
+    
+    NSArray *arrayBotoes = [NSArray arrayWithObjects: img1, img2, img3, img4, nil];
+    for (UIButton *b in arrayBotoes){
+        [b setBackgroundColor:[UIColor redColor]];
+        [b.titleLabel setAlpha:0.0f];
+    }
+}
+
+- (void)viewWillAppear:(BOOL)animated{
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -27,4 +38,16 @@
                      }];
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+}
+
+- (IBAction)botao:(UIButton *)sender {
+//    Setar a cor para não dar um efeito de delay durante a troca de cor
+    [sender setBackgroundColor:[UIColor blueColor]];
+    [UIView transitionWithView:sender duration:0.5
+                       options:UIViewAnimationOptionTransitionFlipFromRight animations:^{
+                           [sender setBackgroundColor:[UIColor blueColor]];
+                           [sender setTitleColor:[UIColor whiteColor] forState:normal];
+                       } completion:nil];
+}
 @end

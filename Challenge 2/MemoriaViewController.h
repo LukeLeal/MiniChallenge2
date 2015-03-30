@@ -10,4 +10,14 @@
 
 @interface MemoriaViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *img1;
+@property (weak, nonatomic) IBOutlet UIButton *img2;
+@property (weak, nonatomic) IBOutlet UIButton *img3;
+@property (weak, nonatomic) IBOutlet UIButton *img4;
+//@property (weak, nonatomic) IBOutlet UIButton *img5;
+//@property (weak, nonatomic) IBOutlet UIButton *img6;
+
+
+- (IBAction)botao:(UIButton *)sender;
+
 @end
