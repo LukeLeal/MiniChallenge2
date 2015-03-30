@@ -13,8 +13,8 @@
 
 @property NSString *texto;
 @property UIColor *cor;
-@property NSInteger *tag;
+@property int tag;
 
--(Carta *)initWithTexto: (NSString *)text andCor: (UIColor *)color andTag: (NSInteger *)etiqueta; 
+-(Carta *)initWithTexto: (NSString *)text andCor: (UIColor *)color andTag: (int)etiqueta;
 
 @end

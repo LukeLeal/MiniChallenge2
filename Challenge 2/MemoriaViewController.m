@@ -8,26 +8,23 @@
 
 #import "MemoriaViewController.h"
 
-@interface MemoriaViewController ()
+@interface MemoriaViewController (){
+    NSArray *arrayBotoes;
+}
 
 @end
 
 @implementation MemoriaViewController
 
-@synthesize img1, img2, img3, img4;
+@synthesize carta1,carta2,carta3,carta4,carta5,carta6,carta7,carta8,carta9,carta10,carta11,carta12,carta13,carta14,carta15;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle:@"Memória"];
     
-    NSArray *arrayBotoes = [NSArray arrayWithObjects: img1, img2, img3, img4, nil];
-    for (UIButton *b in arrayBotoes){
-        [b setBackgroundColor:[UIColor redColor]];
-        [b.titleLabel setAlpha:0.0f];
-    }
-}
-
-- (void)viewWillAppear:(BOOL)animated{
+    arrayBotoes = [NSArray arrayWithObjects: carta1,carta2,carta3,carta4,carta5,carta6,carta7,carta8,carta9,carta10,carta11,carta12,carta13,carta14,carta15,nil];
+    
+    [self preparaCartas];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -38,7 +35,24 @@
                      }];
 }
 
-- (void)viewDidAppear:(BOOL)animated{
+-(void)preparaCartas{
+    MemoriaManager *memoriaManager = [[MemoriaManager alloc]init];
+    NSArray *cartas = [NSArray arrayWithArray:memoriaManager.cartas];
+    
+    NSLog(@"%lu",[cartas count]);
+    Carta *carta;
+    UIButton *botao;
+    
+    for (int i=0; i<[arrayBotoes count]; i++) {
+        carta = [cartas objectAtIndex:i];
+        botao = [arrayBotoes objectAtIndex:i];
+        
+        [botao setTitle:carta.texto forState:normal];
+        [botao setBackgroundColor:carta.cor];
+        [botao setTag:carta.tag];
+        
+        [botao.titleLabel setAlpha:0.0f];
+    }
 }
 
 - (IBAction)botao:(UIButton *)sender {

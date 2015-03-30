@@ -16,4 +16,5 @@
 @property NSMutableArray *arrayDoencas;
 @property NSMutableArray *cartas;
 
+- (instancetype)init;
 @end

@@ -6,10 +6,21 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MemoriaViewController">
             <connections>
-                <outlet property="img1" destination="pl6-hK-MNP" id="Hb8-g3-uSA"/>
-                <outlet property="img2" destination="9Tj-jr-KWU" id="u1E-tq-F2k"/>
-                <outlet property="img3" destination="00r-hs-jLI" id="Fjl-6Q-lNL"/>
-                <outlet property="img4" destination="c2e-Ct-IIh" id="8EU-q2-FmN"/>
+                <outlet property="carta1" destination="pl6-hK-MNP" id="VLq-9Q-Ydg"/>
+                <outlet property="carta10" destination="2tc-3U-0gO" id="Jsz-Wh-Lgv"/>
+                <outlet property="carta11" destination="iSy-U0-X7u" id="d6t-Fe-zw7"/>
+                <outlet property="carta12" destination="8e7-fj-FO8" id="yjE-u8-HeB"/>
+                <outlet property="carta13" destination="HlW-QI-eLu" id="F4S-lJ-zHL"/>
+                <outlet property="carta14" destination="yQM-kG-xvq" id="NEw-Km-8Dy"/>
+                <outlet property="carta15" destination="Fhy-mK-SuS" id="88Z-Mu-qRJ"/>
+                <outlet property="carta2" destination="9Tj-jr-KWU" id="o96-9W-YcM"/>
+                <outlet property="carta3" destination="00r-hs-jLI" id="xcE-nA-6Ci"/>
+                <outlet property="carta4" destination="ygX-Up-AKW" id="T3X-yL-bM6"/>
+                <outlet property="carta5" destination="c2e-Ct-IIh" id="0dO-Z9-3GS"/>
+                <outlet property="carta6" destination="Odj-tO-hHr" id="Ccc-0q-gG2"/>
+                <outlet property="carta7" destination="RdG-JQ-EXs" id="jae-Q7-QSm"/>
+                <outlet property="carta8" destination="hgV-49-kZl" id="kdV-IU-SSq"/>
+                <outlet property="carta9" destination="Zff-E8-Hay" id="O02-uf-LCh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -66,31 +77,6 @@
                     </variation>
                     <connections>
                         <action selector="botao:" destination="-1" eventType="touchUpInside" id="whV-M0-Idd"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pl6-hK-MNP">
-                    <rect key="frame" x="229" y="160" width="46" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="50" id="1dp-eq-cVi"/>
-                        <constraint firstAttribute="height" constant="100" id="xm1-04-M8R"/>
-                    </constraints>
-                    <state key="normal" title="Button">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="1dp-eq-cVi"/>
-                            <exclude reference="xm1-04-M8R"/>
-                        </mask>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <mask key="constraints">
-                            <include reference="1dp-eq-cVi"/>
-                            <include reference="xm1-04-M8R"/>
-                        </mask>
-                    </variation>
-                    <connections>
-                        <action selector="botao:" destination="-1" eventType="touchUpInside" id="9II-RA-Cow"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00r-hs-jLI">
@@ -391,6 +377,31 @@
                     </variation>
                     <connections>
                         <action selector="botao:" destination="-1" eventType="touchUpInside" id="wyB-cc-9hr"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pl6-hK-MNP">
+                    <rect key="frame" x="229" y="160" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="1dp-eq-cVi"/>
+                        <constraint firstAttribute="height" constant="100" id="xm1-04-M8R"/>
+                    </constraints>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="1dp-eq-cVi"/>
+                            <exclude reference="xm1-04-M8R"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="1dp-eq-cVi"/>
+                            <include reference="xm1-04-M8R"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="botao:" destination="-1" eventType="touchUpInside" id="9II-RA-Cow"/>
                     </connections>
                 </button>
             </subviews>

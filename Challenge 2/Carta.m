@@ -12,7 +12,7 @@
 
 @synthesize texto, cor, tag;
 
--(Carta *)initWithTexto: (NSString *)text andCor: (UIColor *)color andTag: (NSInteger *)etiqueta{
+-(Carta *)initWithTexto: (NSString *)text andCor: (UIColor *)color andTag: (int)etiqueta{
     
     self = [super init];
     if (self){

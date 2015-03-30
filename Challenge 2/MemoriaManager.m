@@ -42,15 +42,16 @@
 //    NSArray *cores = @[[UIColor redColor], [UIColor yellowColor], [UIColor blueColor], [UIColor greenColor], [UIColor orangeColor]];
     NSArray *cores = [[NSArray alloc]initWithObjects:[UIColor redColor],[UIColor yellowColor],[UIColor blueColor],[UIColor greenColor],[UIColor orangeColor], nil];
     int i = 0;
-    NSInteger *etiqueta = 0;
+    
+    cartas = [[NSMutableArray alloc]init];
     
     for(Doenca *doenca in arrayDoencas ){
         
-        [cartas addObject:[[Carta alloc]initWithTexto:doenca.nome andCor:[cores objectAtIndex:i] andTag:etiqueta]];
-        [cartas addObject:[[Carta alloc]initWithTexto:doenca.causa andCor:[cores objectAtIndex:i] andTag:etiqueta]];
-        [cartas addObject:[[Carta alloc]initWithTexto:[doenca.sintomas objectAtIndex:0] andCor:[cores objectAtIndex:i] andTag:etiqueta]];
+        [cartas addObject:[[Carta alloc]initWithTexto:doenca.nome andCor:[cores objectAtIndex:i] andTag:i]];
+        [cartas addObject:[[Carta alloc]initWithTexto:doenca.causa andCor:[cores objectAtIndex:i] andTag:i]];
+        [cartas addObject:[[Carta alloc]initWithTexto:[doenca.sintomas objectAtIndex:0] andCor:[cores objectAtIndex:i] andTag:i]];
         
-        i++;etiqueta++;
+        i++;
     }
     
     [self sorteio:cartas];
