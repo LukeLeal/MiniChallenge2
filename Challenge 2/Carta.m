@@ -12,4 +12,16 @@
 
 @synthesize texto, cor, tag;
 
+-(Carta *)initWithTexto: (NSString *)text andCor: (UIColor *)color andTag: (NSInteger *)etiqueta{
+    
+    self = [super init];
+    if (self){
+        texto = text;
+        cor = color;
+        tag = etiqueta;
+    }
+    
+    return self;
+}
+
 @end

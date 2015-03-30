@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "DoencaManager.h"
+#import "Doenca.h"
 #import "Carta.h"
 
 @interface MemoriaManager : NSObject
 
 @property NSMutableArray *arrayDoencas;
+@property NSMutableArray *cartas;
 
 @end

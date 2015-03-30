@@ -15,4 +15,6 @@
 @property UIColor *cor;
 @property NSInteger *tag;
 
+-(Carta *)initWithTexto: (NSString *)text andCor: (UIColor *)color andTag: (NSInteger *)etiqueta; 
+
 @end
