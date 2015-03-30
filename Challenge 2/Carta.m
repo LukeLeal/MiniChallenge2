@@ -10,4 +10,6 @@
 
 @implementation Carta
 
+@synthesize texto, cor, tag;
+
 @end

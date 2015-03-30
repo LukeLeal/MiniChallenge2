@@ -12,7 +12,7 @@
 @interface Carta : NSObject
 
 @property NSString *texto;
-@property UIColor *color;
+@property UIColor *cor;
 @property NSInteger *tag;
 
 @end
