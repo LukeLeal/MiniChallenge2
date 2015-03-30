@@ -33,11 +33,11 @@
 		4EA614E31AC0955300D94F8A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA614E11AC0955300D94F8A /* HomeViewController.xib */; };
 		7E551B541AC0AC5E00EB7FD8 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E551B531AC0AC5E00EB7FD8 /* libc++.dylib */; };
 		7E551B641AC0AC7D00EB7FD8 /* JogosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B591AC0AC7D00EB7FD8 /* JogosViewController.m */; };
-		7E551B651AC0AC7D00EB7FD8 /* JogosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E551B5A1AC0AC7D00EB7FD8 /* JogosViewController.xib */; };
 		7E551B661AC0AC7D00EB7FD8 /* Pontuacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B5C1AC0AC7D00EB7FD8 /* Pontuacao.m */; };
 		7E551B671AC0AC7D00EB7FD8 /* PontuacaoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B5E1AC0AC7D00EB7FD8 /* PontuacaoManager.m */; };
 		7E551B681AC0AC7D00EB7FD8 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B601AC0AC7D00EB7FD8 /* QuizViewController.m */; };
 		7E551B691AC0AC7D00EB7FD8 /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E551B611AC0AC7D00EB7FD8 /* QuizViewController.xib */; };
+		7E5B31EC1AC9DAE700ECBFD8 /* JogosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E5B31EB1AC9DAE700ECBFD8 /* JogosViewController.xib */; };
 		7EDF4A5B1AC1D0F500FFACD5 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDF4A5A1AC1D0F500FFACD5 /* iAd.framework */; };
 		7EDF4A5F1AC1D31500FFACD5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDF4A5E1AC1D31500FFACD5 /* Realm.framework */; };
 		7EDF4A621AC1D5C100FFACD5 /* Doenca.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF4A611AC1D5C100FFACD5 /* Doenca.m */; };
@@ -98,7 +98,6 @@
 		7E551B531AC0AC5E00EB7FD8 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		7E551B581AC0AC7D00EB7FD8 /* JogosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JogosViewController.h; sourceTree = "<group>"; };
 		7E551B591AC0AC7D00EB7FD8 /* JogosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JogosViewController.m; sourceTree = "<group>"; };
-		7E551B5A1AC0AC7D00EB7FD8 /* JogosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JogosViewController.xib; sourceTree = "<group>"; };
 		7E551B5B1AC0AC7D00EB7FD8 /* Pontuacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pontuacao.h; sourceTree = "<group>"; };
 		7E551B5C1AC0AC7D00EB7FD8 /* Pontuacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pontuacao.m; sourceTree = "<group>"; };
 		7E551B5D1AC0AC7D00EB7FD8 /* PontuacaoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PontuacaoManager.h; sourceTree = "<group>"; };
@@ -106,6 +105,7 @@
 		7E551B5F1AC0AC7D00EB7FD8 /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizViewController.h; sourceTree = "<group>"; };
 		7E551B601AC0AC7D00EB7FD8 /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
 		7E551B611AC0AC7D00EB7FD8 /* QuizViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuizViewController.xib; sourceTree = "<group>"; };
+		7E5B31EB1AC9DAE700ECBFD8 /* JogosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JogosViewController.xib; sourceTree = "<group>"; };
 		7EDF4A5A1AC1D0F500FFACD5 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		7EDF4A5E1AC1D31500FFACD5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Challenge 2/Frameworks/Realm.framework"; sourceTree = "<group>"; };
 		7EDF4A601AC1D5C100FFACD5 /* Doenca.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doenca.h; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 			children = (
 				7E551B581AC0AC7D00EB7FD8 /* JogosViewController.h */,
 				7E551B591AC0AC7D00EB7FD8 /* JogosViewController.m */,
-				7E551B5A1AC0AC7D00EB7FD8 /* JogosViewController.xib */,
+				7E5B31EB1AC9DAE700ECBFD8 /* JogosViewController.xib */,
 				4E7D5FBC1AC49392009C8367 /* SalvarPontuacao.h */,
 				4E7D5FBD1AC49392009C8367 /* SalvarPontuacao.m */,
 				4E7D5FBE1AC49392009C8367 /* SalvarPontuacao.xib */,
@@ -424,10 +424,10 @@
 			files = (
 				24A3BB191AC1E16600F7E698 /* PontuacaoTableViewCell.xib in Resources */,
 				4E7D5FC01AC49392009C8367 /* SalvarPontuacao.xib in Resources */,
-				7E551B651AC0AC7D00EB7FD8 /* JogosViewController.xib in Resources */,
 				7E551B691AC0AC7D00EB7FD8 /* QuizViewController.xib in Resources */,
 				4EA614CA1AC094A400D94F8A /* LaunchScreen.xib in Resources */,
 				24A3BB0F1AC1D7D700F7E698 /* img.jpg in Resources */,
+				7E5B31EC1AC9DAE700ECBFD8 /* JogosViewController.xib in Resources */,
 				107F6F801AC326B90077B065 /* EnciclopediaViewController.xib in Resources */,
 				10B602361AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib in Resources */,
 				4EA614C71AC094A400D94F8A /* Images.xcassets in Resources */,

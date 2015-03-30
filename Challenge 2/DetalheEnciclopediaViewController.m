@@ -17,12 +17,13 @@
 
 @end
 
+#pragma mark - Interface
+
 @implementation DetalheEnciclopediaViewController
 @synthesize causa;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     [self.informacoesDoenca setDelegate:self];
     
     [_imagensDoenca setImage: [UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
@@ -67,6 +68,8 @@
 - (void) viewWillDisappear:(BOOL)animated{
     [self animacao];
 }
+
+#pragma mark - Navegação
 
 - (void)next:(id)sender {
     DoencaManager *doencaManager = [DoencaManager sharedInstance];
