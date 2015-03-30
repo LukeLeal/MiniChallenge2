@@ -45,6 +45,9 @@
 
 #pragma mark - Ações de botões
 - (IBAction)memoriaBotao:(id)sender {
+    volta=false;
+    MemoriaViewController *memoria = [[MemoriaViewController alloc]init];
+    [self.navigationController pushViewController:memoria animated:NO];
 }
 
 - (IBAction)quizBotao:(id)sender {

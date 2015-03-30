@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "QuizViewController.h"
+#import "MemoriaViewController.h"
 
 @interface JogosViewController : UIViewController
 

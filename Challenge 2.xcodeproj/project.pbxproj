@@ -11,6 +11,8 @@
 		107F6F801AC326B90077B065 /* EnciclopediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107F6F7E1AC326B90077B065 /* EnciclopediaViewController.xib */; };
 		10B602351AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B602331AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m */; };
 		10B602361AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B602341AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib */; };
+		246873EB1AC9B35600E7B04B /* MemoriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246873E91AC9B35600E7B04B /* MemoriaViewController.m */; };
+		246873EC1AC9B35600E7B04B /* MemoriaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 246873EA1AC9B35600E7B04B /* MemoriaViewController.xib */; };
 		24A3BB0F1AC1D7D700F7E698 /* img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24A3BB0E1AC1D7D700F7E698 /* img.jpg */; };
 		24A3BB131AC1DD8700F7E698 /* PontuacaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A3BB111AC1DD8700F7E698 /* PontuacaoViewController.m */; };
 		24A3BB141AC1DD8700F7E698 /* PontuacaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A3BB121AC1DD8700F7E698 /* PontuacaoViewController.xib */; };
@@ -57,6 +59,9 @@
 		10B602321AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalheEnciclopediaViewController.h; sourceTree = "<group>"; };
 		10B602331AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalheEnciclopediaViewController.m; sourceTree = "<group>"; };
 		10B602341AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetalheEnciclopediaViewController.xib; sourceTree = "<group>"; };
+		246873E81AC9B35600E7B04B /* MemoriaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoriaViewController.h; sourceTree = "<group>"; };
+		246873E91AC9B35600E7B04B /* MemoriaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoriaViewController.m; sourceTree = "<group>"; };
+		246873EA1AC9B35600E7B04B /* MemoriaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoriaViewController.xib; sourceTree = "<group>"; };
 		24A3BB0E1AC1D7D700F7E698 /* img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = img.jpg; path = Images.xcassets/img.jpg; sourceTree = "<group>"; };
 		24A3BB101AC1DD8700F7E698 /* PontuacaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PontuacaoViewController.h; sourceTree = "<group>"; };
 		24A3BB111AC1DD8700F7E698 /* PontuacaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PontuacaoViewController.m; sourceTree = "<group>"; };
@@ -313,6 +318,9 @@
 		7E74342B1AC341D500EF26C4 /* Memória */ = {
 			isa = PBXGroup;
 			children = (
+				246873E81AC9B35600E7B04B /* MemoriaViewController.h */,
+				246873E91AC9B35600E7B04B /* MemoriaViewController.m */,
+				246873EA1AC9B35600E7B04B /* MemoriaViewController.xib */,
 			);
 			name = "Memória";
 			sourceTree = "<group>";
@@ -415,6 +423,7 @@
 				4EA614C71AC094A400D94F8A /* Images.xcassets in Resources */,
 				4EA614E31AC0955300D94F8A /* HomeViewController.xib in Resources */,
 				24A3BB141AC1DD8700F7E698 /* PontuacaoViewController.xib in Resources */,
+				246873EC1AC9B35600E7B04B /* MemoriaViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +450,7 @@
 				7E551B661AC0AC7D00EB7FD8 /* Pontuacao.m in Sources */,
 				4E57BBAF1AC342AD00CB1869 /* Pergunta.m in Sources */,
 				24A3BB131AC1DD8700F7E698 /* PontuacaoViewController.m in Sources */,
+				246873EB1AC9B35600E7B04B /* MemoriaViewController.m in Sources */,
 				7E551B681AC0AC7D00EB7FD8 /* QuizViewController.m in Sources */,
 				107F6F7F1AC326B90077B065 /* EnciclopediaViewController.m in Sources */,
 				4EA614BF1AC094A400D94F8A /* AppDelegate.m in Sources */,
