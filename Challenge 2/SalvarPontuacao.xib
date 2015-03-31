@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="oii-vw-suf" userLabel="background">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="oii-vw-suf" userLabel="background">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUG-tR-tcv">
@@ -54,8 +54,7 @@
                             <exclude reference="OQF-sV-nWG"/>
                         </mask>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                        <rect key="frame" x="55" y="160" width="290" height="30"/>
+                    <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
                             <include reference="OQF-sV-nWG"/>
                         </mask>
@@ -105,8 +104,7 @@
                             <exclude reference="ikT-aV-w0g"/>
                         </mask>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                        <rect key="frame" x="90" y="220" width="220" height="220"/>
+                    <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
                             <include reference="140-uE-dyO"/>
                             <include reference="CUB-E2-3gp"/>
@@ -163,24 +161,24 @@
                     <exclude reference="Kms-qJ-Lik"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="3cf-Hn-tH4"/>
+                    <exclude reference="s4k-rF-9nj"/>
+                    <exclude reference="2vH-Fy-EeC"/>
+                    <exclude reference="Yb0-7t-aoK"/>
+                    <exclude reference="PsR-UU-5qw"/>
+                    <exclude reference="ysA-la-yax"/>
                     <exclude reference="PTb-bi-qUl"/>
                     <exclude reference="dxC-xB-S7d"/>
                     <exclude reference="iTI-Kk-ZLX"/>
                     <exclude reference="rum-w0-9NI"/>
-                    <exclude reference="PsR-UU-5qw"/>
-                    <exclude reference="ysA-la-yax"/>
                     <exclude reference="Otd-ih-9z5"/>
                     <exclude reference="qke-9W-GQF"/>
-                    <exclude reference="3cf-Hn-tH4"/>
-                    <exclude reference="s4k-rF-9nj"/>
-                    <exclude reference="FaX-v6-SUO"/>
-                    <exclude reference="lwt-Wb-wrT"/>
-                    <exclude reference="uJy-W6-hsf"/>
-                    <exclude reference="2vH-Fy-EeC"/>
-                    <exclude reference="Yb0-7t-aoK"/>
                     <exclude reference="Crt-cp-UUh"/>
                     <exclude reference="hHj-Ds-IDi"/>
                     <exclude reference="hQb-Qt-EKV"/>
+                    <exclude reference="FaX-v6-SUO"/>
+                    <exclude reference="lwt-Wb-wrT"/>
+                    <exclude reference="uJy-W6-hsf"/>
                     <exclude reference="RXR-fg-Luu"/>
                     <exclude reference="wFN-ZR-HSA"/>
                     <exclude reference="Ob4-78-9S2"/>
@@ -195,24 +193,24 @@
                     <include reference="Kms-qJ-Lik"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="3cf-Hn-tH4"/>
+                    <include reference="s4k-rF-9nj"/>
+                    <include reference="2vH-Fy-EeC"/>
+                    <include reference="Yb0-7t-aoK"/>
+                    <include reference="PsR-UU-5qw"/>
+                    <include reference="ysA-la-yax"/>
                     <include reference="PTb-bi-qUl"/>
                     <include reference="dxC-xB-S7d"/>
                     <include reference="iTI-Kk-ZLX"/>
                     <include reference="rum-w0-9NI"/>
-                    <include reference="PsR-UU-5qw"/>
-                    <include reference="ysA-la-yax"/>
                     <include reference="Otd-ih-9z5"/>
                     <include reference="qke-9W-GQF"/>
-                    <include reference="3cf-Hn-tH4"/>
-                    <include reference="s4k-rF-9nj"/>
-                    <include reference="FaX-v6-SUO"/>
-                    <include reference="lwt-Wb-wrT"/>
-                    <exclude reference="uJy-W6-hsf"/>
-                    <include reference="2vH-Fy-EeC"/>
-                    <include reference="Yb0-7t-aoK"/>
                     <include reference="Crt-cp-UUh"/>
                     <include reference="hHj-Ds-IDi"/>
                     <exclude reference="hQb-Qt-EKV"/>
+                    <include reference="FaX-v6-SUO"/>
+                    <include reference="lwt-Wb-wrT"/>
+                    <exclude reference="uJy-W6-hsf"/>
                     <include reference="RXR-fg-Luu"/>
                     <include reference="wFN-ZR-HSA"/>
                     <include reference="Ob4-78-9S2"/>

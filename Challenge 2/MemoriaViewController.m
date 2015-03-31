@@ -32,7 +32,7 @@
     
     mm = [[MemoriaManager alloc]init];
     
-    secondsLeft = 800;
+    secondsLeft = 60;
    [self countdownTimer];
     pontos=0;
     arrayBotoes = [NSArray arrayWithObjects: carta1,carta2,carta3,carta4,carta5,carta6,carta7,carta8,carta9,carta10,carta11,carta12,nil];

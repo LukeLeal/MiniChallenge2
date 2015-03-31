@@ -21,81 +21,48 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="WPA-KJ-mh0" userLabel="background">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voE-CT-vB9">
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voE-CT-vB9">
                     <rect key="frame" x="255" y="367" width="91" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="260" id="biu-ZW-d2M"/>
-                    </constraints>
                     <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="30"/>
-                    <state key="normal" title="Jogar">
+                    <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="30" maxY="0.0"/>
+                    <state key="normal" title="Jogar" image="Puzzle Filled-50">
                         <color key="titleColor" red="0.41568627450980394" green="0.0" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="biu-ZW-d2M"/>
-                        </mask>
-                    </variation>
                     <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="130" y="249" width="96" height="49"/>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <mask key="constraints">
-                            <include reference="biu-ZW-d2M"/>
-                        </mask>
                     </variation>
                     <connections>
                         <action selector="jogarBotao:" destination="-1" eventType="touchUpInside" id="X6K-nu-AuY"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekQ-xd-sun">
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekQ-xd-sun">
                     <rect key="frame" x="248" y="405" width="116" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="260" id="IGM-wv-U4a"/>
-                    </constraints>
                     <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="30"/>
-                    <state key="normal" title="Pontuação">
+                    <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="30" maxY="0.0"/>
+                    <state key="normal" title="Pontuação" image="Leaderboard-50">
                         <color key="titleColor" red="0.41568627450000001" green="0.0" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="IGM-wv-U4a"/>
-                        </mask>
-                    </variation>
                     <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="316" y="249" width="168" height="49"/>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <mask key="constraints">
-                            <include reference="IGM-wv-U4a"/>
-                        </mask>
                     </variation>
                     <connections>
                         <action selector="pontuacaoBotao:" destination="-1" eventType="touchUpInside" id="kbl-fZ-ZC1"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxm-Rw-1tQ">
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxm-Rw-1tQ">
                     <rect key="frame" x="243" y="448" width="127" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="260" id="dTp-XU-ruj"/>
-                    </constraints>
                     <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="30"/>
-                    <state key="normal" title="Enciclopédia">
+                    <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="30" maxY="0.0"/>
+                    <state key="normal" title="Enciclopédia" image="Book Stack-50">
                         <color key="titleColor" red="0.41568627450000001" green="0.0" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="dTp-XU-ruj"/>
-                        </mask>
-                    </variation>
                     <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="534" y="231" width="205" height="67"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <mask key="constraints">
-                            <include reference="dTp-XU-ruj"/>
-                        </mask>
+                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="70" y="800" width="260" height="50"/>
                     </variation>
                     <connections>
                         <action selector="enciclopediaBotao:" destination="-1" eventType="touchUpInside" id="IDy-KP-wHT"/>
@@ -137,6 +104,7 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="voE-CT-vB9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="70" id="Ayd-xM-GgF"/>
                 <constraint firstItem="yxm-Rw-1tQ" firstAttribute="top" secondItem="ekQ-xd-sun" secondAttribute="bottom" constant="25" id="BuH-Hu-2sn"/>
                 <constraint firstAttribute="centerX" secondItem="yxm-Rw-1tQ" secondAttribute="centerX" id="M6Z-3V-IFh"/>
                 <constraint firstItem="yxm-Rw-1tQ" firstAttribute="leading" secondItem="ekQ-xd-sun" secondAttribute="trailing" constant="50" id="Po0-YA-NMx">
@@ -150,7 +118,10 @@
                 <constraint firstAttribute="centerX" secondItem="BAD-DU-Bqp" secondAttribute="centerX" id="dTH-l1-fkz"/>
                 <constraint firstAttribute="centerX" secondItem="BAD-DU-Bqp" secondAttribute="centerX" id="eHo-yF-Gfc"/>
                 <constraint firstItem="WPA-KJ-mh0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eRF-My-u3L"/>
-                <constraint firstAttribute="centerX" secondItem="ekQ-xd-sun" secondAttribute="centerX" id="gDX-vb-92I"/>
+                <constraint firstItem="yxm-Rw-1tQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="70" id="fmN-Fg-NMa"/>
+                <constraint firstAttribute="centerX" secondItem="ekQ-xd-sun" secondAttribute="centerX" id="gDX-vb-92I">
+                    <variation key="heightClass=regular-widthClass=compact" constant="5"/>
+                </constraint>
                 <constraint firstItem="WPA-KJ-mh0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="jtW-Wf-x0x"/>
                 <constraint firstAttribute="bottom" secondItem="WPA-KJ-mh0" secondAttribute="bottom" id="kDH-SA-wB7"/>
                 <constraint firstItem="ekQ-xd-sun" firstAttribute="top" secondItem="voE-CT-vB9" secondAttribute="bottom" constant="25" id="lum-XX-6PX"/>
@@ -162,6 +133,7 @@
                 <constraint firstItem="BAD-DU-Bqp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="rDP-js-ykR">
                     <variation key="heightClass=regular-widthClass=compact" constant="-37"/>
                 </constraint>
+                <constraint firstItem="ekQ-xd-sun" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="70" id="rwf-WO-Bxn"/>
                 <constraint firstItem="ekQ-xd-sun" firstAttribute="top" secondItem="voE-CT-vB9" secondAttribute="bottom" constant="65" id="sHS-pw-RiL">
                     <variation key="heightClass=regular-widthClass=compact" constant="75"/>
                 </constraint>
@@ -173,26 +145,29 @@
             </constraints>
             <variation key="default">
                 <mask key="constraints">
-                    <exclude reference="dTH-l1-fkz"/>
-                    <exclude reference="eHo-yF-Gfc"/>
-                    <exclude reference="rDP-js-ykR"/>
-                    <exclude reference="zgt-qO-10U"/>
                     <exclude reference="UtC-Bd-rHr"/>
                     <exclude reference="eRF-My-u3L"/>
                     <exclude reference="jtW-Wf-x0x"/>
                     <exclude reference="kDH-SA-wB7"/>
+                    <exclude reference="dTH-l1-fkz"/>
+                    <exclude reference="eHo-yF-Gfc"/>
+                    <exclude reference="rDP-js-ykR"/>
+                    <exclude reference="zgt-qO-10U"/>
+                    <exclude reference="Ayd-xM-GgF"/>
                     <exclude reference="wXn-ff-gK2"/>
                     <exclude reference="yAy-vs-j9v"/>
                     <exclude reference="gDX-vb-92I"/>
                     <exclude reference="lum-XX-6PX"/>
                     <exclude reference="nUa-jP-hja"/>
                     <exclude reference="puA-1g-mmi"/>
+                    <exclude reference="rwf-WO-Bxn"/>
                     <exclude reference="sHS-pw-RiL"/>
                     <exclude reference="BuH-Hu-2sn"/>
                     <exclude reference="M6Z-3V-IFh"/>
                     <exclude reference="Po0-YA-NMx"/>
                     <exclude reference="RAA-CE-gec"/>
                     <exclude reference="cma-go-iqz"/>
+                    <exclude reference="fmN-Fg-NMa"/>
                     <exclude reference="pci-Oa-BkI"/>
                 </mask>
             </variation>
@@ -208,27 +183,33 @@
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="constraints">
-                    <include reference="dTH-l1-fkz"/>
-                    <include reference="rDP-js-ykR"/>
-                    <include reference="UtC-Bd-rHr"/>
+                    <exclude reference="UtC-Bd-rHr"/>
                     <include reference="eRF-My-u3L"/>
                     <include reference="jtW-Wf-x0x"/>
                     <include reference="kDH-SA-wB7"/>
-                    <include reference="wXn-ff-gK2"/>
+                    <include reference="dTH-l1-fkz"/>
+                    <include reference="rDP-js-ykR"/>
+                    <include reference="Ayd-xM-GgF"/>
+                    <exclude reference="wXn-ff-gK2"/>
                     <exclude reference="yAy-vs-j9v"/>
                     <include reference="gDX-vb-92I"/>
                     <include reference="lum-XX-6PX"/>
+                    <include reference="rwf-WO-Bxn"/>
                     <exclude reference="sHS-pw-RiL"/>
                     <include reference="BuH-Hu-2sn"/>
-                    <include reference="M6Z-3V-IFh"/>
+                    <exclude reference="M6Z-3V-IFh"/>
                     <exclude reference="RAA-CE-gec"/>
                     <include reference="cma-go-iqz"/>
+                    <include reference="fmN-Fg-NMa"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="418" y="373"/>
         </view>
     </objects>
     <resources>
+        <image name="Book Stack-50" width="50" height="50"/>
+        <image name="Leaderboard-50" width="50" height="50"/>
+        <image name="Puzzle Filled-50" width="50" height="50"/>
         <image name="background" width="640" height="452"/>
         <image name="logo" width="513" height="640"/>
     </resources>
