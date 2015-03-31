@@ -32,6 +32,14 @@
     [self.foto addGestureRecognizer:tapFoto];
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [UIView animateWithDuration:0.75
+                     animations:^{
+                         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+                         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
+                     }];
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return NO;
@@ -94,7 +102,12 @@
     NSMutableArray *newViewControllers = [[NSMutableArray alloc] initWithArray:self.navigationController.viewControllers];
     [newViewControllers removeObjectsInRange:NSMakeRange(1, self.navigationController.viewControllers.count-1)];
     [newViewControllers addObject:[[PontuacaoViewController alloc] init]];
-    [self.navigationController setViewControllers:newViewControllers];
+    [UIView animateWithDuration:0.75
+                     animations:^{
+                         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+                         [UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.navigationController.view cache:NO];
+                     }];
+    [self.navigationController setViewControllers:newViewControllers animated:NO];
 }
 
 #pragma mark - Navegação
@@ -104,7 +117,7 @@
     UIAlertController *confirmCancelAlert = [UIAlertController alertControllerWithTitle:@"Tem certeza?" message:nil preferredStyle:UIAlertControllerStyleAlert];
     //Cria uma ação para quando o respectivo botão for pressionado. No caso, o botão "Sim".
     UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        [self.navigationController popToRootViewControllerAnimated:NO];
     }];
     //Botão "Não", que mantém o usuário na mesma view.
     UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {}];
@@ -112,6 +125,6 @@
     [confirmCancelAlert addAction:yesAction];
     [confirmCancelAlert addAction:noAction];
     //A view controller apresenta o alerta.
-    [self presentViewController:confirmCancelAlert animated:YES completion:nil];
+    [self presentViewController:confirmCancelAlert animated:NO completion:nil];
 }
 @end

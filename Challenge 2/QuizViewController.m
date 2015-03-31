@@ -18,6 +18,8 @@
     NSArray *botoes;
     //NSMutableArray *perguntas;
     QuizManager *qm;
+    //Para voltar ou ir para a próxima view
+    BOOL volta;
 }
 
 @end
@@ -26,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    volta=false;
     _pontos.text = @"Pontuação: 0";
     _sequencia.text = @"Combo: 0";
     [self.navigationController setNavigationBarHidden:YES];
@@ -51,11 +54,20 @@
 
 
 -(void) viewWillDisappear:(BOOL)animated{
-    [UIView animateWithDuration:0.75
-                     animations:^{
-                         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-                         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
-                     }];
+    if(volta){
+        [UIView animateWithDuration:0.75
+                         animations:^{
+                             [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+                             [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
+                         }];
+    }
+    else{
+        [UIView animateWithDuration:0.75
+                         animations:^{
+                             [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+                             [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+                         }];
+    }
 }
 
 -(void)responde: (id)sender{
@@ -132,7 +144,8 @@
         }];
         //Botão "Não".
         UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            [self.navigationController popToRootViewControllerAnimated:YES];
+            volta=true;
+            [self.navigationController popToRootViewControllerAnimated:NO];
         }];
         //Adiciona as ações ao alerta.
         [timerAlert addAction:yesAction];
