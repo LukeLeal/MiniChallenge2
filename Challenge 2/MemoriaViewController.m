@@ -16,13 +16,13 @@
 
 @implementation MemoriaViewController
 
-@synthesize carta1,carta2,carta3,carta4,carta5,carta6,carta7,carta8,carta9,carta10,carta11,carta12,carta13,carta14,carta15;
+@synthesize carta1,carta2,carta3,carta4,carta5,carta6,carta7,carta8,carta9,carta10,carta11,carta12;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle:@"Memória"];
     
-    arrayBotoes = [NSArray arrayWithObjects: carta1,carta2,carta3,carta4,carta5,carta6,carta7,carta8,carta9,carta10,carta11,carta12,carta13,carta14,carta15,nil];
+    arrayBotoes = [NSArray arrayWithObjects: carta1,carta2,carta3,carta4,carta5,carta6,carta7,carta8,carta9,carta10,carta11,carta12,nil];
     
     [self preparaCartas];
 }
@@ -61,7 +61,7 @@
             return [UIColor redColor];
             break;
         case 1:
-            return [UIColor yellowColor];
+            return [UIColor orangeColor];
             break;
         case 2:
             return [UIColor blueColor];
@@ -69,10 +69,6 @@
         case 3:
             return [UIColor greenColor];
             break;
-        case 4:
-            return [UIColor orangeColor];
-            break;
-            
         default:
             break;
     }

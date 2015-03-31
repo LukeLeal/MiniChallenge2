@@ -25,9 +25,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *carta10;
 @property (weak, nonatomic) IBOutlet UIButton *carta11;
 @property (weak, nonatomic) IBOutlet UIButton *carta12;
-@property (weak, nonatomic) IBOutlet UIButton *carta13;
-@property (weak, nonatomic) IBOutlet UIButton *carta14;
-@property (weak, nonatomic) IBOutlet UIButton *carta15;
 
 
 - (IBAction)botao:(UIButton *)sender;

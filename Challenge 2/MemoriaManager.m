@@ -33,7 +33,7 @@
 }
 
 - (void)remove{
-    while ([arrayDoencas count] > 5){
+    while ([arrayDoencas count] > 4){
         [arrayDoencas removeLastObject];
     }
 }
