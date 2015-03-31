@@ -32,7 +32,7 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tempo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IB-rj-dcT">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IB-rj-dcT">
                     <rect key="frame" x="216" y="0.0" width="169" height="58"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="169" id="j3n-PV-dgS"/>
@@ -60,7 +60,7 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uat-k1-bPE">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uat-k1-bPE">
                     <rect key="frame" x="188" y="133" width="224" height="149"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="149" id="01j-up-X5z"/>
@@ -76,7 +76,7 @@
                         </mask>
                     </variation>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="oCg-mN-M0M">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="oCg-mN-M0M">
                     <rect key="frame" x="136" y="443" width="371" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="ORS-c6-7Bb"/>
@@ -96,7 +96,7 @@
                         </mask>
                     </variation>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4va-gj-D4T">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4va-gj-D4T">
                     <rect key="frame" x="136" y="396" width="371" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="cf1-Xh-2uC"/>
@@ -116,7 +116,7 @@
                         </mask>
                     </variation>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" text="TEXTO DA PERGUNTA" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="qHv-8F-AQF">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="TEXTO DA PERGUNTA" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="qHv-8F-AQF">
                     <rect key="frame" x="136" y="290" width="371" height="98"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -136,7 +136,7 @@
                         </mask>
                     </variation>
                 </textView>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Hjp-FD-MyF">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Hjp-FD-MyF">
                     <rect key="frame" x="136" y="487" width="371" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="no1-IM-j95"/>
@@ -156,7 +156,7 @@
                         </mask>
                     </variation>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sequencia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNd-xW-yoO">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sequencia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNd-xW-yoO">
                     <rect key="frame" x="434" y="85" width="142" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="4Pc-8l-BfD"/>
@@ -219,6 +219,7 @@
                     <exclude reference="djl-sx-Jf7"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="711-LQ-yvQ"/>
                     <exclude reference="FLH-w8-0K8"/>
                     <exclude reference="faq-Ww-Z8B"/>
                     <exclude reference="s7C-Yx-G66"/>
@@ -230,10 +231,6 @@
                     <exclude reference="Bwc-9J-zde"/>
                     <exclude reference="cxq-i6-ge3"/>
                     <exclude reference="gkn-bx-aZ1"/>
-                    <exclude reference="6Mz-bb-wRu"/>
-                    <exclude reference="Xa2-k7-WJG"/>
-                    <exclude reference="ePQ-W9-yGQ"/>
-                    <exclude reference="711-LQ-yvQ"/>
                     <exclude reference="WL4-mg-2vK"/>
                     <exclude reference="l3c-Rr-iPO"/>
                     <exclude reference="qsW-CO-0JC"/>
@@ -241,6 +238,9 @@
                     <exclude reference="jPS-yg-aT0"/>
                     <exclude reference="ltJ-eU-LrJ"/>
                     <exclude reference="zXq-Cj-Ei6"/>
+                    <exclude reference="6Mz-bb-wRu"/>
+                    <exclude reference="Xa2-k7-WJG"/>
+                    <exclude reference="ePQ-W9-yGQ"/>
                     <exclude reference="ZKf-FD-CUe"/>
                     <exclude reference="yOt-Mu-ssc"/>
                     <exclude reference="PtV-YY-WJs"/>
@@ -254,6 +254,7 @@
                     <include reference="djl-sx-Jf7"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="711-LQ-yvQ"/>
                     <include reference="FLH-w8-0K8"/>
                     <include reference="faq-Ww-Z8B"/>
                     <include reference="s7C-Yx-G66"/>
@@ -265,10 +266,6 @@
                     <include reference="Bwc-9J-zde"/>
                     <include reference="cxq-i6-ge3"/>
                     <include reference="gkn-bx-aZ1"/>
-                    <include reference="6Mz-bb-wRu"/>
-                    <include reference="Xa2-k7-WJG"/>
-                    <include reference="ePQ-W9-yGQ"/>
-                    <include reference="711-LQ-yvQ"/>
                     <include reference="WL4-mg-2vK"/>
                     <include reference="l3c-Rr-iPO"/>
                     <include reference="qsW-CO-0JC"/>
@@ -276,6 +273,9 @@
                     <include reference="jPS-yg-aT0"/>
                     <include reference="ltJ-eU-LrJ"/>
                     <include reference="zXq-Cj-Ei6"/>
+                    <include reference="6Mz-bb-wRu"/>
+                    <include reference="Xa2-k7-WJG"/>
+                    <include reference="ePQ-W9-yGQ"/>
                     <include reference="ZKf-FD-CUe"/>
                     <include reference="yOt-Mu-ssc"/>
                     <include reference="PtV-YY-WJs"/>

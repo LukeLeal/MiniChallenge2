@@ -26,7 +26,7 @@
     [super viewDidLoad];
     [self.informacoesDoenca setDelegate:self];
     
-    [_imagensDoenca setImage: [UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
+    [_imagemDoenca setImage: [UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
     
     UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(next:)];
     [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];

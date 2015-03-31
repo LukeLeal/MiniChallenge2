@@ -11,7 +11,7 @@
 @interface DetalheEnciclopediaViewController : UIViewController <UITextViewDelegate, UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *informacoesDoenca;
-@property (weak, nonatomic) IBOutlet UIImageView *imagensDoenca;
+@property (weak, nonatomic) IBOutlet UIImageView *imagemDoenca;
 @property (weak, nonatomic) IBOutlet UILabel *causa;
 @property (weak, nonatomic) IBOutlet UILabel *prevencao;
 @property (weak, nonatomic) IBOutlet UILabel *sintoma;
