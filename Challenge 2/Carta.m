@@ -10,14 +10,13 @@
 
 @implementation Carta
 
-@synthesize texto, cor, tag;
+@synthesize texto, tag;
 
--(Carta *)initWithTexto: (NSString *)text andCor: (UIColor *)color andTag: (int)etiqueta{
+-(Carta *)initWithTexto: (NSString *)text andTag: (int)etiqueta{
     
     self = [super init];
     if (self){
         texto = text;
-        cor = color;
         tag = etiqueta;
     }
     

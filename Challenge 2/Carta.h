@@ -7,14 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 
 @interface Carta : NSObject
 
 @property NSString *texto;
-@property UIColor *cor;
 @property int tag;
 
--(Carta *)initWithTexto: (NSString *)text andCor: (UIColor *)color andTag: (int)etiqueta;
+-(Carta *)initWithTexto: (NSString *)text andTag: (int)etiqueta;
 
 @end

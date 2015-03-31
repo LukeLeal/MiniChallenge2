@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Carta.h"
 #import "MemoriaManager.h"
+#import "DoencaManager.h"
 
 @interface MemoriaViewController : UIViewController
 

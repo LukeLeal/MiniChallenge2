@@ -48,19 +48,44 @@
         botao = [arrayBotoes objectAtIndex:i];
         
         [botao setTitle:carta.texto forState:normal];
-        [botao setBackgroundColor:carta.cor];
+        [botao setBackgroundColor:[UIColor blackColor]];
         [botao setTag:carta.tag];
         
         [botao.titleLabel setAlpha:0.0f];
     }
 }
 
+-(UIColor *)corByTag: (int)tag{
+    switch (tag) {
+        case 0:
+            return [UIColor redColor];
+            break;
+        case 1:
+            return [UIColor yellowColor];
+            break;
+        case 2:
+            return [UIColor blueColor];
+            break;
+        case 3:
+            return [UIColor greenColor];
+            break;
+        case 4:
+            return [UIColor orangeColor];
+            break;
+            
+        default:
+            break;
+    }
+    return nil;
+}
+
+
 - (IBAction)botao:(UIButton *)sender {
 //    Setar a cor para não dar um efeito de delay durante a troca de cor
-    [sender setBackgroundColor:[UIColor blueColor]];
+    [sender setBackgroundColor:[self corByTag:(int)sender.tag]];
     [UIView transitionWithView:sender duration:0.5
                        options:UIViewAnimationOptionTransitionFlipFromRight animations:^{
-                           [sender setBackgroundColor:[UIColor blueColor]];
+              
                            [sender setTitleColor:[UIColor whiteColor] forState:normal];
                        } completion:nil];
 }
