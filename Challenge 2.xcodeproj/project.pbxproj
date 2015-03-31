@@ -38,6 +38,7 @@
 		7E551B681AC0AC7D00EB7FD8 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B601AC0AC7D00EB7FD8 /* QuizViewController.m */; };
 		7E551B691AC0AC7D00EB7FD8 /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E551B611AC0AC7D00EB7FD8 /* QuizViewController.xib */; };
 		7E5B31EC1AC9DAE700ECBFD8 /* JogosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E5B31EB1AC9DAE700ECBFD8 /* JogosViewController.xib */; };
+		7ED3B44C1ACB0A5C00D65593 /* Doenças.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED3B44B1ACB0A5C00D65593 /* Doenças.xcassets */; };
 		7EDF4A5B1AC1D0F500FFACD5 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDF4A5A1AC1D0F500FFACD5 /* iAd.framework */; };
 		7EDF4A5F1AC1D31500FFACD5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDF4A5E1AC1D31500FFACD5 /* Realm.framework */; };
 		7EDF4A621AC1D5C100FFACD5 /* Doenca.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF4A611AC1D5C100FFACD5 /* Doenca.m */; };
@@ -106,6 +107,7 @@
 		7E551B601AC0AC7D00EB7FD8 /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
 		7E551B611AC0AC7D00EB7FD8 /* QuizViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuizViewController.xib; sourceTree = "<group>"; };
 		7E5B31EB1AC9DAE700ECBFD8 /* JogosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JogosViewController.xib; sourceTree = "<group>"; };
+		7ED3B44B1ACB0A5C00D65593 /* Doenças.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Doenças.xcassets"; sourceTree = "<group>"; };
 		7EDF4A5A1AC1D0F500FFACD5 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		7EDF4A5E1AC1D31500FFACD5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Challenge 2/Frameworks/Realm.framework"; sourceTree = "<group>"; };
 		7EDF4A601AC1D5C100FFACD5 /* Doenca.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doenca.h; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				7E551B4C1AC0AA8000EB7FD8 /* Entidades */,
 				7E551B4B1AC0AA7300EB7FD8 /* Views */,
 				4EA614C61AC094A400D94F8A /* Images.xcassets */,
+				7ED3B44B1ACB0A5C00D65593 /* Doenças.xcassets */,
 				4EA614C81AC094A400D94F8A /* LaunchScreen.xib */,
 				4EA614B91AC094A400D94F8A /* Supporting Files */,
 			);
@@ -434,6 +437,7 @@
 				4EA614E31AC0955300D94F8A /* HomeViewController.xib in Resources */,
 				24A3BB141AC1DD8700F7E698 /* PontuacaoViewController.xib in Resources */,
 				246873EC1AC9B35600E7B04B /* MemoriaViewController.xib in Resources */,
+				7ED3B44C1ACB0A5C00D65593 /* Doenças.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

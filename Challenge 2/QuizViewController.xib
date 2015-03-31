@@ -23,6 +23,15 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="uUj-aN-DtV" userLabel="background">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pergunta:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djl-sx-Jf7">
+                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="16"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tempo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IB-rj-dcT">
                     <rect key="frame" x="216" y="0.0" width="169" height="58"/>
                     <constraints>
@@ -109,7 +118,7 @@
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" text="TEXTO DA PERGUNTA" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="qHv-8F-AQF">
                     <rect key="frame" x="136" y="290" width="371" height="98"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="98" id="7LQ-8O-mDg"/>
                     </constraints>
@@ -169,12 +178,6 @@
                         </mask>
                     </variation>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pergunta:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djl-sx-Jf7">
-                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="16"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -183,6 +186,7 @@
                 <constraint firstItem="djl-sx-Jf7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="38" id="711-LQ-yvQ"/>
                 <constraint firstItem="uat-k1-bPE" firstAttribute="top" secondItem="RNd-xW-yoO" secondAttribute="bottom" constant="27" id="Bwc-9J-zde"/>
                 <constraint firstItem="6IB-rj-dcT" firstAttribute="centerX" secondItem="uat-k1-bPE" secondAttribute="centerX" id="Eee-gH-4Kp"/>
+                <constraint firstItem="uUj-aN-DtV" firstAttribute="top" secondItem="6IB-rj-dcT" secondAttribute="top" id="FLH-w8-0K8"/>
                 <constraint firstItem="Hjp-FD-MyF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PtV-YY-WJs"/>
                 <constraint firstItem="qHv-8F-AQF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="32" id="WL4-mg-2vK"/>
                 <constraint firstItem="RNd-xW-yoO" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="Xa2-k7-WJG"/>
@@ -192,6 +196,7 @@
                 <constraint firstItem="Hjp-FD-MyF" firstAttribute="top" secondItem="oCg-mN-M0M" secondAttribute="bottom" constant="8" symbolic="YES" id="eNu-up-fzM"/>
                 <constraint firstItem="RNd-xW-yoO" firstAttribute="top" secondItem="6IB-rj-dcT" secondAttribute="bottom" constant="21" id="ePQ-W9-yGQ"/>
                 <constraint firstItem="Hjp-FD-MyF" firstAttribute="leading" secondItem="oCg-mN-M0M" secondAttribute="leading" id="fZL-IK-IPl"/>
+                <constraint firstItem="uUj-aN-DtV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="faq-Ww-Z8B"/>
                 <constraint firstItem="uat-k1-bPE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="88" id="gkn-bx-aZ1"/>
                 <constraint firstItem="4va-gj-D4T" firstAttribute="top" secondItem="qHv-8F-AQF" secondAttribute="bottom" constant="8" symbolic="YES" id="jPS-yg-aT0">
                     <variation key="heightClass=regular-widthClass=compact" constant="-8"/>
@@ -202,7 +207,9 @@
                 <constraint firstItem="qHv-8F-AQF" firstAttribute="top" secondItem="uat-k1-bPE" secondAttribute="bottom" constant="31" id="qsW-CO-0JC">
                     <variation key="heightClass=regular-widthClass=compact" constant="47"/>
                 </constraint>
+                <constraint firstAttribute="bottom" secondItem="uUj-aN-DtV" secondAttribute="bottom" id="s7C-Yx-G66"/>
                 <constraint firstItem="Hjp-FD-MyF" firstAttribute="trailing" secondItem="oCg-mN-M0M" secondAttribute="trailing" id="sLY-5b-e32"/>
+                <constraint firstItem="uUj-aN-DtV" firstAttribute="centerX" secondItem="4va-gj-D4T" secondAttribute="centerX" id="vEK-r8-fui"/>
                 <constraint firstItem="6IB-rj-dcT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vMA-Kn-zEK"/>
                 <constraint firstItem="oCg-mN-M0M" firstAttribute="top" secondItem="4va-gj-D4T" secondAttribute="bottom" constant="8" symbolic="YES" id="yOt-Mu-ssc"/>
                 <constraint firstItem="4va-gj-D4T" firstAttribute="leading" secondItem="oCg-mN-M0M" secondAttribute="leading" id="zXq-Cj-Ei6"/>
@@ -212,7 +219,10 @@
                     <exclude reference="djl-sx-Jf7"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="711-LQ-yvQ"/>
+                    <exclude reference="FLH-w8-0K8"/>
+                    <exclude reference="faq-Ww-Z8B"/>
+                    <exclude reference="s7C-Yx-G66"/>
+                    <exclude reference="vEK-r8-fui"/>
                     <exclude reference="qpe-ca-skQ"/>
                     <exclude reference="Eee-gH-4Kp"/>
                     <exclude reference="vMA-Kn-zEK"/>
@@ -220,6 +230,10 @@
                     <exclude reference="Bwc-9J-zde"/>
                     <exclude reference="cxq-i6-ge3"/>
                     <exclude reference="gkn-bx-aZ1"/>
+                    <exclude reference="6Mz-bb-wRu"/>
+                    <exclude reference="Xa2-k7-WJG"/>
+                    <exclude reference="ePQ-W9-yGQ"/>
+                    <exclude reference="711-LQ-yvQ"/>
                     <exclude reference="WL4-mg-2vK"/>
                     <exclude reference="l3c-Rr-iPO"/>
                     <exclude reference="qsW-CO-0JC"/>
@@ -227,9 +241,6 @@
                     <exclude reference="jPS-yg-aT0"/>
                     <exclude reference="ltJ-eU-LrJ"/>
                     <exclude reference="zXq-Cj-Ei6"/>
-                    <exclude reference="6Mz-bb-wRu"/>
-                    <exclude reference="Xa2-k7-WJG"/>
-                    <exclude reference="ePQ-W9-yGQ"/>
                     <exclude reference="ZKf-FD-CUe"/>
                     <exclude reference="yOt-Mu-ssc"/>
                     <exclude reference="PtV-YY-WJs"/>
@@ -243,7 +254,10 @@
                     <include reference="djl-sx-Jf7"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="711-LQ-yvQ"/>
+                    <include reference="FLH-w8-0K8"/>
+                    <include reference="faq-Ww-Z8B"/>
+                    <include reference="s7C-Yx-G66"/>
+                    <include reference="vEK-r8-fui"/>
                     <include reference="qpe-ca-skQ"/>
                     <include reference="Eee-gH-4Kp"/>
                     <include reference="vMA-Kn-zEK"/>
@@ -251,6 +265,10 @@
                     <include reference="Bwc-9J-zde"/>
                     <include reference="cxq-i6-ge3"/>
                     <include reference="gkn-bx-aZ1"/>
+                    <include reference="6Mz-bb-wRu"/>
+                    <include reference="Xa2-k7-WJG"/>
+                    <include reference="ePQ-W9-yGQ"/>
+                    <include reference="711-LQ-yvQ"/>
                     <include reference="WL4-mg-2vK"/>
                     <include reference="l3c-Rr-iPO"/>
                     <include reference="qsW-CO-0JC"/>
@@ -258,9 +276,6 @@
                     <include reference="jPS-yg-aT0"/>
                     <include reference="ltJ-eU-LrJ"/>
                     <include reference="zXq-Cj-Ei6"/>
-                    <include reference="6Mz-bb-wRu"/>
-                    <include reference="Xa2-k7-WJG"/>
-                    <include reference="ePQ-W9-yGQ"/>
                     <include reference="ZKf-FD-CUe"/>
                     <include reference="yOt-Mu-ssc"/>
                     <include reference="PtV-YY-WJs"/>
@@ -271,4 +286,7 @@
             </variation>
         </view>
     </objects>
+    <resources>
+        <image name="background" width="640" height="452"/>
+    </resources>
 </document>

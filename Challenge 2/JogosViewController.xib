@@ -14,15 +14,15 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="F0n-87-zlo" userLabel="background">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9u3-Vd-l57">
                     <rect key="frame" x="239" y="223" width="123" height="38"/>
                     <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="21"/>
                     <state key="normal" title="Memória">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="139" y="285" width="123" height="38"/>
-                    </variation>
                     <connections>
                         <action selector="memoriaBotao:" destination="-1" eventType="touchUpInside" id="Ino-LQ-Zyh"/>
                     </connections>
@@ -33,9 +33,6 @@
                     <state key="normal" title="Quiz">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="139" y="344" width="123" height="30"/>
-                    </variation>
                     <connections>
                         <action selector="quizBotao:" destination="-1" eventType="touchUpInside" id="3Jb-eA-kqR"/>
                     </connections>
@@ -46,16 +43,56 @@
                     <state key="normal" title="Roulette">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="139" y="408" width="123" height="30"/>
-                    </variation>
                     <connections>
                         <action selector="rouletteBotao:" destination="-1" eventType="touchUpInside" id="Y5B-78-kMk"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="9u3-Vd-l57" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="285" id="6V2-lL-dBf"/>
+                <constraint firstItem="F0n-87-zlo" firstAttribute="centerX" secondItem="vDw-Xp-kux" secondAttribute="centerX" id="8V2-S9-LfB"/>
+                <constraint firstAttribute="bottom" secondItem="F0n-87-zlo" secondAttribute="bottom" id="Gem-Hb-oVV"/>
+                <constraint firstItem="F0n-87-zlo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Jcs-gO-GLC"/>
+                <constraint firstItem="vDw-Xp-kux" firstAttribute="top" secondItem="MW3-Lh-ghp" secondAttribute="bottom" constant="34" id="M3u-U8-HRg"/>
+                <constraint firstItem="F0n-87-zlo" firstAttribute="centerX" secondItem="9u3-Vd-l57" secondAttribute="centerX" id="OYH-G9-wDy"/>
+                <constraint firstItem="F0n-87-zlo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="UQN-6y-vhS"/>
+                <constraint firstItem="F0n-87-zlo" firstAttribute="centerX" secondItem="MW3-Lh-ghp" secondAttribute="centerX" id="Yqj-TK-Yme"/>
+                <constraint firstAttribute="trailing" secondItem="F0n-87-zlo" secondAttribute="trailing" id="qcG-V4-Llm"/>
+                <constraint firstItem="MW3-Lh-ghp" firstAttribute="top" secondItem="9u3-Vd-l57" secondAttribute="bottom" constant="21" id="yy3-cf-3Xg"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="8V2-S9-LfB"/>
+                    <exclude reference="Gem-Hb-oVV"/>
+                    <exclude reference="Jcs-gO-GLC"/>
+                    <exclude reference="OYH-G9-wDy"/>
+                    <exclude reference="UQN-6y-vhS"/>
+                    <exclude reference="Yqj-TK-Yme"/>
+                    <exclude reference="qcG-V4-Llm"/>
+                    <exclude reference="6V2-lL-dBf"/>
+                    <exclude reference="yy3-cf-3Xg"/>
+                    <exclude reference="M3u-U8-HRg"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <include reference="8V2-S9-LfB"/>
+                    <include reference="Gem-Hb-oVV"/>
+                    <include reference="Jcs-gO-GLC"/>
+                    <include reference="OYH-G9-wDy"/>
+                    <include reference="UQN-6y-vhS"/>
+                    <include reference="Yqj-TK-Yme"/>
+                    <include reference="qcG-V4-Llm"/>
+                    <include reference="6V2-lL-dBf"/>
+                    <include reference="yy3-cf-3Xg"/>
+                    <include reference="M3u-U8-HRg"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="176" y="253"/>
         </view>
     </objects>
+    <resources>
+        <image name="background" width="640" height="452"/>
+    </resources>
 </document>
