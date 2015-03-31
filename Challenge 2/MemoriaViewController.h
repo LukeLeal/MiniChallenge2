@@ -10,6 +10,8 @@
 #import "Carta.h"
 #import "MemoriaManager.h"
 #import "DoencaManager.h"
+#import "SalvarPontuacao.h"
+#import "PontuacaoManager.h"
 
 @interface MemoriaViewController : UIViewController
 
@@ -25,6 +27,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *carta10;
 @property (weak, nonatomic) IBOutlet UIButton *carta11;
 @property (weak, nonatomic) IBOutlet UIButton *carta12;
+@property (weak, nonatomic) IBOutlet UILabel *tempo;
+@property (weak, nonatomic) IBOutlet UILabel *pontuacao;
 
 
 - (IBAction)botao:(UIButton *)sender;

@@ -15,6 +15,7 @@
 
 @property NSMutableArray *arrayDoencas;
 @property NSMutableArray *cartas;
+@property int pontuacao;
 
 - (instancetype)init;
 @end

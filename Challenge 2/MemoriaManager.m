@@ -10,7 +10,7 @@
 
 @implementation MemoriaManager
 
-@synthesize arrayDoencas, cartas;
+@synthesize arrayDoencas, cartas, pontuacao;
 
 - (instancetype)init{
     self = [super init];
@@ -21,6 +21,7 @@
         [self sorteio:arrayDoencas];
         [self remove];
         [self criarCartas];
+        pontuacao = 0;
     }
     return self;
 }

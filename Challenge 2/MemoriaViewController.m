@@ -11,31 +11,40 @@
 @interface MemoriaViewController (){
     NSArray *arrayBotoes;
     int count;
+    BOOL volta;
     NSMutableArray *selecionados;
+    MemoriaManager *mm;
     //int hours, minutes, seconds;
     double secondsLeft;
     NSTimer *timer;
+    int pontos;
 }
 
 @end
 
 @implementation MemoriaViewController
 
-@synthesize carta1,carta2,carta3,carta4,carta5,carta6,carta7,carta8,carta9,carta10,carta11,carta12;
+@synthesize carta1,carta2,carta3,carta4,carta5,carta6,carta7,carta8,carta9,carta10,carta11,carta12, tempo, pontuacao;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle:@"Memória"];
     
-    secondsLeft = 60;
-    [self countdownTimer];
+    mm = [[MemoriaManager alloc]init];
+    
+    secondsLeft = 800;
+   [self countdownTimer];
+    pontos=0;
     arrayBotoes = [NSArray arrayWithObjects: carta1,carta2,carta3,carta4,carta5,carta6,carta7,carta8,carta9,carta10,carta11,carta12,nil];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [self preparaCartas];
     count=0;
+    volta=false;
     selecionados = [[NSMutableArray alloc]init];
+    [pontuacao setText:@"Pontuação: 0"];
+    [tempo setText:@"Tempo restante: 0"];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -122,16 +131,6 @@
     }
 }
 
-//- (BOOL)continua{
-//    count++;
-//    if(count == 3){
-//        return false;
-//    }
-//    else{
-//        return true;
-//    }
-//}
-
 - (BOOL)verificaTag: (UIButton *)botao{
     UIButton *last = [selecionados lastObject];
     if(botao.tag == last.tag){
@@ -165,6 +164,13 @@
         [self animacaoAcerto:b];
     }
     [selecionados removeAllObjects];
+    pontos = pontos + 100;
+    pontuacao.text = [NSString stringWithFormat:@"Pontuação: %d", pontos];
+    
+    if(pontos == 400){
+        int segundos = secondsLeft;
+        pontos = pontos*segundos;
+    }
 }
 
 - (void)animacaoAcerto: (UIButton *)botao{
@@ -181,5 +187,44 @@
     botao.layer.borderWidth = 5.0;
     botao.layer.borderColor = [UIColor purpleColor].CGColor;
     [UIView commitAnimations];
+}
+
+-(void)countdownTimer{
+    timer = [NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(tempo:) userInfo:nil repeats:YES];
+}
+
+- (void) tempo: (id) sender{
+    if(secondsLeft > 0 ){
+        secondsLeft -= 0.5;
+        //        hours = secondsLeft / 3600;
+        //        minutes = (secondsLeft % 3600) / 60;
+        int seconds = secondsLeft;
+        tempo.text = [NSString stringWithFormat:@"Segundos: %d", seconds];
+    }
+    else{
+        [timer invalidate];
+        //Cria uma AlertController que gerencia o alerta.
+        UIAlertController *timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:@"Deseja salvar sua pontuação?" preferredStyle:UIAlertControllerStyleAlert];
+        //Cria uma ação para quando o respectivo botão for pressionado. No caso, o botão "Sim".
+        UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
+            [pontuacaoManager.pontuacaoAtual setPontos:mm.pontuacao];
+            [pontuacaoManager.pontuacaoAtual setCategoria:@"Memoria"];
+            [self.navigationController pushViewController:[[SalvarPontuacao alloc] init] animated:YES];
+        }];
+        //Botão "Não".
+        UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            volta=true;
+            [self.navigationController popToRootViewControllerAnimated:NO];
+        }];
+        //Adiciona as ações ao alerta.
+        [timerAlert addAction:yesAction];
+        [timerAlert addAction:noAction];
+        //A view controller apresenta o alerta.
+        [self presentViewController:timerAlert animated:YES completion:nil];
+        //Pontuacao manager
+        //Perguntar se quer salvar dados
+        //Se sim, cria um pontuação manager, seta pontuação atual e vai pra outra view.
+    }
 }
 @end
