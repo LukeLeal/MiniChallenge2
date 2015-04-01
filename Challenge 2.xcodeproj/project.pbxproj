@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		107F6F7F1AC326B90077B065 /* EnciclopediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 107F6F7D1AC326B90077B065 /* EnciclopediaViewController.m */; };
 		107F6F801AC326B90077B065 /* EnciclopediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107F6F7E1AC326B90077B065 /* EnciclopediaViewController.xib */; };
+		10AFB13D1ACC5B53009EC28E /* MemoriaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10AFB13C1ACC5B53009EC28E /* MemoriaViewController.xib */; };
 		10B602351AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B602331AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m */; };
 		10B602361AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B602341AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib */; };
 		246873EB1AC9B35600E7B04B /* MemoriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246873E91AC9B35600E7B04B /* MemoriaViewController.m */; };
-		246873EC1AC9B35600E7B04B /* MemoriaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 246873EA1AC9B35600E7B04B /* MemoriaViewController.xib */; };
 		246873F01AC9D05500E7B04B /* Carta.m in Sources */ = {isa = PBXBuildFile; fileRef = 246873EF1AC9D05500E7B04B /* Carta.m */; };
 		246873F31AC9D07F00E7B04B /* MemoriaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 246873F21AC9D07F00E7B04B /* MemoriaManager.m */; };
 		24A3BB0F1AC1D7D700F7E698 /* img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24A3BB0E1AC1D7D700F7E698 /* img.jpg */; };
@@ -59,12 +59,12 @@
 		107F6F7C1AC326B90077B065 /* EnciclopediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnciclopediaViewController.h; sourceTree = "<group>"; };
 		107F6F7D1AC326B90077B065 /* EnciclopediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnciclopediaViewController.m; sourceTree = "<group>"; };
 		107F6F7E1AC326B90077B065 /* EnciclopediaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnciclopediaViewController.xib; sourceTree = "<group>"; };
+		10AFB13C1ACC5B53009EC28E /* MemoriaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MemoriaViewController.xib; path = "../../../Library/Containers/ru.keepcoder.Telegram/Data/Downloads.telegram-documents/MemoriaViewController.xib"; sourceTree = "<group>"; };
 		10B602321AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalheEnciclopediaViewController.h; sourceTree = "<group>"; };
 		10B602331AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalheEnciclopediaViewController.m; sourceTree = "<group>"; };
 		10B602341AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetalheEnciclopediaViewController.xib; sourceTree = "<group>"; };
 		246873E81AC9B35600E7B04B /* MemoriaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoriaViewController.h; sourceTree = "<group>"; };
 		246873E91AC9B35600E7B04B /* MemoriaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoriaViewController.m; sourceTree = "<group>"; };
-		246873EA1AC9B35600E7B04B /* MemoriaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoriaViewController.xib; sourceTree = "<group>"; };
 		246873EE1AC9D05500E7B04B /* Carta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Carta.h; sourceTree = "<group>"; };
 		246873EF1AC9D05500E7B04B /* Carta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Carta.m; sourceTree = "<group>"; };
 		246873F11AC9D07F00E7B04B /* MemoriaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoriaManager.h; sourceTree = "<group>"; };
@@ -333,7 +333,7 @@
 			children = (
 				246873E81AC9B35600E7B04B /* MemoriaViewController.h */,
 				246873E91AC9B35600E7B04B /* MemoriaViewController.m */,
-				246873EA1AC9B35600E7B04B /* MemoriaViewController.xib */,
+				10AFB13C1ACC5B53009EC28E /* MemoriaViewController.xib */,
 			);
 			name = Memoria;
 			sourceTree = "<group>";
@@ -425,6 +425,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10AFB13D1ACC5B53009EC28E /* MemoriaViewController.xib in Resources */,
 				24A3BB191AC1E16600F7E698 /* PontuacaoTableViewCell.xib in Resources */,
 				4E7D5FC01AC49392009C8367 /* SalvarPontuacao.xib in Resources */,
 				7E551B691AC0AC7D00EB7FD8 /* QuizViewController.xib in Resources */,
@@ -436,7 +437,6 @@
 				4EA614C71AC094A400D94F8A /* Images.xcassets in Resources */,
 				4EA614E31AC0955300D94F8A /* HomeViewController.xib in Resources */,
 				24A3BB141AC1DD8700F7E698 /* PontuacaoViewController.xib in Resources */,
-				246873EC1AC9B35600E7B04B /* MemoriaViewController.xib in Resources */,
 				7ED3B44C1ACB0A5C00D65593 /* Doenças.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

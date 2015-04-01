@@ -17,7 +17,7 @@
     //int hours, minutes, seconds;
     double secondsLeft;
     NSTimer *timer;
-    int pontos;
+    int pontos, i;
 }
 
 @end
@@ -35,6 +35,7 @@
     secondsLeft = 60;
    [self countdownTimer];
     pontos=0;
+    i=0;
     arrayBotoes = [NSArray arrayWithObjects: carta1,carta2,carta3,carta4,carta5,carta6,carta7,carta8,carta9,carta10,carta11,carta12,nil];
 }
 
@@ -107,7 +108,6 @@
 //                           [sender setTitleColor:[UIColor whiteColor] forState:normal];
                            [sender.titleLabel setAlpha:1.0f];
                        } completion:^(BOOL finished){
-                           [sender setUserInteractionEnabled:NO];
                            [self jogo:sender];
                        }];
 }
@@ -152,6 +152,7 @@
 }
 
 - (void)animacaoErro: (UIButton *)botao{
+    
     [botao setBackgroundColor:[UIColor blackColor]];
     [botao.titleLabel setAlpha:0.0f];
     [UIView transitionWithView:botao duration:0.5
@@ -163,14 +164,17 @@
     for (UIButton *b in selecionados){
         [self animacaoAcerto:b];
     }
-    [selecionados removeAllObjects];
-    pontos = pontos + 100;
+    
+    i++;
+    
+    pontos += 10*secondsLeft;
     pontuacao.text = [NSString stringWithFormat:@"Pontuação: %d", pontos];
     
-    if(pontos == 400){
-        int segundos = secondsLeft;
-        pontos = pontos*segundos;
+    if (i == 4) {
+        secondsLeft = 0;
     }
+    
+    [selecionados removeAllObjects];
 }
 
 - (void)animacaoAcerto: (UIButton *)botao{
@@ -187,6 +191,18 @@
     botao.layer.borderWidth = 5.0;
     botao.layer.borderColor = [UIColor purpleColor].CGColor;
     [UIView commitAnimations];
+}
+
+- (void)habilitaInteracao{
+    for (UIButton *b in arrayBotoes){
+        [b setUserInteractionEnabled:YES];
+    }
+}
+
+- (void)desabilitaInteracao{
+    for (UIButton *b in arrayBotoes){
+        [b setUserInteractionEnabled:NO];
+    }
 }
 
 -(void)countdownTimer{
@@ -208,7 +224,7 @@
         //Cria uma ação para quando o respectivo botão for pressionado. No caso, o botão "Sim".
         UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
-            [pontuacaoManager.pontuacaoAtual setPontos:mm.pontuacao];
+            [pontuacaoManager.pontuacaoAtual setPontos:pontos];
             [pontuacaoManager.pontuacaoAtual setCategoria:@"Memoria"];
             [self.navigationController pushViewController:[[SalvarPontuacao alloc] init] animated:YES];
         }];
