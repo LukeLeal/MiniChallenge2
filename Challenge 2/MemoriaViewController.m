@@ -132,10 +132,11 @@
         else{
             [selecionados addObject:sender];
             interativo = YES;
-            [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(interacao) userInfo:nil repeats:NO];
-            [self retornaCartas];
+            [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(retornaCartas) userInfo:nil repeats:NO];
+//            [self retornaCartas];
         }
     }
+
 }
 
 - (BOOL)verificaTag: (UIButton *)botao{
@@ -152,10 +153,11 @@
     
     for (UIButton *b in selecionados){
         [self animacaoErro:b];
-        [b setUserInteractionEnabled:YES];
     }
     
     [selecionados removeAllObjects];
+//    [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(interacao) userInfo:nil repeats:NO];
+    [self interacao];
 }
 
 - (void)animacaoErro: (UIButton *)botao{
