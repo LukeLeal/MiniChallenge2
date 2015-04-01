@@ -25,7 +25,6 @@
     [self.nome setDelegate:self];
     [self.categoria setText:pontuacaoManager.pontuacaoAtual.categoria];
     [self.pontos setText:[NSString stringWithFormat:@"%d", pontuacaoManager.pontuacaoAtual.pontos]];
-    [self.foto setImage: [UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
     
     UITapGestureRecognizer *tapFoto = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(editarFoto:)];
     [tapFoto setDelegate:self];

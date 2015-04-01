@@ -14,7 +14,7 @@
 @property NSMutableArray *perguntas;
 @property int pontuacao;
 @property int perguntaAtual;
-@property int seqAcertos;// sequencia de acertos
+@property int seqAcertos; //sequencia de acertos
 
 
 @end

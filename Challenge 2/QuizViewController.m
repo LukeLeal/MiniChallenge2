@@ -48,6 +48,10 @@
     [_b2 addTarget:self action:@selector(responde:) forControlEvents:UIControlEventTouchUpInside];
     [_b3 addTarget:self action:@selector(responde:) forControlEvents:UIControlEventTouchUpInside];
     botoes = @[_b1, _b2, _b3];
+    for (UIButton *botao in botoes) {
+        [botao setContentEdgeInsets:UIEdgeInsetsMake(0, 5.0f, 0, 5.0f)];
+        [botao.layer setBorderWidth:1.0f];
+    }
     
     [self proxPerg];
 }
@@ -129,32 +133,46 @@
         //        hours = secondsLeft / 3600;
         //        minutes = (secondsLeft % 3600) / 60;
         int seconds = secondsLeft;
-        _tempo.text = [NSString stringWithFormat:@"Segundos: %d", seconds];
+        _tempo.text = [NSString stringWithFormat:@"%d", seconds];
     }
     else{
         [timer invalidate];
-        //Cria uma AlertController que gerencia o alerta.
-        UIAlertController *timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:@"Deseja salvar sua pontuação?" preferredStyle:UIAlertControllerStyleAlert];
-        //Cria uma ação para quando o respectivo botão for pressionado. No caso, o botão "Sim".
-        UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
-            [pontuacaoManager.pontuacaoAtual setPontos:qm.pontuacao];
-            [pontuacaoManager.pontuacaoAtual setCategoria:@"Quiz"];
-            [self.navigationController pushViewController:[[SalvarPontuacao alloc] init] animated:YES];
-        }];
-        //Botão "Não".
-        UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            volta=true;
-            [self.navigationController popToRootViewControllerAnimated:NO];
-        }];
-        //Adiciona as ações ao alerta.
-        [timerAlert addAction:yesAction];
-        [timerAlert addAction:noAction];
-        //A view controller apresenta o alerta.
-        [self presentViewController:timerAlert animated:YES completion:nil];
-        //Pontuacao manager
-        //Perguntar se quer salvar dados
-        //Se sim, cria um pontuação manager, seta pontuação atual e vai pra outra view.
+        //A opção de salvar a pontuação apenas será mostrada caso o jogador tenha marcado pontos (i.e. pontos > 0).
+        if (qm.pontuacao) {
+            //Cria uma AlertController que gerencia o alerta.
+            UIAlertController *timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:[NSString stringWithFormat:@"Pontuação final: %d\nDeseja salvar sua pontuação?", qm.pontuacao] preferredStyle:UIAlertControllerStyleAlert];
+            //Cria uma ação para quando o respectivo botão for pressionado. No caso, o botão "Sim".
+            UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
+                [pontuacaoManager.pontuacaoAtual setPontos:qm.pontuacao];
+                [pontuacaoManager.pontuacaoAtual setCategoria:@"Quiz"];
+                [self.navigationController pushViewController:[[SalvarPontuacao alloc] init] animated:YES];
+            }];
+            //Botão "Não".
+            UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                volta=true;
+                [self.navigationController popToRootViewControllerAnimated:NO];
+            }];
+            //Adiciona as ações ao alerta.
+            [timerAlert addAction:yesAction];
+            [timerAlert addAction:noAction];
+            //A view controller apresenta o alerta.
+            [self presentViewController:timerAlert animated:YES completion:nil];
+            //Pontuacao manager
+            //Perguntar se quer salvar dados
+            //Se sim, cria um pontuação manager, seta pontuação atual e vai pra outra view.
+        } else {
+            UIAlertController *timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:@"Você não marcou nenhum ponto...\nTentar de novo?" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                [self viewDidLoad];
+            }];
+            UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                [self.navigationController popToRootViewControllerAnimated:NO];
+            }];
+            [timerAlert addAction:yesAction];
+            [timerAlert addAction:noAction];
+            [self presentViewController:timerAlert animated:YES completion:nil];
+        }
     }
 }
 
@@ -168,6 +186,20 @@
     //    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     timer = [NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(tempo:) userInfo:nil repeats:YES];
     //    [pool release];
+}
+
+- (IBAction)desistirBotao:(id)sender {
+    UIAlertController *confirmGiveUpAlert = [UIAlertController alertControllerWithTitle:@"Desistência" message:@"Tem certeza?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self.navigationController popToRootViewControllerAnimated:NO];
+    }];
+    UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        //Começar a contar o tempo de novo.
+    }];
+    [confirmGiveUpAlert addAction:yesAction];
+    [confirmGiveUpAlert addAction:noAction];
+    //Parar o tempo.
+    [self presentViewController:confirmGiveUpAlert animated:YES completion:nil];
 }
 
 @end

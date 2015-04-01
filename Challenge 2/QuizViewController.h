@@ -12,19 +12,14 @@
 
 @interface QuizViewController : UIViewController
 
-
-//- (IBAction)alternativaABotao:(id)sender;
-//- (IBAction)alternativaBBotao:(id)sender;
-//- (IBAction)alternativaCBotao:(id)sender;
-
-@property (weak, nonatomic) IBOutlet UIImageView *imagemDoenca;
-//@property (weak, nonatomic) IBOutlet UILabel *pergunta;
 @property (weak, nonatomic) IBOutlet UITextView *pergunta;
-
 @property (weak, nonatomic) IBOutlet UILabel *tempo;
 @property (weak, nonatomic) IBOutlet UILabel *pontos;
-@property (weak, nonatomic) IBOutlet UILabel *sequencia;
+@property (weak, nonatomic) IBOutlet UILabel *sequencia; // sequencia de acertos
 @property (weak, nonatomic) IBOutlet UIButton *b1;
 @property (weak, nonatomic) IBOutlet UIButton *b2;
 @property (weak, nonatomic) IBOutlet UIButton *b3;
+
+- (IBAction)desistirBotao:(id)sender;
+
 @end
