@@ -31,7 +31,7 @@
     
     mm = [[MemoriaManager alloc]init];
     
-    secondsLeft = 60;
+    secondsLeft = 30;
    [self countdownTimer];
     pontos=0;
     parCont=0;
@@ -173,7 +173,6 @@
     }
     
     parCont++;
-    
     pontos += 10*secondsLeft;
     pontuacao.text = [NSString stringWithFormat:@"Pontuação: %d", pontos];
     

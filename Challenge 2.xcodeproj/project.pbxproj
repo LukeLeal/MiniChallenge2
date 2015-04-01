@@ -331,9 +331,9 @@
 		7E74342B1AC341D500EF26C4 /* Memoria */ = {
 			isa = PBXGroup;
 			children = (
-				10AFB13E1ACC8258009EC28E /* MemoriaViewController.xib */,
 				246873E81AC9B35600E7B04B /* MemoriaViewController.h */,
 				246873E91AC9B35600E7B04B /* MemoriaViewController.m */,
+				10AFB13E1ACC8258009EC28E /* MemoriaViewController.xib */,
 			);
 			name = Memoria;
 			sourceTree = "<group>";
