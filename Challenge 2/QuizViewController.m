@@ -137,42 +137,42 @@
     }
     else{
         [timer invalidate];
+        UIAlertController *timerAlert;
+        UIAlertAction *yesAction, *noAction;
         //A opção de salvar a pontuação apenas será mostrada caso o jogador tenha marcado pontos (i.e. pontos > 0).
         if (qm.pontuacao) {
+            //Pontuacao manager
+            //Perguntar se quer salvar dados
+            //Se sim, cria um pontuação manager, seta pontuação atual e vai pra outra view.
             //Cria uma AlertController que gerencia o alerta.
-            UIAlertController *timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:[NSString stringWithFormat:@"Pontuação final: %d\nDeseja salvar sua pontuação?", qm.pontuacao] preferredStyle:UIAlertControllerStyleAlert];
+            timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:[NSString stringWithFormat:@"Pontuação final: %d\nDeseja salvar sua pontuação?", qm.pontuacao] preferredStyle:UIAlertControllerStyleAlert];
             //Cria uma ação para quando o respectivo botão for pressionado. No caso, o botão "Sim".
-            UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
                 [pontuacaoManager.pontuacaoAtual setPontos:qm.pontuacao];
                 [pontuacaoManager.pontuacaoAtual setCategoria:@"Quiz"];
                 [self.navigationController pushViewController:[[SalvarPontuacao alloc] init] animated:YES];
             }];
             //Botão "Não".
-            UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 volta=true;
                 [self.navigationController popToRootViewControllerAnimated:NO];
             }];
-            //Adiciona as ações ao alerta.
-            [timerAlert addAction:yesAction];
-            [timerAlert addAction:noAction];
-            //A view controller apresenta o alerta.
-            [self presentViewController:timerAlert animated:YES completion:nil];
-            //Pontuacao manager
-            //Perguntar se quer salvar dados
-            //Se sim, cria um pontuação manager, seta pontuação atual e vai pra outra view.
         } else {
-            UIAlertController *timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:@"Você não marcou nenhum ponto...\nTentar de novo?" preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:@"Você não marcou nenhum ponto...\nTentar de novo?" preferredStyle:UIAlertControllerStyleAlert];
+            yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 [self viewDidLoad];
             }];
-            UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 [self.navigationController popToRootViewControllerAnimated:NO];
             }];
-            [timerAlert addAction:yesAction];
-            [timerAlert addAction:noAction];
-            [self presentViewController:timerAlert animated:YES completion:nil];
         }
+        //Adiciona as ações ao alerta.
+        [timerAlert addAction:yesAction];
+        [timerAlert addAction:noAction];
+        //A view controller apresenta o alerta.
+        [self presentViewController:timerAlert animated:YES completion:nil];
+        
     }
 }
 

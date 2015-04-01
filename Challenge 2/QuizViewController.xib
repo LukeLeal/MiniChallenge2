@@ -126,7 +126,6 @@
                     </variation>
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" text="TEXTO DA PERGUNTA" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="qHv-8F-AQF">
-                    <rect key="frame" x="136" y="290" width="371" height="98"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="98" id="7LQ-8O-mDg">
@@ -387,6 +386,7 @@
                     <include reference="sLY-5b-e32"/>
                 </mask>
             </variation>
+            <point key="canvasLocation" x="167" y="289"/>
         </view>
     </objects>
     <resources>

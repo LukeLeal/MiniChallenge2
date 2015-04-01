@@ -38,6 +38,8 @@
 		7E551B681AC0AC7D00EB7FD8 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B601AC0AC7D00EB7FD8 /* QuizViewController.m */; };
 		7E551B691AC0AC7D00EB7FD8 /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E551B611AC0AC7D00EB7FD8 /* QuizViewController.xib */; };
 		7E5B31EC1AC9DAE700ECBFD8 /* JogosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E5B31EB1AC9DAE700ECBFD8 /* JogosViewController.xib */; };
+		7ECA24081ACC917E004EFB17 /* DificuldadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECA24061ACC917E004EFB17 /* DificuldadeViewController.m */; };
+		7ECA24091ACC917E004EFB17 /* DificuldadeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ECA24071ACC917E004EFB17 /* DificuldadeViewController.xib */; };
 		7ED3B44C1ACB0A5C00D65593 /* Doenças.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED3B44B1ACB0A5C00D65593 /* Doenças.xcassets */; };
 		7EDF4A5B1AC1D0F500FFACD5 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDF4A5A1AC1D0F500FFACD5 /* iAd.framework */; };
 		7EDF4A5F1AC1D31500FFACD5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDF4A5E1AC1D31500FFACD5 /* Realm.framework */; };
@@ -107,6 +109,9 @@
 		7E551B601AC0AC7D00EB7FD8 /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
 		7E551B611AC0AC7D00EB7FD8 /* QuizViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuizViewController.xib; sourceTree = "<group>"; };
 		7E5B31EB1AC9DAE700ECBFD8 /* JogosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JogosViewController.xib; sourceTree = "<group>"; };
+		7ECA24051ACC917E004EFB17 /* DificuldadeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DificuldadeViewController.h; sourceTree = "<group>"; };
+		7ECA24061ACC917E004EFB17 /* DificuldadeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DificuldadeViewController.m; sourceTree = "<group>"; };
+		7ECA24071ACC917E004EFB17 /* DificuldadeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DificuldadeViewController.xib; sourceTree = "<group>"; };
 		7ED3B44B1ACB0A5C00D65593 /* Doenças.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Doenças.xcassets"; sourceTree = "<group>"; };
 		7EDF4A5A1AC1D0F500FFACD5 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		7EDF4A5E1AC1D31500FFACD5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Challenge 2/Frameworks/Realm.framework"; sourceTree = "<group>"; };
@@ -231,6 +236,9 @@
 				7E551B581AC0AC7D00EB7FD8 /* JogosViewController.h */,
 				7E551B591AC0AC7D00EB7FD8 /* JogosViewController.m */,
 				7E5B31EB1AC9DAE700ECBFD8 /* JogosViewController.xib */,
+				7ECA24051ACC917E004EFB17 /* DificuldadeViewController.h */,
+				7ECA24061ACC917E004EFB17 /* DificuldadeViewController.m */,
+				7ECA24071ACC917E004EFB17 /* DificuldadeViewController.xib */,
 				4E7D5FBC1AC49392009C8367 /* SalvarPontuacao.h */,
 				4E7D5FBD1AC49392009C8367 /* SalvarPontuacao.m */,
 				4E7D5FBE1AC49392009C8367 /* SalvarPontuacao.xib */,
@@ -438,6 +446,7 @@
 				4EA614E31AC0955300D94F8A /* HomeViewController.xib in Resources */,
 				24A3BB141AC1DD8700F7E698 /* PontuacaoViewController.xib in Resources */,
 				7ED3B44C1ACB0A5C00D65593 /* Doenças.xcassets in Resources */,
+				7ECA24091ACC917E004EFB17 /* DificuldadeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +467,7 @@
 				7E551B641AC0AC7D00EB7FD8 /* JogosViewController.m in Sources */,
 				7EDF4A621AC1D5C100FFACD5 /* Doenca.m in Sources */,
 				7E551B671AC0AC7D00EB7FD8 /* PontuacaoManager.m in Sources */,
+				7ECA24081ACC917E004EFB17 /* DificuldadeViewController.m in Sources */,
 				24A3BB181AC1E16600F7E698 /* PontuacaoTableViewCell.m in Sources */,
 				246873F31AC9D07F00E7B04B /* MemoriaManager.m in Sources */,
 				10B602351AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m in Sources */,
