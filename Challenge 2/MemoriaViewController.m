@@ -9,15 +9,14 @@
 #import "MemoriaViewController.h"
 
 @interface MemoriaViewController (){
-    NSArray *arrayBotoes;
     int count;
-    BOOL volta;
-    NSMutableArray *selecionados;
+    BOOL volta, interativo;
+    NSMutableArray *selecionados, *arrayBotoes;
     MemoriaManager *mm;
     //int hours, minutes, seconds;
     double secondsLeft;
     NSTimer *timer;
-    int pontos, i;
+    int pontos, parCont;
 }
 
 @end
@@ -35,8 +34,8 @@
     secondsLeft = 60;
    [self countdownTimer];
     pontos=0;
-    i=0;
-    arrayBotoes = [NSArray arrayWithObjects: carta1,carta2,carta3,carta4,carta5,carta6,carta7,carta8,carta9,carta10,carta11,carta12,nil];
+    parCont=0;
+    arrayBotoes = [NSMutableArray arrayWithObjects: carta1,carta2,carta3,carta4,carta5,carta6,carta7,carta8,carta9,carta10,carta11,carta12,nil];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -100,12 +99,12 @@
 
 
 - (IBAction)botao:(UIButton *)sender {
-//    Setar a cor para não dar um efeito de delay durante a troca de cor
+    interativo = NO;
+    [self interacao];
     [sender setBackgroundColor:[self corByTag:(int)sender.tag]];
     [UIView transitionWithView:sender duration:0.5
                        options:UIViewAnimationOptionTransitionFlipFromRight animations:^{
               
-//                           [sender setTitleColor:[UIColor whiteColor] forState:normal];
                            [sender.titleLabel setAlpha:1.0f];
                        } completion:^(BOOL finished){
                            [self jogo:sender];
@@ -115,17 +114,25 @@
 - (void)jogo: (UIButton *)sender{
     if([selecionados count] == 0){
         [selecionados addObject:sender];
+        [arrayBotoes removeObject:sender];
+        interativo = YES;
+        [self interacao];
     }
     
     else{
         if([self verificaTag:sender]){
             [selecionados addObject:sender];
+            [arrayBotoes removeObject:sender];
             if ([selecionados count] == 3){
                 [self acerto];
             }
+            interativo = YES;
+            [self interacao];
         }
         else{
             [selecionados addObject:sender];
+            interativo = YES;
+            [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(interacao) userInfo:nil repeats:NO];
             [self retornaCartas];
         }
     }
@@ -165,12 +172,12 @@
         [self animacaoAcerto:b];
     }
     
-    i++;
+    parCont++;
     
     pontos += 10*secondsLeft;
     pontuacao.text = [NSString stringWithFormat:@"Pontuação: %d", pontos];
     
-    if (i == 4) {
+    if (parCont == 4) {
         secondsLeft = 0;
     }
     
@@ -193,15 +200,9 @@
     [UIView commitAnimations];
 }
 
-- (void)habilitaInteracao{
-    for (UIButton *b in arrayBotoes){
-        [b setUserInteractionEnabled:YES];
-    }
-}
-
-- (void)desabilitaInteracao{
-    for (UIButton *b in arrayBotoes){
-        [b setUserInteractionEnabled:NO];
+- (void)interacao{
+    for(UIButton *b in arrayBotoes){
+        [b setUserInteractionEnabled:interativo];
     }
 }
 
