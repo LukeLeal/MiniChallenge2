@@ -131,6 +131,7 @@
         }
         else{
             [selecionados addObject:sender];
+            [arrayBotoes removeObject:sender];
             interativo = YES;
             [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(retornaCartas) userInfo:nil repeats:NO];
 //            [self retornaCartas];
@@ -153,6 +154,7 @@
     
     for (UIButton *b in selecionados){
         [self animacaoErro:b];
+        [arrayBotoes addObject: b];
     }
     
     [selecionados removeAllObjects];
