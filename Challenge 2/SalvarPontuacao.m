@@ -101,12 +101,7 @@
     NSMutableArray *newViewControllers = [[NSMutableArray alloc] initWithArray:self.navigationController.viewControllers];
     [newViewControllers removeObjectsInRange:NSMakeRange(1, self.navigationController.viewControllers.count-1)];
     [newViewControllers addObject:[[PontuacaoViewController alloc] init]];
-    [UIView animateWithDuration:0.75
-                     animations:^{
-                         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-                         [UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.navigationController.view cache:NO];
-                     }];
-    [self.navigationController setViewControllers:newViewControllers animated:NO];
+    [self.navigationController setViewControllers:newViewControllers animated:YES];
 }
 
 #pragma mark - Navegação
