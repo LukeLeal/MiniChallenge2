@@ -14,6 +14,6 @@
 
 - (IBAction)memoriaBotao:(id)sender;
 - (IBAction)quizBotao:(id)sender;
-- (IBAction)rouletteBotao:(id)sender;
+//- (IBAction)rouletteBotao:(id)sender;
 
 @end

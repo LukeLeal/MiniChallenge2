@@ -25,6 +25,8 @@
 
 @synthesize carta1,carta2,carta3,carta4,carta5,carta6,carta7,carta8,carta9,carta10,carta11,carta12, tempo, pontuacao;
 
+#pragma mark - Interface
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle:@"Memória"];
@@ -54,6 +56,33 @@
                          [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
                      }];
 }
+
+- (void)animacaoErro: (UIButton *)botao{
+    
+    [botao setBackgroundColor:[UIColor blackColor]];
+    [botao.titleLabel setAlpha:0.0f];
+    [UIView transitionWithView:botao duration:0.5
+                       options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+                       } completion:nil];
+}
+
+- (void)animacaoAcerto: (UIButton *)botao{
+    [UIView beginAnimations:@"fadeInNewView" context:NULL];
+    [UIView setAnimationDuration:1.0];
+    botao.transform = CGAffineTransformMakeScale(1.8, 1.8);
+    botao.alpha = 1.0f;
+    [UIView commitAnimations];
+    
+    [UIView beginAnimations:@"fadeInNewView" context:NULL];
+    [UIView setAnimationDuration:1.0];
+    botao.transform = CGAffineTransformMakeScale(1,1);
+    botao.alpha = 1.0f;
+    botao.layer.borderWidth = 5.0;
+    botao.layer.borderColor = [UIColor purpleColor].CGColor;
+    [UIView commitAnimations];
+}
+
+#pragma mark - Jogo
 
 -(void)preparaCartas{
     MemoriaManager *memoriaManager = [[MemoriaManager alloc]init];
@@ -160,15 +189,6 @@
     [self interacao];
 }
 
-- (void)animacaoErro: (UIButton *)botao{
-    
-    [botao setBackgroundColor:[UIColor blackColor]];
-    [botao.titleLabel setAlpha:0.0f];
-    [UIView transitionWithView:botao duration:0.5
-                       options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
-                       } completion:nil];
-}
-
 - (void)acerto{
     for (UIButton *b in selecionados){
         [self animacaoAcerto:b];
@@ -185,27 +205,13 @@
     [selecionados removeAllObjects];
 }
 
-- (void)animacaoAcerto: (UIButton *)botao{
-    [UIView beginAnimations:@"fadeInNewView" context:NULL];
-    [UIView setAnimationDuration:1.0];
-    botao.transform = CGAffineTransformMakeScale(1.8, 1.8);
-    botao.alpha = 1.0f;
-    [UIView commitAnimations];
-    
-    [UIView beginAnimations:@"fadeInNewView" context:NULL];
-    [UIView setAnimationDuration:1.0];
-    botao.transform = CGAffineTransformMakeScale(1,1);
-    botao.alpha = 1.0f;
-    botao.layer.borderWidth = 5.0;
-    botao.layer.borderColor = [UIColor purpleColor].CGColor;
-    [UIView commitAnimations];
-}
-
 - (void)interacao{
     for(UIButton *b in arrayBotoes){
         [b setUserInteractionEnabled:interativo];
     }
 }
+
+#pragma mark - Tempo (i.e. NSTimer)
 
 -(void)countdownTimer{
     timer = [NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(tempo:) userInfo:nil repeats:YES];
@@ -229,7 +235,7 @@
             //Perguntar se quer salvar dados
             //Se sim, cria um pontuação manager, seta pontuação atual e vai pra outra view.
             //Cria uma AlertController que gerencia o alerta.
-            timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:@"Deseja salvar sua pontuação?" preferredStyle:UIAlertControllerStyleAlert];
+            timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:[NSString stringWithFormat:@"Pontuação final: %d\nDeseja salvar sua pontuação?", pontos] preferredStyle:UIAlertControllerStyleAlert];
             //Cria uma ação para quando o respectivo botão for pressionado. No caso, o botão "Sim".
             yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
@@ -257,6 +263,22 @@
         //A view controller apresenta o alerta.
         [self presentViewController:timerAlert animated:YES completion:nil];
     }
+}
+
+#pragma mark - Navegação
+
+- (IBAction)desistirBotao:(id)sender {
+    UIAlertController *confirmGiveUpAlert = [UIAlertController alertControllerWithTitle:@"Desistência" message:@"Tem certeza?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self.navigationController popToRootViewControllerAnimated:NO];
+    }];
+    UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        //Começar a contar o tempo de novo.
+    }];
+    [confirmGiveUpAlert addAction:yesAction];
+    [confirmGiveUpAlert addAction:noAction];
+    //Parar o tempo.
+    [self presentViewController:confirmGiveUpAlert animated:YES completion:nil];
 }
 
 @end

@@ -20,23 +20,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Whi-TK-SpP" userLabel="background">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="800" id="R46-pP-51h"/>
-                    </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="R46-pP-51h"/>
-                        </mask>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
-                        <mask key="constraints">
-                            <include reference="R46-pP-51h"/>
-                        </mask>
-                    </variation>
-                </imageView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QTC-4H-Kov">
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="met-Rn-MY9">
@@ -241,7 +224,7 @@
                                     </variation>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.1473426857" green="0.6641793762" blue="0.95399839389999996" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstItem="C2O-Ud-DEk" firstAttribute="leading" secondItem="gxF-cc-3KC" secondAttribute="trailing" constant="1" id="3PG-eJ-skM"/>
                                 <constraint firstItem="nZW-QT-sQs" firstAttribute="top" secondItem="C2O-Ud-DEk" secondAttribute="bottom" constant="31" id="3R7-0h-v2L"/>
@@ -483,9 +466,6 @@
                 </constraint>
             </constraints>
             <variation key="default">
-                <mask key="subviews">
-                    <exclude reference="Whi-TK-SpP"/>
-                </mask>
                 <mask key="constraints">
                     <exclude reference="5UT-zl-cgt"/>
                     <exclude reference="Lw5-NK-uME"/>
@@ -495,9 +475,6 @@
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
-                <mask key="subviews">
-                    <include reference="Whi-TK-SpP"/>
-                </mask>
                 <mask key="constraints">
                     <include reference="5UT-zl-cgt"/>
                     <include reference="Lw5-NK-uME"/>
@@ -509,7 +486,4 @@
             <point key="canvasLocation" x="483" y="308"/>
         </view>
     </objects>
-    <resources>
-        <image name="background" width="640" height="452"/>
-    </resources>
 </document>

@@ -26,6 +26,8 @@
 
 @implementation QuizViewController
 
+#pragma mark - Interface
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     volta=false;
@@ -73,6 +75,8 @@
                          }];
     }
 }
+
+#pragma mark - Jogo
 
 -(void)responde: (id)sender{
     for (int i = 0; i < [botoes count]; i++) {
@@ -126,6 +130,8 @@
         [(UIButton *)[botoes objectAtIndex:i] setHidden:NO];
     }
 }
+
+#pragma mark - Tempo (i.e. NSTimer)
 
 - (void) tempo: (id) sender{
     if(secondsLeft > 0 ){
@@ -187,6 +193,8 @@
     timer = [NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(tempo:) userInfo:nil repeats:YES];
     //    [pool release];
 }
+
+#pragma mark - Navegação
 
 - (IBAction)desistirBotao:(id)sender {
     UIAlertController *confirmGiveUpAlert = [UIAlertController alertControllerWithTitle:@"Desistência" message:@"Tem certeza?" preferredStyle:UIAlertControllerStyleAlert];

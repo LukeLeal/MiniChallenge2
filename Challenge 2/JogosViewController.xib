@@ -14,90 +14,111 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="F0n-87-zlo" userLabel="background">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9u3-Vd-l57">
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9u3-Vd-l57">
                     <rect key="frame" x="239" y="223" width="123" height="38"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="35"/>
-                    <state key="normal" title="Memória" image="Brain-Games-red">
-                        <color key="titleColor" red="0.84313725490000002" green="0.1058823529" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Memória" image="Brain-Games">
+                        <color key="titleColor" red="0.1473426857" green="0.6641793762" blue="0.95399839389999996" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="memoriaBotao:" destination="-1" eventType="touchUpInside" id="Ino-LQ-Zyh"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MW3-Lh-ghp">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="G6u-RV-kMG">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="58Q-K8-aAi"/>
+                        <constraint firstAttribute="width" constant="240" id="GYg-xR-zf4"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="58Q-K8-aAi"/>
+                            <exclude reference="GYg-xR-zf4"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="58Q-K8-aAi"/>
+                            <include reference="GYg-xR-zf4"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MW3-Lh-ghp">
                     <rect key="frame" x="239" y="282" width="123" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="35"/>
-                    <state key="normal" title="Quiz" image="Quiz-Games-red">
-                        <color key="titleColor" red="0.84313725490000002" green="0.1058823529" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="contentEdgeInsets" minX="-80" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Quiz" image="Quiz-Games">
+                        <color key="titleColor" red="0.1473426857" green="0.6641793762" blue="0.95399839389999996" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="quizBotao:" destination="-1" eventType="touchUpInside" id="3Jb-eA-kqR"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDw-Xp-kux">
-                    <rect key="frame" x="239" y="346" width="123" height="30"/>
-                    <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="21"/>
-                    <state key="normal" title="Roulette">
-                        <color key="titleColor" red="0.84313725490000002" green="0.1058823529" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="rouletteBotao:" destination="-1" eventType="touchUpInside" id="Y5B-78-kMk"/>
-                    </connections>
-                </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.1473426857" green="0.6641793762" blue="0.95399839389999996" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="9u3-Vd-l57" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="77" id="20L-Ea-HYE"/>
-                <constraint firstItem="MW3-Lh-ghp" firstAttribute="top" secondItem="9u3-Vd-l57" secondAttribute="bottom" constant="19" id="7aS-M3-KZu"/>
-                <constraint firstAttribute="trailing" secondItem="F0n-87-zlo" secondAttribute="trailing" id="BdS-Ix-xNw"/>
-                <constraint firstAttribute="bottom" secondItem="F0n-87-zlo" secondAttribute="bottom" id="GNg-nT-cKn"/>
-                <constraint firstItem="F0n-87-zlo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="I2Z-6V-P71"/>
-                <constraint firstItem="vDw-Xp-kux" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="153" id="mzD-4g-p0J"/>
-                <constraint firstItem="MW3-Lh-ghp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="77" id="nel-EG-CUZ"/>
-                <constraint firstItem="9u3-Vd-l57" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="285" id="oKX-ol-u70"/>
-                <constraint firstItem="F0n-87-zlo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pEJ-e6-8sq"/>
-                <constraint firstItem="vDw-Xp-kux" firstAttribute="top" secondItem="MW3-Lh-ghp" secondAttribute="bottom" constant="36" id="uz0-qP-t82"/>
+                <constraint firstItem="MW3-Lh-ghp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="10L-eE-rCV"/>
+                <constraint firstAttribute="centerY" secondItem="9u3-Vd-l57" secondAttribute="centerY" id="17z-mI-AwG"/>
+                <constraint firstAttribute="trailing" secondItem="MW3-Lh-ghp" secondAttribute="trailing" id="CBp-8g-0lx"/>
+                <constraint firstItem="G6u-RV-kMG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="80" id="Fs5-A3-Zod"/>
+                <constraint firstAttribute="trailing" secondItem="9u3-Vd-l57" secondAttribute="trailing" id="NEO-63-HEJ"/>
+                <constraint firstAttribute="centerY" secondItem="MW3-Lh-ghp" secondAttribute="centerY" id="V6s-Nm-WqF"/>
+                <constraint firstAttribute="centerX" secondItem="G6u-RV-kMG" secondAttribute="centerX" id="YYJ-rR-pXO"/>
+                <constraint firstItem="MW3-Lh-ghp" firstAttribute="top" secondItem="9u3-Vd-l57" secondAttribute="bottom" constant="24" id="a7A-Ac-WSW">
+                    <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                </constraint>
+                <constraint firstItem="9u3-Vd-l57" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iyC-oR-OwY"/>
+                <constraint firstItem="G6u-RV-kMG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="33" id="pZP-vV-rVg"/>
+                <constraint firstItem="MW3-Lh-ghp" firstAttribute="top" secondItem="9u3-Vd-l57" secondAttribute="bottom" constant="19" id="rC3-jb-lpy"/>
             </constraints>
             <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="G6u-RV-kMG"/>
+                </mask>
                 <mask key="constraints">
-                    <exclude reference="BdS-Ix-xNw"/>
-                    <exclude reference="GNg-nT-cKn"/>
-                    <exclude reference="I2Z-6V-P71"/>
-                    <exclude reference="pEJ-e6-8sq"/>
-                    <exclude reference="20L-Ea-HYE"/>
-                    <exclude reference="oKX-ol-u70"/>
-                    <exclude reference="7aS-M3-KZu"/>
-                    <exclude reference="nel-EG-CUZ"/>
-                    <exclude reference="mzD-4g-p0J"/>
-                    <exclude reference="uz0-qP-t82"/>
+                    <exclude reference="Fs5-A3-Zod"/>
+                    <exclude reference="YYJ-rR-pXO"/>
+                    <exclude reference="pZP-vV-rVg"/>
+                    <exclude reference="17z-mI-AwG"/>
+                    <exclude reference="NEO-63-HEJ"/>
+                    <exclude reference="iyC-oR-OwY"/>
+                    <exclude reference="10L-eE-rCV"/>
+                    <exclude reference="CBp-8g-0lx"/>
+                    <exclude reference="V6s-Nm-WqF"/>
+                    <exclude reference="a7A-Ac-WSW"/>
+                    <exclude reference="rC3-jb-lpy"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="G6u-RV-kMG"/>
+                </mask>
                 <mask key="constraints">
-                    <include reference="BdS-Ix-xNw"/>
-                    <include reference="GNg-nT-cKn"/>
-                    <include reference="I2Z-6V-P71"/>
-                    <include reference="pEJ-e6-8sq"/>
-                    <include reference="20L-Ea-HYE"/>
-                    <include reference="oKX-ol-u70"/>
-                    <include reference="7aS-M3-KZu"/>
-                    <include reference="nel-EG-CUZ"/>
-                    <include reference="mzD-4g-p0J"/>
-                    <include reference="uz0-qP-t82"/>
+                    <exclude reference="Fs5-A3-Zod"/>
+                    <include reference="YYJ-rR-pXO"/>
+                    <include reference="pZP-vV-rVg"/>
+                    <include reference="17z-mI-AwG"/>
+                    <include reference="NEO-63-HEJ"/>
+                    <include reference="iyC-oR-OwY"/>
+                    <include reference="10L-eE-rCV"/>
+                    <include reference="CBp-8g-0lx"/>
+                    <exclude reference="V6s-Nm-WqF"/>
+                    <include reference="a7A-Ac-WSW"/>
+                    <exclude reference="rC3-jb-lpy"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="176" y="253"/>
         </view>
     </objects>
     <resources>
-        <image name="Brain-Games-red" width="64" height="64"/>
-        <image name="Quiz-Games-red" width="64" height="64"/>
-        <image name="background" width="640" height="452"/>
+        <image name="Brain-Games" width="64" height="64"/>
+        <image name="Quiz-Games" width="64" height="64"/>
+        <image name="logo" width="1042" height="1042"/>
     </resources>
 </document>

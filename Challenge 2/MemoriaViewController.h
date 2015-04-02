@@ -32,5 +32,7 @@
 
 
 - (IBAction)botao:(UIButton *)sender;
+- (IBAction)desistirBotao:(id)sender;
+
 
 @end
