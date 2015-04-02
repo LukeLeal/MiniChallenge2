@@ -9,15 +9,14 @@
 #import "MemoriaViewController.h"
 
 @interface MemoriaViewController (){
-    int count;
-    BOOL volta, interativo;
-    NSMutableArray *selecionados, *arrayBotoes;
-    MemoriaManager *mm;
-    //int hours, minutes, seconds;
     double secondsLeft;
-    NSTimer *timer;
-    int pontos, parCont;
+    int pontos, parCont, count;
+    BOOL volta, interativo;
+    MemoriaManager *mm;
+    NSMutableArray *selecionados, *arrayBotoes;
     UIImage *imagem;
+    NSTimer *timer;
+    //int hours, minutes, seconds;
 }
 
 @end
@@ -27,7 +26,6 @@
 @synthesize carta1,carta2,carta3,carta4,carta5,carta6,carta7,carta8,carta9,carta10,carta11,carta12, tempo, pontuacao;
 
 #pragma mark - Interface
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle:@"Memória"];
@@ -61,33 +59,7 @@
                      }];
 }
 
-- (void)animacaoErro: (UIButton *)botao{
-    
-    [botao setBackgroundColor:[UIColor blackColor]];
-    [botao.titleLabel setAlpha:0.0f];
-    [UIView transitionWithView:botao duration:0.5
-                       options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
-                       } completion:nil];
-}
-
-- (void)animacaoAcerto: (UIButton *)botao{
-    [UIView beginAnimations:@"fadeInNewView" context:NULL];
-    [UIView setAnimationDuration:1.0];
-    botao.transform = CGAffineTransformMakeScale(1.8, 1.8);
-    botao.alpha = 1.0f;
-    [UIView commitAnimations];
-    
-    [UIView beginAnimations:@"fadeInNewView" context:NULL];
-    [UIView setAnimationDuration:1.0];
-    botao.transform = CGAffineTransformMakeScale(1,1);
-    botao.alpha = 1.0f;
-    botao.layer.borderWidth = 5.0;
-    botao.layer.borderColor = [UIColor purpleColor].CGColor;
-    [UIView commitAnimations];
-}
-
-#pragma mark - Jogo
-
+#pragma mark - Preparação
 -(void)preparaCartas{
     MemoriaManager *memoriaManager = [[MemoriaManager alloc]init];
     NSArray *cartas = [NSArray arrayWithArray:memoriaManager.cartas];
@@ -98,19 +70,29 @@
         carta = [cartas objectAtIndex:i];
         botao = [arrayBotoes objectAtIndex:i];
         
-        [botao setTitle:carta.texto forState:normal];
-        [botao setBackgroundColor:[UIColor colorWithPatternImage:imagem]];
-        [botao setTag:carta.tag];
-        
-        [botao setContentEdgeInsets:UIEdgeInsetsMake(0, 6.0f, 0, 6.0f)];
-        botao.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-        botao.titleLabel.numberOfLines = 5;
-        botao.titleLabel.minimumScaleFactor = 1./botao.titleLabel.font.pointSize;
-        botao.titleLabel.adjustsFontSizeToFitWidth = YES;
-        [botao setTitleColor:[UIColor clearColor] forState:normal];
-        botao.layer.borderWidth = 3.0;
-        botao.layer.borderColor = [UIColor grayColor].CGColor;
+        [self preparaCarta:carta:botao];
     }
+}
+
+- (void)preparaCarta: (Carta *)carta : (UIButton *)botao{
+    [botao setTitle:carta.texto forState:normal];
+    [botao setBackgroundColor:[UIColor colorWithPatternImage:imagem]];
+    [botao setTag:carta.tag];
+    [botao setContentEdgeInsets:UIEdgeInsetsMake(0, 6.0f, 0, 6.0f)];
+    [botao setTitleColor:[UIColor clearColor] forState:normal];
+    
+    UILabel *tituloBotao = botao.titleLabel;
+    [self ajustesLabel:tituloBotao];
+
+    botao.layer.borderWidth = 3.0;
+    botao.layer.borderColor = [UIColor grayColor].CGColor;
+}
+
+- (void)ajustesLabel: (UILabel *)label{
+    label.lineBreakMode = NSLineBreakByWordWrapping;
+    label.numberOfLines = 5;
+    label.minimumScaleFactor = 1./label.font.pointSize;
+    label.adjustsFontSizeToFitWidth = YES;
 }
 
 -(UIColor *)corByTag: (int)tag{
@@ -133,7 +115,7 @@
     return nil;
 }
 
-
+#pragma mark - Ação do botão
 - (IBAction)botao:(UIButton *)sender {
     interativo = NO;
     [self interacao];
@@ -148,33 +130,46 @@
                        }];
 }
 
+- (IBAction)desistirBotao:(id)sender {
+    UIAlertController *confirmGiveUpAlert = [UIAlertController alertControllerWithTitle:@"Desistência" message:@"Tem certeza?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self.navigationController popToRootViewControllerAnimated:NO];
+    }];
+    UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        //Começar a contar o tempo de novo.
+    }];
+    [confirmGiveUpAlert addAction:yesAction];
+    [confirmGiveUpAlert addAction:noAction];
+    //Parar o tempo.
+    [self presentViewController:confirmGiveUpAlert animated:YES completion:nil];
+}
+
+#pragma mark - Jogo
 - (void)jogo: (UIButton *)sender{
     if([selecionados count] == 0){
-        [selecionados addObject:sender];
-        [arrayBotoes removeObject:sender];
-        interativo = YES;
+        [self alterarArrays:sender];
         [self interacao];
     }
     
     else{
         if([self verificaTag:sender]){
-            [selecionados addObject:sender];
-            [arrayBotoes removeObject:sender];
+            [self alterarArrays:sender];
             if ([selecionados count] == 3){
                 [self acerto];
             }
-            interativo = YES;
             [self interacao];
         }
         else{
-            [selecionados addObject:sender];
-            [arrayBotoes removeObject:sender];
-            interativo = YES;
+            [self alterarArrays:sender];
             [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(retornaCartas) userInfo:nil repeats:NO];
-//            [self retornaCartas];
         }
     }
+}
 
+- (void) alterarArrays: (UIButton *)sender {
+    [selecionados addObject:sender];
+    [arrayBotoes removeObject:sender];
+    interativo = YES;
 }
 
 - (BOOL)verificaTag: (UIButton *)botao{
@@ -196,7 +191,6 @@
     }
     
     [selecionados removeAllObjects];
-//    [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(interacao) userInfo:nil repeats:NO];
     [self interacao];
 }
 
@@ -205,13 +199,7 @@
         [self animacaoAcerto:b];
     }
     
-    parCont++;
-    pontos += 10*secondsLeft;
-    pontuacao.text = [NSString stringWithFormat:@"Pontuação: %d", pontos];
-    
-    if (parCont == 4) {
-        secondsLeft = 0;
-    }
+    [self alterarPontuacao];
     
     [selecionados removeAllObjects];
 }
@@ -222,8 +210,18 @@
     }
 }
 
-#pragma mark - Tempo (i.e. NSTimer)
+- (void)alterarPontuacao{
+    parCont++;
+    pontos += 10*secondsLeft;
+    pontuacao.text = [NSString stringWithFormat:@"Pontuação: %d", pontos];
+    
+    if (parCont == 4) {
+        secondsLeft = 0;
+    }
+    
+}
 
+#pragma mark - Tempo (i.e. NSTimer)
 -(void)countdownTimer{
     timer = [NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(tempo:) userInfo:nil repeats:YES];
 }
@@ -276,20 +274,31 @@
     }
 }
 
-#pragma mark - Navegação
+#pragma mark - Animações
 
-- (IBAction)desistirBotao:(id)sender {
-    UIAlertController *confirmGiveUpAlert = [UIAlertController alertControllerWithTitle:@"Desistência" message:@"Tem certeza?" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self.navigationController popToRootViewControllerAnimated:NO];
-    }];
-    UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        //Começar a contar o tempo de novo.
-    }];
-    [confirmGiveUpAlert addAction:yesAction];
-    [confirmGiveUpAlert addAction:noAction];
-    //Parar o tempo.
-    [self presentViewController:confirmGiveUpAlert animated:YES completion:nil];
+- (void)animacaoErro: (UIButton *)botao{
+    
+    [botao setBackgroundColor:[UIColor colorWithPatternImage:imagem]];
+    [botao setTitleColor:[UIColor clearColor] forState:normal];
+    [UIView transitionWithView:botao duration:0.5
+                       options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+                       } completion:nil];
+}
+
+- (void)animacaoAcerto: (UIButton *)botao{
+    [UIView beginAnimations:@"fadeInNewView" context:NULL];
+    [UIView setAnimationDuration:1.0];
+    botao.transform = CGAffineTransformMakeScale(1.8, 1.8);
+    botao.alpha = 1.0f;
+    [UIView commitAnimations];
+    
+    [UIView beginAnimations:@"fadeInNewView" context:NULL];
+    [UIView setAnimationDuration:1.0];
+    botao.transform = CGAffineTransformMakeScale(1,1);
+    botao.alpha = 1.0f;
+    botao.layer.borderWidth = 5.0;
+    botao.layer.borderColor = [UIColor purpleColor].CGColor;
+    [UIView commitAnimations];
 }
 
 @end
