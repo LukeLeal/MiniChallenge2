@@ -98,13 +98,13 @@
 -(UIColor *)corByTag: (int)tag{
     switch (tag) {
         case 0:
-            return [UIColor redColor];
+            return [UIColor colorWithRed:1 green:0 blue:1 alpha:1.0];
             break;
         case 1:
-            return [UIColor orangeColor];
+            return [UIColor colorWithRed:1 green:1 blue:0 alpha:1.0];
             break;
         case 2:
-            return [UIColor blueColor];
+            return [UIColor whiteColor];
             break;
         case 3:
             return [UIColor greenColor];
@@ -296,7 +296,7 @@
     [UIView setAnimationDuration:1.0];
     botao.transform = CGAffineTransformMakeScale(1,1);
     botao.alpha = 1.0f;
-    botao.layer.borderWidth = 5.0;
+    botao.layer.borderWidth = 3.0;
     botao.layer.borderColor = [UIColor purpleColor].CGColor;
     [UIView commitAnimations];
 }
