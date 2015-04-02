@@ -17,6 +17,7 @@
     double secondsLeft;
     NSTimer *timer;
     int pontos, parCont;
+    UIImage *imagem;
 }
 
 @end
@@ -39,6 +40,9 @@
     pontos=0;
     parCont=0;
     arrayBotoes = [NSMutableArray arrayWithObjects: carta1,carta2,carta3,carta4,carta5,carta6,carta7,carta8,carta9,carta10,carta11,carta12,nil];
+    imagem = [[UIImage alloc]init];
+    NSString *img = @"cardcover.png";
+    imagem = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:img ofType:nil]];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -95,11 +99,16 @@
         botao = [arrayBotoes objectAtIndex:i];
         
         [botao setTitle:carta.texto forState:normal];
-        [botao setBackgroundColor:[UIColor blackColor]];
+        [botao setBackgroundColor:[UIColor colorWithPatternImage:imagem]];
         [botao setTag:carta.tag];
         
-        [botao.titleLabel setAlpha:0.0f];
-        botao.layer.borderWidth = 5.0;
+        [botao setContentEdgeInsets:UIEdgeInsetsMake(0, 6.0f, 0, 6.0f)];
+        botao.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        botao.titleLabel.numberOfLines = 5;
+        botao.titleLabel.minimumScaleFactor = 1./botao.titleLabel.font.pointSize;
+        botao.titleLabel.adjustsFontSizeToFitWidth = YES;
+        [botao setTitleColor:[UIColor clearColor] forState:normal];
+        botao.layer.borderWidth = 3.0;
         botao.layer.borderColor = [UIColor grayColor].CGColor;
     }
 }
@@ -131,10 +140,11 @@
     [sender setBackgroundColor:[self corByTag:(int)sender.tag]];
     [UIView transitionWithView:sender duration:0.5
                        options:UIViewAnimationOptionTransitionFlipFromRight animations:^{
-                           
-                           [sender.titleLabel setAlpha:1.0f];
                        } completion:^(BOOL finished){
-                           [self jogo:sender];
+                           if(finished){
+                               [sender setTitleColor:[UIColor blackColor] forState:normal];
+                               [self jogo:sender];
+                           }
                        }];
 }
 
@@ -182,6 +192,7 @@
     for (UIButton *b in selecionados){
         [self animacaoErro:b];
         [arrayBotoes addObject: b];
+        [b setTitleColor:[UIColor clearColor] forState:normal];
     }
     
     [selecionados removeAllObjects];

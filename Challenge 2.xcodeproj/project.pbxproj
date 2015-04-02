@@ -12,6 +12,7 @@
 		10AFB13F1ACC8258009EC28E /* MemoriaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10AFB13E1ACC8258009EC28E /* MemoriaViewController.xib */; };
 		10B602351AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B602331AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m */; };
 		10B602361AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B602341AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib */; };
+		10E963F91ACDBADE00EF5347 /* cardcover.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E963F81ACDBADE00EF5347 /* cardcover.png */; };
 		246873EB1AC9B35600E7B04B /* MemoriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246873E91AC9B35600E7B04B /* MemoriaViewController.m */; };
 		246873F01AC9D05500E7B04B /* Carta.m in Sources */ = {isa = PBXBuildFile; fileRef = 246873EF1AC9D05500E7B04B /* Carta.m */; };
 		246873F31AC9D07F00E7B04B /* MemoriaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 246873F21AC9D07F00E7B04B /* MemoriaManager.m */; };
@@ -65,6 +66,7 @@
 		10B602321AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalheEnciclopediaViewController.h; sourceTree = "<group>"; };
 		10B602331AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalheEnciclopediaViewController.m; sourceTree = "<group>"; };
 		10B602341AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetalheEnciclopediaViewController.xib; sourceTree = "<group>"; };
+		10E963F81ACDBADE00EF5347 /* cardcover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cardcover.png; path = Images.xcassets/cardcover.imageset/cardcover.png; sourceTree = "<group>"; };
 		246873E81AC9B35600E7B04B /* MemoriaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoriaViewController.h; sourceTree = "<group>"; };
 		246873E91AC9B35600E7B04B /* MemoriaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoriaViewController.m; sourceTree = "<group>"; };
 		246873EE1AC9D05500E7B04B /* Carta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Carta.h; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 		4EA614B91AC094A400D94F8A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				10E963F81ACDBADE00EF5347 /* cardcover.png */,
 				24A3BB0E1AC1D7D700F7E698 /* img.jpg */,
 				4EA614BA1AC094A400D94F8A /* Info.plist */,
 				4EA614BB1AC094A400D94F8A /* main.m */,
@@ -438,6 +441,7 @@
 				4E7D5FC01AC49392009C8367 /* SalvarPontuacao.xib in Resources */,
 				7E551B691AC0AC7D00EB7FD8 /* QuizViewController.xib in Resources */,
 				4EA614CA1AC094A400D94F8A /* LaunchScreen.xib in Resources */,
+				10E963F91ACDBADE00EF5347 /* cardcover.png in Resources */,
 				24A3BB0F1AC1D7D700F7E698 /* img.jpg in Resources */,
 				7E5B31EC1AC9DAE700ECBFD8 /* JogosViewController.xib in Resources */,
 				107F6F801AC326B90077B065 /* EnciclopediaViewController.xib in Resources */,
