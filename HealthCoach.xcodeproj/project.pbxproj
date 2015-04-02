@@ -87,14 +87,14 @@
 		4E7D5FBC1AC49392009C8367 /* SalvarPontuacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalvarPontuacao.h; sourceTree = "<group>"; };
 		4E7D5FBD1AC49392009C8367 /* SalvarPontuacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalvarPontuacao.m; sourceTree = "<group>"; };
 		4E7D5FBE1AC49392009C8367 /* SalvarPontuacao.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SalvarPontuacao.xib; sourceTree = "<group>"; };
-		4EA614B61AC094A400D94F8A /* Challenge 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Challenge 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EA614B61AC094A400D94F8A /* HealthCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EA614BA1AC094A400D94F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EA614BB1AC094A400D94F8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4EA614BD1AC094A400D94F8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4EA614BE1AC094A400D94F8A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4EA614C61AC094A400D94F8A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4EA614C91AC094A400D94F8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		4EA614CF1AC094A400D94F8A /* Challenge 2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Challenge 2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EA614CF1AC094A400D94F8A /* HealthCoachTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthCoachTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EA614D41AC094A400D94F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EA614D51AC094A400D94F8A /* Challenge_2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Challenge_2Tests.m; sourceTree = "<group>"; };
 		4EA614DF1AC0955300D94F8A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -159,8 +159,8 @@
 		4EA614B71AC094A400D94F8A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4EA614B61AC094A400D94F8A /* Challenge 2.app */,
-				4EA614CF1AC094A400D94F8A /* Challenge 2Tests.xctest */,
+				4EA614B61AC094A400D94F8A /* HealthCoach.app */,
+				4EA614CF1AC094A400D94F8A /* HealthCoachTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -359,9 +359,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4EA614B51AC094A400D94F8A /* Challenge 2 */ = {
+		4EA614B51AC094A400D94F8A /* HealthCoach */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4EA614D91AC094A400D94F8A /* Build configuration list for PBXNativeTarget "Challenge 2" */;
+			buildConfigurationList = 4EA614D91AC094A400D94F8A /* Build configuration list for PBXNativeTarget "HealthCoach" */;
 			buildPhases = (
 				4EA614B21AC094A400D94F8A /* Sources */,
 				4EA614B31AC094A400D94F8A /* Frameworks */,
@@ -371,14 +371,14 @@
 			);
 			dependencies = (
 			);
-			name = "Challenge 2";
+			name = HealthCoach;
 			productName = "Challenge 2";
-			productReference = 4EA614B61AC094A400D94F8A /* Challenge 2.app */;
+			productReference = 4EA614B61AC094A400D94F8A /* HealthCoach.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4EA614CE1AC094A400D94F8A /* Challenge 2Tests */ = {
+		4EA614CE1AC094A400D94F8A /* HealthCoachTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4EA614DC1AC094A400D94F8A /* Build configuration list for PBXNativeTarget "Challenge 2Tests" */;
+			buildConfigurationList = 4EA614DC1AC094A400D94F8A /* Build configuration list for PBXNativeTarget "HealthCoachTests" */;
 			buildPhases = (
 				4EA614CB1AC094A400D94F8A /* Sources */,
 				4EA614CC1AC094A400D94F8A /* Frameworks */,
@@ -389,9 +389,9 @@
 			dependencies = (
 				4EA614D11AC094A400D94F8A /* PBXTargetDependency */,
 			);
-			name = "Challenge 2Tests";
+			name = HealthCoachTests;
 			productName = "Challenge 2Tests";
-			productReference = 4EA614CF1AC094A400D94F8A /* Challenge 2Tests.xctest */;
+			productReference = 4EA614CF1AC094A400D94F8A /* HealthCoachTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -412,7 +412,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4EA614B11AC094A400D94F8A /* Build configuration list for PBXProject "Challenge 2" */;
+			buildConfigurationList = 4EA614B11AC094A400D94F8A /* Build configuration list for PBXProject "HealthCoach" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -425,8 +425,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4EA614B51AC094A400D94F8A /* Challenge 2 */,
-				4EA614CE1AC094A400D94F8A /* Challenge 2Tests */,
+				4EA614B51AC094A400D94F8A /* HealthCoach */,
+				4EA614CE1AC094A400D94F8A /* HealthCoachTests */,
 			);
 		};
 /* End PBXProject section */
@@ -504,7 +504,7 @@
 /* Begin PBXTargetDependency section */
 		4EA614D11AC094A400D94F8A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4EA614B51AC094A400D94F8A /* Challenge 2 */;
+			target = 4EA614B51AC094A400D94F8A /* HealthCoach */;
 			targetProxy = 4EA614D01AC094A400D94F8A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -605,8 +605,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = "./**";
 				INFOPLIST_FILE = "Challenge 2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HealthCoach;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -616,8 +618,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = "./**";
 				INFOPLIST_FILE = "Challenge 2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HealthCoach;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -635,7 +639,7 @@
 				);
 				INFOPLIST_FILE = "Challenge 2Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HealthCoachTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Challenge 2.app/Challenge 2";
 			};
 			name = Debug;
@@ -650,7 +654,7 @@
 				);
 				INFOPLIST_FILE = "Challenge 2Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HealthCoachTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Challenge 2.app/Challenge 2";
 			};
 			name = Release;
@@ -658,7 +662,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4EA614B11AC094A400D94F8A /* Build configuration list for PBXProject "Challenge 2" */ = {
+		4EA614B11AC094A400D94F8A /* Build configuration list for PBXProject "HealthCoach" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4EA614D71AC094A400D94F8A /* Debug */,
@@ -667,7 +671,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4EA614D91AC094A400D94F8A /* Build configuration list for PBXNativeTarget "Challenge 2" */ = {
+		4EA614D91AC094A400D94F8A /* Build configuration list for PBXNativeTarget "HealthCoach" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4EA614DA1AC094A400D94F8A /* Debug */,
@@ -676,7 +680,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4EA614DC1AC094A400D94F8A /* Build configuration list for PBXNativeTarget "Challenge 2Tests" */ = {
+		4EA614DC1AC094A400D94F8A /* Build configuration list for PBXNativeTarget "HealthCoachTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4EA614DD1AC094A400D94F8A /* Debug */,
