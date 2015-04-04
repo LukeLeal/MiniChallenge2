@@ -37,13 +37,23 @@ static bool isFirstAccess = YES;
 }
 
 - (void)addPontuacao:(Pontuacao *)pontuacao {
-    [self.pontuacoes addObject:pontuacao];
     self.pontuacaoAtual = [[Pontuacao alloc] init];
     
     RLMRealm *realm = [RLMRealm defaultRealm];
     [realm beginWriteTransaction];
     [realm addObject:pontuacao];
     [realm commitWriteTransaction];
+    
+    [self.pontuacoes addObject:pontuacao];
+}
+
+- (void)removePontuacao:(Pontuacao *)pontuacao {
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    [realm beginWriteTransaction];
+    [realm deleteObject:pontuacao];
+    [realm commitWriteTransaction];
+    
+    [self.pontuacoes removeObject:pontuacao];
 }
 
 - (NSArray *)sortedPontuacoes {

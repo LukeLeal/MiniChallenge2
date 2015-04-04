@@ -53,6 +53,7 @@
     for (UIButton *botao in botoes) {
         [botao setContentEdgeInsets:UIEdgeInsetsMake(0, 5.0f, 0, 5.0f)];
         [botao.layer setBorderWidth:1.0f];
+        [botao.layer setBorderColor:[UIColor greenColor].CGColor];
     }
     
     [self proxPerg];

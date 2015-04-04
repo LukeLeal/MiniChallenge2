@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetalheEnciclopediaViewController : UIViewController <UITextViewDelegate, UIGestureRecognizerDelegate>
+@interface DetalheEnciclopediaViewController : UIViewController <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *informacoesDoenca;
 @property (weak, nonatomic) IBOutlet UIImageView *imagemDoenca;

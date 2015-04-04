@@ -33,13 +33,13 @@
     
     mm = [[MemoriaManager alloc]init];
     
-    secondsLeft = 30;
+    secondsLeft = 60;
     [self countdownTimer];
     pontos=0;
     parCont=0;
     arrayBotoes = [NSMutableArray arrayWithObjects: carta1,carta2,carta3,carta4,carta5,carta6,carta7,carta8,carta9,carta10,carta11,carta12,nil];
     imagem = [[UIImage alloc]init];
-    NSString *img = @"cardcover.png";
+    NSString *img = @"card_cover.png";
     imagem = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:img ofType:nil]];
 }
 
@@ -249,7 +249,7 @@
             yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
                 [pontuacaoManager.pontuacaoAtual setPontos:pontos];
-                [pontuacaoManager.pontuacaoAtual setCategoria:@"Memoria"];
+                [pontuacaoManager.pontuacaoAtual setCategoria:@"Memória"];
                 [self.navigationController pushViewController:[[SalvarPontuacao alloc] init] animated:YES];
             }];
             //Botão "Não".

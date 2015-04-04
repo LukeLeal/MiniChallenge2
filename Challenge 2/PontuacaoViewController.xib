@@ -18,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vvW-pd-nY0">
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="vvW-pd-nY0" secondAttribute="height" multiplier="400:667" id="G73-1Z-Y6k"/>
                         <constraint firstAttribute="height" constant="600" id="Rb3-u4-esT">
@@ -26,6 +26,7 @@
                         </constraint>
                         <constraint firstAttribute="width" constant="400" id="UaB-db-sUw"/>
                     </constraints>
+                    <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <variation key="default">
                         <mask key="constraints">
                             <exclude reference="G73-1Z-Y6k"/>
@@ -47,12 +48,13 @@
                         <segment title="Quiz"/>
                         <segment title="Memória"/>
                     </segments>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <action selector="trocaModoJogo:" destination="-1" eventType="valueChanged" id="EmX-Hd-eCV"/>
                     </connections>
                 </segmentedControl>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.1473426857" green="0.6641793762" blue="0.95399839389999996" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="vvW-pd-nY0" firstAttribute="top" secondItem="ndk-oc-eNo" secondAttribute="bottom" constant="15" id="4DG-JP-zsB"/>
                 <constraint firstItem="ndk-oc-eNo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="f8s-SJ-nQW"/>

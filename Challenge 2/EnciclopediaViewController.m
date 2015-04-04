@@ -29,6 +29,7 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:NO];
     volta = true;
 }
 
@@ -69,7 +70,10 @@
     [celula.textLabel setText: [(Doenca *)[doencas objectAtIndex:(int) row] nome]];
     
     //alterando a fonte da celula
-    celula.textLabel.font =[UIFont fontWithName:@"superclarendon" size:15.0f];
+    celula.textLabel.font =[UIFont fontWithName:@"superclarendon" size:18.0f];
+    [celula.textLabel setTextColor:[UIColor whiteColor]];
+    
+    [celula setBackgroundColor:[UIColor clearColor]];
     
     return celula;
 }

@@ -77,6 +77,8 @@
             [celula.nome setText:pontuacao.nome];
             [celula.pontos setText:[NSString stringWithFormat:@"%d", pontuacao.pontos]];
             [celula.foto setImage:[pontuacao getFotoAsImage]];
+            if (indexPath.row != 0)
+                [celula.trophy setHidden:YES];
             break;
         }
         case 1:
@@ -85,6 +87,8 @@
             [celula.nome setText:pontuacao.nome];
             [celula.pontos setText:[NSString stringWithFormat:@"%d", pontuacao.pontos]];
             [celula.foto setImage:[pontuacao getFotoAsImage]];
+            if (indexPath.row != 0)
+                [celula.trophy setHidden:YES];
             break;
         }
     }
@@ -100,20 +104,14 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
         
-        //Remove o objeto do Realm.io.
-        RLMRealm *realm = [RLMRealm defaultRealm];
-        [realm beginWriteTransaction];
-        [realm deleteObject:[pontuacaoManager.pontuacoes objectAtIndex:indexPath.row]];
-        [realm commitWriteTransaction];
-        
-        //Remove o objeto da base de dados.
-        [pontuacaoManager.pontuacoes removeObjectAtIndex:indexPath.row];
-        
-        //Remove o objeto da array local para garantir que a tabela se atualize com o número correto de células.
-        if (modoJogo.selectedSegmentIndex == 0)
+        //Remove o objeto do Realm.io e da base de dados local para garantir que a tabela se atualize com o número correto de células.
+        if (modoJogo.selectedSegmentIndex == 0) {
+            [pontuacaoManager removePontuacao:[pontuacoesQuiz objectAtIndex:indexPath.row]];
             [pontuacoesQuiz removeObjectAtIndex:indexPath.row];
-        else
+        } else if (modoJogo.selectedSegmentIndex == 1) {
+            [pontuacaoManager removePontuacao:[pontuacoesMemoria objectAtIndex:indexPath.row]];
             [pontuacoesMemoria removeObjectAtIndex:indexPath.row];
+        }
         
         //Remove a célula da tabela e atualiza.
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];

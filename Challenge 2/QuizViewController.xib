@@ -24,8 +24,8 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pergunta:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djl-sx-Jf7">
                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" name="Superclarendon-Bold" family="Superclarendon" pointSize="20"/>
-                    <color key="textColor" red="0.10648646474683832" green="0.47198078132175703" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Superclarendon-Regular" family="Superclarendon" pointSize="20"/>
+                    <color key="textColor" red="0.3938031441" green="1" blue="0.55098625280000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IB-rj-dcT">
@@ -39,6 +39,7 @@
                         </constraint>
                     </constraints>
                     <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="80"/>
+                    <color key="textColor" red="0.39380314405856742" green="1" blue="0.55098625281661562" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="default">
                         <mask key="constraints">
@@ -62,6 +63,7 @@
                         <constraint firstAttribute="height" constant="22" id="yHN-aF-Nny"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Superclarendon-Bold" family="Superclarendon" pointSize="18"/>
+                    <color key="textColor" red="0.3938031441" green="1" blue="0.55098625280000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="default">
                         <mask key="constraints">
@@ -85,7 +87,7 @@
                     </constraints>
                     <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="14"/>
                     <state key="normal" title="Alternativa B">
-                        <color key="titleColor" red="0.89849668560606055" green="0.099876786942089069" blue="0.7945798746321715" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.66458044510000003" green="0.9047309858" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="default">
@@ -108,7 +110,7 @@
                     </constraints>
                     <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="14"/>
                     <state key="normal" title="Alternativa A">
-                        <color key="titleColor" red="0.061937148229481424" green="0.89849668560606055" blue="0.19473242099658419" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.66458044510000003" green="0.9047309858" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="default">
@@ -129,7 +131,7 @@
                             <variation key="heightClass=regular-widthClass=compact" constant="70"/>
                         </constraint>
                     </constraints>
-                    <color key="textColor" red="0.20586111118963141" green="0.46617185892863466" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.5183538833786947" green="1" blue="0.84470774190071651" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="16"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     <variation key="default">
@@ -152,7 +154,7 @@
                     </constraints>
                     <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="14"/>
                     <state key="normal" title="Alternativa C">
-                        <color key="titleColor" red="0.058739223886702809" green="0.814752267705386" blue="0.96204229797979801" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.66458044510000003" green="0.9047309858" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="default">
@@ -166,7 +168,7 @@
                         </mask>
                     </variation>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stopwatch-100" translatesAutoresizingMaskIntoConstraints="NO" id="H8i-fK-ltM">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stopwatch_green-96" translatesAutoresizingMaskIntoConstraints="NO" id="H8i-fK-ltM">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="LSM-4b-LHR">
@@ -189,7 +191,7 @@
                         </mask>
                     </variation>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sequencia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNd-xW-yoO">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sequencia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNd-xW-yoO">
                     <rect key="frame" x="434" y="85" width="142" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="4Pc-8l-BfD"/>
@@ -198,6 +200,7 @@
                         </constraint>
                     </constraints>
                     <fontDescription key="fontDescription" name="Superclarendon-Bold" family="Superclarendon" pointSize="18"/>
+                    <color key="textColor" red="0.3938031441" green="1" blue="0.55098625280000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="default">
                         <mask key="constraints">
@@ -214,11 +217,26 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxf-aw-bcM">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="18"/>
-                    <state key="normal" title="Desistir" image="Crying-50">
-                        <color key="titleColor" red="0.69019607839999997" green="0.1450980392" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="124" id="Nog-a8-ZHf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="20"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Desistir" image="crying_baby-32">
+                        <color key="titleColor" red="0.66458044506016734" green="0.9047309857635556" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Nog-a8-ZHf"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="35" y="733" width="124" height="32"/>
+                        <mask key="constraints">
+                            <include reference="Nog-a8-ZHf"/>
+                        </mask>
+                    </variation>
                     <connections>
                         <action selector="desistirBotao:" destination="-1" eventType="touchUpInside" id="EbG-4Q-rbK"/>
                     </connections>
@@ -240,13 +258,13 @@
                 <constraint firstAttribute="trailing" secondItem="I6P-fC-YL1" secondAttribute="trailing" constant="8" id="ATy-Ns-iKN">
                     <variation key="heightClass=regular-widthClass=compact" constant="20"/>
                 </constraint>
-                <constraint firstAttribute="bottom" secondItem="rxf-aw-bcM" secondAttribute="bottom" constant="35" id="BHp-Yg-oYZ"/>
                 <constraint firstItem="6IB-rj-dcT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="61" id="DCR-W9-MBP">
                     <variation key="heightClass=regular-widthClass=compact" constant="122"/>
                 </constraint>
                 <constraint firstAttribute="bottom" secondItem="rxf-aw-bcM" secondAttribute="bottom" constant="127" id="GHa-Qf-1Ke">
                     <variation key="heightClass=regular-widthClass=compact" constant="169"/>
                 </constraint>
+                <constraint firstAttribute="bottom" secondItem="rxf-aw-bcM" secondAttribute="bottom" constant="35" id="O9Z-z8-mXE"/>
                 <constraint firstItem="Hjp-FD-MyF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PtV-YY-WJs"/>
                 <constraint firstItem="6IB-rj-dcT" firstAttribute="top" secondItem="I6P-fC-YL1" secondAttribute="bottom" constant="50" id="Q5n-t4-Aat"/>
                 <constraint firstAttribute="bottom" secondItem="rxf-aw-bcM" secondAttribute="bottom" constant="169" id="Tbt-q5-1TF">
@@ -288,9 +306,9 @@
                 <constraint firstItem="Hjp-FD-MyF" firstAttribute="trailing" secondItem="oCg-mN-M0M" secondAttribute="trailing" id="sLY-5b-e32"/>
                 <constraint firstItem="6IB-rj-dcT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vMA-Kn-zEK"/>
                 <constraint firstItem="I6P-fC-YL1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="vqM-zE-K6u"/>
+                <constraint firstItem="rxf-aw-bcM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="x7I-Kt-xuF"/>
                 <constraint firstItem="oCg-mN-M0M" firstAttribute="top" secondItem="4va-gj-D4T" secondAttribute="bottom" constant="8" symbolic="YES" id="yOt-Mu-ssc"/>
                 <constraint firstItem="4va-gj-D4T" firstAttribute="leading" secondItem="oCg-mN-M0M" secondAttribute="leading" id="zXq-Cj-Ei6"/>
-                <constraint firstItem="rxf-aw-bcM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="zwE-KX-FOn"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
@@ -299,39 +317,39 @@
                     <exclude reference="rxf-aw-bcM"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="711-LQ-yvQ"/>
-                    <exclude reference="q6p-to-Q7c"/>
-                    <exclude reference="3Bv-Tz-m7g"/>
-                    <exclude reference="BHp-Yg-oYZ"/>
-                    <exclude reference="GHa-Qf-1Ke"/>
-                    <exclude reference="Tbt-q5-1TF"/>
-                    <exclude reference="YMI-c1-dSs"/>
-                    <exclude reference="zwE-KX-FOn"/>
+                    <exclude reference="Xa2-k7-WJG"/>
+                    <exclude reference="aBc-Jb-cxg"/>
+                    <exclude reference="b7f-eR-Jft"/>
+                    <exclude reference="ePQ-W9-yGQ"/>
                     <exclude reference="0bk-CR-j98"/>
                     <exclude reference="3V9-4C-aiG"/>
                     <exclude reference="7iT-Uh-IZU"/>
-                    <exclude reference="WL4-mg-2vK"/>
-                    <exclude reference="l3c-Rr-iPO"/>
                     <exclude reference="ATy-Ns-iKN"/>
                     <exclude reference="vqM-zE-K6u"/>
                     <exclude reference="DCR-W9-MBP"/>
                     <exclude reference="Q5n-t4-Aat"/>
                     <exclude reference="jos-RX-Cc8"/>
                     <exclude reference="vMA-Kn-zEK"/>
+                    <exclude reference="711-LQ-yvQ"/>
+                    <exclude reference="q6p-to-Q7c"/>
+                    <exclude reference="WL4-mg-2vK"/>
+                    <exclude reference="l3c-Rr-iPO"/>
                     <exclude reference="adG-Xf-8cl"/>
                     <exclude reference="jPS-yg-aT0"/>
                     <exclude reference="ltJ-eU-LrJ"/>
                     <exclude reference="zXq-Cj-Ei6"/>
-                    <exclude reference="Xa2-k7-WJG"/>
-                    <exclude reference="aBc-Jb-cxg"/>
-                    <exclude reference="b7f-eR-Jft"/>
-                    <exclude reference="ePQ-W9-yGQ"/>
                     <exclude reference="ZKf-FD-CUe"/>
                     <exclude reference="yOt-Mu-ssc"/>
                     <exclude reference="PtV-YY-WJs"/>
                     <exclude reference="eNu-up-fzM"/>
                     <exclude reference="fZL-IK-IPl"/>
                     <exclude reference="sLY-5b-e32"/>
+                    <exclude reference="3Bv-Tz-m7g"/>
+                    <exclude reference="GHa-Qf-1Ke"/>
+                    <exclude reference="O9Z-z8-mXE"/>
+                    <exclude reference="Tbt-q5-1TF"/>
+                    <exclude reference="YMI-c1-dSs"/>
+                    <exclude reference="x7I-Kt-xuF"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -341,46 +359,46 @@
                     <include reference="rxf-aw-bcM"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="711-LQ-yvQ"/>
-                    <include reference="q6p-to-Q7c"/>
-                    <exclude reference="3Bv-Tz-m7g"/>
-                    <include reference="BHp-Yg-oYZ"/>
-                    <exclude reference="GHa-Qf-1Ke"/>
-                    <exclude reference="Tbt-q5-1TF"/>
-                    <exclude reference="YMI-c1-dSs"/>
-                    <include reference="zwE-KX-FOn"/>
+                    <exclude reference="Xa2-k7-WJG"/>
+                    <include reference="aBc-Jb-cxg"/>
+                    <include reference="b7f-eR-Jft"/>
+                    <exclude reference="ePQ-W9-yGQ"/>
                     <include reference="0bk-CR-j98"/>
                     <exclude reference="3V9-4C-aiG"/>
                     <include reference="7iT-Uh-IZU"/>
-                    <include reference="WL4-mg-2vK"/>
-                    <include reference="l3c-Rr-iPO"/>
                     <include reference="ATy-Ns-iKN"/>
                     <include reference="vqM-zE-K6u"/>
                     <exclude reference="DCR-W9-MBP"/>
                     <include reference="Q5n-t4-Aat"/>
                     <include reference="jos-RX-Cc8"/>
                     <exclude reference="vMA-Kn-zEK"/>
+                    <include reference="711-LQ-yvQ"/>
+                    <include reference="q6p-to-Q7c"/>
+                    <include reference="WL4-mg-2vK"/>
+                    <include reference="l3c-Rr-iPO"/>
                     <include reference="adG-Xf-8cl"/>
                     <include reference="jPS-yg-aT0"/>
                     <include reference="ltJ-eU-LrJ"/>
                     <include reference="zXq-Cj-Ei6"/>
-                    <exclude reference="Xa2-k7-WJG"/>
-                    <include reference="aBc-Jb-cxg"/>
-                    <include reference="b7f-eR-Jft"/>
-                    <exclude reference="ePQ-W9-yGQ"/>
                     <include reference="ZKf-FD-CUe"/>
                     <include reference="yOt-Mu-ssc"/>
                     <include reference="PtV-YY-WJs"/>
                     <include reference="eNu-up-fzM"/>
                     <include reference="fZL-IK-IPl"/>
                     <include reference="sLY-5b-e32"/>
+                    <exclude reference="3Bv-Tz-m7g"/>
+                    <exclude reference="GHa-Qf-1Ke"/>
+                    <include reference="O9Z-z8-mXE"/>
+                    <exclude reference="Tbt-q5-1TF"/>
+                    <exclude reference="YMI-c1-dSs"/>
+                    <include reference="x7I-Kt-xuF"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="167" y="289"/>
         </view>
     </objects>
     <resources>
-        <image name="Crying-50" width="35" height="35"/>
-        <image name="stopwatch-100" width="100" height="100"/>
+        <image name="crying_baby-32" width="32" height="32"/>
+        <image name="stopwatch_green-96" width="96" height="96"/>
     </resources>
 </document>

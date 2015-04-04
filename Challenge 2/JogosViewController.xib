@@ -14,19 +14,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9u3-Vd-l57">
-                    <rect key="frame" x="239" y="223" width="123" height="38"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="35"/>
-                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <state key="normal" title="Memória" image="questions-50">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="memoriaBotao:" destination="-1" eventType="touchUpInside" id="Ino-LQ-Zyh"/>
-                    </connections>
-                </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brain" translatesAutoresizingMaskIntoConstraints="NO" id="G6u-RV-kMG">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <constraints>
@@ -49,33 +36,95 @@
                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MW3-Lh-ghp">
                     <rect key="frame" x="239" y="282" width="123" height="30"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="35"/>
-                    <inset key="contentEdgeInsets" minX="-80" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <state key="normal" title="Quiz" image="faq-50">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="A0Y-vJ-ZW2"/>
+                        <constraint firstAttribute="height" constant="120" id="dyK-iq-WD3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="20"/>
+                    <inset key="titleEdgeInsets" minX="-100" minY="100" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Quiz" image="faq-100">
+                        <color key="titleColor" red="0.3938031441" green="1" blue="0.55098625280000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="A0Y-vJ-ZW2"/>
+                            <exclude reference="dyK-iq-WD3"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="A0Y-vJ-ZW2"/>
+                            <include reference="dyK-iq-WD3"/>
+                        </mask>
+                    </variation>
                     <connections>
                         <action selector="quizBotao:" destination="-1" eventType="touchUpInside" id="3Jb-eA-kqR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9u3-Vd-l57">
+                    <rect key="frame" x="239" y="223" width="123" height="38"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="iMQ-k4-GD6"/>
+                        <constraint firstAttribute="height" constant="122" id="w7K-kC-vCX">
+                            <variation key="heightClass=regular-widthClass=compact" constant="120"/>
+                        </constraint>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="20"/>
+                    <inset key="titleEdgeInsets" minX="-100" minY="100" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Memória" image="questions-100">
+                        <color key="titleColor" red="0.99448858520000005" green="1" blue="0.085176400499999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="iMQ-k4-GD6"/>
+                            <exclude reference="w7K-kC-vCX"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="iMQ-k4-GD6"/>
+                            <include reference="w7K-kC-vCX"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="memoriaBotao:" destination="-1" eventType="touchUpInside" id="Ino-LQ-Zyh"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.1473426857" green="0.6641793762" blue="0.95399839389999996" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="MW3-Lh-ghp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="10L-eE-rCV"/>
                 <constraint firstAttribute="centerY" secondItem="9u3-Vd-l57" secondAttribute="centerY" id="17z-mI-AwG"/>
-                <constraint firstAttribute="trailing" secondItem="MW3-Lh-ghp" secondAttribute="trailing" id="CBp-8g-0lx"/>
-                <constraint firstItem="G6u-RV-kMG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="80" id="Fs5-A3-Zod"/>
-                <constraint firstAttribute="trailing" secondItem="9u3-Vd-l57" secondAttribute="trailing" id="NEO-63-HEJ"/>
-                <constraint firstAttribute="centerY" secondItem="MW3-Lh-ghp" secondAttribute="centerY" id="V6s-Nm-WqF"/>
-                <constraint firstAttribute="centerX" secondItem="G6u-RV-kMG" secondAttribute="centerX" id="YYJ-rR-pXO"/>
-                <constraint firstItem="MW3-Lh-ghp" firstAttribute="top" secondItem="9u3-Vd-l57" secondAttribute="bottom" constant="24" id="a7A-Ac-WSW">
-                    <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                <constraint firstItem="9u3-Vd-l57" firstAttribute="top" secondItem="G6u-RV-kMG" secondAttribute="bottom" constant="115" id="4S5-j0-XsX">
+                    <variation key="heightClass=regular-widthClass=compact" constant="55"/>
                 </constraint>
-                <constraint firstItem="9u3-Vd-l57" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iyC-oR-OwY"/>
-                <constraint firstItem="G6u-RV-kMG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="33" id="pZP-vV-rVg"/>
+                <constraint firstItem="9u3-Vd-l57" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="80" id="Bbc-ew-SLs">
+                    <variation key="heightClass=regular-widthClass=compact" constant="68"/>
+                </constraint>
+                <constraint firstItem="MW3-Lh-ghp" firstAttribute="leading" secondItem="9u3-Vd-l57" secondAttribute="trailing" constant="40" id="Eu7-DD-qN8"/>
+                <constraint firstItem="G6u-RV-kMG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="80" id="Fs5-A3-Zod"/>
+                <constraint firstItem="MW3-Lh-ghp" firstAttribute="trailing" secondItem="G6u-RV-kMG" secondAttribute="trailing" id="FsL-Nk-WE7"/>
+                <constraint firstItem="MW3-Lh-ghp" firstAttribute="top" secondItem="9u3-Vd-l57" secondAttribute="top" id="G3h-e9-03j"/>
+                <constraint firstAttribute="centerY" secondItem="MW3-Lh-ghp" secondAttribute="centerY" id="V6s-Nm-WqF"/>
+                <constraint firstItem="9u3-Vd-l57" firstAttribute="leading" secondItem="G6u-RV-kMG" secondAttribute="leading" id="X01-9T-BD8"/>
+                <constraint firstAttribute="centerX" secondItem="G6u-RV-kMG" secondAttribute="centerX" id="YYJ-rR-pXO"/>
+                <constraint firstItem="9u3-Vd-l57" firstAttribute="top" secondItem="MW3-Lh-ghp" secondAttribute="top" id="eDb-o5-SkB"/>
+                <constraint firstItem="9u3-Vd-l57" firstAttribute="top" secondItem="G6u-RV-kMG" secondAttribute="bottom" constant="67" id="jNu-f9-8fi">
+                    <variation key="heightClass=regular-widthClass=compact" constant="37"/>
+                </constraint>
+                <constraint firstItem="MW3-Lh-ghp" firstAttribute="top" secondItem="G6u-RV-kMG" secondAttribute="bottom" constant="67" id="kis-UE-D5r">
+                    <variation key="heightClass=regular-widthClass=compact" constant="37"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="MW3-Lh-ghp" secondAttribute="trailing" constant="80" id="pSl-ai-vjY">
+                    <variation key="heightClass=regular-widthClass=compact" constant="61"/>
+                </constraint>
+                <constraint firstItem="G6u-RV-kMG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="33" id="pZP-vV-rVg">
+                    <variation key="heightClass=regular-widthClass=compact" constant="93"/>
+                </constraint>
                 <constraint firstItem="MW3-Lh-ghp" firstAttribute="top" secondItem="9u3-Vd-l57" secondAttribute="bottom" constant="19" id="rC3-jb-lpy"/>
+                <constraint firstItem="MW3-Lh-ghp" firstAttribute="bottom" secondItem="9u3-Vd-l57" secondAttribute="bottom" id="sxC-54-yUs"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
@@ -86,13 +135,19 @@
                     <exclude reference="YYJ-rR-pXO"/>
                     <exclude reference="pZP-vV-rVg"/>
                     <exclude reference="17z-mI-AwG"/>
-                    <exclude reference="NEO-63-HEJ"/>
-                    <exclude reference="iyC-oR-OwY"/>
-                    <exclude reference="10L-eE-rCV"/>
-                    <exclude reference="CBp-8g-0lx"/>
+                    <exclude reference="4S5-j0-XsX"/>
+                    <exclude reference="Bbc-ew-SLs"/>
+                    <exclude reference="X01-9T-BD8"/>
+                    <exclude reference="eDb-o5-SkB"/>
+                    <exclude reference="jNu-f9-8fi"/>
+                    <exclude reference="Eu7-DD-qN8"/>
+                    <exclude reference="FsL-Nk-WE7"/>
+                    <exclude reference="G3h-e9-03j"/>
                     <exclude reference="V6s-Nm-WqF"/>
-                    <exclude reference="a7A-Ac-WSW"/>
+                    <exclude reference="kis-UE-D5r"/>
+                    <exclude reference="pSl-ai-vjY"/>
                     <exclude reference="rC3-jb-lpy"/>
+                    <exclude reference="sxC-54-yUs"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -103,14 +158,20 @@
                     <exclude reference="Fs5-A3-Zod"/>
                     <include reference="YYJ-rR-pXO"/>
                     <include reference="pZP-vV-rVg"/>
-                    <include reference="17z-mI-AwG"/>
-                    <include reference="NEO-63-HEJ"/>
-                    <include reference="iyC-oR-OwY"/>
-                    <include reference="10L-eE-rCV"/>
-                    <include reference="CBp-8g-0lx"/>
+                    <exclude reference="17z-mI-AwG"/>
+                    <exclude reference="4S5-j0-XsX"/>
+                    <include reference="Bbc-ew-SLs"/>
+                    <exclude reference="X01-9T-BD8"/>
+                    <exclude reference="eDb-o5-SkB"/>
+                    <include reference="jNu-f9-8fi"/>
+                    <exclude reference="Eu7-DD-qN8"/>
+                    <exclude reference="FsL-Nk-WE7"/>
+                    <exclude reference="G3h-e9-03j"/>
                     <exclude reference="V6s-Nm-WqF"/>
-                    <include reference="a7A-Ac-WSW"/>
+                    <include reference="kis-UE-D5r"/>
+                    <include reference="pSl-ai-vjY"/>
                     <exclude reference="rC3-jb-lpy"/>
+                    <exclude reference="sxC-54-yUs"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="176" y="253"/>
@@ -118,7 +179,7 @@
     </objects>
     <resources>
         <image name="brain" width="2560" height="2560"/>
-        <image name="faq-50" width="50" height="50"/>
-        <image name="questions-50" width="50" height="50"/>
+        <image name="faq-100" width="100" height="100"/>
+        <image name="questions-100" width="100" height="100"/>
     </resources>
 </document>

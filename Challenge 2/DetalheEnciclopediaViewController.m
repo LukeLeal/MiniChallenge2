@@ -24,7 +24,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.informacoesDoenca setDelegate:self];
     
     [_imagemDoenca setImage: [UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
     
@@ -55,6 +54,9 @@
     [self setTitle:doenca.nome];
     //descrição
     [self.informacoesDoenca setText:doenca.descricao];
+    [self.informacoesDoenca setFont:[UIFont fontWithName:@"superclarendon" size:15.0f]];
+    [self.informacoesDoenca setTextColor:[UIColor whiteColor]];
+    [self.informacoesDoenca setTextAlignment:NSTextAlignmentJustified];
     //causa
     [self.causa setText:doenca.causa];
     //prevenção

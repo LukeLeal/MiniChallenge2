@@ -97,7 +97,9 @@
             <color key="backgroundColor" red="0.14734268565326505" green="0.66417937623760115" blue="0.95399839386512175" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="voE-CT-vB9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="70" id="Ayd-xM-GgF"/>
-                <constraint firstItem="yxm-Rw-1tQ" firstAttribute="top" secondItem="ekQ-xd-sun" secondAttribute="bottom" constant="25" id="BuH-Hu-2sn"/>
+                <constraint firstItem="yxm-Rw-1tQ" firstAttribute="top" secondItem="ekQ-xd-sun" secondAttribute="bottom" constant="25" id="BuH-Hu-2sn">
+                    <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                </constraint>
                 <constraint firstAttribute="centerX" secondItem="yxm-Rw-1tQ" secondAttribute="centerX" id="M6Z-3V-IFh"/>
                 <constraint firstItem="yxm-Rw-1tQ" firstAttribute="leading" secondItem="ekQ-xd-sun" secondAttribute="trailing" constant="50" id="Po0-YA-NMx">
                     <variation key="heightClass=compact-widthClass=regular" constant="50"/>
@@ -105,21 +107,25 @@
                 <constraint firstItem="yxm-Rw-1tQ" firstAttribute="top" secondItem="ekQ-xd-sun" secondAttribute="bottom" constant="65" id="RAA-CE-gec">
                     <variation key="heightClass=regular-widthClass=compact" constant="75"/>
                 </constraint>
-                <constraint firstAttribute="bottom" secondItem="yxm-Rw-1tQ" secondAttribute="bottom" constant="-50" id="cma-go-iqz"/>
+                <constraint firstAttribute="bottom" secondItem="yxm-Rw-1tQ" secondAttribute="bottom" constant="-50" id="cma-go-iqz">
+                    <variation key="heightClass=regular-widthClass=compact" constant="-50"/>
+                </constraint>
                 <constraint firstAttribute="centerX" secondItem="BAD-DU-Bqp" secondAttribute="centerX" id="dTH-l1-fkz"/>
                 <constraint firstAttribute="centerX" secondItem="BAD-DU-Bqp" secondAttribute="centerX" id="eHo-yF-Gfc"/>
                 <constraint firstItem="yxm-Rw-1tQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="70" id="fmN-Fg-NMa"/>
                 <constraint firstAttribute="centerX" secondItem="ekQ-xd-sun" secondAttribute="centerX" id="gDX-vb-92I">
                     <variation key="heightClass=regular-widthClass=compact" constant="5"/>
                 </constraint>
-                <constraint firstItem="ekQ-xd-sun" firstAttribute="top" secondItem="voE-CT-vB9" secondAttribute="bottom" constant="25" id="lum-XX-6PX"/>
+                <constraint firstItem="ekQ-xd-sun" firstAttribute="top" secondItem="voE-CT-vB9" secondAttribute="bottom" constant="25" id="lum-XX-6PX">
+                    <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                </constraint>
                 <constraint firstAttribute="centerX" secondItem="ekQ-xd-sun" secondAttribute="centerX" id="nUa-jP-hja"/>
                 <constraint firstItem="yxm-Rw-1tQ" firstAttribute="top" secondItem="BAD-DU-Bqp" secondAttribute="bottom" constant="60" id="pci-Oa-BkI"/>
                 <constraint firstItem="ekQ-xd-sun" firstAttribute="leading" secondItem="voE-CT-vB9" secondAttribute="trailing" constant="50" id="puA-1g-mmi">
                     <variation key="heightClass=compact-widthClass=regular" constant="90"/>
                 </constraint>
                 <constraint firstItem="BAD-DU-Bqp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="rDP-js-ykR">
-                    <variation key="heightClass=regular-widthClass=compact" constant="-37"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="-30"/>
                 </constraint>
                 <constraint firstItem="ekQ-xd-sun" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="70" id="rwf-WO-Bxn"/>
                 <constraint firstItem="ekQ-xd-sun" firstAttribute="top" secondItem="voE-CT-vB9" secondAttribute="bottom" constant="65" id="sHS-pw-RiL">

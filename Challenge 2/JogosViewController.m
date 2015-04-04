@@ -22,6 +22,7 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:NO];
     volta = true;
 }
 

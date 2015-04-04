@@ -93,28 +93,35 @@
 #pragma mark - Persistência de Dados
 
 - (IBAction)salvar:(id)sender {
-    PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
-    [pontuacaoManager.pontuacaoAtual setNome:self.nome.text];
-    [pontuacaoManager.pontuacaoAtual setFotoWithUIImage:self.foto.image];
-    [pontuacaoManager addPontuacao:pontuacaoManager.pontuacaoAtual];
-    
-    NSMutableArray *newViewControllers = [[NSMutableArray alloc] initWithArray:self.navigationController.viewControllers];
-    [newViewControllers removeObjectsInRange:NSMakeRange(1, self.navigationController.viewControllers.count-1)];
-    [newViewControllers addObject:[[PontuacaoViewController alloc] init]];
-    [self.navigationController setViewControllers:newViewControllers animated:YES];
+    if (self.nome.text.length < 3 || self.nome.text.length > 10) {
+        UIAlertController *nameTooSmallAlert = [UIAlertController alertControllerWithTitle:@"Aviso" message:@"Insira um nome entre 3 a 10 caracteres" preferredStyle:UIAlertControllerStyleAlert];
+        [nameTooSmallAlert addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil]];
+        [self presentViewController:nameTooSmallAlert animated:NO completion:nil];
+    } else {
+        
+        PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
+        [pontuacaoManager.pontuacaoAtual setNome:self.nome.text];
+        [pontuacaoManager.pontuacaoAtual setFotoWithUIImage:self.foto.image];
+        [pontuacaoManager addPontuacao:pontuacaoManager.pontuacaoAtual];
+        
+        NSMutableArray *newViewControllers = [[NSMutableArray alloc] initWithArray:self.navigationController.viewControllers];
+        [newViewControllers removeObjectsInRange:NSMakeRange(1, self.navigationController.viewControllers.count-1)];
+        [newViewControllers addObject:[[PontuacaoViewController alloc] init]];
+        [self.navigationController setViewControllers:newViewControllers animated:YES];
+    }
 }
 
 #pragma mark - Navegação
 
 - (IBAction)cancelar:(id)sender {
     //Cria uma AlertController que gerencia o alerta.
-    UIAlertController *confirmCancelAlert = [UIAlertController alertControllerWithTitle:@"Tem certeza?" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *confirmCancelAlert = [UIAlertController alertControllerWithTitle:@"Cancelar" message:@"Tem certeza?" preferredStyle:UIAlertControllerStyleAlert];
     //Cria uma ação para quando o respectivo botão for pressionado. No caso, o botão "Sim".
     UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         [self.navigationController popToRootViewControllerAnimated:NO];
     }];
     //Botão "Não", que mantém o usuário na mesma view.
-    UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {}];
+    UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:nil];
     //Adiciona as ações ao alerta.
     [confirmCancelAlert addAction:yesAction];
     [confirmCancelAlert addAction:noAction];

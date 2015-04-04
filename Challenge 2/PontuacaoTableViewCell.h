@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nome;
 @property (weak, nonatomic) IBOutlet UILabel *pontos;
 @property (weak, nonatomic) IBOutlet UIImageView *foto;
+@property (weak, nonatomic) IBOutlet UIImageView *trophy;
 
 
 @end

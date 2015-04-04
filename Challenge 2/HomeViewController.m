@@ -18,11 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Home"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [self.navigationController setNavigationBarHidden:NO];
+    [self.navigationController setNavigationBarHidden:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -34,10 +33,10 @@
 
 - (void)animacao{
     [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        jogar.transform = CGAffineTransformMakeTranslation(0, -140);
-        pontuacao.transform = CGAffineTransformMakeTranslation(0, -140);
-        enciclopedia.transform = CGAffineTransformMakeTranslation(0, -140);
-        logo.transform = CGAffineTransformMakeTranslation(0, 140);
+        jogar.transform = CGAffineTransformMakeTranslation(0, -180);
+        pontuacao.transform = CGAffineTransformMakeTranslation(0, -180);
+        enciclopedia.transform = CGAffineTransformMakeTranslation(0, -180);
+        logo.transform = CGAffineTransformMakeTranslation(0, 80);
     } completion:^(BOOL finished) {
         
     }];
