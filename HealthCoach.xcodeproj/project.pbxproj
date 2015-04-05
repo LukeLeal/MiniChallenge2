@@ -670,7 +670,7 @@
 		4EA614DD1AC094A400D94F8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				BUNDLE_LOADER = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -682,14 +682,14 @@
 				INFOPLIST_FILE = "Challenge 2Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = HealthCoachTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Challenge 2.app/Challenge 2";
+				TEST_HOST = "";
 			};
 			name = Debug;
 		};
 		4EA614DE1AC094A400D94F8A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				BUNDLE_LOADER = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -697,7 +697,7 @@
 				INFOPLIST_FILE = "Challenge 2Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = HealthCoachTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Challenge 2.app/Challenge 2";
+				TEST_HOST = "";
 			};
 			name = Release;
 		};
