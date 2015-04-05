@@ -84,7 +84,7 @@
         [(UIButton *)[botoes objectAtIndex:i] setHidden:YES];
     }
     UIButton *b = (UIButton *)sender;
-    if ([[b titleLabel] text] == [(Pergunta *)[[qm perguntas] objectAtIndex:[qm perguntaAtual]] correto]) {
+    if ([[[b titleLabel] text] isEqualToString:[(Pergunta *)[[qm perguntas] objectAtIndex:[qm perguntaAtual]] correto]]) {
         //secondsLeft += 2;
         qm.pontuacao += 100 * [qm seqAcertos];
         qm.seqAcertos++;
@@ -119,11 +119,16 @@
     //        //[(UIButton *)[botoes objectAtIndex:x] setTag:0];
     //    }
     
+//    for (int i = 0; i < [botoes count]; i++) {
+//        //[(UIButton *)[botoes objectAtIndex:i] setHidden:NO];
+//        //[(UIButton *)[botoes objectAtIndex:i] setTitle:[[(Pergunta *)[[qm perguntas] objectAtIndex:[qm perguntaAtual]] alternativas] objectAtIndex:i] forState:UIControlStateNormal];
+//    }
+    
+    NSMutableArray *alternativas = [qm embaralha];
     for (int i = 0; i < [botoes count]; i++) {
         //[(UIButton *)[botoes objectAtIndex:i] setHidden:NO];
-        [(UIButton *)[botoes objectAtIndex:i] setTitle:[[(Pergunta *)[[qm perguntas] objectAtIndex:[qm perguntaAtual]] alternativas] objectAtIndex:i] forState:UIControlStateNormal];
+        [(UIButton *)[botoes objectAtIndex:i] setTitle:[(Alternativa *)[alternativas objectAtIndex:i] texto] forState:UIControlStateNormal];
     }
-    
     
     //
     //    [self.view setNeedsDisplay];

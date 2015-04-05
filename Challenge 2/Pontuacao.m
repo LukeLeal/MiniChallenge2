@@ -10,16 +10,21 @@
 
 @implementation Pontuacao
 
-- (instancetype)initWithNome:(NSString *)newNome andFoto:(UIImage *)newFoto andPontos:(int)newPontos andCategoria:(NSString *)newCategoria {
-    self = [super init];
-    if (self) {
-        self.nome = newNome;
-        self.foto = UIImagePNGRepresentation(newFoto);
-        self.pontos = newPontos;
-        self.categoria = newCategoria;
-    }
-    return self;
-}
+@dynamic foto;
+@dynamic nome;
+@dynamic pontos;
+@dynamic categoria;
+//
+//- (instancetype)initWithNome:(NSString *)newNome andFoto:(UIImage *)newFoto andPontos:(int)newPontos andCategoria:(NSString *)newCategoria {
+//    self = [super init];
+//        if (self) {
+//            self.nome = newNome;
+//            self.foto = UIImagePNGRepresentation(newFoto);
+//            self.pontos = [NSNumber numberWithInt:newPontos];//Core Data guarda NSNumber.
+//            self.categoria = newCategoria;
+//        }
+//    return self;
+//}
 
 - (void)setFotoWithUIImage:(UIImage *)newFoto {
     self.foto = UIImagePNGRepresentation(newFoto);
@@ -27,6 +32,11 @@
 
 - (UIImage *)getFotoAsImage {
     return [UIImage imageWithData:self.foto];
+}
+
+-(NSComparisonResult) compare: (Pontuacao *)outro{
+    //Ordena em ordem decrescente
+    return [[outro pontos] compare:self.pontos];
 }
 
 @end

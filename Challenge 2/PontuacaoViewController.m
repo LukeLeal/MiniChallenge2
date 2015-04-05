@@ -75,7 +75,7 @@
         {
             Pontuacao *pontuacao = [pontuacoesQuiz objectAtIndex:indexPath.row];
             [celula.nome setText:pontuacao.nome];
-            [celula.pontos setText:[NSString stringWithFormat:@"%d", pontuacao.pontos]];
+            [celula.pontos setText:[NSString stringWithFormat:@"%@", pontuacao.pontos]];
             [celula.foto setImage:[pontuacao getFotoAsImage]];
             if (indexPath.row != 0)
                 [celula.trophy setHidden:YES];
@@ -85,7 +85,7 @@
         {
             Pontuacao *pontuacao = [pontuacoesMemoria objectAtIndex:indexPath.row];
             [celula.nome setText:pontuacao.nome];
-            [celula.pontos setText:[NSString stringWithFormat:@"%d", pontuacao.pontos]];
+            [celula.pontos setText:[NSString stringWithFormat:@"%@", pontuacao.pontos]];
             [celula.foto setImage:[pontuacao getFotoAsImage]];
             if (indexPath.row != 0)
                 [celula.trophy setHidden:YES];
@@ -99,25 +99,25 @@
     return 75;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    //Caso o botão Delete for selecionado...
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
-        
-        //Remove o objeto do Realm.io e da base de dados local para garantir que a tabela se atualize com o número correto de células.
-        if (modoJogo.selectedSegmentIndex == 0) {
-            [pontuacaoManager removePontuacao:[pontuacoesQuiz objectAtIndex:indexPath.row]];
-            [pontuacoesQuiz removeObjectAtIndex:indexPath.row];
-        } else if (modoJogo.selectedSegmentIndex == 1) {
-            [pontuacaoManager removePontuacao:[pontuacoesMemoria objectAtIndex:indexPath.row]];
-            [pontuacoesMemoria removeObjectAtIndex:indexPath.row];
-        }
-        
-        //Remove a célula da tabela e atualiza.
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        [tableView reloadData];
-    }
-}
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+//    //Caso o botão Delete for selecionado...
+//    if (editingStyle == UITableViewCellEditingStyleDelete) {
+//        PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
+//        
+//        //Remove o objeto do Realm.io e da base de dados local para garantir que a tabela se atualize com o número correto de células.
+//        if (modoJogo.selectedSegmentIndex == 0) {
+//            [pontuacaoManager removePontuacao:[pontuacoesQuiz objectAtIndex:indexPath.row]];
+//            [pontuacoesQuiz removeObjectAtIndex:indexPath.row];
+//        } else if (modoJogo.selectedSegmentIndex == 1) {
+//            [pontuacaoManager removePontuacao:[pontuacoesMemoria objectAtIndex:indexPath.row]];
+//            [pontuacoesMemoria removeObjectAtIndex:indexPath.row];
+//        }
+//        
+//        //Remove a célula da tabela e atualiza.
+//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//        [tableView reloadData];
+//    }
+//}
 
 #pragma mark - Segmented Control
 

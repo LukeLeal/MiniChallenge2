@@ -6,17 +6,33 @@
 //  Copyright (c) 2015 Bepid. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+#import "DataManager.h"
+#import "Sintoma.h"
 
-@interface Doenca : NSObject
 
-@property NSString *nome;
-@property NSString *causa;
-@property NSString *prevencao;
-@property NSString *descricao;
-@property NSArray *sintomas;
-@property NSArray *imagens;
+@interface Doenca : NSManagedObject
 
-- (instancetype)initWithNome:(NSString *)newNome andCausa:(NSString *)newCausa andPrevencao:(NSString *)newPrevencao andDescricao:(NSString *)newDescricao andSintomas:(NSArray *)newSintomas andImagens:(NSArray *)newImagens;
+@property (nonatomic, retain) NSString *nome;
+@property (nonatomic, retain) NSString *prevencao;
+@property (nonatomic, retain) NSString *causa;
+@property (nonatomic, retain) NSString *imagem;
+@property (nonatomic, retain) NSString *descricao;
+@property (nonatomic, retain) NSSet *sintomas;
+
+
+//- (instancetype)initWithNome:(NSString *)newNome andCausa:(NSString *)newCausa andPrevencao:(NSString *)newPrevencao andDescricao:(NSString *)newDescricao andSintomas:(NSArray *)newSintomas andImagem:(NSString *)newImagem;
+
+-(NSComparisonResult)localizedCaseInsensitiveCompare:(Doenca *)outro;
+@end
+
+@interface Doenca (CoreDataGeneratedAccessors)
+
+- (void)addSintomasObject:(NSManagedObject *)value;
+- (void)removeSintomasObject:(NSManagedObject *)value;
+- (void)addSintomas:(NSSet *)values;
+- (void)removeSintomas:(NSSet *)values;
 
 @end
+

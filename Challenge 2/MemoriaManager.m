@@ -48,7 +48,9 @@
         
         [cartas addObject:[[Carta alloc]initWithTexto:doenca.nome  andTag:i]];
         [cartas addObject:[[Carta alloc]initWithTexto:doenca.causa  andTag:i]];
-        [cartas addObject:[[Carta alloc]initWithTexto:[doenca.sintomas objectAtIndex:0] andTag:i]];
+        
+        NSArray *s = [[doenca sintomas] allObjects];
+        [cartas addObject:[[Carta alloc]initWithTexto:[(Sintoma *)[s objectAtIndex:0] texto] andTag:i]];
         
         i++;
     }

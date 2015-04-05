@@ -8,19 +8,28 @@
 
 #import "Pergunta.h"
 
+
 @implementation Pergunta
 
-//-(id) init:(NSString *)p withCorreto: (NSString *)c withAlternativas: (NSArray *)a{
--(id) init:(NSString *)p withAlternativas: (NSArray *)a{
-    self = [super init];
-    
-    if(self){
-        _pergunta = p;
-        _correto = (NSString *)[a objectAtIndex:0];
-        _alternativas = [[NSMutableArray alloc] initWithArray: a];
-    }
-    
-    return self;
+@dynamic pergunta;
+@dynamic correto;
+@dynamic alternativas;
+
+
+//-(id) init:(NSString *)p withAlternativas: (NSArray *)a{
+//    self = [super init];
+//    
+//    if(self){
+//        self.pergunta = p;
+//        self.correto = (NSString *)[a objectAtIndex:0];
+//        self.alternativas = [NSSet setWithArray:a];
+//    }
+//    
+//    return self;
+//}
+
+-(NSMutableArray *) getAlternativasMA{
+    return [NSMutableArray arrayWithArray: [self.alternativas allObjects]];
 }
 
 @end

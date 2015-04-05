@@ -62,8 +62,13 @@
     //prevenção
     [self.prevencao setText:doenca.prevencao];
     //sintomas
-    for(int i=0; i<doenca.sintomas.count; i++)
-        [self.sintoma setText: [doenca.sintomas objectAtIndex:i]];
+    NSArray *q = [[doenca sintomas] allObjects];
+    
+    for(int i=0; i<doenca.sintomas.count; i++){
+        //ARRUMAR TEXTO PRA COLOCAR TODOS SINTOMAS. Concatenar string
+        [self.sintoma setText: [(Sintoma *)[q objectAtIndex:i] texto]];
+    }
+    
     volta=true;
 }
 

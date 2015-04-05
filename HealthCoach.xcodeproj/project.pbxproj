@@ -22,6 +22,14 @@
 		24A3BB191AC1E16600F7E698 /* PontuacaoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A3BB171AC1E16600F7E698 /* PontuacaoTableViewCell.xib */; };
 		4E57BBAF1AC342AD00CB1869 /* Pergunta.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E57BBAE1AC342AD00CB1869 /* Pergunta.m */; };
 		4E57BBB21AC342C800CB1869 /* QuizManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E57BBB11AC342C800CB1869 /* QuizManager.m */; };
+		4E70EDC81AD0C127006A4B96 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E70EDC71AD0C127006A4B96 /* CoreData.framework */; };
+		4E70EDD51AD0C36E006A4B96 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E70EDCE1AD0C36E006A4B96 /* DataManager.m */; };
+		4E70EDD61AD0C36E006A4B96 /* DoencaBeta.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E70EDD01AD0C36E006A4B96 /* DoencaBeta.m */; };
+		4E70EDD71AD0C36E006A4B96 /* PerguntaBeta.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E70EDD21AD0C36E006A4B96 /* PerguntaBeta.m */; };
+		4E70EDD81AD0C36E006A4B96 /* PontuacaoBeta.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E70EDD41AD0C36E006A4B96 /* PontuacaoBeta.m */; };
+		4E70EDDB1AD0C84A006A4B96 /* Challenge_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E70EDD91AD0C84A006A4B96 /* Challenge_2.xcdatamodeld */; };
+		4E70EDE01AD0CB17006A4B96 /* Alternativa.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E70EDDD1AD0CB17006A4B96 /* Alternativa.m */; };
+		4E70EDE11AD0CB17006A4B96 /* Sintoma.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E70EDDF1AD0CB17006A4B96 /* Sintoma.m */; };
 		4E7D5FBF1AC49392009C8367 /* SalvarPontuacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D5FBD1AC49392009C8367 /* SalvarPontuacao.m */; };
 		4E7D5FC01AC49392009C8367 /* SalvarPontuacao.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E7D5FBE1AC49392009C8367 /* SalvarPontuacao.xib */; };
 		4EA614BC1AC094A400D94F8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA614BB1AC094A400D94F8A /* main.m */; };
@@ -81,6 +89,20 @@
 		4E57BBAE1AC342AD00CB1869 /* Pergunta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pergunta.m; sourceTree = "<group>"; };
 		4E57BBB01AC342C800CB1869 /* QuizManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizManager.h; sourceTree = "<group>"; };
 		4E57BBB11AC342C800CB1869 /* QuizManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizManager.m; sourceTree = "<group>"; };
+		4E70EDC71AD0C127006A4B96 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4E70EDCD1AD0C36E006A4B96 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		4E70EDCE1AD0C36E006A4B96 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		4E70EDCF1AD0C36E006A4B96 /* DoencaBeta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoencaBeta.h; sourceTree = "<group>"; };
+		4E70EDD01AD0C36E006A4B96 /* DoencaBeta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoencaBeta.m; sourceTree = "<group>"; };
+		4E70EDD11AD0C36E006A4B96 /* PerguntaBeta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerguntaBeta.h; sourceTree = "<group>"; };
+		4E70EDD21AD0C36E006A4B96 /* PerguntaBeta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerguntaBeta.m; sourceTree = "<group>"; };
+		4E70EDD31AD0C36E006A4B96 /* PontuacaoBeta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PontuacaoBeta.h; sourceTree = "<group>"; };
+		4E70EDD41AD0C36E006A4B96 /* PontuacaoBeta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PontuacaoBeta.m; sourceTree = "<group>"; };
+		4E70EDDA1AD0C84A006A4B96 /* Challenge_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Challenge_2.xcdatamodel; sourceTree = "<group>"; };
+		4E70EDDC1AD0CB17006A4B96 /* Alternativa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alternativa.h; sourceTree = "<group>"; };
+		4E70EDDD1AD0CB17006A4B96 /* Alternativa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alternativa.m; sourceTree = "<group>"; };
+		4E70EDDE1AD0CB17006A4B96 /* Sintoma.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sintoma.h; sourceTree = "<group>"; };
+		4E70EDDF1AD0CB17006A4B96 /* Sintoma.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sintoma.m; sourceTree = "<group>"; };
 		4E7D5FBC1AC49392009C8367 /* SalvarPontuacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalvarPontuacao.h; sourceTree = "<group>"; };
 		4E7D5FBD1AC49392009C8367 /* SalvarPontuacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalvarPontuacao.m; sourceTree = "<group>"; };
 		4E7D5FBE1AC49392009C8367 /* SalvarPontuacao.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SalvarPontuacao.xib; sourceTree = "<group>"; };
@@ -123,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E70EDC81AD0C127006A4B96 /* CoreData.framework in Frameworks */,
 				7EDF4A5F1AC1D31500FFACD5 /* Realm.framework in Frameworks */,
 				7EDF4A5B1AC1D0F500FFACD5 /* iAd.framework in Frameworks */,
 				7E551B541AC0AC5E00EB7FD8 /* libc++.dylib in Frameworks */,
@@ -139,9 +162,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E70EDC91AD0C26E006A4B96 /* Base de Dados */ = {
+			isa = PBXGroup;
+			children = (
+				4E70EDD91AD0C84A006A4B96 /* Challenge_2.xcdatamodeld */,
+				4E70EDCD1AD0C36E006A4B96 /* DataManager.h */,
+				4E70EDCE1AD0C36E006A4B96 /* DataManager.m */,
+			);
+			name = "Base de Dados";
+			sourceTree = "<group>";
+		};
 		4EA614AD1AC094A400D94F8A = {
 			isa = PBXGroup;
 			children = (
+				4E70EDC71AD0C127006A4B96 /* CoreData.framework */,
 				7EDF4A5E1AC1D31500FFACD5 /* Realm.framework */,
 				7EDF4A5A1AC1D0F500FFACD5 /* iAd.framework */,
 				7E551B531AC0AC5E00EB7FD8 /* libc++.dylib */,
@@ -165,6 +199,7 @@
 			children = (
 				4EA614BD1AC094A400D94F8A /* AppDelegate.h */,
 				4EA614BE1AC094A400D94F8A /* AppDelegate.m */,
+				4E70EDC91AD0C26E006A4B96 /* Base de Dados */,
 				7E551B4C1AC0AA8000EB7FD8 /* Entidades */,
 				7E551B4B1AC0AA7300EB7FD8 /* Views */,
 				4EA614C61AC094A400D94F8A /* Images.xcassets */,
@@ -273,8 +308,12 @@
 		7E7434241AC3413400EF26C4 /* Doenca */ = {
 			isa = PBXGroup;
 			children = (
+				4E70EDDE1AD0CB17006A4B96 /* Sintoma.h */,
+				4E70EDDF1AD0CB17006A4B96 /* Sintoma.m */,
 				7EDF4A601AC1D5C100FFACD5 /* Doenca.h */,
 				7EDF4A611AC1D5C100FFACD5 /* Doenca.m */,
+				4E70EDCF1AD0C36E006A4B96 /* DoencaBeta.h */,
+				4E70EDD01AD0C36E006A4B96 /* DoencaBeta.m */,
 				7EDF4A631AC1E3C900FFACD5 /* DoencaManager.h */,
 				7EDF4A641AC1E3C900FFACD5 /* DoencaManager.m */,
 			);
@@ -284,6 +323,8 @@
 		7E7434251AC3414C00EF26C4 /* Pontuacao */ = {
 			isa = PBXGroup;
 			children = (
+				4E70EDD31AD0C36E006A4B96 /* PontuacaoBeta.h */,
+				4E70EDD41AD0C36E006A4B96 /* PontuacaoBeta.m */,
 				7E551B5B1AC0AC7D00EB7FD8 /* Pontuacao.h */,
 				7E551B5C1AC0AC7D00EB7FD8 /* Pontuacao.m */,
 				7E551B5D1AC0AC7D00EB7FD8 /* PontuacaoManager.h */,
@@ -295,8 +336,12 @@
 		7E7434271AC3418000EF26C4 /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				4E70EDDC1AD0CB17006A4B96 /* Alternativa.h */,
+				4E70EDDD1AD0CB17006A4B96 /* Alternativa.m */,
 				4E57BBAD1AC342AD00CB1869 /* Pergunta.h */,
 				4E57BBAE1AC342AD00CB1869 /* Pergunta.m */,
+				4E70EDD11AD0C36E006A4B96 /* PerguntaBeta.h */,
+				4E70EDD21AD0C36E006A4B96 /* PerguntaBeta.m */,
 				4E57BBB01AC342C800CB1869 /* QuizManager.h */,
 				4E57BBB11AC342C800CB1869 /* QuizManager.m */,
 			);
@@ -466,18 +511,25 @@
 				246873F31AC9D07F00E7B04B /* MemoriaManager.m in Sources */,
 				10B602351AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m in Sources */,
 				7EDF4A651AC1E3C900FFACD5 /* DoencaManager.m in Sources */,
+				4E70EDD71AD0C36E006A4B96 /* PerguntaBeta.m in Sources */,
 				7E551B661AC0AC7D00EB7FD8 /* Pontuacao.m in Sources */,
 				4E57BBAF1AC342AD00CB1869 /* Pergunta.m in Sources */,
 				24A3BB131AC1DD8700F7E698 /* PontuacaoViewController.m in Sources */,
 				246873EB1AC9B35600E7B04B /* MemoriaViewController.m in Sources */,
+				4E70EDDB1AD0C84A006A4B96 /* Challenge_2.xcdatamodeld in Sources */,
+				4E70EDE01AD0CB17006A4B96 /* Alternativa.m in Sources */,
 				7E551B681AC0AC7D00EB7FD8 /* QuizViewController.m in Sources */,
 				107F6F7F1AC326B90077B065 /* EnciclopediaViewController.m in Sources */,
 				4EA614BF1AC094A400D94F8A /* AppDelegate.m in Sources */,
+				4E70EDD81AD0C36E006A4B96 /* PontuacaoBeta.m in Sources */,
 				4E57BBB21AC342C800CB1869 /* QuizManager.m in Sources */,
+				4E70EDE11AD0CB17006A4B96 /* Sintoma.m in Sources */,
+				4E70EDD51AD0C36E006A4B96 /* DataManager.m in Sources */,
 				4EA614BC1AC094A400D94F8A /* main.m in Sources */,
 				246873F01AC9D05500E7B04B /* Carta.m in Sources */,
 				4EA614E21AC0955300D94F8A /* HomeViewController.m in Sources */,
 				4E7D5FBF1AC49392009C8367 /* SalvarPontuacao.m in Sources */,
+				4E70EDD61AD0C36E006A4B96 /* DoencaBeta.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +732,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4E70EDD91AD0C84A006A4B96 /* Challenge_2.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4E70EDDA1AD0C84A006A4B96 /* Challenge_2.xcdatamodel */,
+			);
+			currentVersion = 4E70EDDA1AD0C84A006A4B96 /* Challenge_2.xcdatamodel */;
+			path = Challenge_2.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4EA614AE1AC094A400D94F8A /* Project object */;
 }

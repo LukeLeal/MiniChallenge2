@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Doenca.h"
+#import "DataManager.h"
+#import "Sintoma.h"
 
 @interface DoencaManager : NSObject
 
-@property NSArray *doencas;
+@property NSMutableArray *doencas;
 @property int doencaAtual;
 
 -(NSArray *) nomeDoenca;

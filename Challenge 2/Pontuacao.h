@@ -6,17 +6,21 @@
 //  Copyright (c) 2015 Bepid. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 #import <UIKit/UIKit.h>
-#import <Realm/Realm.h>
 
-@interface Pontuacao : RLMObject
+@interface Pontuacao : NSManagedObject
 
-@property NSString *nome;
-@property NSData *foto;
-@property int pontos;
-@property NSString *categoria;
+@property (nonatomic, retain) NSData * foto;
+@property (nonatomic, retain) NSString * nome;
+@property (nonatomic, retain) NSNumber * pontos;
+@property (nonatomic, retain) NSString * categoria;
 
-- (instancetype)initWithNome:(NSString *)newNome andFoto:(UIImage *)newFoto andPontos:(int)newPontos andCategoria:(NSString *)newCategoria;
+-(NSComparisonResult) compare: (Pontuacao *) outro;
+
+
+//- (instancetype)initWithNome:(NSString *)newNome andFoto:(UIImage *)newFoto andPontos:(int)newPontos andCategoria:(NSString *)newCategoria;
 - (void)setFotoWithUIImage:(UIImage *)newFoto;
 - (UIImage *)getFotoAsImage;
 

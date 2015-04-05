@@ -8,15 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import "Pontuacao.h"
+#import "PontuacaoBeta.h"
+#import "DataManager.h"
 
 @interface PontuacaoManager : NSObject
 
 @property NSMutableArray *pontuacoes;
-@property Pontuacao *pontuacaoAtual;
+@property PontuacaoBeta *pontuacaoAtual;
 
 + (PontuacaoManager *)sharedInstance;
-- (void)addPontuacao:(Pontuacao *)pontuacao;
-- (void)removePontuacao:(Pontuacao *)pontuacao;
+- (void)addPontuacao:(PontuacaoBeta *)pontuacao;
+//- (void)removePontuacao:(Pontuacao *)pontuacao;
 - (NSArray *)sortedPontuacoes;
 
 @end

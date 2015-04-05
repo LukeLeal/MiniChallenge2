@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6751" systemVersion="14C1514" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Alternativa" representedClassName="Alternativa" syncable="YES">
+        <attribute name="texto" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pergunta" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Pergunta" inverseName="alternativas" inverseEntity="Pergunta" syncable="YES"/>
+    </entity>
+    <entity name="Doenca" representedClassName="Doenca" syncable="YES">
+        <attribute name="causa" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imagem" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prevencao" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sintomas" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Sintoma" inverseName="doenca" inverseEntity="Sintoma" syncable="YES"/>
+    </entity>
+    <entity name="Pergunta" representedClassName="Pergunta" syncable="YES">
+        <attribute name="correto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pergunta" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="alternativas" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Alternativa" inverseName="pergunta" inverseEntity="Alternativa" syncable="YES"/>
+    </entity>
+    <entity name="Pontuacao" representedClassName="Pontuacao" syncable="YES">
+        <attribute name="categoria" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="foto" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pontos" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="Sintoma" representedClassName="Sintoma" syncable="YES">
+        <attribute name="texto" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="doenca" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Doenca" inverseName="sintomas" inverseEntity="Doenca" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Alternativa" positionX="-531" positionY="-135" width="128" height="73"/>
+        <element name="Doenca" positionX="-317" positionY="-0" width="128" height="133"/>
+        <element name="Pergunta" positionX="-308" positionY="-144" width="128" height="88"/>
+        <element name="Pontuacao" positionX="-101" positionY="-144" width="128" height="103"/>
+        <element name="Sintoma" positionX="-531" positionY="54" width="128" height="73"/>
+    </elements>
+</model>

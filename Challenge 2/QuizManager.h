@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Pergunta.h"
+#import "DataManager.h"
 
 @interface QuizManager : NSObject
 
@@ -15,6 +16,8 @@
 @property int pontuacao;
 @property int perguntaAtual;
 @property int seqAcertos; //sequencia de acertos
+
+- (NSMutableArray *) embaralha;
 
 
 @end
