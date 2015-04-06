@@ -16,9 +16,6 @@
 @property (nonatomic, retain) NSString * correto;
 @property (nonatomic, retain) NSSet *alternativas;
 
-//-(id) init:(NSString *)p withAlternativas: (NSArray *)a;
--(NSMutableArray *) getAlternativasMA;
-
 @end
 
 

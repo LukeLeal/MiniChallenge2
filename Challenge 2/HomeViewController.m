@@ -23,7 +23,6 @@
     //Verifica se é a primeira execução do App. Se for, insere os dados padrão no banco.
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     if (![ud objectForKey:@"dadosCriados"]) {
-        NSLog(@"Primeira vez");
         [[DataManager sharedInstance] iniciaDados];
         [ud setBool:YES forKey:@"dadosCriados"];
     }

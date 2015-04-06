@@ -21,9 +21,6 @@
 @property (nonatomic, retain) NSString *descricao;
 @property (nonatomic, retain) NSSet *sintomas;
 
-
-//- (instancetype)initWithNome:(NSString *)newNome andCausa:(NSString *)newCausa andPrevencao:(NSString *)newPrevencao andDescricao:(NSString *)newDescricao andSintomas:(NSArray *)newSintomas andImagem:(NSString *)newImagem;
-
 -(NSComparisonResult)localizedCaseInsensitiveCompare:(Doenca *)outro;
 @end
 

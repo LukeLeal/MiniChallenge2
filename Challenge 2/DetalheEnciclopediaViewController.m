@@ -36,10 +36,6 @@
     [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
     [swipeRight setDelegate:self];
     [self.view addGestureRecognizer:swipeRight];
-    
-//    causa.lineBreakMode = NSLineBreakByWordWrapping;
-//    causa.numberOfLines = 3;
-    
 }
 
 - (void)didReceiveMemoryWarning {

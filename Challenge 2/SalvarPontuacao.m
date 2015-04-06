@@ -21,7 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
-//    [self.navigationController setNavigationBarHidden:YES];
     [self.nome setDelegate:self];
     [self.categoria setText:pontuacaoManager.pontuacaoAtual.categoria];
     [self.pontos setText:[NSString stringWithFormat:@"%d", pontuacaoManager.pontuacaoAtual.pontos]];

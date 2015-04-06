@@ -22,7 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     [self setTitle:@"Enciclopédia"];
     [_tabelaEnciclopedia setDelegate:self];
     [_tabelaEnciclopedia setDataSource:self];
@@ -62,13 +61,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *celula = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"celula"];
-    
     doencas = [[DoencaManager sharedInstance] doencas];
-    
-    long row = [indexPath row];
-    
-    [celula.textLabel setText: [(Doenca *)[doencas objectAtIndex:(int) row] nome]];
-    
+    [celula.textLabel setText: [(Doenca *)[doencas objectAtIndex:(int) indexPath.row] nome]];
     //alterando a fonte da celula
     celula.textLabel.font =[UIFont fontWithName:@"superclarendon" size:18.0f];
     [celula.textLabel setTextColor:[UIColor whiteColor]];

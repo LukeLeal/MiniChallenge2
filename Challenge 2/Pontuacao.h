@@ -20,8 +20,6 @@
 
 -(NSComparisonResult) compare: (Pontuacao *) outro;
 
-
-//- (instancetype)initWithNome:(NSString *)newNome andFoto:(UIImage *)newFoto andPontos:(int)newPontos andCategoria:(NSString *)newCategoria;
 - (void)setFotoWithUIImage:(UIImage *)newFoto;
 - (UIImage *)getFotoAsImage;
 

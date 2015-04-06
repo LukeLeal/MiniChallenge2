@@ -40,13 +40,6 @@
     [self countdownTimer];
     qm = [[QuizManager alloc] init];
     
-    
-    //    perguntas = [[NSMutableArray alloc] initWithObjects:
-    //    [[Pergunta alloc] init:@"P 1" withAlternativas:@[@"Certo", @"bvadvas", @"casfafw"]],
-    //    [[Pergunta alloc] init:@"P 2" withAlternativas:@[@"6", @"7", @"8"]],
-    //    //[[Pergunta alloc] init:<#(NSString *)#> withCorreto:<#(NSString *)#> withAlternativas:<#(NSArray *)#>]
-    //                 nil];
-    
     [_b1 addTarget:self action:@selector(responde:) forControlEvents:UIControlEventTouchUpInside];
     [_b2 addTarget:self action:@selector(responde:) forControlEvents:UIControlEventTouchUpInside];
     [_b3 addTarget:self action:@selector(responde:) forControlEvents:UIControlEventTouchUpInside];
@@ -101,8 +94,6 @@
     _sequencia.text = [NSString stringWithFormat:@"Combo: %d", [qm seqAcertos] - 1];
     qm.perguntaAtual += 1;
     if ([qm perguntaAtual] < [[qm perguntas] count]){
-    //perguntaAtual++;
-    //NSLog(@"\n\n");
         [self proxPerg];
     } else {
         secondsLeft = 1;
@@ -112,19 +103,6 @@
 
 -(void) proxPerg {
     _pergunta.text = [(Pergunta *)[[qm perguntas] objectAtIndex:[qm perguntaAtual]] pergunta];
-    //NSMutableArray *a = [[NSMutableArray alloc] initWithArray:[(Pergunta *)[perguntas objectAtIndex:0] alternativas]];//Alternativas
-    
-    //    for (int x = 0; x < [a count]; x++) {
-    //        int randInt = (arc4random() % ([a count] - x)) + x;
-    //        [a exchangeObjectAtIndex:x withObjectAtIndex:randInt];
-    //        //[(UIButton *)[botoes objectAtIndex:x] setTag:0];
-    //    }
-    
-//    for (int i = 0; i < [botoes count]; i++) {
-//        //[(UIButton *)[botoes objectAtIndex:i] setHidden:NO];
-//        //[(UIButton *)[botoes objectAtIndex:i] setTitle:[[(Pergunta *)[[qm perguntas] objectAtIndex:[qm perguntaAtual]] alternativas] objectAtIndex:i] forState:UIControlStateNormal];
-//    }
-    
     NSMutableArray *alternativas = [qm embaralha];
     for (int i = 0; i < [botoes count]; i++) {
         //[(UIButton *)[botoes objectAtIndex:i] setHidden:NO];
@@ -191,15 +169,7 @@
 }
 
 -(void)countdownTimer{
-    
-    //hours = minutes = seconds = 0;
-    //    if([timer isValid])
-    //    {
-    //        [timer release];
-    //    }
-    //    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     timer = [NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(tempo:) userInfo:nil repeats:YES];
-    //    [pool release];
 }
 
 #pragma mark - Navegação
