@@ -10,7 +10,7 @@
 
 @interface MemoriaViewController (){
     double secondsLeft;
-    int parCont, count;
+    int parCont;
     BOOL volta, interativo;
     MemoriaManager *mm;
     NSMutableArray *selecionados, *arrayBotoes;
@@ -32,22 +32,23 @@
     [self.navigationController setNavigationBarHidden:YES];
     
     mm = [[MemoriaManager alloc]init];
-    
-    secondsLeft = 60;
-    [self countdownTimer];
-    parCont=0;
+    selecionados = [[NSMutableArray alloc]init];
     arrayBotoes = [NSMutableArray arrayWithObjects: carta1,carta2,carta3,carta4,carta5,carta6,carta7,carta8,carta9,carta10,carta11,carta12,nil];
+    
     imagem = [[UIImage alloc]init];
     NSString *img = @"card_cover.png";
     imagem = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:img ofType:nil]];
+    
+    parCont=0;
+    volta=false;
+    [pontuacao setText:@"Pontuação: 0"];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [self preparaCartas];
-    count=0;
-    volta=false;
-    selecionados = [[NSMutableArray alloc]init];
-    [pontuacao setText:@"Pontuação: 0"];
+    
+    secondsLeft = 10;
+    [self countdownTimer];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -60,8 +61,7 @@
 
 #pragma mark - Preparação
 -(void)preparaCartas{
-    MemoriaManager *memoriaManager = [[MemoriaManager alloc]init];
-    NSArray *cartas = [NSArray arrayWithArray:memoriaManager.cartas];
+    NSArray *cartas = [NSArray arrayWithArray:mm.cartas];
     Carta *carta;
     UIButton *botao;
     
@@ -186,7 +186,6 @@
     for (UIButton *b in selecionados){
         [self animacaoErro:b];
         [arrayBotoes addObject: b];
-        [b setTitleColor:[UIColor clearColor] forState:normal];
     }
     
     [selecionados removeAllObjects];
@@ -233,12 +232,11 @@
         int seconds = secondsLeft;
         tempo.text = [NSString stringWithFormat:@"%d", seconds];
     }
-    else{
-        [timer invalidate];
+    else{[timer invalidate];
         UIAlertController *timerAlert;
         UIAlertAction *yesAction, *noAction;
         //A opção de salvar a pontuação apenas será mostrada caso o jogador tenha marcado pontos (i.e. pontos > 0).
-        if (mm.pontuacao) {
+        if (mm.pontuacao > 0) {
             //Pontuacao manager
             //Perguntar se quer salvar dados
             //Se sim, cria um pontuação manager, seta pontuação atual e vai pra outra view.
@@ -257,11 +255,13 @@
                 [self.navigationController popToRootViewControllerAnimated:NO];
             }];
         } else {
-            timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:@"Você não marcou nenhum ponto...\nTentar de novo?" preferredStyle:UIAlertControllerStyleAlert];
+            timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:@"Você não marcou nenhum ponto...\nTentar novamente?" preferredStyle:UIAlertControllerStyleAlert];
             yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-                [self viewDidLoad];
+                [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(retornaCartas) userInfo:nil repeats:NO];
+                [NSTimer scheduledTimerWithTimeInterval:0.4 target:self selector:@selector(reload) userInfo:nil repeats:NO];
             }];
             noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                volta=true;
                 [self.navigationController popToRootViewControllerAnimated:NO];
             }];
         }
@@ -273,12 +273,19 @@
     }
 }
 
+#pragma mark - Outros
+
+- (void)reload{
+    [mm sortearNovamente];
+    [self viewWillAppear:NO];
+}
+
 #pragma mark - Animações
 
 - (void)animacaoErro: (UIButton *)botao{
-    
-    [botao setBackgroundColor:[UIColor colorWithPatternImage:imagem]];
     [botao setTitleColor:[UIColor clearColor] forState:normal];
+    [botao setBackgroundColor:[UIColor colorWithPatternImage:imagem]];
+    
     [UIView transitionWithView:botao duration:0.5
                        options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
                        } completion:nil];

@@ -18,4 +18,5 @@
 @property int pontuacao;
 
 - (instancetype)init;
+- (void)sortearNovamente;
 @end

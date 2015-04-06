@@ -17,6 +17,7 @@
     if(self){
         DoencaManager *doencas = [[DoencaManager alloc]init];
         self.arrayDoencas = [NSMutableArray arrayWithArray:doencas.doencas];
+        cartas = [[NSMutableArray alloc]init];
         
         [self sorteio:arrayDoencas];
         [self remove];
@@ -39,10 +40,13 @@
     }
 }
 
+- (void)sortearNovamente{
+    [cartas removeAllObjects];
+    [self criarCartas];
+}
+
 -(void)criarCartas{
     int i = 0;
-    
-    cartas = [[NSMutableArray alloc]init];
     
     for(Doenca *doenca in arrayDoencas ){
         
