@@ -18,7 +18,7 @@
 
 + (PontuacaoManager *)sharedInstance;
 - (void)addPontuacao:(PontuacaoBeta *)pontuacao;
-//- (void)removePontuacao:(Pontuacao *)pontuacao;
+- (void)removePontuacao:(Pontuacao *)pontuacao;
 - (NSArray *)sortedPontuacoes;
 
 @end

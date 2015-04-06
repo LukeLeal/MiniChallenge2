@@ -27,6 +27,7 @@
         [[DataManager sharedInstance] iniciaDados];
         [ud setBool:YES forKey:@"dadosCriados"];
     }
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {

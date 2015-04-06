@@ -14,6 +14,7 @@
 @dynamic nome;
 @dynamic pontos;
 @dynamic categoria;
+@dynamic cod;
 //
 //- (instancetype)initWithNome:(NSString *)newNome andFoto:(UIImage *)newFoto andPontos:(int)newPontos andCategoria:(NSString *)newCategoria {
 //    self = [super init];

@@ -48,14 +48,10 @@ static bool isFirstAccess = YES;
     //    [realm commitWriteTransaction];
 }
 
-//- (void)removePontuacao:(Pontuacao *)pontuacao {
-//    RLMRealm *realm = [RLMRealm defaultRealm];
-//    [realm beginWriteTransaction];
-//    [realm deleteObject:pontuacao];
-//    [realm commitWriteTransaction];
-//    
-//    [self.pontuacoes removeObject:pontuacao];
-//}
+- (void)removePontuacao:(Pontuacao *)pontuacao {
+    
+    [[DataManager sharedInstance] deleta:@"Pontuacao" withPredicado:[pontuacao cod]];
+}
 
 - (NSArray *)sortedPontuacoes {
 //    return [self.pontuacoes sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {

@@ -19,6 +19,7 @@
     </entity>
     <entity name="Pontuacao" representedClassName="Pontuacao" syncable="YES">
         <attribute name="categoria" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cod" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="foto" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pontos" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -31,7 +32,7 @@
         <element name="Alternativa" positionX="-531" positionY="-135" width="128" height="73"/>
         <element name="Doenca" positionX="-317" positionY="-0" width="128" height="133"/>
         <element name="Pergunta" positionX="-308" positionY="-144" width="128" height="88"/>
-        <element name="Pontuacao" positionX="-101" positionY="-144" width="128" height="103"/>
+        <element name="Pontuacao" positionX="-101" positionY="-144" width="128" height="118"/>
         <element name="Sintoma" positionX="-531" positionY="54" width="128" height="73"/>
     </elements>
 </model>

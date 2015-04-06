@@ -15,6 +15,7 @@
 @property (nonatomic, retain) NSData * foto;
 @property (nonatomic, retain) NSString * nome;
 @property (nonatomic, retain) NSNumber * pontos;
+@property (nonatomic, retain) NSNumber * cod;
 @property (nonatomic, retain) NSString * categoria;
 
 -(NSComparisonResult) compare: (Pontuacao *) outro;

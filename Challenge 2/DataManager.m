@@ -63,12 +63,17 @@ static bool isFirstAccess = YES;
     
 //    Script Perguntas
     NSArray *perguntas = @[
-                           [[PerguntaBeta alloc] init:@"Quais destes são sintomas da pneumonia?" withAlternativas:@[@"Falta de ar e bolhas avermelhadas na pele", @"Ardência nos olhos e rigidez na nuca", @"Febre alta e dor no tórax"]],
-                           [[PerguntaBeta alloc] init:@"Como a aids ataca o corpo humano?" withAlternativas:@[@"Atacando o sistema imunológico e destruindo os glóbulos brancos", @"Inflamando as meninges, membranas que recobrem o cérebro", @"Infeccionando a cavidade abdominal"]],
-                           [[PerguntaBeta alloc] init:@"Qual destas é uma medida contra a meningite?" withAlternativas:@[@"Vacina", @"Remoção da apêndice", @"Limpar frequentemente as mãos"]],
-                           [[PerguntaBeta alloc] init:@"Qual destas doenças pode infectar alguém por uma lesão na pele?" withAlternativas:@[@"Tétano", @"Alzheimer", @"Apendicite"]],
+       [[PerguntaBeta alloc] init:@"Quais destes são sintomas da pneumonia?" withAlternativas:@[@"Falta de ar e bolhas avermelhadas na pele", @"Ardência nos olhos e rigidez na nuca", @"Febre alta e dor no tórax"]],
+       [[PerguntaBeta alloc] init:@"Como a aids ataca o corpo humano?" withAlternativas:@[@"Atacando o sistema imunológico e destruindo os glóbulos brancos", @"Inflamando as meninges, membranas que recobrem o cérebro", @"Infeccionando a cavidade abdominal"]],
+       [[PerguntaBeta alloc] init:@"Qual destas é uma medida contra a meningite?" withAlternativas:@[@"Vacina", @"Remoção da apêndice", @"Limpar frequentemente as mãos"]],
+       [[PerguntaBeta alloc] init:@"Qual destas doenças pode infectar alguém por uma lesão na pele?" withAlternativas:@[@"Tétano", @"Alzheimer", @"Apendicite"]],
+       [[PerguntaBeta alloc] init:@"Qual o nome dos tubos cujo a mucosa inflama quando há um caso de bronquite crônica?" withAlternativas:@[@"Bronquios", @"Bronquiolos", @"Artérias"]],
+       [[PerguntaBeta alloc] init:@"Quais dessas são possíveis causas da hipertensão?" withAlternativas:@[@"Estresse e obesidade", @"Obesidade e deficiência de cálcio", @"Lesões no corpo e parasitas"]],
+       [[PerguntaBeta alloc] init:@"Qual parte do corpo é afetada quando uma pessoa possui alzhaimer?" withAlternativas:@[@"Cérebro", @"Pulmão", @"Coração"]],
+       [[PerguntaBeta alloc] init:@"Qual o principal sintoma da osteoporose?" withAlternativas:@[@"Fragilidade nos ossos", @"Bolhas avermelhadas na pele", @"Prisão de ventre"]],
+       [[PerguntaBeta alloc] init:@"A aids é uma doença que afeta qual sistema?" withAlternativas:@[@"Sistema imunológico", @"Sistema muscular", @"Sistema nervoso"]],
                            ];
-//    //[[PerguntaBeta alloc] init:@"" withAlternativas:@[@"", @"", @""]]];
+//    //[[PerguntaBeta alloc] init:@"" withAlternativas:@[@"", @"", @""]];
 //    
     //Vai inserindo cada pergunta da array no banco
     for (PerguntaBeta *p in perguntas) {
@@ -89,6 +94,7 @@ static bool isFirstAccess = YES;
     pontuacao.nome = p.nome;
     //Por algum motivo, deu crash por bad access nisso aqui uma hora. Executei outra vez e tava normal. wtf
     pontuacao.pontos = [NSNumber numberWithInt: p.pontos];
+    pontuacao.cod = [NSNumber numberWithInt: [self maiorCod]];
     pontuacao.categoria = p.categoria;
 }
 
@@ -136,5 +142,50 @@ static bool isFirstAccess = YES;
     NSArray *fetchedObjects = [self.context executeFetchRequest:fetchRequest error:&error];
     return fetchedObjects;
 }
+
+-(int) maiorCod {
+    NSError *error;
+    if (![self.context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    
+    //"Realizador da busca"
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    //Define qual entidade será buscada no banco
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"Pontuacao" inManagedObjectContext:self.context];
+    [fetchRequest setEntity:entity];
+
+    fetchRequest.fetchLimit = 1;
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"cod" ascending:NO]];
+    Pontuacao *p = [self.context executeFetchRequest:fetchRequest error:nil].lastObject;
+    if (!p) {
+        return 1;
+    } else {
+        return [[p cod] intValue] + 1;
+    }
+    
+}
+
+-(void) deleta: (NSString *)entidade withPredicado: (NSNumber *)predicado{
+    //Deleta uma entidade de acordo com seu código
+    
+    NSError *error;
+    if (![self.context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:entidade inManagedObjectContext:self.context];
+    
+    [fetchRequest setEntity:entity];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"cod == %d", [predicado intValue]]];
+    NSManagedObject *obj = [self.context executeFetchRequest:fetchRequest error:&error].lastObject;
+    [self.context deleteObject:obj];
+}
+
 
 @end

@@ -27,4 +27,6 @@
 -(void) inserePontuacao: (PontuacaoBeta *)p;
 -(NSArray *) busca: (NSString *)entidade;
 -(NSArray *) busca: (NSString *)entidade withPredicado: (NSString *)predicado;
+-(void) deleta: (NSString *)entidade withPredicado: (NSNumber *)predicado;
+//-(void) maiorCod;
 @end
