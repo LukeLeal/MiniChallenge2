@@ -36,7 +36,7 @@
                     <rect key="frame" x="248" y="405" width="116" height="30"/>
                     <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="30"/>
                     <inset key="imageEdgeInsets" minX="-17" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <state key="normal" title="Pontuação" image="leaderboard-50">
+                    <state key="normal" title="Pontuação" image="leaderboard-trocar50">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
@@ -195,7 +195,7 @@
     <resources>
         <image name="brain" width="2560" height="2560"/>
         <image name="courses-50" width="50" height="50"/>
-        <image name="leaderboard-50" width="50" height="50"/>
+        <image name="leaderboard-trocar50" width="50" height="50"/>
         <image name="puzzle-50" width="50" height="50"/>
     </resources>
 </document>

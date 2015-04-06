@@ -52,7 +52,7 @@
     botoes = @[_b1, _b2, _b3];
     for (UIButton *botao in botoes) {
         [botao setContentEdgeInsets:UIEdgeInsetsMake(0, 5.0f, 0, 5.0f)];
-        [botao.layer setBorderWidth:1.0f];
+        [botao.layer setBorderWidth:3.0f];
         [botao.layer setBorderColor:[UIColor greenColor].CGColor];
     }
     
