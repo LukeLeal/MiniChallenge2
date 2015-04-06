@@ -49,7 +49,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [self preparaCartas];
     
-    secondsLeft = 10;
+    secondsLeft = 2;
     [self countdownTimer];
 }
 
@@ -246,52 +246,57 @@
 - (void) acabouTempo{
     [timer invalidate];
     UIAlertController *timerAlert;
-    UIAlertAction *yesAction, *noAction;
     
     //A opção de salvar a pontuação apenas será mostrada caso o jogador tenha marcado pontos (i.e. pontos > 0).
     if (mm.pontuacao > 0) {
         //Perguntar se quer salvar dados
-        [self fezPontos:timerAlert : yesAction : noAction];
+        timerAlert = [self fezPontos:timerAlert];
     } else {
-        [self naoFezPontos:timerAlert : yesAction : noAction];
+        timerAlert = [self naoFezPontos:timerAlert];
     }
     
-    //Adiciona as ações ao alerta.
-    [timerAlert addAction:yesAction];
-    [timerAlert addAction:noAction];
     //A view controller apresenta o alerta.
     [self presentViewController:timerAlert animated:YES completion:nil];
-
 }
 
-- (void)fezPontos: (UIAlertController *)timerAlert : (UIAlertAction *)yesAction : (UIAlertAction *)noAction{
+- (UIAlertController *)fezPontos: (UIAlertController *)timerAlert {
     //Se sim, cria um pontuação manager, seta pontuação atual e vai pra outra view.
     //Cria uma AlertController que gerencia o alerta.
     timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:[NSString stringWithFormat:@"Pontuação final: %d\nDeseja salvar sua pontuação?", mm.pontuacao] preferredStyle:UIAlertControllerStyleAlert];
     //Cria uma ação para quando o respectivo botão for pressionado. No caso, o botão "Sim".
-    yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
         [pontuacaoManager.pontuacaoAtual setPontos:mm.pontuacao];
         [pontuacaoManager.pontuacaoAtual setCategoria:@"Memória"];
         [self.navigationController pushViewController:[[SalvarPontuacao alloc] init] animated:YES];
     }];
     //Botão "Não".
-    noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         volta=true;
         [self.navigationController popToRootViewControllerAnimated:NO];
     }];
+    //Adiciona as ações ao alerta.
+    [timerAlert addAction:yesAction];
+    [timerAlert addAction:noAction];
+    
+    return timerAlert;
 }
 
-- (void)naoFezPontos: (UIAlertController *)timerAlert : (UIAlertAction *)yesAction : (UIAlertAction *)noAction{
+- (UIAlertController *)naoFezPontos: (UIAlertController *)timerAlert {
     timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:@"Você não marcou nenhum ponto...\nTentar novamente?" preferredStyle:UIAlertControllerStyleAlert];
-    yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(retornaCartas) userInfo:nil repeats:NO];
         [NSTimer scheduledTimerWithTimeInterval:0.4 target:self selector:@selector(reload) userInfo:nil repeats:NO];
     }];
-    noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         volta=true;
         [self.navigationController popToRootViewControllerAnimated:NO];
     }];
+    //Adiciona as ações ao alerta.
+    [timerAlert addAction:yesAction];
+    [timerAlert addAction:noAction];
+    
+    return timerAlert;
 }
 
 - (void)reload{
