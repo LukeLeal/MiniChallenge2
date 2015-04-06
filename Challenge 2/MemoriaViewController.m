@@ -49,7 +49,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [self preparaCartas];
     
-    secondsLeft = 2;
+    secondsLeft = 60;
     [self countdownTimer];
 }
 
