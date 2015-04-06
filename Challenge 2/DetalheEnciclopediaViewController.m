@@ -67,12 +67,11 @@
     [self.prevencao setText:doenca.prevencao];
     //sintomas
     NSArray *q = [[doenca sintomas] allObjects];
-    
+    NSString *strSint = @"";//NSString que concatenará os sintomas
     for(int i=0; i<doenca.sintomas.count; i++){
-        //ARRUMAR TEXTO PRA COLOCAR TODOS SINTOMAS. Concatenar string
-        [self.sintoma setText: [(Sintoma *)[q objectAtIndex:i] texto]];
+        strSint = [strSint stringByAppendingString: [NSString stringWithFormat:@"%@; ", [(Sintoma *)[q objectAtIndex:i] texto]]];
     }
-    
+    [self.sintoma setText: strSint];
     volta=true;
 }
 
