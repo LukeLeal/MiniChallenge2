@@ -247,42 +247,51 @@
     [timer invalidate];
     UIAlertController *timerAlert;
     UIAlertAction *yesAction, *noAction;
+    
     //A opção de salvar a pontuação apenas será mostrada caso o jogador tenha marcado pontos (i.e. pontos > 0).
     if (mm.pontuacao > 0) {
-        //Pontuacao manager
         //Perguntar se quer salvar dados
-        //Se sim, cria um pontuação manager, seta pontuação atual e vai pra outra view.
-        //Cria uma AlertController que gerencia o alerta.
-        timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:[NSString stringWithFormat:@"Pontuação final: %d\nDeseja salvar sua pontuação?", mm.pontuacao] preferredStyle:UIAlertControllerStyleAlert];
-        //Cria uma ação para quando o respectivo botão for pressionado. No caso, o botão "Sim".
-        yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
-            [pontuacaoManager.pontuacaoAtual setPontos:mm.pontuacao];
-            [pontuacaoManager.pontuacaoAtual setCategoria:@"Memória"];
-            [self.navigationController pushViewController:[[SalvarPontuacao alloc] init] animated:YES];
-        }];
-        //Botão "Não".
-        noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            volta=true;
-            [self.navigationController popToRootViewControllerAnimated:NO];
-        }];
+        [self fezPontos:timerAlert : yesAction : noAction];
     } else {
-        timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:@"Você não marcou nenhum ponto...\nTentar novamente?" preferredStyle:UIAlertControllerStyleAlert];
-        yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(retornaCartas) userInfo:nil repeats:NO];
-            [NSTimer scheduledTimerWithTimeInterval:0.4 target:self selector:@selector(reload) userInfo:nil repeats:NO];
-        }];
-        noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            volta=true;
-            [self.navigationController popToRootViewControllerAnimated:NO];
-        }];
+        [self naoFezPontos:timerAlert : yesAction : noAction];
     }
+    
     //Adiciona as ações ao alerta.
     [timerAlert addAction:yesAction];
     [timerAlert addAction:noAction];
     //A view controller apresenta o alerta.
     [self presentViewController:timerAlert animated:YES completion:nil];
 
+}
+
+- (void)fezPontos: (UIAlertController *)timerAlert : (UIAlertAction *)yesAction : (UIAlertAction *)noAction{
+    //Se sim, cria um pontuação manager, seta pontuação atual e vai pra outra view.
+    //Cria uma AlertController que gerencia o alerta.
+    timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:[NSString stringWithFormat:@"Pontuação final: %d\nDeseja salvar sua pontuação?", mm.pontuacao] preferredStyle:UIAlertControllerStyleAlert];
+    //Cria uma ação para quando o respectivo botão for pressionado. No caso, o botão "Sim".
+    yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
+        [pontuacaoManager.pontuacaoAtual setPontos:mm.pontuacao];
+        [pontuacaoManager.pontuacaoAtual setCategoria:@"Memória"];
+        [self.navigationController pushViewController:[[SalvarPontuacao alloc] init] animated:YES];
+    }];
+    //Botão "Não".
+    noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        volta=true;
+        [self.navigationController popToRootViewControllerAnimated:NO];
+    }];
+}
+
+- (void)naoFezPontos: (UIAlertController *)timerAlert : (UIAlertAction *)yesAction : (UIAlertAction *)noAction{
+    timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:@"Você não marcou nenhum ponto...\nTentar novamente?" preferredStyle:UIAlertControllerStyleAlert];
+    yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(retornaCartas) userInfo:nil repeats:NO];
+        [NSTimer scheduledTimerWithTimeInterval:0.4 target:self selector:@selector(reload) userInfo:nil repeats:NO];
+    }];
+    noAction = [UIAlertAction actionWithTitle:@"Não" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        volta=true;
+        [self.navigationController popToRootViewControllerAnimated:NO];
+    }];
 }
 
 - (void)reload{
