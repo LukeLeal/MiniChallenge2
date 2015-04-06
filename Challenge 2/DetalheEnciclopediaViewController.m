@@ -13,6 +13,7 @@
 
 @interface DetalheEnciclopediaViewController (){
     BOOL volta;
+
 }
 
 @end
@@ -24,8 +25,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [_imagemDoenca setImage: [UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"img.jpg" ofType:nil]]];
+
+
     
     UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(next:)];
     [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
@@ -46,6 +47,13 @@
 -(void)viewWillAppear:(BOOL)animated {
     DoencaManager *doencaManager = [DoencaManager sharedInstance];
     Doenca *doenca = [doencaManager.doencas objectAtIndex:doencaManager.doencaAtual];
+    
+//    for (int i=0; i<12; i++) {
+    
+        NSString *img = [NSString stringWithFormat:@"%@.png", doenca.nome];
+        [_imagemDoenca setImage: [UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource: img ofType:nil]]];
+//    }
+    
     //titulo
     [self setTitle:doenca.nome];
     //descrição

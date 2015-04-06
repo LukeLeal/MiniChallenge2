@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1028CE241AD306C700345BCF /* Aids.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE231AD306C700345BCF /* Aids.png */; };
+		1028CE261AD3076B00345BCF /* Alzheimer.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE251AD3076B00345BCF /* Alzheimer.png */; };
+		1028CE281AD3077600345BCF /* Apendicite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE271AD3077600345BCF /* Apendicite.png */; };
+		1028CE2A1AD3093100345BCF /* Catapora.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE291AD3093100345BCF /* Catapora.png */; };
+		1028CE2C1AD3093C00345BCF /* Conjuntivite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE2B1AD3093C00345BCF /* Conjuntivite.png */; };
+		1028CE2E1AD3094700345BCF /* Gripe.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE2D1AD3094700345BCF /* Gripe.png */; };
+		1028CE301AD309C000345BCF /* Malária.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE2F1AD309C000345BCF /* Malária.png */; };
+		1028CE321AD309CC00345BCF /* Meningite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE311AD309CC00345BCF /* Meningite.png */; };
+		1028CE341AD309DA00345BCF /* Pneumonia.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE331AD309DA00345BCF /* Pneumonia.png */; };
+		1028CE361AD309E800345BCF /* Tétano.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE351AD309E800345BCF /* Tétano.png */; };
 		107F6F7F1AC326B90077B065 /* EnciclopediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 107F6F7D1AC326B90077B065 /* EnciclopediaViewController.m */; };
 		107F6F801AC326B90077B065 /* EnciclopediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107F6F7E1AC326B90077B065 /* EnciclopediaViewController.xib */; };
 		10AFB13F1ACC8258009EC28E /* MemoriaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10AFB13E1ACC8258009EC28E /* MemoriaViewController.xib */; };
@@ -65,6 +75,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1028CE231AD306C700345BCF /* Aids.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Aids.png; path = "Doenças.xcassets/aids.imageset/Aids.png"; sourceTree = "<group>"; };
+		1028CE251AD3076B00345BCF /* Alzheimer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Alzheimer.png; path = "Doenças.xcassets/alzheimer.imageset/Alzheimer.png"; sourceTree = "<group>"; };
+		1028CE271AD3077600345BCF /* Apendicite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Apendicite.png; path = "Doenças.xcassets/apendicite.imageset/Apendicite.png"; sourceTree = "<group>"; };
+		1028CE291AD3093100345BCF /* Catapora.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Catapora.png; path = "Doenças.xcassets/catapora.imageset/Catapora.png"; sourceTree = "<group>"; };
+		1028CE2B1AD3093C00345BCF /* Conjuntivite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Conjuntivite.png; path = "Doenças.xcassets/conjuntivite.imageset/Conjuntivite.png"; sourceTree = "<group>"; };
+		1028CE2D1AD3094700345BCF /* Gripe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gripe.png; path = "Doenças.xcassets/gripe.imageset/Gripe.png"; sourceTree = "<group>"; };
+		1028CE2F1AD309C000345BCF /* Malária.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Malária.png"; path = "Doenças.xcassets/malaria.imageset/Malária.png"; sourceTree = "<group>"; };
+		1028CE311AD309CC00345BCF /* Meningite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Meningite.png; path = "Doenças.xcassets/meningite.imageset/Meningite.png"; sourceTree = "<group>"; };
+		1028CE331AD309DA00345BCF /* Pneumonia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pneumonia.png; path = "Doenças.xcassets/pneumonia.imageset/Pneumonia.png"; sourceTree = "<group>"; };
+		1028CE351AD309E800345BCF /* Tétano.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tétano.png"; path = "Doenças.xcassets/tetano.imageset/Tétano.png"; sourceTree = "<group>"; };
 		107F6F7C1AC326B90077B065 /* EnciclopediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnciclopediaViewController.h; sourceTree = "<group>"; };
 		107F6F7D1AC326B90077B065 /* EnciclopediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnciclopediaViewController.m; sourceTree = "<group>"; };
 		107F6F7E1AC326B90077B065 /* EnciclopediaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnciclopediaViewController.xib; sourceTree = "<group>"; };
@@ -213,6 +233,16 @@
 		4EA614B91AC094A400D94F8A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1028CE351AD309E800345BCF /* Tétano.png */,
+				1028CE331AD309DA00345BCF /* Pneumonia.png */,
+				1028CE311AD309CC00345BCF /* Meningite.png */,
+				1028CE2F1AD309C000345BCF /* Malária.png */,
+				1028CE2D1AD3094700345BCF /* Gripe.png */,
+				1028CE2B1AD3093C00345BCF /* Conjuntivite.png */,
+				1028CE291AD3093100345BCF /* Catapora.png */,
+				1028CE271AD3077600345BCF /* Apendicite.png */,
+				1028CE251AD3076B00345BCF /* Alzheimer.png */,
+				1028CE231AD306C700345BCF /* Aids.png */,
 				7E0E92B01AD02D4700F77D84 /* card_cover.png */,
 				24A3BB0E1AC1D7D700F7E698 /* img.jpg */,
 				4EA614BA1AC094A400D94F8A /* Info.plist */,
@@ -473,18 +503,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1028CE2A1AD3093100345BCF /* Catapora.png in Resources */,
 				10AFB13F1ACC8258009EC28E /* MemoriaViewController.xib in Resources */,
+				1028CE261AD3076B00345BCF /* Alzheimer.png in Resources */,
+				1028CE301AD309C000345BCF /* Malária.png in Resources */,
 				24A3BB191AC1E16600F7E698 /* PontuacaoTableViewCell.xib in Resources */,
 				4E7D5FC01AC49392009C8367 /* SalvarPontuacao.xib in Resources */,
+				1028CE341AD309DA00345BCF /* Pneumonia.png in Resources */,
 				7E551B691AC0AC7D00EB7FD8 /* QuizViewController.xib in Resources */,
 				4EA614CA1AC094A400D94F8A /* LaunchScreen.xib in Resources */,
 				24A3BB0F1AC1D7D700F7E698 /* img.jpg in Resources */,
 				7E5B31EC1AC9DAE700ECBFD8 /* JogosViewController.xib in Resources */,
 				107F6F801AC326B90077B065 /* EnciclopediaViewController.xib in Resources */,
 				10B602361AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib in Resources */,
+				1028CE321AD309CC00345BCF /* Meningite.png in Resources */,
 				4EA614C71AC094A400D94F8A /* Images.xcassets in Resources */,
 				4EA614E31AC0955300D94F8A /* HomeViewController.xib in Resources */,
+				1028CE361AD309E800345BCF /* Tétano.png in Resources */,
+				1028CE241AD306C700345BCF /* Aids.png in Resources */,
+				1028CE2C1AD3093C00345BCF /* Conjuntivite.png in Resources */,
+				1028CE2E1AD3094700345BCF /* Gripe.png in Resources */,
 				24A3BB141AC1DD8700F7E698 /* PontuacaoViewController.xib in Resources */,
+				1028CE281AD3077600345BCF /* Apendicite.png in Resources */,
 				7ED3B44C1ACB0A5C00D65593 /* Doenças.xcassets in Resources */,
 				7E0E92B11AD02D4700F77D84 /* card_cover.png in Resources */,
 			);
