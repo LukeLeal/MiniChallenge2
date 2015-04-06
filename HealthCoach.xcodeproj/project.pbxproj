@@ -15,11 +15,19 @@
 		1028CE2E1AD3094700345BCF /* Gripe.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE2D1AD3094700345BCF /* Gripe.png */; };
 		1028CE321AD309CC00345BCF /* Meningite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE311AD309CC00345BCF /* Meningite.png */; };
 		1028CE341AD309DA00345BCF /* Pneumonia.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE331AD309DA00345BCF /* Pneumonia.png */; };
+<<<<<<< Updated upstream
+=======
+		1028CE361AD309E800345BCF /* Tétano.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE351AD309E800345BCF /* Tétano.png */; };
+>>>>>>> Stashed changes
 		107F6F7F1AC326B90077B065 /* EnciclopediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 107F6F7D1AC326B90077B065 /* EnciclopediaViewController.m */; };
 		107F6F801AC326B90077B065 /* EnciclopediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107F6F7E1AC326B90077B065 /* EnciclopediaViewController.xib */; };
 		10AFB13F1ACC8258009EC28E /* MemoriaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10AFB13E1ACC8258009EC28E /* MemoriaViewController.xib */; };
 		10B602351AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B602331AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m */; };
 		10B602361AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B602341AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib */; };
+<<<<<<< Updated upstream
+=======
+		244D85FD1AD330DC00DBC65F /* card_cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 244D85FC1AD330DC00DBC65F /* card_cover.png */; };
+>>>>>>> Stashed changes
 		246873EB1AC9B35600E7B04B /* MemoriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246873E91AC9B35600E7B04B /* MemoriaViewController.m */; };
 		246873F01AC9D05500E7B04B /* Carta.m in Sources */ = {isa = PBXBuildFile; fileRef = 246873EF1AC9D05500E7B04B /* Carta.m */; };
 		246873F31AC9D07F00E7B04B /* MemoriaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 246873F21AC9D07F00E7B04B /* MemoriaManager.m */; };
@@ -82,6 +90,10 @@
 		1028CE2D1AD3094700345BCF /* Gripe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gripe.png; path = "Doenças.xcassets/gripe.imageset/Gripe.png"; sourceTree = "<group>"; };
 		1028CE311AD309CC00345BCF /* Meningite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Meningite.png; path = "Doenças.xcassets/meningite.imageset/Meningite.png"; sourceTree = "<group>"; };
 		1028CE331AD309DA00345BCF /* Pneumonia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pneumonia.png; path = "Doenças.xcassets/pneumonia.imageset/Pneumonia.png"; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
+=======
+		1028CE351AD309E800345BCF /* Tétano.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tétano.png"; path = "Doenças.xcassets/tetano.imageset/Tétano.png"; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
 		107F6F7C1AC326B90077B065 /* EnciclopediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnciclopediaViewController.h; sourceTree = "<group>"; };
 		107F6F7D1AC326B90077B065 /* EnciclopediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnciclopediaViewController.m; sourceTree = "<group>"; };
 		107F6F7E1AC326B90077B065 /* EnciclopediaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnciclopediaViewController.xib; sourceTree = "<group>"; };
@@ -89,6 +101,10 @@
 		10B602321AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalheEnciclopediaViewController.h; sourceTree = "<group>"; };
 		10B602331AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalheEnciclopediaViewController.m; sourceTree = "<group>"; };
 		10B602341AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetalheEnciclopediaViewController.xib; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
+=======
+		244D85FC1AD330DC00DBC65F /* card_cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = card_cover.png; path = ../../../../Downloads/card_cover.png; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
 		246873E81AC9B35600E7B04B /* MemoriaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoriaViewController.h; sourceTree = "<group>"; };
 		246873E91AC9B35600E7B04B /* MemoriaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoriaViewController.m; sourceTree = "<group>"; };
 		246873EE1AC9D05500E7B04B /* Carta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Carta.h; sourceTree = "<group>"; };
@@ -232,8 +248,13 @@
 		4EA614B91AC094A400D94F8A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< Updated upstream
 				7E070A371AD32D790043EE46 /* card_cover.png */,
 				7E444E551AD32973000749B7 /* Tétano.png */,
+=======
+				244D85FC1AD330DC00DBC65F /* card_cover.png */,
+				1028CE351AD309E800345BCF /* Tétano.png */,
+>>>>>>> Stashed changes
 				1028CE331AD309DA00345BCF /* Pneumonia.png */,
 				1028CE311AD309CC00345BCF /* Meningite.png */,
 				7E7C06D31AD3262200924AE5 /* Malária.png */,
@@ -510,6 +531,11 @@
 				4E7D5FC01AC49392009C8367 /* SalvarPontuacao.xib in Resources */,
 				1028CE341AD309DA00345BCF /* Pneumonia.png in Resources */,
 				7E551B691AC0AC7D00EB7FD8 /* QuizViewController.xib in Resources */,
+<<<<<<< Updated upstream
+=======
+				4EA614CA1AC094A400D94F8A /* LaunchScreen.xib in Resources */,
+				244D85FD1AD330DC00DBC65F /* card_cover.png in Resources */,
+>>>>>>> Stashed changes
 				24A3BB0F1AC1D7D700F7E698 /* img.jpg in Resources */,
 				7E5B31EC1AC9DAE700ECBFD8 /* JogosViewController.xib in Resources */,
 				107F6F801AC326B90077B065 /* EnciclopediaViewController.xib in Resources */,
