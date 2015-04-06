@@ -17,11 +17,14 @@
 		1028CE321AD309CC00345BCF /* Meningite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE311AD309CC00345BCF /* Meningite.png */; };
 		1028CE341AD309DA00345BCF /* Pneumonia.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE331AD309DA00345BCF /* Pneumonia.png */; };
 		1028CE361AD309E800345BCF /* Tétano.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE351AD309E800345BCF /* Tétano.png */; };
+		1028CE381AD3145200345BCF /* card_cover2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE371AD3145200345BCF /* card_cover2.png */; };
 		107F6F7F1AC326B90077B065 /* EnciclopediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 107F6F7D1AC326B90077B065 /* EnciclopediaViewController.m */; };
 		107F6F801AC326B90077B065 /* EnciclopediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107F6F7E1AC326B90077B065 /* EnciclopediaViewController.xib */; };
 		10AFB13F1ACC8258009EC28E /* MemoriaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10AFB13E1ACC8258009EC28E /* MemoriaViewController.xib */; };
 		10B602351AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B602331AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m */; };
 		10B602361AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B602341AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib */; };
+		10BDD74F1AD3211F00F5C8A9 /* card_cover3.png in Resources */ = {isa = PBXBuildFile; fileRef = 10BDD74E1AD3211F00F5C8A9 /* card_cover3.png */; };
+		10BDD7511AD3233700F5C8A9 /* card_cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 10BDD7501AD3233700F5C8A9 /* card_cover.png */; };
 		246873EB1AC9B35600E7B04B /* MemoriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246873E91AC9B35600E7B04B /* MemoriaViewController.m */; };
 		246873F01AC9D05500E7B04B /* Carta.m in Sources */ = {isa = PBXBuildFile; fileRef = 246873EF1AC9D05500E7B04B /* Carta.m */; };
 		246873F31AC9D07F00E7B04B /* MemoriaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 246873F21AC9D07F00E7B04B /* MemoriaManager.m */; };
@@ -49,7 +52,7 @@
 		4EA614D61AC094A400D94F8A /* Challenge_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA614D51AC094A400D94F8A /* Challenge_2Tests.m */; };
 		4EA614E21AC0955300D94F8A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA614E01AC0955300D94F8A /* HomeViewController.m */; };
 		4EA614E31AC0955300D94F8A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA614E11AC0955300D94F8A /* HomeViewController.xib */; };
-		7E0E92B11AD02D4700F77D84 /* card_cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E0E92B01AD02D4700F77D84 /* card_cover.png */; };
+		7E0E92B11AD02D4700F77D84 /* card_cover1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E0E92B01AD02D4700F77D84 /* card_cover1.png */; };
 		7E551B541AC0AC5E00EB7FD8 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E551B531AC0AC5E00EB7FD8 /* libc++.dylib */; };
 		7E551B641AC0AC7D00EB7FD8 /* JogosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B591AC0AC7D00EB7FD8 /* JogosViewController.m */; };
 		7E551B661AC0AC7D00EB7FD8 /* Pontuacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B5C1AC0AC7D00EB7FD8 /* Pontuacao.m */; };
@@ -85,6 +88,7 @@
 		1028CE311AD309CC00345BCF /* Meningite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Meningite.png; path = "Doenças.xcassets/meningite.imageset/Meningite.png"; sourceTree = "<group>"; };
 		1028CE331AD309DA00345BCF /* Pneumonia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pneumonia.png; path = "Doenças.xcassets/pneumonia.imageset/Pneumonia.png"; sourceTree = "<group>"; };
 		1028CE351AD309E800345BCF /* Tétano.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tétano.png"; path = "Doenças.xcassets/tetano.imageset/Tétano.png"; sourceTree = "<group>"; };
+		1028CE371AD3145200345BCF /* card_cover2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = card_cover2.png; path = ../../../Downloads/card_cover2.png; sourceTree = "<group>"; };
 		107F6F7C1AC326B90077B065 /* EnciclopediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnciclopediaViewController.h; sourceTree = "<group>"; };
 		107F6F7D1AC326B90077B065 /* EnciclopediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnciclopediaViewController.m; sourceTree = "<group>"; };
 		107F6F7E1AC326B90077B065 /* EnciclopediaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnciclopediaViewController.xib; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 		10B602321AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalheEnciclopediaViewController.h; sourceTree = "<group>"; };
 		10B602331AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalheEnciclopediaViewController.m; sourceTree = "<group>"; };
 		10B602341AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetalheEnciclopediaViewController.xib; sourceTree = "<group>"; };
+		10BDD74E1AD3211F00F5C8A9 /* card_cover3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = card_cover3.png; path = ../../../Downloads/card_cover3.png; sourceTree = "<group>"; };
+		10BDD7501AD3233700F5C8A9 /* card_cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = card_cover.png; path = ../../../Downloads/card_cover.png; sourceTree = "<group>"; };
 		246873E81AC9B35600E7B04B /* MemoriaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoriaViewController.h; sourceTree = "<group>"; };
 		246873E91AC9B35600E7B04B /* MemoriaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoriaViewController.m; sourceTree = "<group>"; };
 		246873EE1AC9D05500E7B04B /* Carta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Carta.h; sourceTree = "<group>"; };
@@ -139,7 +145,7 @@
 		4EA614DF1AC0955300D94F8A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		4EA614E01AC0955300D94F8A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		4EA614E11AC0955300D94F8A /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		7E0E92B01AD02D4700F77D84 /* card_cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = card_cover.png; path = Images.xcassets/card_cover.imageset/card_cover.png; sourceTree = "<group>"; };
+		7E0E92B01AD02D4700F77D84 /* card_cover1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = card_cover1.png; path = Images.xcassets/card_cover.imageset/card_cover1.png; sourceTree = "<group>"; };
 		7E551B531AC0AC5E00EB7FD8 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		7E551B581AC0AC7D00EB7FD8 /* JogosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JogosViewController.h; sourceTree = "<group>"; };
 		7E551B591AC0AC7D00EB7FD8 /* JogosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JogosViewController.m; sourceTree = "<group>"; };
@@ -233,6 +239,9 @@
 		4EA614B91AC094A400D94F8A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				10BDD7501AD3233700F5C8A9 /* card_cover.png */,
+				10BDD74E1AD3211F00F5C8A9 /* card_cover3.png */,
+				1028CE371AD3145200345BCF /* card_cover2.png */,
 				1028CE351AD309E800345BCF /* Tétano.png */,
 				1028CE331AD309DA00345BCF /* Pneumonia.png */,
 				1028CE311AD309CC00345BCF /* Meningite.png */,
@@ -243,7 +252,7 @@
 				1028CE271AD3077600345BCF /* Apendicite.png */,
 				1028CE251AD3076B00345BCF /* Alzheimer.png */,
 				1028CE231AD306C700345BCF /* Aids.png */,
-				7E0E92B01AD02D4700F77D84 /* card_cover.png */,
+				7E0E92B01AD02D4700F77D84 /* card_cover1.png */,
 				24A3BB0E1AC1D7D700F7E698 /* img.jpg */,
 				4EA614BA1AC094A400D94F8A /* Info.plist */,
 				4EA614BB1AC094A400D94F8A /* main.m */,
@@ -511,22 +520,25 @@
 				4E7D5FC01AC49392009C8367 /* SalvarPontuacao.xib in Resources */,
 				1028CE341AD309DA00345BCF /* Pneumonia.png in Resources */,
 				7E551B691AC0AC7D00EB7FD8 /* QuizViewController.xib in Resources */,
+				1028CE381AD3145200345BCF /* card_cover2.png in Resources */,
 				4EA614CA1AC094A400D94F8A /* LaunchScreen.xib in Resources */,
 				24A3BB0F1AC1D7D700F7E698 /* img.jpg in Resources */,
 				7E5B31EC1AC9DAE700ECBFD8 /* JogosViewController.xib in Resources */,
 				107F6F801AC326B90077B065 /* EnciclopediaViewController.xib in Resources */,
 				10B602361AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib in Resources */,
 				1028CE321AD309CC00345BCF /* Meningite.png in Resources */,
+				10BDD7511AD3233700F5C8A9 /* card_cover.png in Resources */,
 				4EA614C71AC094A400D94F8A /* Images.xcassets in Resources */,
 				4EA614E31AC0955300D94F8A /* HomeViewController.xib in Resources */,
 				1028CE361AD309E800345BCF /* Tétano.png in Resources */,
 				1028CE241AD306C700345BCF /* Aids.png in Resources */,
 				1028CE2C1AD3093C00345BCF /* Conjuntivite.png in Resources */,
+				10BDD74F1AD3211F00F5C8A9 /* card_cover3.png in Resources */,
 				1028CE2E1AD3094700345BCF /* Gripe.png in Resources */,
 				24A3BB141AC1DD8700F7E698 /* PontuacaoViewController.xib in Resources */,
 				1028CE281AD3077600345BCF /* Apendicite.png in Resources */,
 				7ED3B44C1ACB0A5C00D65593 /* Doenças.xcassets in Resources */,
-				7E0E92B11AD02D4700F77D84 /* card_cover.png in Resources */,
+				7E0E92B11AD02D4700F77D84 /* card_cover1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
