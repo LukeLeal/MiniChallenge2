@@ -10,7 +10,7 @@
 
 @interface MemoriaViewController (){
     double secondsLeft;
-    int pontos, parCont, count;
+    int parCont, count;
     BOOL volta, interativo;
     MemoriaManager *mm;
     NSMutableArray *selecionados, *arrayBotoes;
@@ -35,7 +35,6 @@
     
     secondsLeft = 60;
     [self countdownTimer];
-    pontos=0;
     parCont=0;
     arrayBotoes = [NSMutableArray arrayWithObjects: carta1,carta2,carta3,carta4,carta5,carta6,carta7,carta8,carta9,carta10,carta11,carta12,nil];
     imagem = [[UIImage alloc]init];
@@ -212,8 +211,8 @@
 
 - (void)alterarPontuacao{
     parCont++;
-    pontos += 10*secondsLeft;
-    pontuacao.text = [NSString stringWithFormat:@"Pontuação: %d", pontos];
+    mm.pontuacao += 10*secondsLeft;
+    pontuacao.text = [NSString stringWithFormat:@"Pontuação: %d", mm.pontuacao];
     
     if (parCont == 4) {
         secondsLeft = 0;
@@ -239,16 +238,16 @@
         UIAlertController *timerAlert;
         UIAlertAction *yesAction, *noAction;
         //A opção de salvar a pontuação apenas será mostrada caso o jogador tenha marcado pontos (i.e. pontos > 0).
-        if (pontos) {
+        if (mm.pontuacao) {
             //Pontuacao manager
             //Perguntar se quer salvar dados
             //Se sim, cria um pontuação manager, seta pontuação atual e vai pra outra view.
             //Cria uma AlertController que gerencia o alerta.
-            timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:[NSString stringWithFormat:@"Pontuação final: %d\nDeseja salvar sua pontuação?", pontos] preferredStyle:UIAlertControllerStyleAlert];
+            timerAlert = [UIAlertController alertControllerWithTitle:@"Fim do tempo!" message:[NSString stringWithFormat:@"Pontuação final: %d\nDeseja salvar sua pontuação?", mm.pontuacao] preferredStyle:UIAlertControllerStyleAlert];
             //Cria uma ação para quando o respectivo botão for pressionado. No caso, o botão "Sim".
             yesAction = [UIAlertAction actionWithTitle:@"Sim" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 PontuacaoManager *pontuacaoManager = [PontuacaoManager sharedInstance];
-                [pontuacaoManager.pontuacaoAtual setPontos:pontos];
+                [pontuacaoManager.pontuacaoAtual setPontos:mm.pontuacao];
                 [pontuacaoManager.pontuacaoAtual setCategoria:@"Memória"];
                 [self.navigationController pushViewController:[[SalvarPontuacao alloc] init] animated:YES];
             }];
