@@ -36,7 +36,7 @@
     _sequencia.text = @"Combo: 0";
     [self.navigationController setNavigationBarHidden:YES];
     //perguntaAtual = 0;
-    secondsLeft = 60;
+    secondsLeft = 30;
     [self countdownTimer];
     qm = [[QuizManager alloc] init];
     
