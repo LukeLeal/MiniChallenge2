@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *b1;
 @property (weak, nonatomic) IBOutlet UIButton *b2;
 @property (weak, nonatomic) IBOutlet UIButton *b3;
+@property (weak, nonatomic) IBOutlet UILabel *resultado;
 
 - (IBAction)desistirBotao:(id)sender;
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6751" systemVersion="14C1514" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Alternativa" representedClassName="Alternativa" syncable="YES">
         <attribute name="texto" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="pergunta" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Pergunta" inverseName="alternativas" inverseEntity="Pergunta" syncable="YES"/>
@@ -33,6 +33,6 @@
         <element name="Doenca" positionX="-317" positionY="-0" width="128" height="133"/>
         <element name="Pergunta" positionX="-308" positionY="-144" width="128" height="88"/>
         <element name="Pontuacao" positionX="-101" positionY="-144" width="128" height="118"/>
-        <element name="Sintoma" positionX="-531" positionY="54" width="128" height="73"/>
+        <element name="Sintoma" positionX="-576" positionY="65" width="128" height="73"/>
     </elements>
 </model>

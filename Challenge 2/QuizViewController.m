@@ -21,6 +21,7 @@
     //Para voltar ou ir para a próxima view
     BOOL volta;
     BOOL estDesiste;//Se verdade, para o tempo.
+    double timeAux;
 }
 
 @end
@@ -83,6 +84,7 @@
         qm.pontuacao += 100 * [qm seqAcertos];
         qm.seqAcertos++;
         _pontos.text = [NSString stringWithFormat:@"Pontuação: %d", [qm pontuacao]];
+        _resultado.text = @"ACERTOU!";
     } else {
         qm.seqAcertos = 1;
         if (secondsLeft - 5 <= 1) {
@@ -90,9 +92,12 @@
         } else {
             secondsLeft -= 5;
         }
+        _resultado.text = @"ERROU!";
     }
     _sequencia.text = [NSString stringWithFormat:@"Combo: %d", [qm seqAcertos] - 1];
     qm.perguntaAtual += 1;
+    _resultado.hidden = false;
+    [self animacaoResposta];
     if ([qm perguntaAtual] < [[qm perguntas] count]){
         [self proxPerg];
     } else {
@@ -116,6 +121,23 @@
     }
 }
 
+- (void) animacaoResposta {
+    timeAux = secondsLeft;
+    [UIView beginAnimations:@"fadeInNewView" context:NULL];
+    [UIView setAnimationDuration:1.0];
+    self.resultado.transform = CGAffineTransformMakeScale(1.8, 1.8);
+    self.resultado.alpha = 1.0f;
+    [UIView commitAnimations];
+    
+    [UIView beginAnimations:@"fadeInNewView" context:NULL];
+    [UIView setAnimationDuration:1.0];
+    self.resultado.transform = CGAffineTransformMakeScale(1,1);
+    self.resultado.alpha = 1.0f;
+    self.resultado.layer.borderWidth = 3.0;
+    self.resultado.layer.borderColor = [UIColor purpleColor].CGColor;
+    [UIView commitAnimations];
+}
+
 #pragma mark - Tempo (i.e. NSTimer)
 
 - (void) tempo: (id) sender{
@@ -126,6 +148,9 @@
             //        minutes = (secondsLeft % 3600) / 60;
             int seconds = secondsLeft;
             _tempo.text = [NSString stringWithFormat:@"%d", seconds];
+            if (secondsLeft <= timeAux - 2){
+                _resultado.hidden = true;
+            }
         }
         else{
             [timer invalidate];

@@ -7,14 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1028CE241AD306C700345BCF /* Aids.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE231AD306C700345BCF /* Aids.png */; };
-		1028CE261AD3076B00345BCF /* Alzheimer.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE251AD3076B00345BCF /* Alzheimer.png */; };
-		1028CE281AD3077600345BCF /* Apendicite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE271AD3077600345BCF /* Apendicite.png */; };
-		1028CE2A1AD3093100345BCF /* Catapora.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE291AD3093100345BCF /* Catapora.png */; };
-		1028CE2C1AD3093C00345BCF /* Conjuntivite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE2B1AD3093C00345BCF /* Conjuntivite.png */; };
-		1028CE2E1AD3094700345BCF /* Gripe.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE2D1AD3094700345BCF /* Gripe.png */; };
-		1028CE321AD309CC00345BCF /* Meningite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE311AD309CC00345BCF /* Meningite.png */; };
-		1028CE341AD309DA00345BCF /* Pneumonia.png in Resources */ = {isa = PBXBuildFile; fileRef = 1028CE331AD309DA00345BCF /* Pneumonia.png */; };
 		107F6F7F1AC326B90077B065 /* EnciclopediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 107F6F7D1AC326B90077B065 /* EnciclopediaViewController.m */; };
 		107F6F801AC326B90077B065 /* EnciclopediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107F6F7E1AC326B90077B065 /* EnciclopediaViewController.xib */; };
 		10AFB13F1ACC8258009EC28E /* MemoriaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10AFB13E1ACC8258009EC28E /* MemoriaViewController.xib */; };
@@ -28,6 +20,16 @@
 		24A3BB141AC1DD8700F7E698 /* PontuacaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A3BB121AC1DD8700F7E698 /* PontuacaoViewController.xib */; };
 		24A3BB181AC1E16600F7E698 /* PontuacaoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A3BB161AC1E16600F7E698 /* PontuacaoTableViewCell.m */; };
 		24A3BB191AC1E16600F7E698 /* PontuacaoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A3BB171AC1E16600F7E698 /* PontuacaoTableViewCell.xib */; };
+		4E3D15541B2CB696004E4B97 /* Aids.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3D15531B2CB696004E4B97 /* Aids.png */; };
+		4E3D15561B2CB8B5004E4B97 /* Alzheimer.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3D15551B2CB8B5004E4B97 /* Alzheimer.png */; };
+		4E3D155E1B2CB8D5004E4B97 /* Apendicite.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3D15571B2CB8D5004E4B97 /* Apendicite.png */; };
+		4E3D155F1B2CB8D5004E4B97 /* Catapora.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3D15581B2CB8D5004E4B97 /* Catapora.png */; };
+		4E3D15601B2CB8D5004E4B97 /* Gripe.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3D15591B2CB8D5004E4B97 /* Gripe.png */; };
+		4E3D15611B2CB8D5004E4B97 /* Malária.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3D155A1B2CB8D5004E4B97 /* Malária.png */; };
+		4E3D15621B2CB8D5004E4B97 /* Meningite.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3D155B1B2CB8D5004E4B97 /* Meningite.png */; };
+		4E3D15631B2CB8D5004E4B97 /* Pneumonia.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3D155C1B2CB8D5004E4B97 /* Pneumonia.png */; };
+		4E3D15641B2CB8D5004E4B97 /* Tétano.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3D155D1B2CB8D5004E4B97 /* Tétano.png */; };
+		4E3D15661B2CB953004E4B97 /* Conjuntivite.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3D15651B2CB953004E4B97 /* Conjuntivite.png */; };
 		4E57BBAF1AC342AD00CB1869 /* Pergunta.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E57BBAE1AC342AD00CB1869 /* Pergunta.m */; };
 		4E57BBB21AC342C800CB1869 /* QuizManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E57BBB11AC342C800CB1869 /* QuizManager.m */; };
 		4E70EDC81AD0C127006A4B96 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E70EDC71AD0C127006A4B96 /* CoreData.framework */; };
@@ -51,7 +53,6 @@
 		4EBAE4671AD36849002BEB37 /* Hérnia de Disco.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EBAE4641AD36849002BEB37 /* Hérnia de Disco.png */; };
 		4EBAE4681AD36849002BEB37 /* Hipertensão.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EBAE4651AD36849002BEB37 /* Hipertensão.png */; };
 		7E070A381AD32D790043EE46 /* card_cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E070A371AD32D790043EE46 /* card_cover.png */; };
-		7E444E561AD32973000749B7 /* Tétano.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E444E551AD32973000749B7 /* Tétano.png */; };
 		7E551B541AC0AC5E00EB7FD8 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E551B531AC0AC5E00EB7FD8 /* libc++.dylib */; };
 		7E551B641AC0AC7D00EB7FD8 /* JogosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B591AC0AC7D00EB7FD8 /* JogosViewController.m */; };
 		7E551B661AC0AC7D00EB7FD8 /* Pontuacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B5C1AC0AC7D00EB7FD8 /* Pontuacao.m */; };
@@ -59,8 +60,6 @@
 		7E551B681AC0AC7D00EB7FD8 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E551B601AC0AC7D00EB7FD8 /* QuizViewController.m */; };
 		7E551B691AC0AC7D00EB7FD8 /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E551B611AC0AC7D00EB7FD8 /* QuizViewController.xib */; };
 		7E5B31EC1AC9DAE700ECBFD8 /* JogosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E5B31EB1AC9DAE700ECBFD8 /* JogosViewController.xib */; };
-		7E7C06D41AD3262200924AE5 /* Malária.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7C06D31AD3262200924AE5 /* Malária.png */; };
-		7ED3B44C1ACB0A5C00D65593 /* Doenças.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED3B44B1ACB0A5C00D65593 /* Doenças.xcassets */; };
 		7EDF4A5B1AC1D0F500FFACD5 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDF4A5A1AC1D0F500FFACD5 /* iAd.framework */; };
 		7EDF4A5F1AC1D31500FFACD5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDF4A5E1AC1D31500FFACD5 /* Realm.framework */; };
 		7EDF4A621AC1D5C100FFACD5 /* Doenca.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF4A611AC1D5C100FFACD5 /* Doenca.m */; };
@@ -78,14 +77,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1028CE231AD306C700345BCF /* Aids.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Aids.png; path = "Doenças.xcassets/aids.imageset/Aids.png"; sourceTree = "<group>"; };
-		1028CE251AD3076B00345BCF /* Alzheimer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Alzheimer.png; path = "Doenças.xcassets/alzheimer.imageset/Alzheimer.png"; sourceTree = "<group>"; };
-		1028CE271AD3077600345BCF /* Apendicite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Apendicite.png; path = "Doenças.xcassets/apendicite.imageset/Apendicite.png"; sourceTree = "<group>"; };
-		1028CE291AD3093100345BCF /* Catapora.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Catapora.png; path = "Doenças.xcassets/catapora.imageset/Catapora.png"; sourceTree = "<group>"; };
-		1028CE2B1AD3093C00345BCF /* Conjuntivite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Conjuntivite.png; path = "Doenças.xcassets/conjuntivite.imageset/Conjuntivite.png"; sourceTree = "<group>"; };
-		1028CE2D1AD3094700345BCF /* Gripe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gripe.png; path = "Doenças.xcassets/gripe.imageset/Gripe.png"; sourceTree = "<group>"; };
-		1028CE311AD309CC00345BCF /* Meningite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Meningite.png; path = "Doenças.xcassets/meningite.imageset/Meningite.png"; sourceTree = "<group>"; };
-		1028CE331AD309DA00345BCF /* Pneumonia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pneumonia.png; path = "Doenças.xcassets/pneumonia.imageset/Pneumonia.png"; sourceTree = "<group>"; };
 		107F6F7C1AC326B90077B065 /* EnciclopediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnciclopediaViewController.h; sourceTree = "<group>"; };
 		107F6F7D1AC326B90077B065 /* EnciclopediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnciclopediaViewController.m; sourceTree = "<group>"; };
 		107F6F7E1AC326B90077B065 /* EnciclopediaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnciclopediaViewController.xib; sourceTree = "<group>"; };
@@ -106,6 +97,16 @@
 		24A3BB151AC1E16600F7E698 /* PontuacaoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PontuacaoTableViewCell.h; sourceTree = "<group>"; };
 		24A3BB161AC1E16600F7E698 /* PontuacaoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PontuacaoTableViewCell.m; sourceTree = "<group>"; };
 		24A3BB171AC1E16600F7E698 /* PontuacaoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PontuacaoTableViewCell.xib; sourceTree = "<group>"; };
+		4E3D15531B2CB696004E4B97 /* Aids.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Aids.png; sourceTree = "<group>"; };
+		4E3D15551B2CB8B5004E4B97 /* Alzheimer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Alzheimer.png; sourceTree = "<group>"; };
+		4E3D15571B2CB8D5004E4B97 /* Apendicite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Apendicite.png; sourceTree = "<group>"; };
+		4E3D15581B2CB8D5004E4B97 /* Catapora.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Catapora.png; sourceTree = "<group>"; };
+		4E3D15591B2CB8D5004E4B97 /* Gripe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gripe.png; sourceTree = "<group>"; };
+		4E3D155A1B2CB8D5004E4B97 /* Malária.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Malária.png"; sourceTree = "<group>"; };
+		4E3D155B1B2CB8D5004E4B97 /* Meningite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Meningite.png; sourceTree = "<group>"; };
+		4E3D155C1B2CB8D5004E4B97 /* Pneumonia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pneumonia.png; sourceTree = "<group>"; };
+		4E3D155D1B2CB8D5004E4B97 /* Tétano.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tétano.png"; sourceTree = "<group>"; };
+		4E3D15651B2CB953004E4B97 /* Conjuntivite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Conjuntivite.png; sourceTree = "<group>"; };
 		4E57BBAD1AC342AD00CB1869 /* Pergunta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pergunta.h; sourceTree = "<group>"; };
 		4E57BBAE1AC342AD00CB1869 /* Pergunta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pergunta.m; sourceTree = "<group>"; };
 		4E57BBB01AC342C800CB1869 /* QuizManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizManager.h; sourceTree = "<group>"; };
@@ -145,7 +146,6 @@
 		4EBAE4641AD36849002BEB37 /* Hérnia de Disco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Hérnia de Disco.png"; path = "../../../../Downloads/Hérnia de Disco.png"; sourceTree = "<group>"; };
 		4EBAE4651AD36849002BEB37 /* Hipertensão.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Hipertensão.png"; path = "../../../../Downloads/Hipertensão.png"; sourceTree = "<group>"; };
 		7E070A371AD32D790043EE46 /* card_cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_cover.png; sourceTree = "<group>"; };
-		7E444E551AD32973000749B7 /* Tétano.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tétano.png"; path = "Doenças.xcassets/tetano.imageset/Tétano.png"; sourceTree = "<group>"; };
 		7E551B531AC0AC5E00EB7FD8 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		7E551B581AC0AC7D00EB7FD8 /* JogosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JogosViewController.h; sourceTree = "<group>"; };
 		7E551B591AC0AC7D00EB7FD8 /* JogosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JogosViewController.m; sourceTree = "<group>"; };
@@ -157,8 +157,6 @@
 		7E551B601AC0AC7D00EB7FD8 /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
 		7E551B611AC0AC7D00EB7FD8 /* QuizViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuizViewController.xib; sourceTree = "<group>"; };
 		7E5B31EB1AC9DAE700ECBFD8 /* JogosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JogosViewController.xib; sourceTree = "<group>"; };
-		7E7C06D31AD3262200924AE5 /* Malária.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Malária.png"; path = "Doenças.xcassets/malaria.imageset/Malária.png"; sourceTree = "<group>"; };
-		7ED3B44B1ACB0A5C00D65593 /* Doenças.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Doenças.xcassets"; sourceTree = "<group>"; };
 		7EDF4A5A1AC1D0F500FFACD5 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		7EDF4A5E1AC1D31500FFACD5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Challenge 2/Frameworks/Realm.framework"; sourceTree = "<group>"; };
 		7EDF4A601AC1D5C100FFACD5 /* Doenca.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doenca.h; sourceTree = "<group>"; };
@@ -230,7 +228,6 @@
 				7E551B4C1AC0AA8000EB7FD8 /* Entidades */,
 				7E551B4B1AC0AA7300EB7FD8 /* Views */,
 				4EA614C61AC094A400D94F8A /* Images.xcassets */,
-				7ED3B44B1ACB0A5C00D65593 /* Doenças.xcassets */,
 				4EA614C81AC094A400D94F8A /* LaunchScreen.xib */,
 				4EA614B91AC094A400D94F8A /* Supporting Files */,
 			);
@@ -240,21 +237,21 @@
 		4EA614B91AC094A400D94F8A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4E3D15571B2CB8D5004E4B97 /* Apendicite.png */,
+				4E3D15581B2CB8D5004E4B97 /* Catapora.png */,
+				4E3D15591B2CB8D5004E4B97 /* Gripe.png */,
+				4E3D155A1B2CB8D5004E4B97 /* Malária.png */,
+				4E3D155B1B2CB8D5004E4B97 /* Meningite.png */,
+				4E3D155C1B2CB8D5004E4B97 /* Pneumonia.png */,
+				4E3D155D1B2CB8D5004E4B97 /* Tétano.png */,
+				4E3D15651B2CB953004E4B97 /* Conjuntivite.png */,
+				4E3D15531B2CB696004E4B97 /* Aids.png */,
+				4E3D15551B2CB8B5004E4B97 /* Alzheimer.png */,
 				4EBAE4631AD36849002BEB37 /* Bronquite Crônica.png */,
 				4EBAE4641AD36849002BEB37 /* Hérnia de Disco.png */,
 				4EBAE4651AD36849002BEB37 /* Hipertensão.png */,
 				4EBAE45E1AD36636002BEB37 /* Osteoporose.png */,
 				7E070A371AD32D790043EE46 /* card_cover.png */,
-				7E444E551AD32973000749B7 /* Tétano.png */,
-				1028CE331AD309DA00345BCF /* Pneumonia.png */,
-				1028CE311AD309CC00345BCF /* Meningite.png */,
-				7E7C06D31AD3262200924AE5 /* Malária.png */,
-				1028CE2D1AD3094700345BCF /* Gripe.png */,
-				1028CE2B1AD3093C00345BCF /* Conjuntivite.png */,
-				1028CE291AD3093100345BCF /* Catapora.png */,
-				1028CE271AD3077600345BCF /* Apendicite.png */,
-				1028CE251AD3076B00345BCF /* Alzheimer.png */,
-				1028CE231AD306C700345BCF /* Aids.png */,
 				24A3BB0E1AC1D7D700F7E698 /* img.jpg */,
 				4EA614BA1AC094A400D94F8A /* Info.plist */,
 				4EA614BB1AC094A400D94F8A /* main.m */,
@@ -483,6 +480,7 @@
 				TargetAttributes = {
 					4EA614B51AC094A400D94F8A = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = D4BYNLS255;
 					};
 					4EA614CE1AC094A400D94F8A = {
 						CreatedOnToolsVersion = 6.2;
@@ -514,33 +512,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1028CE2A1AD3093100345BCF /* Catapora.png in Resources */,
 				10AFB13F1ACC8258009EC28E /* MemoriaViewController.xib in Resources */,
-				1028CE261AD3076B00345BCF /* Alzheimer.png in Resources */,
+				4E3D15611B2CB8D5004E4B97 /* Malária.png in Resources */,
 				24A3BB191AC1E16600F7E698 /* PontuacaoTableViewCell.xib in Resources */,
+				4E3D155E1B2CB8D5004E4B97 /* Apendicite.png in Resources */,
 				7E070A381AD32D790043EE46 /* card_cover.png in Resources */,
 				4E7D5FC01AC49392009C8367 /* SalvarPontuacao.xib in Resources */,
 				4EBAE4671AD36849002BEB37 /* Hérnia de Disco.png in Resources */,
-				1028CE341AD309DA00345BCF /* Pneumonia.png in Resources */,
 				7E551B691AC0AC7D00EB7FD8 /* QuizViewController.xib in Resources */,
 				24A3BB0F1AC1D7D700F7E698 /* img.jpg in Resources */,
+				4E3D15541B2CB696004E4B97 /* Aids.png in Resources */,
 				7E5B31EC1AC9DAE700ECBFD8 /* JogosViewController.xib in Resources */,
 				107F6F801AC326B90077B065 /* EnciclopediaViewController.xib in Resources */,
-				7E7C06D41AD3262200924AE5 /* Malária.png in Resources */,
 				4EBAE4681AD36849002BEB37 /* Hipertensão.png in Resources */,
 				10B602361AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib in Resources */,
 				4EBAE4661AD36849002BEB37 /* Bronquite Crônica.png in Resources */,
-				1028CE321AD309CC00345BCF /* Meningite.png in Resources */,
+				4E3D155F1B2CB8D5004E4B97 /* Catapora.png in Resources */,
 				4EA614C71AC094A400D94F8A /* Images.xcassets in Resources */,
+				4E3D15661B2CB953004E4B97 /* Conjuntivite.png in Resources */,
 				4EA614E31AC0955300D94F8A /* HomeViewController.xib in Resources */,
-				1028CE241AD306C700345BCF /* Aids.png in Resources */,
-				1028CE2C1AD3093C00345BCF /* Conjuntivite.png in Resources */,
-				1028CE2E1AD3094700345BCF /* Gripe.png in Resources */,
+				4E3D15561B2CB8B5004E4B97 /* Alzheimer.png in Resources */,
+				4E3D15621B2CB8D5004E4B97 /* Meningite.png in Resources */,
+				4E3D15631B2CB8D5004E4B97 /* Pneumonia.png in Resources */,
 				24A3BB141AC1DD8700F7E698 /* PontuacaoViewController.xib in Resources */,
-				1028CE281AD3077600345BCF /* Apendicite.png in Resources */,
+				4E3D15641B2CB8D5004E4B97 /* Tétano.png in Resources */,
+				4E3D15601B2CB8D5004E4B97 /* Gripe.png in Resources */,
 				4EBAE4621AD36636002BEB37 /* Osteoporose.png in Resources */,
-				7E444E561AD32973000749B7 /* Tétano.png in Resources */,
-				7ED3B44C1ACB0A5C00D65593 /* Doenças.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,11 +696,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "./**";
 				INFOPLIST_FILE = "Challenge 2/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = HealthCoach;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -712,11 +712,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "./**";
 				INFOPLIST_FILE = "Challenge 2/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = HealthCoach;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
