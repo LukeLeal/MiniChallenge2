@@ -46,6 +46,7 @@
 		4E70EDE11AD0CB17006A4B96 /* Sintoma.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E70EDDF1AD0CB17006A4B96 /* Sintoma.m */; };
 		4E7D5FBF1AC49392009C8367 /* SalvarPontuacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D5FBD1AC49392009C8367 /* SalvarPontuacao.m */; };
 		4E7D5FC01AC49392009C8367 /* SalvarPontuacao.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E7D5FBE1AC49392009C8367 /* SalvarPontuacao.xib */; };
+		4E860D7B1B2F80BF00882592 /* Launch5.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E860D7A1B2F80BF00882592 /* Launch5.png */; };
 		4EA614BC1AC094A400D94F8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA614BB1AC094A400D94F8A /* main.m */; };
 		4EA614BF1AC094A400D94F8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA614BE1AC094A400D94F8A /* AppDelegate.m */; };
 		4EA614C71AC094A400D94F8A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EA614C61AC094A400D94F8A /* Images.xcassets */; };
@@ -132,6 +133,8 @@
 		4E7D5FBC1AC49392009C8367 /* SalvarPontuacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalvarPontuacao.h; sourceTree = "<group>"; };
 		4E7D5FBD1AC49392009C8367 /* SalvarPontuacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalvarPontuacao.m; sourceTree = "<group>"; };
 		4E7D5FBE1AC49392009C8367 /* SalvarPontuacao.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SalvarPontuacao.xib; sourceTree = "<group>"; };
+		4E860D4F1B2F05E000882592 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4E860D7A1B2F80BF00882592 /* Launch5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Launch5.png; sourceTree = "<group>"; };
 		4EA614B61AC094A400D94F8A /* HealthCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EA614BA1AC094A400D94F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EA614BB1AC094A400D94F8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -200,6 +203,7 @@
 		4EA614AD1AC094A400D94F8A = {
 			isa = PBXGroup;
 			children = (
+				4E860D7A1B2F80BF00882592 /* Launch5.png */,
 				4E70EDC71AD0C127006A4B96 /* CoreData.framework */,
 				7EDF4A5E1AC1D31500FFACD5 /* Realm.framework */,
 				7EDF4A5A1AC1D0F500FFACD5 /* iAd.framework */,
@@ -513,6 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E5069201B2E245600267DE0 /* Hérnia de Disco.png in Resources */,
+				4E860D7B1B2F80BF00882592 /* Launch5.png in Resources */,
 				10AFB13F1ACC8258009EC28E /* MemoriaViewController.xib in Resources */,
 				4E3D15611B2CB8D5004E4B97 /* Malária.png in Resources */,
 				24A3BB191AC1E16600F7E698 /* PontuacaoTableViewCell.xib in Resources */,
@@ -607,6 +612,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4EA614C91AC094A400D94F8A /* Base */,
+				4E860D4F1B2F05E000882592 /* pt */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -648,7 +654,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -684,7 +690,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -700,7 +706,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "./**";
 				INFOPLIST_FILE = "Challenge 2/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = HealthCoach;
 				PROVISIONING_PROFILE = "";
@@ -716,7 +722,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "./**";
 				INFOPLIST_FILE = "Challenge 2/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = HealthCoach;
 				PROVISIONING_PROFILE = "";
