@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "QuizManager.h"
 #import "Pergunta.h"
+#import "DeviceModel.h"
 
 @interface QuizViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *clockImg;
 @property (weak, nonatomic) IBOutlet UITextView *pergunta;
 @property (weak, nonatomic) IBOutlet UILabel *tempo;
 @property (weak, nonatomic) IBOutlet UILabel *pontos;

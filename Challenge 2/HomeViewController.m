@@ -14,19 +14,18 @@
 
 @implementation HomeViewController
 
-@synthesize jogar, pontuacao, enciclopedia, logo;
+@synthesize jogar, pontuacao, enciclopedia, logo, deviceModel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+//    deviceModel = [DeviceModel instance];
     //Verifica se é a primeira execução do App. Se for, insere os dados padrão no banco.
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     if (![ud objectForKey:@"dadosCriados"]) {
         [[DataManager sharedInstance] iniciaDados];
         [ud setBool:YES forKey:@"dadosCriados"];
     }
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -34,18 +33,39 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-    [self animacao];
+//    [self animacao];
+    [self adjustFont];
+    [self prepareAnimation];
+//    [self.view sizeToFit];
+    
+    UIWindow* window = [UIApplication sharedApplication].keyWindow;
+    NSLog(@"%f",window.frame.size.height);
 }
 
+- (void)adjustFont{
+    jogar.titleLabel.adjustsFontSizeToFitWidth = YES;
+    pontuacao.titleLabel.adjustsFontSizeToFitWidth = YES;
+    enciclopedia.titleLabel.adjustsFontSizeToFitWidth = YES;
+}
 
 #pragma mark - Animação
+- (void)prepareAnimation{
+//    float ammount1 = [deviceModel getHomeViewAnimationLabelAmmount];
+//    float ammount2 = [deviceModel getHomeViewAnimationLogoAmmount];
+    
+    float ammount1 = -(self.view.frame.size.height / 5);
+    float ammount2 = (self.view.frame.size.height / 10);
+    
+    
+    [self animacao:ammount1 :ammount2];
+}
 
-- (void)animacao{
+- (void)animacao: (float)ammount1 : (float)ammount2{
     [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        jogar.transform = CGAffineTransformMakeTranslation(0, -180);
-        pontuacao.transform = CGAffineTransformMakeTranslation(0, -180);
-        enciclopedia.transform = CGAffineTransformMakeTranslation(0, -180);
-        logo.transform = CGAffineTransformMakeTranslation(0, 80);
+        jogar.transform = CGAffineTransformMakeTranslation(0, ammount1);
+        pontuacao.transform = CGAffineTransformMakeTranslation(0, ammount1);
+        enciclopedia.transform = CGAffineTransformMakeTranslation(0, ammount1);
+        logo.transform = CGAffineTransformMakeTranslation(0, ammount2);
     } completion:^(BOOL finished) {
         
     }];

@@ -14,6 +14,7 @@
     //int hours, minutes, seconds;
     double secondsLeft;
     NSTimer *timer;
+    DeviceModel *deviceModel;
     //int perguntaAtual;
     NSArray *botoes;
     //NSMutableArray *perguntas;
@@ -28,13 +29,16 @@
 
 @implementation QuizViewController
 
+@synthesize pontos, sequencia, tempo, clockImg;
+
 #pragma mark - Interface
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    deviceModel = [DeviceModel instance];
     volta=false;
-    _pontos.text = @"Pontuação: 0";
-    _sequencia.text = @"Combo: 0";
+    pontos.text = @"Pontuação: 0";
+    sequencia.text = @"Combo: 0";
     [self.navigationController setNavigationBarHidden:YES];
     //perguntaAtual = 0;
     secondsLeft = 30;
@@ -54,6 +58,9 @@
     [self proxPerg];
 }
 
+-(void) viewDidAppear:(BOOL)animated{
+    [self adjustSize];
+}
 
 -(void) viewWillDisappear:(BOOL)animated{
     if(volta){
@@ -72,6 +79,12 @@
     }
 }
 
+- (void)adjustSize{
+//    float newValue = [deviceModel getQuizViewClockSize];
+    float newValue = 5;
+    [clockImg setFrame:CGRectMake(clockImg.frame.origin.x, clockImg.frame.origin.y, newValue, newValue)];
+}
+
 #pragma mark - Jogo
 
 -(void)responde: (id)sender{
@@ -83,7 +96,7 @@
         //secondsLeft += 2;
         qm.pontuacao += 100 * [qm seqAcertos];
         qm.seqAcertos++;
-        _pontos.text = [NSString stringWithFormat:@"Pontuação: %d", [qm pontuacao]];
+        pontos.text = [NSString stringWithFormat:@"Pontuação: %d", [qm pontuacao]];
         _resultado.text = @"ACERTOU!";
     } else {
         qm.seqAcertos = 1;
@@ -94,7 +107,7 @@
         }
         _resultado.text = @"ERROU!";
     }
-    _sequencia.text = [NSString stringWithFormat:@"Combo: %d", [qm seqAcertos] - 1];
+    sequencia.text = [NSString stringWithFormat:@"Combo: %d", [qm seqAcertos] - 1];
     qm.perguntaAtual += 1;
     _resultado.hidden = false;
     [self animacaoResposta];
@@ -147,7 +160,7 @@
             //        hours = secondsLeft / 3600;
             //        minutes = (secondsLeft % 3600) / 60;
             int seconds = secondsLeft;
-            _tempo.text = [NSString stringWithFormat:@"%d", seconds];
+            tempo.text = [NSString stringWithFormat:@"%d", seconds];
             if (secondsLeft <= timeAux - 2){
                 _resultado.hidden = true;
             }

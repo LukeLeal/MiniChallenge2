@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
@@ -18,29 +18,18 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voE-CT-vB9">
-                    <rect key="frame" x="255" y="367" width="91" height="30"/>
-                    <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="30"/>
-                    <inset key="imageEdgeInsets" minX="-30" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <state key="normal" title="Jogar" image="puzzle-50">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
-                        <rect key="frame" x="130" y="249" width="96" height="49"/>
-                    </variation>
-                    <connections>
-                        <action selector="jogarBotao:" destination="-1" eventType="touchUpInside" id="X6K-nu-AuY"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekQ-xd-sun">
                     <rect key="frame" x="248" y="405" width="116" height="30"/>
-                    <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="28"/>
                     <inset key="imageEdgeInsets" minX="-17" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <state key="normal" title="Pontuação" image="leaderboard-50">
+                    <state key="normal" title="Score" image="leaderboard-50">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="316" y="249" width="168" height="49"/>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="70" y="720" width="250" height="50"/>
                     </variation>
                     <connections>
                         <action selector="pontuacaoBotao:" destination="-1" eventType="touchUpInside" id="kbl-fZ-ZC1"/>
@@ -48,11 +37,14 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxm-Rw-1tQ">
                     <rect key="frame" x="243" y="448" width="127" height="30"/>
-                    <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="28"/>
                     <inset key="imageEdgeInsets" minX="-30" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <state key="normal" title="Enciclopédia" image="courses-50"/>
+                    <state key="normal" title="Guia" image="courses-50"/>
                     <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="534" y="231" width="205" height="67"/>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="70" y="800" width="255" height="50"/>
                     </variation>
                     <connections>
                         <action selector="enciclopediaBotao:" destination="-1" eventType="touchUpInside" id="IDy-KP-wHT"/>
@@ -93,13 +85,33 @@
                         </mask>
                     </variation>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voE-CT-vB9">
+                    <rect key="frame" x="255" y="367" width="91" height="30"/>
+                    <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="28"/>
+                    <inset key="imageEdgeInsets" minX="-30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Jogar" image="puzzle-50">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
+                        <rect key="frame" x="130" y="249" width="96" height="49"/>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="70" y="640" width="146" height="50"/>
+                    </variation>
+                    <connections>
+                        <action selector="jogarBotao:" destination="-1" eventType="touchUpInside" id="X6K-nu-AuY"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.14734268565326505" green="0.66417937623760115" blue="0.95399839386512175" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstAttribute="centerX" secondItem="voE-CT-vB9" secondAttribute="centerX" id="5Mw-O7-aXa"/>
                 <constraint firstItem="voE-CT-vB9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="70" id="Ayd-xM-GgF"/>
                 <constraint firstItem="yxm-Rw-1tQ" firstAttribute="top" secondItem="ekQ-xd-sun" secondAttribute="bottom" constant="25" id="BuH-Hu-2sn">
                     <variation key="heightClass=regular-widthClass=compact" constant="30"/>
                 </constraint>
+                <constraint firstAttribute="centerX" secondItem="yxm-Rw-1tQ" secondAttribute="centerX" id="Gu0-dH-l4y"/>
+                <constraint firstAttribute="centerX" secondItem="ekQ-xd-sun" secondAttribute="centerX" id="HUx-eH-vu0"/>
                 <constraint firstAttribute="centerX" secondItem="yxm-Rw-1tQ" secondAttribute="centerX" id="M6Z-3V-IFh"/>
                 <constraint firstItem="yxm-Rw-1tQ" firstAttribute="leading" secondItem="ekQ-xd-sun" secondAttribute="trailing" constant="50" id="Po0-YA-NMx">
                     <variation key="heightClass=compact-widthClass=regular" constant="50"/>
@@ -107,26 +119,30 @@
                 <constraint firstItem="yxm-Rw-1tQ" firstAttribute="top" secondItem="ekQ-xd-sun" secondAttribute="bottom" constant="65" id="RAA-CE-gec">
                     <variation key="heightClass=regular-widthClass=compact" constant="75"/>
                 </constraint>
+                <constraint firstAttribute="centerX" secondItem="ekQ-xd-sun" secondAttribute="centerX" id="bhy-Wh-xJc"/>
                 <constraint firstAttribute="bottom" secondItem="yxm-Rw-1tQ" secondAttribute="bottom" constant="-50" id="cma-go-iqz">
                     <variation key="heightClass=regular-widthClass=compact" constant="-50"/>
                 </constraint>
                 <constraint firstAttribute="centerX" secondItem="BAD-DU-Bqp" secondAttribute="centerX" id="dTH-l1-fkz"/>
                 <constraint firstAttribute="centerX" secondItem="BAD-DU-Bqp" secondAttribute="centerX" id="eHo-yF-Gfc"/>
                 <constraint firstItem="yxm-Rw-1tQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="70" id="fmN-Fg-NMa"/>
-                <constraint firstAttribute="centerX" secondItem="ekQ-xd-sun" secondAttribute="centerX" id="gDX-vb-92I">
-                    <variation key="heightClass=regular-widthClass=compact" constant="5"/>
-                </constraint>
                 <constraint firstItem="ekQ-xd-sun" firstAttribute="top" secondItem="voE-CT-vB9" secondAttribute="bottom" constant="25" id="lum-XX-6PX">
                     <variation key="heightClass=regular-widthClass=compact" constant="30"/>
                 </constraint>
+                <constraint firstItem="ekQ-xd-sun" firstAttribute="leading" secondItem="voE-CT-vB9" secondAttribute="leading" id="n1I-Tf-yYB"/>
                 <constraint firstAttribute="centerX" secondItem="ekQ-xd-sun" secondAttribute="centerX" id="nUa-jP-hja"/>
                 <constraint firstItem="yxm-Rw-1tQ" firstAttribute="top" secondItem="BAD-DU-Bqp" secondAttribute="bottom" constant="60" id="pci-Oa-BkI"/>
                 <constraint firstItem="ekQ-xd-sun" firstAttribute="leading" secondItem="voE-CT-vB9" secondAttribute="trailing" constant="50" id="puA-1g-mmi">
                     <variation key="heightClass=compact-widthClass=regular" constant="90"/>
                 </constraint>
+                <constraint firstAttribute="centerX" secondItem="yxm-Rw-1tQ" secondAttribute="centerX" constant="40" id="qP5-37-PsD">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstAttribute="centerX" secondItem="voE-CT-vB9" secondAttribute="centerX" id="r25-jr-JKv"/>
                 <constraint firstItem="BAD-DU-Bqp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="rDP-js-ykR">
                     <variation key="heightClass=regular-widthClass=compact" constant="-30"/>
                 </constraint>
+                <constraint firstItem="ekQ-xd-sun" firstAttribute="leading" secondItem="yxm-Rw-1tQ" secondAttribute="leading" id="rFt-Ru-bmh"/>
                 <constraint firstItem="ekQ-xd-sun" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="70" id="rwf-WO-Bxn"/>
                 <constraint firstItem="ekQ-xd-sun" firstAttribute="top" secondItem="voE-CT-vB9" secondAttribute="bottom" constant="65" id="sHS-pw-RiL">
                     <variation key="heightClass=regular-widthClass=compact" constant="75"/>
@@ -143,22 +159,29 @@
                     <exclude reference="eHo-yF-Gfc"/>
                     <exclude reference="rDP-js-ykR"/>
                     <exclude reference="zgt-qO-10U"/>
+                    <exclude reference="5Mw-O7-aXa"/>
                     <exclude reference="Ayd-xM-GgF"/>
+                    <exclude reference="r25-jr-JKv"/>
                     <exclude reference="wXn-ff-gK2"/>
                     <exclude reference="yAy-vs-j9v"/>
-                    <exclude reference="gDX-vb-92I"/>
+                    <exclude reference="HUx-eH-vu0"/>
+                    <exclude reference="bhy-Wh-xJc"/>
                     <exclude reference="lum-XX-6PX"/>
+                    <exclude reference="n1I-Tf-yYB"/>
                     <exclude reference="nUa-jP-hja"/>
                     <exclude reference="puA-1g-mmi"/>
+                    <exclude reference="rFt-Ru-bmh"/>
                     <exclude reference="rwf-WO-Bxn"/>
                     <exclude reference="sHS-pw-RiL"/>
                     <exclude reference="BuH-Hu-2sn"/>
+                    <exclude reference="Gu0-dH-l4y"/>
                     <exclude reference="M6Z-3V-IFh"/>
                     <exclude reference="Po0-YA-NMx"/>
                     <exclude reference="RAA-CE-gec"/>
                     <exclude reference="cma-go-iqz"/>
                     <exclude reference="fmN-Fg-NMa"/>
                     <exclude reference="pci-Oa-BkI"/>
+                    <exclude reference="qP5-37-PsD"/>
                 </mask>
             </variation>
             <variation key="heightClass=compact-widthClass=regular">
@@ -175,18 +198,25 @@
                 <mask key="constraints">
                     <include reference="dTH-l1-fkz"/>
                     <include reference="rDP-js-ykR"/>
-                    <include reference="Ayd-xM-GgF"/>
+                    <exclude reference="5Mw-O7-aXa"/>
+                    <exclude reference="Ayd-xM-GgF"/>
+                    <include reference="r25-jr-JKv"/>
                     <exclude reference="wXn-ff-gK2"/>
                     <exclude reference="yAy-vs-j9v"/>
-                    <include reference="gDX-vb-92I"/>
+                    <exclude reference="HUx-eH-vu0"/>
+                    <include reference="bhy-Wh-xJc"/>
                     <include reference="lum-XX-6PX"/>
-                    <include reference="rwf-WO-Bxn"/>
+                    <exclude reference="n1I-Tf-yYB"/>
+                    <exclude reference="rFt-Ru-bmh"/>
+                    <exclude reference="rwf-WO-Bxn"/>
                     <exclude reference="sHS-pw-RiL"/>
                     <include reference="BuH-Hu-2sn"/>
+                    <exclude reference="Gu0-dH-l4y"/>
                     <exclude reference="M6Z-3V-IFh"/>
                     <exclude reference="RAA-CE-gec"/>
                     <include reference="cma-go-iqz"/>
-                    <include reference="fmN-Fg-NMa"/>
+                    <exclude reference="fmN-Fg-NMa"/>
+                    <include reference="qP5-37-PsD"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="418" y="373"/>

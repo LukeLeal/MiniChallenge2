@@ -12,6 +12,7 @@
 		10AFB13F1ACC8258009EC28E /* MemoriaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10AFB13E1ACC8258009EC28E /* MemoriaViewController.xib */; };
 		10B602351AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B602331AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m */; };
 		10B602361AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B602341AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib */; };
+		241E4C271B9FC681009A768B /* DeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E4C261B9FC681009A768B /* DeviceModel.m */; };
 		246873EB1AC9B35600E7B04B /* MemoriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246873E91AC9B35600E7B04B /* MemoriaViewController.m */; };
 		246873F01AC9D05500E7B04B /* Carta.m in Sources */ = {isa = PBXBuildFile; fileRef = 246873EF1AC9D05500E7B04B /* Carta.m */; };
 		246873F31AC9D07F00E7B04B /* MemoriaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 246873F21AC9D07F00E7B04B /* MemoriaManager.m */; };
@@ -85,6 +86,8 @@
 		10B602321AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalheEnciclopediaViewController.h; sourceTree = "<group>"; };
 		10B602331AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalheEnciclopediaViewController.m; sourceTree = "<group>"; };
 		10B602341AC0ADC300B6E7BF /* DetalheEnciclopediaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetalheEnciclopediaViewController.xib; sourceTree = "<group>"; };
+		241E4C231B9FC118009A768B /* DeviceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceModel.h; sourceTree = "<group>"; };
+		241E4C261B9FC681009A768B /* DeviceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceModel.m; sourceTree = "<group>"; };
 		246873E81AC9B35600E7B04B /* MemoriaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoriaViewController.h; sourceTree = "<group>"; };
 		246873E91AC9B35600E7B04B /* MemoriaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoriaViewController.m; sourceTree = "<group>"; };
 		246873EE1AC9D05500E7B04B /* Carta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Carta.h; sourceTree = "<group>"; };
@@ -259,6 +262,8 @@
 				24A3BB0E1AC1D7D700F7E698 /* img.jpg */,
 				4EA614BA1AC094A400D94F8A /* Info.plist */,
 				4EA614BB1AC094A400D94F8A /* main.m */,
+				241E4C231B9FC118009A768B /* DeviceModel.h */,
+				241E4C261B9FC681009A768B /* DeviceModel.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -574,6 +579,7 @@
 				246873EB1AC9B35600E7B04B /* MemoriaViewController.m in Sources */,
 				4E70EDDB1AD0C84A006A4B96 /* Challenge_2.xcdatamodeld in Sources */,
 				4E70EDE01AD0CB17006A4B96 /* Alternativa.m in Sources */,
+				241E4C271B9FC681009A768B /* DeviceModel.m in Sources */,
 				7E551B681AC0AC7D00EB7FD8 /* QuizViewController.m in Sources */,
 				107F6F7F1AC326B90077B065 /* EnciclopediaViewController.m in Sources */,
 				4EA614BF1AC094A400D94F8A /* AppDelegate.m in Sources */,
